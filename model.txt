@@ -1,0 +1,346 @@
+DGMSNet(
+  (network): MTLModel(
+    (backbone): Sequential(
+      (0): DGMSConv(
+        3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False
+        (sub_distribution): GaussianMixtureModel()
+      )
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+      (4): Sequential(
+        (0): BasicBlock(
+          (conv1): DGMSConv(
+            64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): DGMSConv(
+            64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (1): BasicBlock(
+          (conv1): DGMSConv(
+            64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): DGMSConv(
+            64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (5): Sequential(
+        (0): BasicBlock(
+          (conv1): DGMSConv(
+            64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): DGMSConv(
+            128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): DGMSConv(
+              64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False
+              (sub_distribution): GaussianMixtureModel()
+            )
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): BasicBlock(
+          (conv1): DGMSConv(
+            128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): DGMSConv(
+            128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (6): Sequential(
+        (0): BasicBlock(
+          (conv1): DGMSConv(
+            128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): DGMSConv(
+            256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): DGMSConv(
+              128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False
+              (sub_distribution): GaussianMixtureModel()
+            )
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): BasicBlock(
+          (conv1): DGMSConv(
+            256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): DGMSConv(
+            256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (7): Sequential(
+        (0): BasicBlock(
+          (conv1): DGMSConv(
+            256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): DGMSConv(
+            512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): DGMSConv(
+              256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False
+              (sub_distribution): GaussianMixtureModel()
+            )
+            (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): BasicBlock(
+          (conv1): DGMSConv(
+            512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): DGMSConv(
+            512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+    (heads): ModuleDict(
+      (segment_semantic): ASPPHeadNode(
+        (fc1): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 40, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc2): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 40, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc3): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 40, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc4): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 40, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (normal): ASPPHeadNode(
+        (fc1): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 3, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc2): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 3, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc3): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 3, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc4): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 3, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (depth_zbuffer): ASPPHeadNode(
+        (fc1): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 1, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc2): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 1, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc3): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 1, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+        (fc4): Classification_Module(
+          (conv1): DGMSConv(
+            512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv2): DGMSConv(
+            1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (conv3): DGMSConv(
+            1024, 1, kernel_size=(1, 1), stride=(1, 1)
+            (sub_distribution): GaussianMixtureModel()
+          )
+          (relu): ReLU(inplace=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+    )
+  )
+)
