@@ -1,4 +1,4 @@
-DGMSNet(
+resnet18_MTL_DGMS_full_not_trained_not_trained_K3.ptDGMSNet(
   (network): MTLModel(
     (backbone): Sequential(
       (0): DGMSConv(
