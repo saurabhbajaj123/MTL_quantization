@@ -1,0 +1,1 @@
+resnet18_MTL_DGMS_full_not_trained_K3.pt50.093798093707846resnet18_MTL_DGMS_full_not_trained_not_trained_K3.pt169.2674049805853

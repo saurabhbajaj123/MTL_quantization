@@ -33,8 +33,9 @@ class DGMSConv(nn.Conv2d):
         self.is_normal = cfg.IS_NORMAL
 
         self.k_level = cfg.K_LEVEL
+        # print("type(self.k_level) = {}".format(self.k_level))
         self.temperature = cfg.TAU
-        print("initialized DGMSConv")
+        # print("initialized DGMSConv")
 
     def init_mask_params(self):
         init_method = 'empirical' if cfg.IS_EMP else 'k-means'

@@ -18,18 +18,19 @@ class GaussianMixtureModel(nn.Module):
     """
     def __init__(self, num_components, init_weights, temperature=0.01, init_method="k-means"):
         super(GaussianMixtureModel, self).__init__()
+        # print(type(num_components))
         self.num_components = num_components
         self.temperature = temperature
         if torch.cuda.is_available():
             self.device = torch.device('cuda')
         else:
             self.device = torch.device('cpu')
-        print(self.device)
+        # print(self.device)
         self.params_initialization(init_weights, init_method)
 
     def params_initialization(self, init_weights, method='k-means'):
         """ Initialization of GMM parameters using k-means algorithm. """
-        print(""" Initialization of GMM parameters using k-means algorithm. """)
+        # print(""" Initialization of GMM parameters using k-means algorithm. """)
         self.mu_zero = torch.tensor([0.0], device=self.device).float()
         self.pi_k, self.mu, self.sigma = \
                 torch.ones(self.num_components-1, device=self.device), \

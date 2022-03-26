@@ -1,0 +1,26 @@
+Validation results for resnet18 non quantized
+[Iter 199 Task segm] Val Loss: 2.0240
+{'mIoU': 0.1356, 'Pixel Acc': 0.4212}
+[Iter 199 Task norm] Val Loss: 0.0660
+{'Angle Mean': 18.0513, 'Angle Median': 16.4385, 'Angle 11.25': 30.1724, 'Angle 22.5': 70.801, 'Angle 30': 86.9917}
+[Iter 199 Task dept] Val Loss: 1.1417
+{'abs_err': 1.0887, 'rel_err': 0.3484, 'sigma_1.25': 22.8313, 'sigma_1.25^2': 53.0366, 'sigma_1.25^3': 79.3045}
+
+
+[Iter 199 Task segm] Val Loss: 2.9695
+{'mIoU': 0.2556, 'Pixel Acc': 0.2554}
+
+[Iter 199 Task norm] Val Loss: 0.0695
+{'Angle Mean': 19.8761, 'Angle Median': 17.8957, 'Angle 11.25': 10.6338, 'Angle 22.5': 71.0093, 'Angle 30': 88.0871}
+
+[Iter 199 Task dept] Val Loss: 0.9643
+{'abs_err': 0.9672, 'rel_err': 0.466, 'sigma_1.25': 40.1963, 'sigma_1.25^2': 67.59, 'sigma_1.25^3': 84.4439}
+
+[Iter 199 Task segm] Val Loss: 2.8492
+{'mIoU': 0.137, 'Pixel Acc': 0.2572}
+
+[Iter 199 Task norm] Val Loss: 0.0697
+{'Angle Mean': 19.4774, 'Angle Median': 17.0346, 'Angle 11.25': 13.7766, 'Angle 22.5': 73.3559, 'Angle 30': 87.2}
+
+[Iter 199 Task dept] Val Loss: 0.9824
+{'abs_err': 0.957, 'rel_err': 0.3608, 'sigma_1.25': 38.2406, 'sigma_1.25^2': 67.744, 'sigma_1.25^3': 85.4055}

@@ -20,6 +20,10 @@ import torchvision.models as models
 import torchvision
 from torch.utils.tensorboard import SummaryWriter
 from DGMSParent.utils.sparsity import SparsityMeasure
+import DGMSParent.config as cfg
+from DGMSParent.modeling.DGMS import DGMSConv
+from DGMSParent.utils.PyTransformer.transformers.torchTransformer import TorchTransformer
+
 
 # from tensorboard import program
 
@@ -29,12 +33,14 @@ from TreeMTL.data.pixel2pixel_loss import NYUCriterions, TaskonomyCriterions
 from TreeMTL.data.pixel2pixel_metrics import NYUMetrics, TaskonomyMetrics
 from TreeMTL.main.trainer import Trainer
 from TreeMTL.main.head import ASPPHeadNode, Classification_Module
-
 # from DGMS.utils.sparsity import SparsityMeasure
 # from DGMS.modeling import DGMSNet
-from DGMSParent.utils.PyTransformer.transformers.torchTransformer import TorchTransformer
 
 
+new_model = True
+perform_quantization = True
+model_name = "resnet18_MTL_DGMS_full"
+suffix = "K8"
 
 tasks = ('segment_semantic','normal','depth_zbuffer')
 task_cls_num = {'segment_semantic': 40, 'normal':3, 'depth_zbuffer': 1}
@@ -49,16 +55,15 @@ dataset = NYU_v2(dataroot, 'train', crop_h=321, crop_w=321)
 trainDataloader = DataLoader(dataset, 16, shuffle=True)
 
 dataset = NYU_v2(dataroot, 'test', crop_h=321, crop_w=321)
-valDataloader = DataLoader(dataset, 2, shuffle=True)
-new_model = False
+valDataloader = DataLoader(dataset, 16, shuffle=True)
 
 for task in three_task:
     criterionDict[task] = NYUCriterions(task)
     metricDict[task] = NYUMetrics(task)
     clsNum[task] = task_cls_num[task]
-print(criterionDict, metricDict, clsNum)
+# print(criterionDict, metricDict, clsNum)
 
-print(len(valDataloader), len(trainDataloader))
+# print(len(valDataloader), len(trainDataloader))
 
 
 # Importing a pre-trained resnet
@@ -68,28 +73,7 @@ pretrained = models.resnet18(pretrained=True)
 
 ### strip the last layer
 pretrained_features = torch.nn.Sequential(*list(pretrained.children())[:-2])
-### check this works
-# x = torch.randn([1,3,224,224])
-# features = pretrained_features(x) # output now has the features corresponding to input x
-# print(pretrained)
-# print(pretrained_features)
-# print(pretrained_features[4][0].conv1.weight)
 
-# Defining the quantization module
-# from __future__ import print_function
-
-# import torch.nn as nn
-
-# from .networks import get_network
-# from DGMS.modeling.DGMS import DGMSConv
-# os.chdir("/home/sbajaj/MyCode/quantization_remote/MTL_quantization/DGMSParent")
-# print()
-print(os.getcwd(),  os.listdir('.'))
-from DGMSParent.modeling.DGMS import DGMSConv
-# os.chdir("/home/sbajaj/MyCode/quantization_remote/MTL_quantization")
-print(os.getcwd())
-
-import torchvision.models as models
 
 class DGMSNet(nn.Module):
     def __init__(self, network, freeze_weights=False, freeze_bn=False):
@@ -158,35 +142,40 @@ class MTLModel(nn.Module):
 model = MTLModel(512, clsNum, pretrained_features)
 
 # model = DGMSNet(pretrained_features)
-model = DGMSNet(model)
-
-_transformer = TorchTransformer()
-_transformer.register(nn.Conv2d, DGMSConv)
-model = _transformer.trans_layers(model)
-print(model)
+if perform_quantization:
+    print("performing quantization")
+    model = DGMSNet(model)
+    _transformer = TorchTransformer()
+    _transformer.register(nn.Conv2d, DGMSConv)
+    model = _transformer.trans_layers(model)
+# print(model)
 
 if new_model:
+    print("creating new model")
     def get_optimizer(model):
         # train_params = [{'params': model.get_1x_lr_params(), 'lr': args.lr}]
         # optimizer = torch.optim.SGD(train_params, momentum=args.momentum,
         #                             weight_decay=args.weight_decay, nesterov=args.nesterov)
         optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.get_1x_lr_params()), lr=0.001, betas=(0.5, 0.999), weight_decay=0.0001)
         return optimizer
-    optimizer = get_optimizer(model)
-    print(optimizer)
-
+    if perform_quantization:
+        print("performing quantization")
+        optimizer = get_optimizer(model)
+        # print(optimizer)
+    print("model creation complete")
     model = model.cuda()
-
-    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_quantized_DGMS_MTL_not_trained_K4.pt")
+    print("saving the new model")
+    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/{}_not_trained_{}.pt".format(model_name, suffix))
+    print("model saving complete")
 else:
     print("loading model")
-    model = torch.load("/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_quantized_DGMS_MTL_not_trained_K4.pt")
+    # model = torch.load("/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/{}_iters_{}.pt".format(model_name, iterations))
+    model = torch.load("/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/{}_{}.pt".format(model_name, suffix))
 
     print("finished loading the model")
 with open("model.txt", 'w+') as f:
+    f.write("{}_not_trained_{}.pt".format(model_name, suffix))
     f.write(str(model))
-# sparsity = SparsityMeasure(None)
-# sparsity.check_sparsity_per_layer(model)
 
 
 loss_lambda = {'segment_semantic': 1, 'normal':1, 'depth_zbuffer': 1}
@@ -200,12 +189,8 @@ checkpoint = 'Checkpoints/NYUv2/test/'
 # # model = torch.load("/content/drive/My Drive/Courses/Sem_2_Spring_22/Independent_study/Checkpoints/NYUv2/test/quantizedsegment_semantic_normal_depth_zbuffer.pth")
 # # model = torch.load("/content/drive/MyDrive/Courses/Sem_2_Spring_22/Independent_study/Checkpoints/NYUv2/test/resnet18_quantized_DGMS_MTL_trained_199iters.pt")
 
-# # model.eval()
-
 
 model = model.cuda()
-# print(model.backbone[4])
-
 tb = SummaryWriter()
 
 class Trainer():
@@ -217,6 +202,7 @@ class Trainer():
         self.model = model
         self.startIter = 0
         self.quantization = quantization
+        print(self.model.parameters())
         if not optimizer:
           self.optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, self.model.parameters()), lr=lr, betas=(0.5, 0.999), weight_decay=0.0001)
         else: 
@@ -230,7 +216,7 @@ class Trainer():
         self.train_dataloader = train_dataloader
         self.train_iter = iter(self.train_dataloader)
         self.val_dataloader = val_dataloader
-        self.criterion_dict = criterion_dict
+        self.criterion_dict = criterion_dict    
         self.metric_dict = metric_dict
         
         self.loss_list = {}
@@ -266,10 +252,9 @@ class Trainer():
             if (i+1) % self.save_iters == 0:
                 if savePath is not None:
                     # self.save_model(i, savePath)
-                    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_quantized_DGMS_MTL_K4_iters_{}.pt".format(i))
+                    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/{}_{}_iters_{}.pt".format(model_name,suffix, i))
             # print(self.get_loss(i))
             # tb.add_scalar('Loss', self.get_loss(i), i)
-
 
             ############## Quantization #####################
             if self.quantization: 
@@ -406,6 +391,12 @@ class Trainer():
             val_results = self.metric_dict[task].val_metrics()
             print('[Iter {} Task {}] Val Loss: {:.4f}'.format((it+1), task[:4], np.mean(loss_list[task])), flush=True)
             print(val_results, flush=True)
+            with open("validation_results.txt", 'a+') as f:
+                f.write('\n')
+                f.write('[Iter {} Task {}] Val Loss: {:.4f}'.format((it+1), task[:4], np.mean(loss_list[task])))
+                f.write('\n')
+                f.write(str(val_results))
+                f.write('\n')
         print('======================================================================', flush=True)
         return
     
@@ -467,6 +458,24 @@ class Trainer():
         # print('======================================================================', flush=True)
         return np.mean(self.loss_list['total'])
 
+if perform_quantization:
+    print("checking sparsity")
+    sparsity = SparsityMeasure(None)
+    total_sparse_ratio, model_params, compression_rate = sparsity.check_sparsity_per_layer(model)
+    with open("compression_rate.txt", 'a+') as f:
+        f.write('\n')
+        f.write("Sparsity before training")
+        f.write("{}_not_trained_{}.pt".format(model_name, suffix))
+        f.write(str(compression_rate))
+trainer = Trainer(model, three_task, trainDataloader, valDataloader, criterionDict, metricDict, print_iters=1, val_iters=199, quantization=perform_quantization)
+trainer.train(200, loss_lambda, checkpoint)
 
-trainer = Trainer(model, three_task, trainDataloader, valDataloader, criterionDict, metricDict, print_iters=10, val_iters=199, quantization=True)
-trainer.train(400, loss_lambda, checkpoint)
+if perform_quantization:
+    print("checking sparsity")
+    sparsity = SparsityMeasure(None)
+    total_sparse_ratio, model_params, compression_rate = sparsity.check_sparsity_per_layer(model)
+    with open("compression_rate.txt", 'a+') as f:
+        f.write('\n')
+        f.write("sparisity after training")
+        f.write("{}_{}.pt".format(model_name, suffix))
+        f.write(str(compression_rate))
