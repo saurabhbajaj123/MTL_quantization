@@ -19,7 +19,7 @@ class GaussianMixtureModel(nn.Module):
     def __init__(self, num_components, init_weights, temperature=0.01, init_method="k-means"):
         super(GaussianMixtureModel, self).__init__()
         # print(type(num_components))
-        self.num_components = int(num_components)
+        self.num_components = num_components
         self.temperature = temperature
         if torch.cuda.is_available():
             self.device = torch.device('cuda')
