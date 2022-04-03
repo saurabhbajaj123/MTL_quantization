@@ -1,0 +1,39 @@
+
+resnet18_DGMS_MTL_full_trained_K3_1e--7_test2_iters_199.pt, compression = 60.38403653409849 
+time to load K3_1e--7 = 3.4495279788970947
+resnet18_DGMS_MTL_full_trained_K3_1e--6_test2_iters_199.pt, compression = 57.13090166371504 
+time to load K3_1e--6 = 1.1893579959869385
+resnet18_DGMS_MTL_full_trained_K3_1e--5_test2_iters_199.pt, compression = 50.8672855264417 
+time to load K3_1e--5 = 1.1700677871704102
+resnet18_DGMS_MTL_full_trained_K3_1e--4_test2_iters_199.pt, compression = 65.17857839744902 
+time to load K3_1e--4 = 1.1210260391235352
+resnet18_DGMS_MTL_full_trained_K3_1e--3_test2_iters_199.pt, compression = 57.669635274859914 
+time to load K3_1e--3 = 1.107231616973877
+resnet18_DGMS_MTL_full_trained_K3_1e--2_test2_iters_199.pt, compression = 327.34305571217703 
+time to load K3_1e--2 = 1.3303167819976807
+
+resnet18_DGMS_MTL_full_trained_K3_1e--7_test2_iters_199.pt, compression = 60.38403653409849 
+time to load K3_1e--7 = 3.5824248790740967
+resnet18_DGMS_MTL_full_trained_K3_1e--6_test2_iters_199.pt, compression = 57.13090166371504 
+time to load K3_1e--6 = 1.2006886005401611
+resnet18_DGMS_MTL_full_trained_K3_1e--5_test2_iters_199.pt, compression = 50.8672855264417 
+time to load K3_1e--5 = 1.1791951656341553
+resnet18_DGMS_MTL_full_trained_K3_1e--4_test2_iters_199.pt, compression = 65.17857839744902 
+time to load K3_1e--4 = 1.1128344535827637
+resnet18_DGMS_MTL_full_trained_K3_1e--3_test2_iters_199.pt, compression = 57.669635274859914 
+time to load K3_1e--3 = 1.0999314785003662
+resnet18_DGMS_MTL_full_trained_K3_1e--2_test2_iters_199.pt, compression = 327.34305571217703 
+time to load K3_1e--2 = 1.3708608150482178
+
+resnet18_DGMS_MTL_full_trained_K3_1e--2_test2_iters_199.pt, compression = 327.34305571217703 
+time to load K3_1e--2 = 3.7643775939941406
+resnet18_DGMS_MTL_full_trained_K3_1e--3_test2_iters_199.pt, compression = 57.669635274859914 
+time to load K3_1e--3 = 1.1146838665008545
+resnet18_DGMS_MTL_full_trained_K3_1e--4_test2_iters_199.pt, compression = 65.17857839744902 
+time to load K3_1e--4 = 1.1161127090454102
+resnet18_DGMS_MTL_full_trained_K3_1e--5_test2_iters_199.pt, compression = 50.8672855264417 
+time to load K3_1e--5 = 1.123640537261963
+resnet18_DGMS_MTL_full_trained_K3_1e--6_test2_iters_199.pt, compression = 57.13090166371504 
+time to load K3_1e--6 = 1.1649444103240967
+resnet18_DGMS_MTL_full_trained_K3_1e--7_test2_iters_199.pt, compression = 60.38403653409849 
+time to load K3_1e--7 = 1.1997556686401367
