@@ -20,6 +20,7 @@ class GaussianMixtureModel(nn.Module):
         super(GaussianMixtureModel, self).__init__()
         self.num_components = num_components
         self.temperature = temperature
+        print("self.num_components = {}, self.temperature = {}".format(self.num_components, self.temperature))
         if torch.cuda.is_available():
             self.device = torch.device('cuda')
         else:

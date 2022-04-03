@@ -40,6 +40,7 @@ class DGMSConv(nn.Conv2d):
         init_method = 'empirical' if cfg.IS_EMP else 'k-means'
         # print(init_method)
         self.sub_distribution = gmm_approximation(self.k_level, self.weight, self.temperature, init_method)
+        # self.sub_distribution = gmm_approximation(self.k_level, self.weight, tau_temp, init_method)
 
     def get_Sweight(self):
         # soft quantized weights during training

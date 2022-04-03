@@ -12,8 +12,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
-import random
-import argparse
 from pathlib import Path
 from copy import deepcopy
 import torchvision.models as models
@@ -35,6 +33,8 @@ from TreeMTL.main.head import ASPPHeadNode, Classification_Module
 from DGMSParent.utils.PyTransformer.transformers.torchTransformer import TorchTransformer
 
 
+new_model = False
+perform_quantization = True
 
 tasks = ('segment_semantic','normal','depth_zbuffer')
 task_cls_num = {'segment_semantic': 40, 'normal':3, 'depth_zbuffer': 1}
@@ -49,8 +49,7 @@ dataset = NYU_v2(dataroot, 'train', crop_h=321, crop_w=321)
 trainDataloader = DataLoader(dataset, 16, shuffle=True)
 
 dataset = NYU_v2(dataroot, 'test', crop_h=321, crop_w=321)
-valDataloader = DataLoader(dataset, 2, shuffle=True)
-new_model = False
+valDataloader = DataLoader(dataset, 16, shuffle=True)
 
 for task in three_task:
     criterionDict[task] = NYUCriterions(task)
@@ -154,17 +153,17 @@ class MTLModel(nn.Module):
       # idx += 1
     return output
 
-# model = MTLModel(512, clsNum, model)
-model = MTLModel(512, clsNum, pretrained_features)
-
 # model = DGMSNet(pretrained_features)
+
+model = MTLModel(512, clsNum, pretrained_features)
 model = DGMSNet(model)
 
 _transformer = TorchTransformer()
 _transformer.register(nn.Conv2d, DGMSConv)
 model = _transformer.trans_layers(model)
-print(model)
 
+# model = MTLModel(512, clsNum, model)
+# print(model)
 if new_model:
     def get_optimizer(model):
         # train_params = [{'params': model.get_1x_lr_params(), 'lr': args.lr}]
@@ -173,14 +172,15 @@ if new_model:
         optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.get_1x_lr_params()), lr=0.001, betas=(0.5, 0.999), weight_decay=0.0001)
         return optimizer
     optimizer = get_optimizer(model)
-    print(optimizer)
+    # print(optimizer)
 
     model = model.cuda()
 
-    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_quantized_DGMS_MTL_not_trained_K4.pt")
+    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_DGMS_MTL_full_not_trained_K3_1e--2_test2.pt")
+    # del model
 else:
     print("loading model")
-    model = torch.load("/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_quantized_DGMS_MTL_not_trained_K4.pt")
+    model = torch.load("/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_DGMS_MTL_full_not_trained_K3_1e--2_test2.pt")
 
     print("finished loading the model")
 with open("model.txt", 'w+') as f:
@@ -266,7 +266,7 @@ class Trainer():
             if (i+1) % self.save_iters == 0:
                 if savePath is not None:
                     # self.save_model(i, savePath)
-                    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_quantized_DGMS_MTL_K4_iters_{}.pt".format(i))
+                    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_DGMS_MTL_full_trained_K3_1e--2_test2_iters_{}.pt".format(i))
             # print(self.get_loss(i))
             # tb.add_scalar('Loss', self.get_loss(i), i)
 
@@ -401,11 +401,20 @@ class Trainer():
                     tloss = self.criterion_dict[task](output[task], y)
                     self.metric_dict[task](output[task], y)
                 loss_list[task].append(tloss.item())
+        with open("validation_results.txt", 'a+') as f:
+            f.write('______________________________________________________________________')
+            f.write("{}_{}.pt".format("resnet18_DGMS_MTL_full", "K3_1e--2_test2"))
 
         for task in self.tasks:
             val_results = self.metric_dict[task].val_metrics()
             print('[Iter {} Task {}] Val Loss: {:.4f}'.format((it+1), task[:4], np.mean(loss_list[task])), flush=True)
             print(val_results, flush=True)
+            with open("validation_results.txt", 'a+') as f:
+                f.write('\n')
+                f.write('[Iter {} Task {}] Val Loss: {:.4f}'.format((it+1), task[:4], np.mean(loss_list[task])))
+                f.write('\n')
+                f.write(str(val_results))
+                f.write('\n')
         print('======================================================================', flush=True)
         return
     
@@ -468,5 +477,26 @@ class Trainer():
         return np.mean(self.loss_list['total'])
 
 
-trainer = Trainer(model, three_task, trainDataloader, valDataloader, criterionDict, metricDict, print_iters=10, val_iters=199, quantization=True)
-trainer.train(400, loss_lambda, checkpoint)
+if perform_quantization:
+    print("checking sparsity")
+    sparsity = SparsityMeasure(None)
+    total_sparse_ratio, model_params, compression_rate = sparsity.check_sparsity_per_layer(model)
+    with open("compression_rate.txt", 'a+') as f:
+        f.write('______________________________________________________________________')
+        f.write('\n')
+        f.write("Sparsity before training")
+        f.write("{}_not_trained_{}.pt".format("resnet18_DGMS_MTL_full", "K3_1e--2_test2"))
+        f.write(str(compression_rate))
+
+trainer = Trainer(model, three_task, trainDataloader, valDataloader, criterionDict, metricDict, print_iters=10, val_iters=199, quantization=perform_quantization)
+trainer.train(200, loss_lambda, checkpoint)
+
+if perform_quantization:
+    print("checking sparsity")
+    sparsity = SparsityMeasure(None)
+    total_sparse_ratio, model_params, compression_rate = sparsity.check_sparsity_per_layer(model)
+    with open("compression_rate.txt", 'a+') as f:
+        f.write('\n')
+        f.write("Sparsity after training")
+        f.write("{}_{}.pt".format("resnet18_DGMS_MTL_full", "K3_1e--2_test2"))
+        f.write(str(compression_rate))

@@ -1,0 +1,180 @@
+
+[Iter 199 Task segm] Val Loss: 2.8626
+{'mIoU': 0.2866, 'Pixel Acc': 0.3125}
+
+[Iter 199 Task norm] Val Loss: 0.0666
+{'Angle Mean': 19.0802, 'Angle Median': 17.8738, 'Angle 11.25': 23.6365, 'Angle 22.5': 69.7574, 'Angle 30': 87.7975}
+
+[Iter 199 Task dept] Val Loss: 1.2000
+{'abs_err': 1.1537, 'rel_err': 0.3681, 'sigma_1.25': 28.1066, 'sigma_1.25^2': 54.9182, 'sigma_1.25^3': 76.5159}
+
+[Iter 199 Task segm] Val Loss: 2.8122
+{'mIoU': 0.2105, 'Pixel Acc': 0.317}
+
+[Iter 199 Task norm] Val Loss: 0.0685
+{'Angle Mean': 19.0349, 'Angle Median': 16.4011, 'Angle 11.25': 20.3613, 'Angle 22.5': 73.4226, 'Angle 30': 86.817}
+
+[Iter 199 Task dept] Val Loss: 1.3141
+{'abs_err': 1.26, 'rel_err': 0.3896, 'sigma_1.25': 21.5778, 'sigma_1.25^2': 45.4834, 'sigma_1.25^3': 69.5139}
+
+[Iter 199 Task segm] Val Loss: 2.8040
+{'mIoU': 0.1977, 'Pixel Acc': 0.3195}
+
+[Iter 199 Task norm] Val Loss: 0.0682
+{'Angle Mean': 19.1738, 'Angle Median': 16.9473, 'Angle 11.25': 18.7363, 'Angle 22.5': 71.0406, 'Angle 30': 87.5896}
+
+[Iter 199 Task dept] Val Loss: 1.4679
+{'abs_err': 1.511, 'rel_err': 0.8035, 'sigma_1.25': 23.9735, 'sigma_1.25^2': 48.4117, 'sigma_1.25^3': 68.9333}
+
+[Iter 199 Task segm] Val Loss: 2.9365
+{'mIoU': 0.2556, 'Pixel Acc': 0.2538}
+
+[Iter 199 Task norm] Val Loss: 0.0691
+{'Angle Mean': 19.6446, 'Angle Median': 18.8233, 'Angle 11.25': 22.4309, 'Angle 22.5': 63.5051, 'Angle 30': 87.8598}
+
+[Iter 199 Task dept] Val Loss: 1.0634
+{'abs_err': 1.022, 'rel_err': 0.35, 'sigma_1.25': 34.4549, 'sigma_1.25^2': 63.5807, 'sigma_1.25^3': 83.002}
+
+[Iter 199 Task segm] Val Loss: 2.8792
+{'mIoU': 0.1007, 'Pixel Acc': 0.3048}
+
+[Iter 199 Task norm] Val Loss: 0.0667
+{'Angle Mean': 19.1243, 'Angle Median': 16.6585, 'Angle 11.25': 15.5917, 'Angle 22.5': 73.9892, 'Angle 30': 87.5492}
+
+[Iter 199 Task dept] Val Loss: 1.2786
+{'abs_err': 1.2271, 'rel_err': 0.393, 'sigma_1.25': 21.8277, 'sigma_1.25^2': 46.2617, 'sigma_1.25^3': 69.6654}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e-5_test2.pt
+[Iter 199 Task segm] Val Loss: 3.0238
+{'mIoU': 0.2556, 'Pixel Acc': 0.2542}
+
+[Iter 199 Task norm] Val Loss: 0.0672
+{'Angle Mean': 19.3295, 'Angle Median': 17.0924, 'Angle 11.25': 14.671, 'Angle 22.5': 73.2919, 'Angle 30': 87.8362}
+
+[Iter 199 Task dept] Val Loss: 1.1926
+{'abs_err': 1.2121, 'rel_err': 0.6161, 'sigma_1.25': 30.771, 'sigma_1.25^2': 58.5447, 'sigma_1.25^3': 77.622}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--7_test2.pt(BS 2)
+[Iter 199 Task segm] Val Loss: 3.0303
+{'mIoU': 0.2556, 'Pixel Acc': 0.2537}
+
+[Iter 199 Task norm] Val Loss: 0.0728
+{'Angle Mean': 20.0408, 'Angle Median': 18.0977, 'Angle 11.25': 11.9585, 'Angle 22.5': 73.8609, 'Angle 30': 86.885}
+
+[Iter 199 Task dept] Val Loss: 1.0320
+{'abs_err': 1.049, 'rel_err': 0.5044, 'sigma_1.25': 35.7096, 'sigma_1.25^2': 63.375, 'sigma_1.25^3': 81.6764}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--7_test2.pt(BS 2)
+[Iter 199 Task segm] Val Loss: 3.0670
+{'mIoU': 0.2556, 'Pixel Acc': 0.2536}
+
+[Iter 199 Task norm] Val Loss: 0.0724
+{'Angle Mean': 20.0286, 'Angle Median': 18.0736, 'Angle 11.25': 12.1566, 'Angle 22.5': 73.3497, 'Angle 30': 86.9779}
+
+[Iter 199 Task dept] Val Loss: 1.0004
+{'abs_err': 0.9843, 'rel_err': 0.3865, 'sigma_1.25': 37.3012, 'sigma_1.25^2': 66.6207, 'sigma_1.25^3': 84.0839}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--7_test2.pt(BS 2)
+[Iter 199 Task segm] Val Loss: 3.0175
+{'mIoU': 0.2556, 'Pixel Acc': 0.2545}
+
+[Iter 199 Task norm] Val Loss: 0.0693
+{'Angle Mean': 19.8147, 'Angle Median': 18.079, 'Angle 11.25': 12.6642, 'Angle 22.5': 67.5522, 'Angle 30': 88.2026}
+
+[Iter 199 Task dept] Val Loss: 0.9960
+{'abs_err': 0.9793, 'rel_err': 0.381, 'sigma_1.25': 37.6562, 'sigma_1.25^2': 66.9679, 'sigma_1.25^3': 84.2807}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--6_test2.pt (BS 2)
+[Iter 199 Task segm] Val Loss: 3.0227
+{'mIoU': 0.2556, 'Pixel Acc': 0.2537}
+
+[Iter 199 Task norm] Val Loss: 0.0701
+{'Angle Mean': 20.1684, 'Angle Median': 18.0073, 'Angle 11.25': 7.8649, 'Angle 22.5': 76.1739, 'Angle 30': 87.6008}
+
+[Iter 199 Task dept] Val Loss: 1.0288
+{'abs_err': 1.0437, 'rel_err': 0.4987, 'sigma_1.25': 35.9433, 'sigma_1.25^2': 63.698, 'sigma_1.25^3': 81.923}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--6_test2.pt (BS - 16)
+[Iter 199 Task segm] Val Loss: 2.9910
+{'mIoU': 0.2556, 'Pixel Acc': 0.2554}
+
+[Iter 199 Task norm] Val Loss: 0.0685
+{'Angle Mean': 19.5031, 'Angle Median': 17.105, 'Angle 11.25': 11.9841, 'Angle 22.5': 74.3087, 'Angle 30': 87.5473}
+
+[Iter 199 Task dept] Val Loss: 1.1464
+{'abs_err': 1.1615, 'rel_err': 0.5557, 'sigma_1.25': 34.9537, 'sigma_1.25^2': 61.3841, 'sigma_1.25^3': 79.1464}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--6_test2.pt
+[Iter 199 Task segm] Val Loss: 2.8581
+{'mIoU': 0.2377, 'Pixel Acc': 0.2873}
+
+[Iter 199 Task norm] Val Loss: 0.0689
+{'Angle Mean': 19.7343, 'Angle Median': 17.7902, 'Angle 11.25': 11.5105, 'Angle 22.5': 70.8084, 'Angle 30': 88.1354}
+
+[Iter 199 Task dept] Val Loss: 0.9738
+{'abs_err': 0.9738, 'rel_err': 0.4351, 'sigma_1.25': 38.8665, 'sigma_1.25^2': 66.9794, 'sigma_1.25^3': 84.1732}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--5_test2.pt
+[Iter 199 Task segm] Val Loss: 2.9875
+{'mIoU': 0.2556, 'Pixel Acc': 0.2554}
+
+[Iter 199 Task norm] Val Loss: 0.0693
+{'Angle Mean': 19.8657, 'Angle Median': 18.1245, 'Angle 11.25': 11.5274, 'Angle 22.5': 68.4511, 'Angle 30': 88.2481}
+
+[Iter 199 Task dept] Val Loss: 1.2323
+{'abs_err': 1.2601, 'rel_err': 0.6562, 'sigma_1.25': 30.4439, 'sigma_1.25^2': 57.5545, 'sigma_1.25^3': 76.4385}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--5_test2.pt
+[Iter 199 Task segm] Val Loss: 2.9702
+{'mIoU': 0.2556, 'Pixel Acc': 0.2556}
+
+[Iter 199 Task norm] Val Loss: 0.0694
+{'Angle Mean': 18.8916, 'Angle Median': 15.8391, 'Angle 11.25': 24.2144, 'Angle 22.5': 71.6624, 'Angle 30': 86.4618}
+
+[Iter 199 Task dept] Val Loss: 0.9697
+{'abs_err': 0.9702, 'rel_err': 0.4635, 'sigma_1.25': 39.803, 'sigma_1.25^2': 67.7156, 'sigma_1.25^3': 84.5075}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--5_test2.pt
+[Iter 199 Task segm] Val Loss: 2.9840
+{'mIoU': 0.2556, 'Pixel Acc': 0.2554}
+
+[Iter 199 Task norm] Val Loss: 0.0697
+{'Angle Mean': 19.9664, 'Angle Median': 17.9357, 'Angle 11.25': 9.586, 'Angle 22.5': 73.4982, 'Angle 30': 87.9753}
+
+[Iter 199 Task dept] Val Loss: 0.9246
+{'abs_err': 0.9082, 'rel_err': 0.3778, 'sigma_1.25': 41.743, 'sigma_1.25^2': 70.4016, 'sigma_1.25^3': 86.821}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--4_test2.pt
+[Iter 199 Task segm] Val Loss: 3.0133
+{'mIoU': 0.2556, 'Pixel Acc': 0.2555}
+
+[Iter 199 Task norm] Val Loss: 0.0692
+{'Angle Mean': 19.7082, 'Angle Median': 17.5832, 'Angle 11.25': 11.477, 'Angle 22.5': 72.2218, 'Angle 30': 87.922}
+
+[Iter 199 Task dept] Val Loss: 0.9444
+{'abs_err': 0.9186, 'rel_err': 0.3462, 'sigma_1.25': 40.033, 'sigma_1.25^2': 70.1998, 'sigma_1.25^3': 87.1634}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--3_test2.pt
+[Iter 199 Task segm] Val Loss: 2.9951
+{'mIoU': 0.2556, 'Pixel Acc': 0.2553}
+
+[Iter 199 Task norm] Val Loss: 0.0696
+{'Angle Mean': 19.8315, 'Angle Median': 17.8343, 'Angle 11.25': 11.4787, 'Angle 22.5': 70.1483, 'Angle 30': 88.0175}
+
+[Iter 199 Task dept] Val Loss: 1.4648
+{'abs_err': 1.4096, 'rel_err': 0.4343, 'sigma_1.25': 17.5987, 'sigma_1.25^2': 37.6984, 'sigma_1.25^3': 58.1114}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
+[Iter 199 Task segm] Val Loss: 2.9787
+{'mIoU': 0.2556, 'Pixel Acc': 0.2557}
+
+[Iter 199 Task norm] Val Loss: 0.0687
+{'Angle Mean': 19.3138, 'Angle Median': 16.7261, 'Angle 11.25': 13.7475, 'Angle 22.5': 73.2668, 'Angle 30': 87.3397}
+
+[Iter 199 Task dept] Val Loss: 1.0016
+{'abs_err': 1.0092, 'rel_err': 0.4786, 'sigma_1.25': 37.4696, 'sigma_1.25^2': 65.6629, 'sigma_1.25^3': 83.0768}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
+[Iter 199 Task segm] Val Loss: 2.9883
+{'mIoU': 0.2556, 'Pixel Acc': 0.2555}
+
+[Iter 199 Task norm] Val Loss: 0.0682
+{'Angle Mean': 19.1048, 'Angle Median': 16.7312, 'Angle 11.25': 18.9894, 'Angle 22.5': 72.492, 'Angle 30': 87.2436}
+
+[Iter 199 Task dept] Val Loss: 0.9192
+{'abs_err': 0.9059, 'rel_err': 0.3895, 'sigma_1.25': 41.6855, 'sigma_1.25^2': 70.5054, 'sigma_1.25^3': 87.1963}
+______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
+[Iter 199 Task segm] Val Loss: 2.9922
+{'mIoU': 0.17, 'Pixel Acc': 0.2612}
+
+[Iter 199 Task norm] Val Loss: 0.0668
+{'Angle Mean': 19.1174, 'Angle Median': 17.3489, 'Angle 11.25': 20.2605, 'Angle 22.5': 71.5767, 'Angle 30': 87.9485}
+
+[Iter 199 Task dept] Val Loss: 0.9512
+{'abs_err': 0.9649, 'rel_err': 0.4752, 'sigma_1.25': 41.0939, 'sigma_1.25^2': 68.3496, 'sigma_1.25^3': 84.7751}

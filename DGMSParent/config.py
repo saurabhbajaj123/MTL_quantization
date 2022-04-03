@@ -35,9 +35,9 @@ STDS = {
 }
 
 # Model definition
-TAU = 0.0000001 # 0.01
+TAU = 0.01
 IS_TRAIN = True
-K_LEVEL = 4
+K_LEVEL = 3
 IS_NORMAL = False #True
 IS_EMP = False
 

@@ -251,7 +251,7 @@ def main():
     parser.add_argument('--test-batch-size', type=int, default=256, metavar='N', 
                         help='input batch size for testing (default: 256)')
     # model params
-    parser.add_argument('--K', type=int, default=16, metavar='K',
+    parser.add_argument('--K', type=int, default=3, metavar='K',
                         help='number of GMM components (default: 2^4=16)')
     parser.add_argument('--tau', type=float, default=0.01, metavar='TAU',
                         help='gumbel softmax temperature (default: 0.01)')
