@@ -77,5 +77,7 @@ class SparsityMeasure(object):
         bitwidth = math.floor(math.log(cfg.K_LEVEL, 2))
         compression_rate = 1/((nz_ratio) * bitwidth / 32)
         # print("compression rate = {}".format(1/((nz_ratio) * bitwidth / 32)))
+        print("total_weight_num = {}, total_sparsity_num = {}, bitwidth = {}".format(total_weight_num, total_sparsity_num, bitwidth))
         print("compression rate = {}".format(1/((1-total_sparse_ratio) * bitwidth / 32)))
+        print("compression1 = {}".format(total_weight_num * 32 / (bitwidth * (total_weight_num - total_sparsity_num))))
         return total_sparse_ratio, model_params, compression_rate

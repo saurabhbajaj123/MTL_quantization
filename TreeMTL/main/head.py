@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torch.quantization import QuantStub, DeQuantStub
 
 # Heads for Pixel2Pixel
 # Note: Should create for each task
@@ -24,8 +25,11 @@ class Classification_Module(nn.Module):
         self.conv3 = nn.Conv2d(1024, num_classes, kernel_size=1)
         self.relu = nn.ReLU(inplace=True)
         self.dropout = nn.Dropout()
+        self.quant = QuantStub()
+        self.dequant = DeQuantStub()
 
     def forward(self, x):
+        x = self.quant(x)
         x = self.conv1(x)
         x = self.relu(x)
         x = self.dropout(x)
@@ -33,4 +37,5 @@ class Classification_Module(nn.Module):
         x = self.relu(x)
         x = self.dropout(x)
         x = self.conv3(x)
+        x = self.dequant(x)
         return x

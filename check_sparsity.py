@@ -169,56 +169,80 @@ _transformer.register(nn.Conv2d, DGMSConv)
 model = _transformer.trans_layers(model)
 sparsity = SparsityMeasure(None)
 
-timings = defaultdict(list)
-evaluation_time = defaultdict(list)
-for i in range(10):
-    for pow in range(-2, -8, -1):
-        loss_list = {}
-        for task in tasks:
-            loss_list[task] = []
-        print("loading_model = {}".format(str(pow)))
-        t1_load = time.time()
-        model = torch.load("/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_DGMS_MTL_full_trained_K3_1e-{}_test2_iters_199.pt".format(str(pow)))
-        t2_load = time.time()
-        model = model.cuda()
-        model.eval()
-        eval_time = 0
-        for i, data in enumerate(valDataloader):
-            x = data['input'].cuda()
+model = torch.load("/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_DGMS_MTL_full_not_trained_K3_1e-{}_test2.pt".format(str(-2)))
+# print(model)
+def check_total_zero(x):
+    with torch.no_grad():
+        return x.eq(0.0).float().sum().item()
 
-            t1_eval = time.time()
-            output = model(x)
-            t2_eval = time.time()
-            eval_time += t2_eval - t1_eval
-            # for task in tasks:
-            #     y = data[task].cuda()
-            #     if task + '_mask' in data:
-            #         tloss = criterionDict[task](output[task], y, data[task + '_mask'].cuda())
-            #         metricDict[task](output[task], y, data[task + '_mask'].cuda())
-            #     else:
-            #         tloss = criterionDict[task](output[task], y)
-            #         metricDict[task](output[task], y)
-            #     loss_list[task].append(tloss.item())
-        # total_sparse_ratio, model_params, compression_rate = sparsity.check_sparsity_per_layer(model)
-        if i > 1: 
-            timings[pow].append(t2_load - t1_load)
-            evaluation_time[pow].append(eval_time)
+def check_total_weights(x):
+    with torch.no_grad():
+        return x.numel()
+print(model)
+print(model.network.backbone[0])
+print(np.finfo(model.network.backbone[0].weight[0][0][0][0].item()))
+print(np.finfo(model.network.backbone[0].get_Sweight()[0][0][0][0].item()))
+print(np.finfo(model.network.backbone[0].get_Pweight()[0][0][0][0].item()))
 
-for pow in range(-2, -8, -1):
-    with open("output1.txt", 'a+') as f:
-        f.write('\n')
-        # f.write("resnet18_DGMS_MTL_full_trained_K3_1e-{}_test2_iters_199.pt, compression = {} \n".format(str(pow), compression_rate))
-        f.write("K3_1e-{}: time to load avg = {}, avg evalTime = {}".format(str(pow), np.mean(timings[pow]), np.mean(evaluation_time[pow])))
-#%%
-plt.figure(1)
-for key, data_list in timings.items():
-    plt.plot(data_list, label=key)
-plt.legend()
-plt.savefig('load_timings.png')
+total_sparse_ratio, model_params, compression_rate = sparsity.check_sparsity_per_layer(model)
+# print(check_total_zero(model.network.backbone[4][0].conv1.weight))
+# print(model.network.backbone[4][0].conv1.weight.numel())
+# print(model.network.backbone[4][0].conv1.weight.size())
+
+# timings = defaultdict(list)
+# evaluation_time = defaultdict(list)
+# for i in range(1):
+#     for pow in range(-2, -3, -1):
+
+#         loss_list = {}
+#         for task in tasks:
+#             loss_list[task] = []
+#         print("loading_model")
+#         t1_load = time.time()
+#         model = torch.load("/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/resnet18_DGMS_MTL_full_trained_K3_1e-{}_test2_iters_199.pt".format(str(pow)))
+#         print(model)
+#         t2_load = time.time()
+#         model = model.cuda()
+#         model.eval()
+#         eval_time = 0
+#         for i, data in enumerate(valDataloader):
+#             x = data['input'].cuda()
+
+#             t1_eval = time.time()
+#             output = model(x)
+#             t2_eval = time.time()
+#             eval_time += t2_eval - t1_eval
+#             # for task in tasks:
+#             #     y = data[task].cuda()
+#             #     if task + '_mask' in data:
+#             #         tloss = criterionDict[task](output[task], y, data[task + '_mask'].cuda())
+#             #         metricDict[task](output[task], y, data[task + '_mask'].cuda())
+#             #     else:
+#             #         tloss = criterionDict[task](output[task], y)
+#             #         metricDict[task](output[task], y)
+#             #     loss_list[task].append(tloss.item())
+#         total_sparse_ratio, model_params, compression_rate = sparsity.check_sparsity_per_layer(model)
+#         # if i > 1: 
+#         timings[pow].append(t2_load - t1_load)
+#         evaluation_time[pow].append(eval_time)
+
+# for pow in range(-2, -3, -1):
+#     with open("output2.txt", 'a+') as f:
+#         f.write('\n')
+#         f.write("resnet18_DGMS_MTL_full_trained_K3_1e-{}_test2_iters_199.pt, compression = {} \n".format(str(pow), compression_rate))
+#         f.write("K3_1e-{}: time to load avg = {}, avg evalTime = {}".format(str(pow), np.mean(timings[pow]), np.mean(evaluation_time[pow])))
+# #%%
+# plt.figure(1)
+# # fig, ax = plt.subplots()
+# for key, data_list in timings.items():
+#     plt.plot(data_list, label=key)
+# # ax.set_ylim(top = 2)
+# plt.legend()
+# plt.savefig('load_timings1.png')
 
 
-plt.figure(2)
-for key, data_list in evaluation_time.items():
-    plt.plot(data_list, label=key)
-plt.legend()
-plt.savefig('evaluation_time.png')
+# plt.figure(2)
+# for key, data_list in evaluation_time.items():
+#     plt.plot(data_list, label=key)
+# plt.legend()
+# plt.savefig('evaluation_time1.png')
