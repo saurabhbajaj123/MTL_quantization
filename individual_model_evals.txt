@@ -1,0 +1,51 @@
+validating on 41 samples = 
+[Iter 401 Task segm] Val Loss: 2.2006
+{'mIoU': 0.1286, 'Pixel Acc': 0.3911}
+46449074
+[Iter 401 Task norm] Val Loss: 0.0674
+{'Angle Mean': 18.2723, 'Angle Median': 15.3135, 'Angle 11.25': 27.5605, 'Angle 22.5': 74.2668, 'Angle 30': 85.3995}
+[Iter 401 Task dept] Val Loss: 1.0367
+{'abs_err': 0.9924, 'rel_err': 0.3326, 'sigma_1.25': 27.4191, 'sigma_1.25^2': 56.899, 'sigma_1.25^3': 81.9568}
+======================================================================
+inference time = 0.0022724872682152726
+
+(deeplearning) [sbajaj@node002 MTL_quantization]$ python post_training_quantization.py 
+{'segment_semantic': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+)} {'segment_semantic': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab443acbd0>} {'segment_semantic': 40}
+41 50
+validating on 41 samples = 
+[Iter 399 Task segm] Val Loss: 2.1805
+{'mIoU': 0.1299, 'Pixel Acc': 0.4032}
+======================================================================
+inference time = 0.0013921586478628763
+(deeplearning) [sbajaj@node002 MTL_quantization]$ python post_training_quantization.py 
+{'normal': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+)} {'normal': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab443abd50>} {'normal': 3}
+41 50
+validating on 41 samples = 
+46449074
+[Iter 399 Task norm] Val Loss: 0.0745
+{'Angle Mean': 19.6844, 'Angle Median': 17.9845, 'Angle 11.25': 24.6357, 'Angle 22.5': 63.6425, 'Angle 30': 83.0236}
+======================================================================
+inference time = 0.0014850628085252716
+(deeplearning) [sbajaj@node002 MTL_quantization]$ python post_training_quantization.py                                                                                                                                                                                                9-Apr-22
+{'depth_zbuffer': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+)} {'depth_zbuffer': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab443acc50>} {'depth_zbuffer': 1}
+41 50
+validating on 41 samples = 
+[Iter 399 Task dept] Val Loss: 1.3867
+{'abs_err': 1.3264, 'rel_err': 0.4211, 'sigma_1.25': 14.7268, 'sigma_1.25^2': 34.5187, 'sigma_1.25^3': 60.5147}
+======================================================================
+inference time = 0.001328639286320384

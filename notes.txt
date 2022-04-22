@@ -1,0 +1,5 @@
+Model size of your quantized model after training should be even bigger than the original model
+That is because the quantized model after model training is actually “fake quantized” instead of really quantized
+That means, all the values are still stored as floating point 32 and now, you also needs to store the overhead of the quantization as well.
+
+
