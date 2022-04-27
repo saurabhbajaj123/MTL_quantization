@@ -1,0 +1,1246 @@
+Apr26_18-31-13_node150
+{'segment_semantic': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+)} {'segment_semantic': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab31b749d0>} {'segment_semantic': 40}
+41 50
+quantizable model loaded
+MTLModel(
+  (backbone): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (4): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (5): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (6): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (7): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+  )
+  (heads): ModuleDict(
+    (segment_semantic): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+    )
+  )
+  (quant): QuantStub()
+  (dequant): DeQuantStub()
+)
+device = cuda:0
+initializing the Trainer
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 10 Task segm] Train Loss: 3.5815
+[Iter 10 Total] Train Loss: 3.5815
+======================================================================
+[Iter 10 Total] Train Loss: 3.5815
+validating on 41 samples = 
+[Iter 10 Task segm] Val Loss: 2.8143
+{'mIoU': 0.18, 'Pixel Acc': 0.3238}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 20 Task segm] Train Loss: 2.7944
+[Iter 20 Total] Train Loss: 2.7944
+======================================================================
+[Iter 20 Total] Train Loss: 2.7944
+validating on 41 samples = 
+[Iter 20 Task segm] Val Loss: 2.6816
+{'mIoU': 0.1391, 'Pixel Acc': 0.3444}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 30 Task segm] Train Loss: 2.6836
+[Iter 30 Total] Train Loss: 2.6836
+======================================================================
+[Iter 30 Total] Train Loss: 2.6836
+validating on 41 samples = 
+[Iter 30 Task segm] Val Loss: 2.5386
+{'mIoU': 0.1392, 'Pixel Acc': 0.363}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 40 Task segm] Train Loss: 2.4591
+[Iter 40 Total] Train Loss: 2.4591
+======================================================================
+[Iter 40 Total] Train Loss: 2.4591
+validating on 41 samples = 
+[Iter 40 Task segm] Val Loss: 2.5470
+{'mIoU': 0.1619, 'Pixel Acc': 0.3287}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 50 Task segm] Train Loss: 2.4806
+[Iter 50 Total] Train Loss: 2.4806
+======================================================================
+[Iter 50 Total] Train Loss: 2.4806
+validating on 41 samples = 
+[Iter 50 Task segm] Val Loss: 2.4996
+{'mIoU': 0.1267, 'Pixel Acc': 0.3523}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 60 Task segm] Train Loss: 2.4498
+[Iter 60 Total] Train Loss: 2.4498
+======================================================================
+[Iter 60 Total] Train Loss: 2.4498
+validating on 41 samples = 
+[Iter 60 Task segm] Val Loss: 2.6714
+{'mIoU': 0.1095, 'Pixel Acc': 0.271}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 70 Task segm] Train Loss: 2.3830
+[Iter 70 Total] Train Loss: 2.3830
+======================================================================
+[Iter 70 Total] Train Loss: 2.3830
+validating on 41 samples = 
+[Iter 70 Task segm] Val Loss: 2.4124
+{'mIoU': 0.1202, 'Pixel Acc': 0.3654}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 80 Task segm] Train Loss: 2.4441
+[Iter 80 Total] Train Loss: 2.4441
+======================================================================
+[Iter 80 Total] Train Loss: 2.4441
+validating on 41 samples = 
+[Iter 80 Task segm] Val Loss: 2.6930
+{'mIoU': 0.1101, 'Pixel Acc': 0.3687}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 90 Task segm] Train Loss: 2.4082
+[Iter 90 Total] Train Loss: 2.4082
+======================================================================
+[Iter 90 Total] Train Loss: 2.4082
+validating on 41 samples = 
+[Iter 90 Task segm] Val Loss: 2.3478
+{'mIoU': 0.1239, 'Pixel Acc': 0.3707}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 100 Task segm] Train Loss: 2.1500
+[Iter 100 Total] Train Loss: 2.1500
+======================================================================
+[Iter 100 Total] Train Loss: 2.1500
+validating on 41 samples = 
+[Iter 100 Task segm] Val Loss: 2.4235
+{'mIoU': 0.1156, 'Pixel Acc': 0.3421}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 110 Task segm] Train Loss: 2.2535
+[Iter 110 Total] Train Loss: 2.2535
+======================================================================
+[Iter 110 Total] Train Loss: 2.2535
+validating on 41 samples = 
+[Iter 110 Task segm] Val Loss: 2.3966
+{'mIoU': 0.134, 'Pixel Acc': 0.3541}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 120 Task segm] Train Loss: 2.3061
+[Iter 120 Total] Train Loss: 2.3061
+======================================================================
+[Iter 120 Total] Train Loss: 2.3061
+validating on 41 samples = 
+[Iter 120 Task segm] Val Loss: 2.0988
+{'mIoU': 0.1686, 'Pixel Acc': 0.4121}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 130 Task segm] Train Loss: 2.2661
+[Iter 130 Total] Train Loss: 2.2661
+======================================================================
+[Iter 130 Total] Train Loss: 2.2661
+validating on 41 samples = 
+[Iter 130 Task segm] Val Loss: 2.3204
+{'mIoU': 0.1435, 'Pixel Acc': 0.3412}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 140 Task segm] Train Loss: 2.1435
+[Iter 140 Total] Train Loss: 2.1435
+======================================================================
+[Iter 140 Total] Train Loss: 2.1435
+validating on 41 samples = 
+[Iter 140 Task segm] Val Loss: 2.6918
+{'mIoU': 0.1277, 'Pixel Acc': 0.3238}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 150 Task segm] Train Loss: 2.2045
+[Iter 150 Total] Train Loss: 2.2045
+======================================================================
+[Iter 150 Total] Train Loss: 2.2045
+validating on 41 samples = 
+[Iter 150 Task segm] Val Loss: 2.1659
+{'mIoU': 0.1528, 'Pixel Acc': 0.4119}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 160 Task segm] Train Loss: 2.1571
+[Iter 160 Total] Train Loss: 2.1571
+======================================================================
+[Iter 160 Total] Train Loss: 2.1571
+validating on 41 samples = 
+[Iter 160 Task segm] Val Loss: 2.1232
+{'mIoU': 0.1753, 'Pixel Acc': 0.4096}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 170 Task segm] Train Loss: 2.1698
+[Iter 170 Total] Train Loss: 2.1698
+======================================================================
+[Iter 170 Total] Train Loss: 2.1698
+validating on 41 samples = 
+[Iter 170 Task segm] Val Loss: 2.0822
+{'mIoU': 0.1431, 'Pixel Acc': 0.4263}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 180 Task segm] Train Loss: 2.1726
+[Iter 180 Total] Train Loss: 2.1726
+======================================================================
+[Iter 180 Total] Train Loss: 2.1726
+validating on 41 samples = 
+[Iter 180 Task segm] Val Loss: 2.2595
+{'mIoU': 0.14, 'Pixel Acc': 0.3835}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 190 Task segm] Train Loss: 2.0555
+[Iter 190 Total] Train Loss: 2.0555
+======================================================================
+[Iter 190 Total] Train Loss: 2.0555
+validating on 41 samples = 
+[Iter 190 Task segm] Val Loss: 2.1513
+{'mIoU': 0.1548, 'Pixel Acc': 0.402}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 200 Task segm] Train Loss: 2.0283
+[Iter 200 Total] Train Loss: 2.0283
+======================================================================
+[Iter 200 Total] Train Loss: 2.0283
+validating on 41 samples = 
+[Iter 200 Task segm] Val Loss: 2.5897
+{'mIoU': 0.1097, 'Pixel Acc': 0.3384}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 210 Task segm] Train Loss: 2.0951
+[Iter 210 Total] Train Loss: 2.0951
+======================================================================
+[Iter 210 Total] Train Loss: 2.0951
+validating on 41 samples = 
+[Iter 210 Task segm] Val Loss: 2.2345
+{'mIoU': 0.1428, 'Pixel Acc': 0.3891}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 220 Task segm] Train Loss: 2.1737
+[Iter 220 Total] Train Loss: 2.1737
+======================================================================
+[Iter 220 Total] Train Loss: 2.1737
+validating on 41 samples = 
+[Iter 220 Task segm] Val Loss: 2.0299
+{'mIoU': 0.1559, 'Pixel Acc': 0.4189}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 230 Task segm] Train Loss: 1.9727
+[Iter 230 Total] Train Loss: 1.9727
+======================================================================
+[Iter 230 Total] Train Loss: 1.9727
+validating on 41 samples = 
+[Iter 230 Task segm] Val Loss: 2.1489
+{'mIoU': 0.1298, 'Pixel Acc': 0.3983}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 240 Task segm] Train Loss: 1.9491
+[Iter 240 Total] Train Loss: 1.9491
+======================================================================
+[Iter 240 Total] Train Loss: 1.9491
+validating on 41 samples = 
+[Iter 240 Task segm] Val Loss: 2.0966
+{'mIoU': 0.1516, 'Pixel Acc': 0.4023}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 250 Task segm] Train Loss: 2.1241
+[Iter 250 Total] Train Loss: 2.1241
+======================================================================
+[Iter 250 Total] Train Loss: 2.1241
+validating on 41 samples = 
+[Iter 250 Task segm] Val Loss: 2.1764
+{'mIoU': 0.1397, 'Pixel Acc': 0.4013}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 260 Task segm] Train Loss: 1.9236
+[Iter 260 Total] Train Loss: 1.9236
+======================================================================
+[Iter 260 Total] Train Loss: 1.9236
+validating on 41 samples = 
+[Iter 260 Task segm] Val Loss: 2.0725
+{'mIoU': 0.1659, 'Pixel Acc': 0.4098}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 270 Task segm] Train Loss: 1.9380
+[Iter 270 Total] Train Loss: 1.9380
+======================================================================
+[Iter 270 Total] Train Loss: 1.9380
+validating on 41 samples = 
+[Iter 270 Task segm] Val Loss: 2.0753
+{'mIoU': 0.1398, 'Pixel Acc': 0.4039}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 280 Task segm] Train Loss: 2.0154
+[Iter 280 Total] Train Loss: 2.0154
+======================================================================
+[Iter 280 Total] Train Loss: 2.0154
+validating on 41 samples = 
+[Iter 280 Task segm] Val Loss: 1.9890
+{'mIoU': 0.1408, 'Pixel Acc': 0.4097}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 290 Task segm] Train Loss: 1.9882
+[Iter 290 Total] Train Loss: 1.9882
+======================================================================
+[Iter 290 Total] Train Loss: 1.9882
+validating on 41 samples = 
+[Iter 290 Task segm] Val Loss: 2.0247
+{'mIoU': 0.1398, 'Pixel Acc': 0.4162}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 300 Task segm] Train Loss: 1.8646
+[Iter 300 Total] Train Loss: 1.8646
+======================================================================
+[Iter 300 Total] Train Loss: 1.8646
+validating on 41 samples = 
+[Iter 300 Task segm] Val Loss: 2.0848
+{'mIoU': 0.1382, 'Pixel Acc': 0.3994}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 310 Task segm] Train Loss: 1.8566
+[Iter 310 Total] Train Loss: 1.8566
+======================================================================
+[Iter 310 Total] Train Loss: 1.8566
+validating on 41 samples = 
+[Iter 310 Task segm] Val Loss: 2.0855
+{'mIoU': 0.1312, 'Pixel Acc': 0.3876}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 320 Task segm] Train Loss: 1.9007
+[Iter 320 Total] Train Loss: 1.9007
+======================================================================
+[Iter 320 Total] Train Loss: 1.9007
+validating on 41 samples = 
+[Iter 320 Task segm] Val Loss: 2.0128
+{'mIoU': 0.1322, 'Pixel Acc': 0.4227}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 330 Task segm] Train Loss: 1.9659
+[Iter 330 Total] Train Loss: 1.9659
+======================================================================
+[Iter 330 Total] Train Loss: 1.9659
+validating on 41 samples = 
+[Iter 330 Task segm] Val Loss: 2.1404
+{'mIoU': 0.1482, 'Pixel Acc': 0.4105}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 340 Task segm] Train Loss: 1.8928
+[Iter 340 Total] Train Loss: 1.8928
+======================================================================
+[Iter 340 Total] Train Loss: 1.8928
+validating on 41 samples = 
+[Iter 340 Task segm] Val Loss: 1.9228
+{'mIoU': 0.1323, 'Pixel Acc': 0.4413}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 350 Task segm] Train Loss: 1.8295
+[Iter 350 Total] Train Loss: 1.8295
+======================================================================
+[Iter 350 Total] Train Loss: 1.8295
+validating on 41 samples = 
+[Iter 350 Task segm] Val Loss: 2.0924
+{'mIoU': 0.1262, 'Pixel Acc': 0.3836}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 360 Task segm] Train Loss: 1.8211
+[Iter 360 Total] Train Loss: 1.8211
+======================================================================
+[Iter 360 Total] Train Loss: 1.8211
+validating on 41 samples = 
+[Iter 360 Task segm] Val Loss: 2.2434
+{'mIoU': 0.1189, 'Pixel Acc': 0.3863}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 370 Task segm] Train Loss: 1.9287
+[Iter 370 Total] Train Loss: 1.9287
+======================================================================
+[Iter 370 Total] Train Loss: 1.9287
+validating on 41 samples = 
+[Iter 370 Task segm] Val Loss: 2.2538
+{'mIoU': 0.1346, 'Pixel Acc': 0.367}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 380 Task segm] Train Loss: 1.8988
+[Iter 380 Total] Train Loss: 1.8988
+======================================================================
+[Iter 380 Total] Train Loss: 1.8988
+validating on 41 samples = 
+[Iter 380 Task segm] Val Loss: 2.0009
+{'mIoU': 0.1076, 'Pixel Acc': 0.4244}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 390 Task segm] Train Loss: 2.0737
+[Iter 390 Total] Train Loss: 2.0737
+======================================================================
+[Iter 390 Total] Train Loss: 2.0737
+validating on 41 samples = 
+[Iter 390 Task segm] Val Loss: 2.0394
+{'mIoU': 0.1368, 'Pixel Acc': 0.4294}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 400 Task segm] Train Loss: 1.8509
+[Iter 400 Total] Train Loss: 1.8509
+======================================================================
+[Iter 400 Total] Train Loss: 1.8509
+validating on 41 samples = 
+[Iter 400 Task segm] Val Loss: 1.9135
+{'mIoU': 0.1375, 'Pixel Acc': 0.4338}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 410 Task segm] Train Loss: 1.8287
+[Iter 410 Total] Train Loss: 1.8287
+======================================================================
+[Iter 410 Total] Train Loss: 1.8287
+validating on 41 samples = 
+[Iter 410 Task segm] Val Loss: 2.1787
+{'mIoU': 0.1256, 'Pixel Acc': 0.3993}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 420 Task segm] Train Loss: 1.7902
+[Iter 420 Total] Train Loss: 1.7902
+======================================================================
+[Iter 420 Total] Train Loss: 1.7902
+validating on 41 samples = 
+[Iter 420 Task segm] Val Loss: 1.9756
+{'mIoU': 0.1305, 'Pixel Acc': 0.429}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 430 Task segm] Train Loss: 1.8896
+[Iter 430 Total] Train Loss: 1.8896
+======================================================================
+[Iter 430 Total] Train Loss: 1.8896
+validating on 41 samples = 
+[Iter 430 Task segm] Val Loss: 2.0030
+{'mIoU': 0.1519, 'Pixel Acc': 0.4416}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 440 Task segm] Train Loss: 1.8524
+[Iter 440 Total] Train Loss: 1.8524
+======================================================================
+[Iter 440 Total] Train Loss: 1.8524
+validating on 41 samples = 
+[Iter 440 Task segm] Val Loss: 1.9027
+{'mIoU': 0.1622, 'Pixel Acc': 0.4321}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 450 Task segm] Train Loss: 1.8035
+[Iter 450 Total] Train Loss: 1.8035
+======================================================================
+[Iter 450 Total] Train Loss: 1.8035
+validating on 41 samples = 
+[Iter 450 Task segm] Val Loss: 2.1321
+{'mIoU': 0.1343, 'Pixel Acc': 0.389}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 460 Task segm] Train Loss: 1.8034
+[Iter 460 Total] Train Loss: 1.8034
+======================================================================
+[Iter 460 Total] Train Loss: 1.8034
+validating on 41 samples = 
+[Iter 460 Task segm] Val Loss: 2.0161
+{'mIoU': 0.1462, 'Pixel Acc': 0.3949}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 470 Task segm] Train Loss: 1.9419
+[Iter 470 Total] Train Loss: 1.9419
+======================================================================
+[Iter 470 Total] Train Loss: 1.9419
+validating on 41 samples = 
+[Iter 470 Task segm] Val Loss: 1.8919
+{'mIoU': 0.1451, 'Pixel Acc': 0.4492}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 480 Task segm] Train Loss: 1.8548
+[Iter 480 Total] Train Loss: 1.8548
+======================================================================
+[Iter 480 Total] Train Loss: 1.8548
+validating on 41 samples = 
+[Iter 480 Task segm] Val Loss: 1.9010
+{'mIoU': 0.1392, 'Pixel Acc': 0.4413}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 490 Task segm] Train Loss: 1.8289
+[Iter 490 Total] Train Loss: 1.8289
+======================================================================
+[Iter 490 Total] Train Loss: 1.8289
+validating on 41 samples = 
+[Iter 490 Task segm] Val Loss: 1.8006
+{'mIoU': 0.1539, 'Pixel Acc': 0.4569}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 500 Task segm] Train Loss: 1.7744
+[Iter 500 Total] Train Loss: 1.7744
+======================================================================
+[Iter 500 Total] Train Loss: 1.7744
+validating on 41 samples = 
+[Iter 500 Task segm] Val Loss: 2.0890
+{'mIoU': 0.143, 'Pixel Acc': 0.415}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 510 Task segm] Train Loss: 1.9111
+[Iter 510 Total] Train Loss: 1.9111
+======================================================================
+[Iter 510 Total] Train Loss: 1.9111
+validating on 41 samples = 
+[Iter 510 Task segm] Val Loss: 2.4864
+{'mIoU': 0.1249, 'Pixel Acc': 0.3642}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 520 Task segm] Train Loss: 1.7184
+[Iter 520 Total] Train Loss: 1.7184
+======================================================================
+[Iter 520 Total] Train Loss: 1.7184
+validating on 41 samples = 
+[Iter 520 Task segm] Val Loss: 1.8115
+{'mIoU': 0.1516, 'Pixel Acc': 0.4653}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 530 Task segm] Train Loss: 1.7258
+[Iter 530 Total] Train Loss: 1.7258
+======================================================================
+[Iter 530 To
+validating on 41 samples = 
+[Iter 530 Task segm] Val Loss: 1.9312
+{'mIoU': 0.1426, 'Pixel Acc': 0.4337}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 540 Task segm] Train Loss: 1.7373
+[Iter 540 Total] Train Loss: 1.7373
+======================================================================
+[Iter 540 Total] Train Loss: 1.7373
+validating on 41 samples = 
+[Iter 540 Task segm] Val Loss: 1.8754
+{'mIoU': 0.1366, 'Pixel Acc': 0.4424}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 550 Task segm] Train Loss: 1.7221
+[Iter 550 Total] Train Loss: 1.7221
+======================================================================
+[Iter 550 Total] Train Loss: 1.7221
+validating on 41 samples = 
+[Iter 550 Task segm] Val Loss: 1.8595
+{'mIoU': 0.1456, 'Pixel Acc': 0.44}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 560 Task segm] Train Loss: 1.6676
+[Iter 560 Total] Train Loss: 1.6676
+======================================================================
+[Iter 560 Total] Train Loss: 1.6676
+validating on 41 samples = 
+[Iter 560 Task segm] Val Loss: 1.7844
+{'mIoU': 0.1401, 'Pixel Acc': 0.4568}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 570 Task segm] Train Loss: 1.7219
+[Iter 570 Total] Train Loss: 1.7219
+======================================================================
+[Iter 570 Total] Train Loss: 1.7219
+validating on 41 samples = 
+[Iter 570 Task segm] Val Loss: 1.8746
+{'mIoU': 0.1556, 'Pixel Acc': 0.4556}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 580 Task segm] Train Loss: 1.7148
+[Iter 580 Total] Train Loss: 1.7148
+======================================================================
+[Iter 580 Total] Train Loss: 1.7148
+validating on 41 samples = 
+[Iter 580 Task segm] Val Loss: 2.1514
+{'mIoU': 0.1387, 'Pixel Acc': 0.391}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 590 Task segm] Train Loss: 1.7121
+[Iter 590 Total] Train Loss: 1.7121
+======================================================================
+[Iter 590 Total] Train Loss: 1.7121
+validating on 41 samples = 
+[Iter 590 Task segm] Val Loss: 2.0113
+{'mIoU': 0.1282, 'Pixel Acc': 0.4236}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 600 Task segm] Train Loss: 1.7334
+[Iter 600 Total] Train Loss: 1.7334
+======================================================================
+[Iter 600 Total] Train Loss: 1.7334
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 1.9324
+{'mIoU': 0.1329, 'Pixel Acc': 0.4306}
+======================================================================
+prequantization
+validating on 41 samples = 
+[Iter 2 Task segm] Val Loss: 1.9329
+{'mIoU': 0.1329, 'Pixel Acc': 0.4306}
+======================================================================
+postquantization
+validating on 41 samples = 
+[Iter 2 Task segm] Val Loss: 1.9877
+{'mIoU': 0.1211, 'Pixel Acc': 0.4107}
+======================================================================

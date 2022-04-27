@@ -1,0 +1,1470 @@
+Apr26_22-08-30_node001
+{'segment_semantic': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+), 'depth_zbuffer': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+)} {'segment_semantic': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab30c4fa90>, 'depth_zbuffer': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab30c4fd90>} {'segment_semantic': 40, 'depth_zbuffer': 1}
+41 50
+quantizable model loaded
+MTLModel(
+  (backbone): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (4): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (5): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (6): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (7): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+  )
+  (heads): ModuleDict(
+    (segment_semantic): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+    )
+    (depth_zbuffer): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 1, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): Conv2d(512, 1024, kee=(1, 1), padding=(12, 12), dilation=(12, 12))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 1, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 1, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 1, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+    )
+  )
+  (quant): QuantStub()
+  (dequant): DeQuantStub()
+)
+device = cuda:0
+initializing the Trainer
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 10 Task segm] Train Loss: 3.6486
+[Iter 10 Task dept] Train Loss: 2.9339
+[Iter 10 Total] Train Loss: 6.5825
+======================================================================
+[Iter 10 Total] Train Loss: 6.5825
+validating on 41 samples = 
+[Iter 10 Task segm] Val Loss: 2.9355
+{'mIoU': 0.157, 'Pixel Acc': 0.3096}
+[Iter 10 Task dept] Val Loss: 1.0132
+{'abs_err': 0.9914, 'rel_err': 0.3673, 'sigma_1.25': 34.1452, 'sigma_1.25^2': 64.129, 'sigma_1.25^3': 84.1029}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 20 Task segm] Train Loss: 2.8435
+[Iter 20 Task dept] Train Loss: 1.2251
+[Iter 20 Total] Train Loss: 4.0686
+======================================================================
+[Iter 20 Total] Train Loss: 4.0686
+validating on 41 samples = 
+[Iter 20 Task segm] Val Loss: 2.7332
+{'mIoU': 0.1715, 'Pixel Acc': 0.3262}
+[Iter 20 Task dept] Val Loss: 0.9409
+{'abs_err': 0.9238, 'rel_err': 0.3981, 'sigma_1.25': 38.7621, 'sigma_1.25^2': 69.3641, 'sigma_1.25^3': 87.5726}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 30 Task segm] Train Loss: 2.7168
+[Iter 30 Task dept] Train Loss: 1.1937
+[Iter 30 Total] Train Loss: 3.9105
+======================================================================
+[Iter 30 Total] Train Loss: 3.9105
+validating on 41 samples = 
+[Iter 30 Task segm] Val Loss: 2.6852
+{'mIoU': 0.1339, 'Pixel Acc': 0.3315}
+[Iter 30 Task dept] Val Loss: 0.9064
+{'abs_err': 0.8899, 'rel_err': 0.3631, 'sigma_1.25': 41.4432, 'sigma_1.25^2': 71.8744, 'sigma_1.25^3': 88.1053}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 40 Task segm] Train Loss: 2.5663
+[Iter 40 Task dept] Train Loss: 1.1142
+[Iter 40 Total] Train Loss: 3.6806
+======================================================================
+[Iter 40 Total] Train Loss: 3.6806
+validating on 41 samples = 
+[Iter 40 Task segm] Val Loss: 2.6531
+{'mIoU': 0.0954, 'Pixel Acc': 0.2882}
+[Iter 40 Task dept] Val Loss: 1.3999
+{'abs_err': 1.349, 'rel_err': 0.4277, 'sigma_1.25': 18.3935, 'sigma_1.25^2': 38.548, 'sigma_1.25^3': 60.6389}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 50 Task segm] Train Loss: 2.5576
+[Iter 50 Task dept] Train Loss: 1.0738
+[Iter 50 Total] Train Loss: 3.6314
+======================================================================
+[Iter 50 Total] Train Loss: 3.6314
+validating on 41 samples = 
+[Iter 50 Task segm] Val Loss: 2.6509
+{'mIoU': 0.1441, 'Pixel Acc': 0.3288}
+[Iter 50 Task dept] Val Loss: 1.0852
+{'abs_err': 1.0288, 'rel_err': 0.3798, 'sigma_1.25': 28.5641, 'sigma_1.25^2': 55.4022, 'sigma_1.25^3': 77.6931}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 60 Task segm] Train Loss: 2.5895
+[Iter 60 Task dept] Train Loss: 1.0613
+[Iter 60 Total] Train Loss: 3.6508
+======================================================================
+[Iter 60 Total] Train Loss: 3.6508
+validating on 41 samples = 
+[Iter 60 Task segm] Val Loss: 2.6864
+{'mIoU': 0.1261, 'Pixel Acc': 0.3295}
+[Iter 60 Task dept] Val Loss: 1.1374
+{'abs_err': 1.1739, 'rel_err': 0.5611, 'sigma_1.25': 35.5519, 'sigma_1.25^2': 63.1443, 'sigma_1.25^3': 80.9395}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 70 Task segm] Train Loss: 2.4382
+[Iter 70 Task dept] Train Loss: 0.9192
+[Iter 70 Total] Train Loss: 3.3574
+======================================================================
+[Iter 70 Total] Train Loss: 3.3574
+validating on 41 samples = 
+[Iter 70 Task segm] Val Loss: 2.4310
+{'mIoU': 0.1472, 'Pixel Acc': 0.3541}
+[Iter 70 Task dept] Val Loss: 0.9311
+{'abs_err': 0.9053, 'rel_err': 0.3233, 'sigma_1.25': 34.6879, 'sigma_1.25^2': 66.5446, 'sigma_1.25^3': 87.5065}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 80 Task segm] Train Loss: 2.3973
+[Iter 80 Task dept] Train Loss: 0.9875
+[Iter 80 Total] Train Loss: 3.3848
+======================================================================
+[Iter 80 Total] Train Loss: 3.3848
+validating on 41 samples = 
+[Iter 80 Task segm] Val Loss: 2.4846
+{'mIoU': 0.1279, 'Pixel Acc': 0.3202}
+[Iter 80 Task dept] Val Loss: 1.2689
+{'abs_err': 1.2141, 'rel_err': 0.387, 'sigma_1.25': 20.8778, 'sigma_1.25^2': 44.6281, 'sigma_1.25^3': 69.8923}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 90 Task segm] Train Loss: 2.3840
+[Iter 90 Task dept] Train Loss: 1.0570
+[Iter 90 Total] Train Loss: 3.4410
+======================================================================
+[Iter 90 Total] Train Loss: 3.4410
+validating on 41 samples = 
+[Iter 90 Task segm] Val Loss: 2.3981
+{'mIoU': 0.1148, 'Pixel Acc': 0.3551}
+[Iter 90 Task dept] Val Loss: 1.2255
+{'abs_err': 1.1732, 'rel_err': 0.3691, 'sigma_1.25': 21.6921, 'sigma_1.25^2': 48.6279, 'sigma_1.25^3': 74.3574}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 100 Task segm] Train Loss: 2.4096
+[Iter 100 Task dept] Train Loss: 0.9088
+[Iter 100 Total] Train Loss: 3.3184
+======================================================================
+[Iter 100 Total] Train Loss: 3.3184
+validating on 41 samples = 
+[Iter 100 Task segm] Val Loss: 2.6325
+{'mIoU': 0.1017, 'Pixel Acc': 0.2865}
+[Iter 100 Task dept] Val Loss: 0.8984
+{'abs_err': 0.8753, 'rel_err': 0.3064, 'sigma_1.25': 40.288, 'sigma_1.25^2': 71.5055, 'sigma_1.25^3': 89.3998}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 110 Task segm] Train Loss: 2.3091
+[Iter 110 Task dept] Train Loss: 0.9576
+[Iter 110 Total] Train Loss: 3.2667
+======================================================================
+[Iter 110 Total] Train Loss: 3.2667
+validating on 41 samples = 
+[Iter 110 Task segm] Val Loss: 2.2299
+{'mIoU': 0.1728, 'Pixel Acc': 0.3977}
+[Iter 110 Task dept] Val Loss: 1.3077
+{'abs_err': 1.2508, 'rel_err': 0.3936, 'sigma_1.25': 17.5124, 'sigma_1.25^2': 41.2328, 'sigma_1.25^3': 68.8274}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 120 Task segm] Train Loss: 2.3680
+[Iter 120 Task dept] Train Loss: 1.0509
+[Iter 120 Total] Train Loss: 3.4189
+======================================================================
+[Iter 120 Total] Train Loss: 3.4189
+validating on 41 samples = 
+[Iter 120 Task segm] Val Loss: 2.4047
+{'mIoU': 0.1061, 'Pixel Acc': 0.3668}
+[Iter 120 Task dept] Val Loss: 0.7612
+{'abs_err': 0.754, 'rel_err': 0.2855, 'sigma_1.25': 47.2637, 'sigma_1.25^2': 78.9771, 'sigma_1.25^3': 93.2605}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 130 Task segm] Train Loss: 2.1924
+[Iter 130 Task dept] Train Loss: 0.8329
+[Iter 130 Total] Train Loss: 3.0252
+======================================================================
+[Iter 130 Total] Train Loss: 3.0252
+validating on 41 samples = 
+[Iter 130 Task segm] Val Loss: 2.2610
+{'mIoU': 0.1308, 'Pixel Acc': 0.3902}
+[Iter 130 Task dept] Val Loss: 1.1821
+{'abs_err': 1.1331, 'rel_err': 0.3663, 'sigma_1.25': 21.6313, 'sigma_1.25^2': 48.2408, 'sigma_1.25^3': 75.2315}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 140 Task segm] Train Loss: 2.2231
+[Iter 140 Task dept] Train Loss: 1.0003
+[Iter 140 Total] Train Loss: 3.2234
+======================================================================
+[Iter 140 Total] Train Loss: 3.2234
+validating on 41 samples = 
+[Iter 140 Task segm] Val Loss: 2.2670
+{'mIoU': 0.1541, 'Pixel Acc': 0.3769}
+[Iter 140 Task dept] Val Loss: 0.9526
+{'abs_err': 0.9159, 'rel_err': 0.3052, 'sigma_1.25': 35.037, 'sigma_1.25^2': 67.9524, 'sigma_1.25^3': 88.5213}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 150 Task segm] Train Loss: 2.2641
+[Iter 150 Task dept] Train Loss: 0.9797
+[Iter 150 Total] Train Loss: 3.2438
+======================================================================
+[Iter 150 Total] Train Loss: 3.2438
+validating on 41 samples = 
+[Iter 150 Task segm] Val Loss: 2.2328
+{'mIoU': 0.1457, 'Pixel Acc': 0.3761}
+[Iter 150 Task dept] Val Loss: 1.1028
+{'abs_err': 1.056, 'rel_err': 0.3346, 'sigma_1.25': 27.8607, 'sigma_1.25^2': 58.2928, 'sigma_1.25^3': 82.3893}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 160 Task segm] Train Loss: 2.1933
+[Iter 160 Task dept] Train Loss: 0.8819
+[Iter 160 Total] Train Loss: 3.0752
+======================================================================
+[Iter 160 Total] Train Loss: 3.0752
+validating on 41 samples = 
+[Iter 160 Task segm] Val Loss: 2.1740
+{'mIoU': 0.1253, 'Pixel Acc': 0.3947}
+[Iter 160 Task dept] Val Loss: 1.2900
+{'abs_err': 1.2363, 'rel_err': 0.3957, 'sigma_1.25': 17.4895, 'sigma_1.25^2': 41.4292, 'sigma_1.25^3': 67.851}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 170 Task segm] Train Loss: 2.1815
+[Iter 170 Task dept] Train Loss: 0.8873
+[Iter 170 Total] Train Loss: 3.0688
+======================================================================
+[Iter 170 Total] Train Loss: 3.0688
+validating on 41 samples = 
+[Iter 170 Task segm] Val Loss: 2.1725
+{'mIoU': 0.1485, 'Pixel Acc': 0.3894}
+[Iter 170 Task dept] Val Loss: 1.0325
+{'abs_err': 0.9829, 'rel_err': 0.3214, 'sigma_1.25': 28.8964, 'sigma_1.25^2': 60.1928, 'sigma_1.25^3': 85.0768}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 180 Task segm] Train Loss: 2.0660
+[Iter 180 Task dept] Train Loss: 0.9928
+[Iter 180 Total] Train Loss: 3.0588
+======================================================================
+[Iter 180 Total] Train Loss: 3.0588
+validating on 41 samples = 
+[Iter 180 Task segm] Val Loss: 2.1634
+{'mIoU': 0.1512, 'Pixel Acc': 0.4007}
+[Iter 180 Task dept] Val Loss: 1.2556
+{'abs_err': 1.1994, 'rel_err': 0.3819, 'sigma_1.25': 18.2615, 'sigma_1.25^2': 43.6314, 'sigma_1.25^3': 71.6791}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 190 Task segm] Train Loss: 2.1734
+[Iter 190 Task dept] Train Loss: 0.9096
+[Iter 190 Total] Train Loss: 3.0830
+======================================================================
+[Iter 190 Total] Train Loss: 3.0830
+validating on 41 samples = 
+[Iter 190 Task segm] Val Loss: 2.2098
+{'mIoU': 0.1374, 'Pixel Acc': 0.398}
+[Iter 190 Task dept] Val Loss: 1.0591
+{'abs_err': 1.0172, 'rel_err': 0.3338, 'sigma_1.25': 27.7219, 'sigma_1.25^2': 57.4339, 'sigma_1.25^3': 81.5808}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 200 Task segm] Train Loss: 2.1149
+[Iter 200 Task dept] Train Loss: 0.9390
+[Iter 200 Total] Train Loss: 3.0540
+======================================================================
+[Iter 200 Total] Train Loss: 3.0540
+validating on 41 samples = 
+[Iter 200 Task segm] Val Loss: 2.1162
+{'mIoU': 0.1346, 'Pixel Acc': 0.4223}
+[Iter 200 Task dept] Val Loss: 1.3925
+{'abs_err': 1.3317, 'rel_err': 0.4226, 'sigma_1.25': 14.3926, 'sigma_1.25^2': 35.0666, 'sigma_1.25^3': 61.0214}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 210 Task segm] Train Loss: 2.1476
+[Iter 210 Task dept] Train Loss: 1.0092
+[Iter 210 Total] Train Loss: 3.1568
+======================================================================
+[Iter 210 Total] Train Loss: 3.1568
+validating on 41 samples = 
+[Iter 210 Task segm] Val Loss: 2.2926
+{'mIoU': 0.1196, 'Pixel Acc': 0.3556}
+[Iter 210 Task dept] Val Loss: 1.3861
+{'abs_err': 1.3265, 'rel_err': 0.4331, 'sigma_1.25': 13.4908, 'sigma_1.25^2': 31.6226, 'sigma_1.25^3': 56.8831}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 220 Task segm] Train Loss: 2.1631
+[Iter 220 Task dept] Train Loss: 0.8868
+[Iter 220 Total] Train Loss: 3.0499
+======================================================================
+[Iter 220 Total] Train Loss: 3.0499
+validating on 41 samples = 
+[Iter 220 Task segm] Val Loss: 2.1182
+{'mIoU': 0.1381, 'Pixel Acc': 0.4205}
+[Iter 220 Task dept] Val Loss: 1.4050
+{'abs_err': 1.3431, 'rel_err': 0.4369, 'sigma_1.25': 11.7372, 'sigma_1.25^2': 30.1529, 'sigma_1.25^3': 57.4572}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 230 Task segm] Train Loss: 1.9812
+[Iter 230 Task dept] Train Loss: 0.8519
+[Iter 230 Total] Train Loss: 2.8332
+======================================================================
+[Iter 230 Total] Train Loss: 2.8332
+validating on 41 samples = 
+[Iter 230 Task segm] Val Loss: 2.4074
+{'mIoU': 0.1177, 'Pixel Acc': 0.3606}
+[Iter 230 Task dept] Val Loss: 1.0058
+{'abs_err': 0.9619, 'rel_err': 0.3131, 'sigma_1.25': 32.148, 'sigma_1.25^2': 64.4938, 'sigma_1.25^3': 86.0995}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 240 Task segm] Train Loss: 1.9315
+[Iter 240 Task dept] Train Loss: 1.0153
+[Iter 240 Total] Train Loss: 2.9468
+======================================================================
+[Iter 240 Total] Train Loss: 2.9468
+validating on 41 samples = 
+[Iter 240 Task segm] Val Loss: 2.0995
+{'mIoU': 0.1398, 'Pixel Acc': 0.4074}
+[Iter 240 Task dept] Val Loss: 0.8207
+{'abs_err': 0.7996, 'rel_err': 0.2895, 'sigma_1.25': 40.7649, 'sigma_1.25^2': 74.5763, 'sigma_1.25^3': 92.45}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 250 Task segm] Train Loss: 2.1705
+[Iter 250 Task dept] Train Loss: 0.8371
+[Iter 250 Total] Train Loss: 3.0076
+======================================================================
+[Iter 250 Total] Train Loss: 3.0076
+validating on 41 samples = 
+[Iter 250 Task segm] Val Loss: 2.3183
+{'mIoU': 0.1037, 'Pixel Acc': 0.3825}
+[Iter 250 Task dept] Val Loss: 1.3770
+{'abs_err': 1.317, 'rel_err': 0.424, 'sigma_1.25': 13.2024, 'sigma_1.25^2': 32.9458, 'sigma_1.25^3': 60.2424}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 260 Task segm] Train Loss: 2.1696
+[Iter 260 Task dept] Train Loss: 0.8920
+[Iter 260 Total] Train Loss: 3.0617
+======================================================================
+[Iter 260 Total] Train Loss: 3.0617
+validating on 41 samples = 
+[Iter 260 Task segm] Val Loss: 2.3505
+{'mIoU': 0.1145, 'Pixel Acc': 0.3736}
+[Iter 260 Task dept] Val Loss: 0.7701
+{'abs_err': 0.7539, 'rel_err': 0.2945, 'sigma_1.25': 45.8857, 'sigma_1.25^2': 78.5738, 'sigma_1.25^3': 93.5936}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 270 Task segm] Train Loss: 2.0821
+[Iter 270 Task dept] Train Loss: 0.7972
+[Iter 270 Total] Train Loss: 2.8793
+======================================================================
+[Iter 270 Total] Train Loss: 2.8793
+validating on 41 samples = 
+[Iter 270 Task segm] Val Loss: 2.1532
+{'mIoU': 0.1394, 'Pixel Acc': 0.4064}
+[Iter 270 Task dept] Val Loss: 0.8679
+{'abs_err': 0.8289, 'rel_err': 0.2871, 'sigma_1.25': 36.8709, 'sigma_1.25^2': 71.4099, 'sigma_1.25^3': 91.9327}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 280 Task segm] Train Loss: 2.0103
+[Iter 280 Task dept] Train Loss: 0.9084
+[Iter 280 Total] Train Loss: 2.9186
+======================================================================
+[Iter 280 Total] Train Loss: 2.9186
+validating on 41 samples = 
+[Iter 280 Task segm] Val Loss: 2.0298
+{'mIoU': 0.161, 'Pixel Acc': 0.4158}
+[Iter 280 Task dept] Val Loss: 0.8305
+{'abs_err': 0.7956, 'rel_err': 0.2758, 'sigma_1.25': 42.3105, 'sigma_1.25^2': 76.0174, 'sigma_1.25^3': 92.7082}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 290 Task segm] Train Loss: 1.9970
+[Iter 290 Task dept] Train Loss: 0.8889
+[Iter 290 Total] Train Loss: 2.8859
+======================================================================
+[Iter 290 Total] Train Loss: 2.8859
+validating on 41 samples = 
+[Iter 290 Task segm] Val Loss: 2.0822
+{'mIoU': 0.1147, 'Pixel Acc': 0.417}
+[Iter 290 Task dept] Val Loss: 0.9807
+{'abs_err': 0.9346, 'rel_err': 0.3134, 'sigma_1.25': 30.552, 'sigma_1.25^2': 64.977, 'sigma_1.25^3': 88.0226}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 300 Task segm] Train Loss: 1.9756
+[Iter 300 Task dept] Train Loss: 0.9062
+[Iter 300 Total] Train Loss: 2.8818
+======================================================================
+[Iter 300 Total] Train Loss: 2.8818
+validating on 41 samples = 
+[Iter 300 Task segm] Val Loss: 2.0906
+{'mIoU': 0.1369, 'Pixel Acc': 0.4166}
+[Iter 300 Task dept] Val Loss: 0.9364
+{'abs_err': 0.8961, 'rel_err': 0.3037, 'sigma_1.25': 33.9994, 'sigma_1.25^2': 67.36, 'sigma_1.25^3': 88.5315}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 310 Task segm] Train Loss: 1.9838
+[Iter 310 Task dept] Train Loss: 0.8630
+[Iter 310 Total] Train Loss: 2.8468
+======================================================================
+[Iter 310 Total] Train Loss: 2.8468
+validating on 41 samples = 
+[Iter 310 Task segm] Val Loss: 1.9777
+{'mIoU': 0.1537, 'Pixel Acc': 0.4257}
+[Iter 310 Task dept] Val Loss: 0.9528
+{'abs_err': 0.9116, 'rel_err': 0.3001, 'sigma_1.25': 32.607, 'sigma_1.25^2': 66.2568, 'sigma_1.25^3': 89.5956}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 320 Task segm] Train Loss: 1.9572
+[Iter 320 Task dept] Train Loss: 0.8984
+[Iter 320 Total] Train Loss: 2.8556
+======================================================================
+[Iter 320 Total] Train Loss: 2.8556
+validating on 41 samples = 
+[Iter 320 Task segm] Val Loss: 2.1601
+{'mIoU': 0.1555, 'Pixel Acc': 0.4143}
+[Iter 320 Task dept] Val Loss: 1.2346
+{'abs_err': 1.1808, 'rel_err': 0.3755, 'sigma_1.25': 20.9885, 'sigma_1.25^2': 46.4378, 'sigma_1.25^3': 72.1817}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 330 Task segm] Train Loss: 1.9646
+[Iter 330 Task dept] Train Loss: 0.7587
+[Iter 330 Total] Train Loss: 2.7234
+======================================================================
+[Iter 330 Total] Train Loss: 2.7234
+validating on 41 samples = 
+[Iter 330 Task segm] Val Loss: 2.1899
+{'mIoU': 0.1199, 'Pixel Acc': 0.3909}
+[Iter 330 Task dept] Val Loss: 1.5131
+{'abs_err': 1.4504, 'rel_err': 0.466, 'sigma_1.25': 10.321, 'sigma_1.25^2': 24.9972, 'sigma_1.25^3': 48.2237}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 340 Task segm] Train Loss: 1.8802
+[Iter 340 Task dept] Train Loss: 0.8657
+[Iter 340 Total] Train Loss: 2.7460
+======================================================================
+[Iter 340 Total] Train Loss: 2.7460
+validating on 41 samples = 
+[Iter 340 Task segm] Val Loss: 2.1396
+{'mIoU': 0.1418, 'Pixel Acc': 0.3835}
+[Iter 340 Task dept] Val Loss: 1.5283
+{'abs_err': 1.4644, 'rel_err': 0.4694, 'sigma_1.25': 9.2778, 'sigma_1.25^2': 23.81, 'sigma_1.25^3': 47.9645}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 350 Task segm] Train Loss: 2.0142
+[Iter 350 Task dept] Train Loss: 0.9273
+[Iter 350 Total] Train Loss: 2.9415
+======================================================================
+[Iter 350 Total] Train Loss: 2.9415
+validating on 41 samples = 
+[Iter 350 Task segm] Val Loss: 2.2013
+{'mIoU': 0.1352, 'Pixel Acc': 0.3866}
+[Iter 350 Task dept] Val Loss: 1.1702
+{'abs_err': 1.1152, 'rel_err': 0.3617, 'sigma_1.25': 20.4936, 'sigma_1.25^2': 48.6443, 'sigma_1.25^3': 76.6207}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 360 Task segm] Train Loss: 1.8412
+[Iter 360 Task dept] Train Loss: 0.8010
+[Iter 360 Total] Train Loss: 2.6422
+======================================================================
+[Iter 360 Total] Train Loss: 2.6422
+validating on 41 samples = 
+[Iter 360 Task segm] Val Loss: 1.9009
+{'mIoU': 0.1554, 'Pixel Acc': 0.4487}
+[Iter 360 Task dept] Val Loss: 1.1329
+{'abs_err': 1.0788, 'rel_err': 0.3414, 'sigma_1.25': 23.5282, 'sigma_1.25^2': 54.528, 'sigma_1.25^3': 81.0907}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 370 Task segm] Train Loss: 1.9339
+[Iter 370 Task dept] Train Loss: 0.8444
+[Iter 370 Total] Train Loss: 2.7782
+======================================================================
+[Iter 370 Total] Train Loss: 2.7782
+validating on 41 samples = 
+[Iter 370 Task segm] Val Loss: 1.9854
+{'mIoU': 0.1555, 'Pixel Acc': 0.4325}
+[Iter 370 Task dept] Val Loss: 0.9997
+{'abs_err': 0.955, 'rel_err': 0.3097, 'sigma_1.25': 30.2432, 'sigma_1.25^2': 63.8105, 'sigma_1.25^3': 87.5883}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 380 Task segm] Train Loss: 1.8325
+[Iter 380 Task dept] Train Loss: 0.8255
+[Iter 380 Total] Train Loss: 2.6579
+======================================================================
+[Iter 380 Total] Train Loss: 2.6579
+validating on 41 samples = 
+[Iter 380 Task segm] Val Loss: 2.0919
+{'mIoU': 0.1357, 'Pixel Acc': 0.3998}
+[Iter 380 Task dept] Val Loss: 1.3076
+{'abs_err': 1.249, 'rel_err': 0.4017, 'sigma_1.25': 15.1955, 'sigma_1.25^2': 38.281, 'sigma_1.25^3': 66.5391}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 390 Task segm] Train Loss: 1.7986
+[Iter 390 Task dept] Train Loss: 0.8005
+[Iter 390 Total] Train Loss: 2.5991
+======================================================================
+[Iter 390 Total] Train Loss: 2.5991
+validating on 41 samples = 
+[Iter 390 Task segm] Val Loss: 1.9541
+{'mIoU': 0.1674, 'Pixel Acc': 0.4387}
+[Iter 390 Task dept] Val Loss: 1.4507
+{'abs_err': 1.3892, 'rel_err': 0.4394, 'sigma_1.25': 11.6506, 'sigma_1.25^2': 30.3916, 'sigma_1.25^3': 57.4132}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 400 Task segm] Train Loss: 1.9926
+[Iter 400 Task dept] Train Loss: 0.8888
+[Iter 400 Total] Train Loss: 2.8814
+======================================================================
+[Iter 400 Total] Train Loss: 2.8814
+validating on 41 samples = 
+[Iter 400 Task segm] Val Loss: 2.2479
+{'mIoU': 0.1291, 'Pixel Acc': 0.3753}
+[Iter 400 Task dept] Val Loss: 1.3139
+{'abs_err': 1.2542, 'rel_err': 0.4012, 'sigma_1.25': 15.0868, 'sigma_1.25^2': 38.557, 'sigma_1.25^3': 67.0144}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 410 Task segm] Train Loss: 1.8411
+[Iter 410 Task dept] Train Loss: 0.7944
+[Iter 410 Total] Train Loss: 2.6355
+======================================================================
+[Iter 410 Total] Train Loss: 2.6355
+validating on 41 samples = 
+[Iter 410 Task segm] Val Loss: 1.9933
+{'mIoU': 0.1358, 'Pixel Acc': 0.4318}
+[Iter 410 Task dept] Val Loss: 1.1372
+{'abs_err': 1.0806, 'rel_err': 0.3442, 'sigma_1.25': 22.5634, 'sigma_1.25^2': 53.6054, 'sigma_1.25^3': 80.8852}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 420 Task segm] Train Loss: 1.9076
+[Iter 420 Task dept] Train Loss: 0.8622
+[Iter 420 Total] Train Loss: 2.7698
+======================================================================
+[Iter 420 Total] Train Loss: 2.7698
+validating on 41 samples = 
+[Iter 420 Task segm] Val Loss: 2.2796
+{'mIoU': 0.1344, 'Pixel Acc': 0.3964}
+[Iter 420 Task dept] Val Loss: 1.1491
+{'abs_err': 1.0998, 'rel_err': 0.3526, 'sigma_1.25': 23.8411, 'sigma_1.25^2': 52.5345, 'sigma_1.25^3': 77.4094}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 430 Task segm] Train Loss: 1.7865
+[Iter 430 Task dept] Train Loss: 0.7874
+[Iter 430 Total] Train Loss: 2.5739
+======================================================================
+[Iter 430 Total] Train Loss: 2.5739
+validating on 41 samples = 
+[Iter 430 Task segm] Val Loss: 2.0388
+{'mIoU': 0.1167, 'Pixel Acc': 0.4045}
+[Iter 430 Task dept] Val Loss: 1.4455
+{'abs_err': 1.3835, 'rel_err': 0.4421, 'sigma_1.25': 10.9619, 'sigma_1.25^2': 29.3047, 'sigma_1.25^3': 56.662}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 440 Task segm] Train Loss: 1.8817
+[Iter 440 Task dept] Train Loss: 0.7617
+[Iter 440 Total] Train Loss: 2.6433
+======================================================================
+[Iter 440 Total] Train Loss: 2.6433
+validating on 41 samples = 
+[Iter 440 Task segm] Val Loss: 1.9452
+{'mIoU': 0.1399, 'Pixel Acc': 0.4303}
+[Iter 440 Task dept] Val Loss: 1.0902
+{'abs_err': 1.0404, 'rel_err': 0.3292, 'sigma_1.25': 27.1009, 'sigma_1.25^2': 58.8433, 'sigma_1.25^3': 82.2292}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 450 Task segm] Train Loss: 1.9158
+[Iter 450 Task dept] Train Loss: 0.8177
+[Iter 450 Total] Train Loss: 2.7335
+======================================================================
+[Iter 450 Total] Train Loss: 2.7335
+validating on 41 samples = 
+[Iter 450 Task segm] Val Loss: 2.0025
+{'mIoU': 0.1525, 'Pixel Acc': 0.4376}
+[Iter 450 Task dept] Val Loss: 1.0739
+{'abs_err': 1.0199, 'rel_err': 0.3297, 'sigma_1.25': 24.5404, 'sigma_1.25^2': 57.3444, 'sigma_1.25^3': 84.3425}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 460 Task segm] Train Loss: 1.8202
+[Iter 460 Task dept] Train Loss: 0.8469
+[Iter 460 Total] Train Loss: 2.6670
+======================================================================
+[Iter 460 Total] Train Loss: 2.6670
+validating on 41 samples = 
+[Iter 460 Task segm] Val Loss: 2.0710
+{'mIoU': 0.1354, 'Pixel Acc': 0.4103}
+[Iter 460 Task dept] Val Loss: 1.1455
+{'abs_err': 1.0913, 'rel_err': 0.3454, 'sigma_1.25': 24.0029, 'sigma_1.25^2': 53.8699, 'sigma_1.25^3': 79.4143}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 470 Task segm] Train Loss: 1.8678
+[Iter 470 Task dept] Train Loss: 0.7557
+[Iter 470 Total] Train Loss: 2.6235
+======================================================================
+[Iter 470 Total] Train Loss: 2.6235
+validating on 41 samples = 
+[Iter 470 Task segm] Val Loss: 1.9478
+{'mIoU': 0.1385, 'Pixel Acc': 0.4327}
+[Iter 470 Task dept] Val Loss: 0.9587
+{'abs_err': 0.9154, 'rel_err': 0.3072, 'sigma_1.25': 29.7269, 'sigma_1.25^2': 64.2803, 'sigma_1.25^3': 89.298}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 480 Task segm] Train Loss: 1.8705
+[Iter 480 Task dept] Train Loss: 0.7950
+[Iter 480 Total] Train Loss: 2.6654
+======================================================================
+[Iter 480 Total] Train Loss: 2.6654
+validating on 41 samples = 
+[Iter 480 Task segm] Val Loss: 2.4062
+{'mIoU': 0.1164, 'Pixel Acc': 0.365}
+[Iter 480 Task dept] Val Loss: 0.8943
+{'abs_err': 0.8548, 'rel_err': 0.2878, 'sigma_1.25': 36.5176, 'sigma_1.25^2': 71.4861, 'sigma_1.25^3': 91.6941}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 490 Task segm] Train Loss: 1.7756
+[Iter 490 Task dept] Train Loss: 0.8145
+[Iter 490 Total] Train Loss: 2.5901
+======================================================================
+[Iter 490 Total] Train Loss: 2.5901
+validating on 41 samples = 
+[Iter 490 Task segm] Val Loss: 1.8148
+{'mIoU': 0.1585, 'Pixel Acc': 0.4438}
+[Iter 490 Task dept] Val Loss: 0.9917
+{'abs_err': 0.9419, 'rel_err': 0.3053, 'sigma_1.25': 29.1638, 'sigma_1.25^2': 64.2509, 'sigma_1.25^3': 88.8703}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 500 Task segm] Train Loss: 1.8685
+[Iter 500 Task dept] Train Loss: 0.8024
+[Iter 500 Total] Train Loss: 2.6710
+======================================================================
+[Iter 500 Total] Train Loss: 2.6710
+validating on 41 samples = 
+[Iter 500 Task segm] Val Loss: 2.0152
+{'mIoU': 0.1284, 'Pixel Acc': 0.4215}
+[Iter 500 Task dept] Val Loss: 1.3140
+{'abs_err': 1.2589, 'rel_err': 0.4038, 'sigma_1.25': 15.4783, 'sigma_1.25^2': 39.1083, 'sigma_1.25^3': 66.3008}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 510 Task segm] Train Loss: 1.7722
+[Iter 510 Task dept] Train Loss: 0.8027
+[Iter 510 Total] Train Loss: 2.5749
+======================================================================
+[Iter 510 Total] Train Loss: 2.5749
+validating on 41 samples = 
+[Iter 510 Task segm] Val Loss: 1.9866
+{'mIoU': 0.1417, 'Pixel Acc': 0.4302}
+[Iter 510 Task dept] Val Loss: 1.4292
+{'abs_err': 1.3684, 'rel_err': 0.4347, 'sigma_1.25': 11.7945, 'sigma_1.25^2': 31.4843, 'sigma_1.25^3': 58.5312}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 520 Task segm] Train Loss: 1.8879
+[Iter 520 Task dept] Train Loss: 0.8381
+[Iter 520 Total] Train Loss: 2.7260
+======================================================================
+[Iter 520 Total] Train Loss: 2.7260
+validating on 41 samples = 
+[Iter 520 Task segm] Val Loss: 1.9386
+{'mIoU': 0.1417, 'Pixel Acc': 0.4403}
+[Iter 520 Task dept] Val Loss: 1.3605
+{'abs_err': 1.2994, 'rel_err': 0.4191, 'sigma_1.25': 12.002, 'sigma_1.25^2': 33.3783, 'sigma_1.25^3': 63.1219}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 530 Task segm] Train Loss: 1.6413
+[Iter 530 Task dept] Train Loss: 0.8050
+[Iter 530 Total] Train Loss: 2.4464
+======================================================================
+[Iter 530 Total] Train Loss: 2.4464
+validating on 41 samples = 
+[Iter 530 Task segm] Val Loss: 1.9923
+{'mIoU': 0.1396, 'Pixel Acc': 0.4119}
+[Iter 530 Task dept] Val Loss: 1.2765
+{'abs_err': 1.2199, 'rel_err': 0.3886, 'sigma_1.25': 16.8004, 'sigma_1.25^2': 41.5472, 'sigma_1.25^3': 70.4936}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 540 Task segm] Train Loss: 1.9385
+[Iter 540 Task dept] Train Loss: 0.7852
+[Iter 540 Total] Train Loss: 2.7237
+======================================================================
+[Iter 540 Total] Train Loss: 2.7237
+validating on 41 samples = 
+[Iter 540 Task segm] Val Loss: 2.2049
+{'mIoU': 0.1138, 'Pixel Acc': 0.3954}
+[Iter 540 Task dept] Val Loss: 1.6580
+{'abs_err': 1.5931, 'rel_err': 0.5235, 'sigma_1.25': 6.4902, 'sigma_1.25^2': 16.4843, 'sigma_1.25^3': 34.6504}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 550 Task segm] Train Loss: 1.7726
+[Iter 550 Task dept] Train Loss: 0.8170
+[Iter 550 Total] Train Loss: 2.5896
+======================================================================
+[Iter 550 Total] Train Loss: 2.5896
+validating on 41 samples = 
+[Iter 550 Task segm] Val Loss: 2.0371
+{'mIoU': 0.1396, 'Pixel Acc': 0.4117}
+[Iter 550 Task dept] Val Loss: 1.5387
+{'abs_err': 1.4752, 'rel_err': 0.4714, 'sigma_1.25': 9.4754, 'sigma_1.25^2': 23.5801, 'sigma_1.25^3': 47.5473}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 560 Task segm] Train Loss: 1.8087
+[Iter 560 Task dept] Train Loss: 0.8986
+[Iter 560 Total] Train Loss: 2.7073
+======================================================================
+[Iter 560 Total] Train Loss: 2.7073
+validating on 41 samples = 
+[Iter 560 Task segm] Val Loss: 1.8883
+{'mIoU': 0.1597, 'Pixel Acc': 0.4515}
+[Iter 560 Task dept] Val Loss: 1.0888
+{'abs_err': 1.0394, 'rel_err': 0.3337, 'sigma_1.25': 24.0663, 'sigma_1.25^2': 56.8183, 'sigma_1.25^3': 83.4787}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 570 Task segm] Train Loss: 1.6908
+[Iter 570 Task dept] Train Loss: 0.7813
+[Iter 570 Total] Train Loss: 2.4721
+======================================================================
+[Iter 570 Total] Train Loss: 2.4721
+validating on 41 samples = 
+[Iter 570 Task segm] Val Loss: 2.1177
+{'mIoU': 0.1364, 'Pixel Acc': 0.3971}
+[Iter 570 Task dept] Val Loss: 0.9959
+{'abs_err': 0.9513, 'rel_err': 0.3194, 'sigma_1.25': 29.3633, 'sigma_1.25^2': 61.8353, 'sigma_1.25^3': 86.7894}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 580 Task segm] Train Loss: 1.8134
+[Iter 580 Task dept] Train Loss: 0.7530
+[Iter 580 Total] Train Loss: 2.5664
+======================================================================
+[Iter 580 Total] Train Loss: 2.5664
+validating on 41 samples = 
+[Iter 580 Task segm] Val Loss: 1.9961
+{'mIoU': 0.1349, 'Pixel Acc': 0.42}
+[Iter 580 Task dept] Val Loss: 1.2084
+{'abs_err': 1.1513, 'rel_err': 0.3688, 'sigma_1.25': 18.805, 'sigma_1.25^2': 45.7335, 'sigma_1.25^3': 75.6755}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 590 Task segm] Train Loss: 1.8581
+[Iter 590 Task dept] Train Loss: 0.7645
+[Iter 590 Total] Train Loss: 2.6226
+======================================================================
+[Iter 590 Total] Train Loss: 2.6226
+validating on 41 samples = 
+[Iter 590 Task segm] Val Loss: 1.9837
+{'mIoU': 0.1334, 'Pixel Acc': 0.4065}
+[Iter 590 Task dept] Val Loss: 1.0397
+{'abs_err': 0.9895, 'rel_err': 0.3186, 'sigma_1.25': 27.5015, 'sigma_1.25^2': 61.1722, 'sigma_1.25^3': 86.0789}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 600 Task segm] Train Loss: 1.7518
+[Iter 600 Task dept] Train Loss: 0.7995
+[Iter 600 Total] Train Loss: 2.5513
+======================================================================
+[Iter 600 Total] Train Loss: 2.5513
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 1.8503
+{'mIoU': 0.1451, 'Pixel Acc': 0.4603}
+[Iter 600 Task dept] Val Loss: 0.9918
+{'abs_err': 0.9452, 'rel_err': 0.3036, 'sigma_1.25': 31.028, 'sigma_1.25^2': 65.5036, 'sigma_1.25^3': 87.8878}
+======================================================================
+prequantization
+validating on 41 samples = 
+[Iter 2 Task segm] Val Loss: 1.8470
+{'mIoU': 0.1451, 'Pixel Acc': 0.4607}
+[Iter 2 Task dept] Val Loss: 0.9901
+{'abs_err': 0.9452, 'rel_err': 0.3036, 'sigma_1.25': 31.028, 'sigma_1.25^2': 65.5036, 'sigma_1.25^3': 87.8878}
+======================================================================
+inference time = 0.6977570103435982
+postquantization
+validating on 41 samples = 
+[Iter 2 Task segm] Val Loss: 1.8803
+{'mIoU': 0.1438, 'Pixel Acc': 0.4506}
+[Iter 2 Task dept] Val Loss: 0.9917
+{'abs_err': 0.9463, 'rel_err': 0.3037, 'sigma_1.25': 31.2493, 'sigma_1.25^2': 65.7489, 'sigma_1.25^3': 87.8296}
+======================================================================
+inference time = 0.14541948016096906

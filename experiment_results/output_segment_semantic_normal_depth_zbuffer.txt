@@ -1,0 +1,1753 @@
+Apr26_22-14-46_node144
+{'segment_semantic': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+), 'normal': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+), 'depth_zbuffer': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+)} {'segment_semantic': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab31b75a90>, 'normal': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab31b75d90>, 'depth_zbuffer': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab320930d0>} {'segment_semantic': 40, 'normal': 3, 'depth_zbuffer': 1}
+41 50
+quantizable model loaded
+MTLModel(
+  (backbone): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (4): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (5): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (6): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (7): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+  )
+  (heads): ModuleDict(
+    (segment_semantic): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+    )
+    (normal): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), strnv3): Conv2d(1024, 3, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 3, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 3, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 3, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+    )
+    (depth_zbuffer): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 1, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 1, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 1, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 1, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+    )
+  )
+  (quant): QuantStub()
+  (dequant): DeQuantStub()
+)
+device = cuda:0
+initializing the Trainer
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 10 Task segm] Train Loss: 3.8747
+[Iter 10 Task norm] Train Loss: 0.1595
+[Iter 10 Task dept] Train Loss: 3.1205
+[Iter 10 Total] Train Loss: 7.1546
+======================================================================
+[Iter 10 Total] Train Loss: 7.1546
+validating on 41 samples = 
+[Iter 10 Task segm] Val Loss: 2.9780
+{'mIoU': 0.2013, 'Pixel Acc': 0.3245}
+46449074
+[Iter 10 Task norm] Val Loss: 0.0698
+{'Angle Mean': 19.8081, 'Angle Median': 17.5482, 'Angle 11.25': 10.2777, 'Angle 22.5': 74.9953, 'Angle 30': 87.4158}
+[Iter 10 Task dept] Val Loss: 1.4736
+{'abs_err': 1.418, 'rel_err': 0.4499, 'sigma_1.25': 17.6184, 'sigma_1.25^2': 36.0646, 'sigma_1.25^3': 54.9074}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 20 Task segm] Train Loss: 2.8473
+[Iter 20 Task norm] Train Loss: 0.0715
+[Iter 20 Task dept] Train Loss: 1.1884
+[Iter 20 Total] Train Loss: 4.1072
+======================================================================
+[Iter 20 Total] Train Loss: 4.1072
+validating on 41 samples = 
+[Iter 20 Task segm] Val Loss: 2.7297
+{'mIoU': 0.206, 'Pixel Acc': 0.3204}
+46449074
+[Iter 20 Task norm] Val Loss: 0.0680
+{'Angle Mean': 19.1576, 'Angle Median': 18.0989, 'Angle 11.25': 24.9133, 'Angle 22.5': 66.7819, 'Angle 30': 87.1168}
+[Iter 20 Task dept] Val Loss: 1.2820
+{'abs_err': 1.2838, 'rel_err': 0.6258, 'sigma_1.25': 33.7272, 'sigma_1.25^2': 60.4555, 'sigma_1.25^3': 78.0744}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 30 Task segm] Train Loss: 2.7850
+[Iter 30 Task norm] Train Loss: 0.0665
+[Iter 30 Task dept] Train Loss: 1.1444
+[Iter 30 Total] Train Loss: 3.9959
+======================================================================
+[Iter 30 Total] Train Loss: 3.9959
+validating on 41 samples = 
+[Iter 30 Task segm] Val Loss: 2.9733
+{'mIoU': 0.1386, 'Pixel Acc': 0.2467}
+46449074
+[Iter 30 Task norm] Val Loss: 0.0699
+{'Angle Mean': 19.3483, 'Angle Median': 16.5175, 'Angle 11.25': 15.1079, 'Angle 22.5': 73.4429, 'Angle 30': 86.6177}
+[Iter 30 Task dept] Val Loss: 0.9999
+{'abs_err': 0.9648, 'rel_err': 0.3772, 'sigma_1.25': 34.8162, 'sigma_1.25^2': 65.5039, 'sigma_1.25^3': 85.7259}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 40 Task segm] Train Loss: 2.6346
+[Iter 40 Task norm] Train Loss: 0.0715
+[Iter 40 Task dept] Train Loss: 1.1503
+[Iter 40 Total] Train Loss: 3.8564
+======================================================================
+[Iter 40 Total] Train Loss: 3.8564
+validating on 41 samples = 
+[Iter 40 Task segm] Val Loss: 3.0483
+{'mIoU': 0.0852, 'Pixel Acc': 0.1924}
+46449074
+[Iter 40 Task norm] Val Loss: 0.0680
+{'Angle Mean': 19.0339, 'Angle Median': 16.624, 'Angle 11.25': 20.4785, 'Angle 22.5': 72.8403, 'Angle 30': 86.1938}
+[Iter 40 Task dept] Val Loss: 1.4242
+{'abs_err': 1.4363, 'rel_err': 0.6214, 'sigma_1.25': 33.1054, 'sigma_1.25^2': 60.4728, 'sigma_1.25^3': 78.3406}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 50 Task segm] Train Loss: 2.5810
+[Iter 50 Task norm] Train Loss: 0.0644
+[Iter 50 Task dept] Train Loss: 1.0130
+[Iter 50 Total] Train Loss: 3.6584
+======================================================================
+[Iter 50 Total] Train Loss: 3.6584
+validating on 41 samples = 
+[Iter 50 Task segm] Val Loss: 2.6331
+{'mIoU': 0.1217, 'Pixel Acc': 0.3212}
+46449074
+[Iter 50 Task norm] Val Loss: 0.0706
+{'Angle Mean': 18.9408, 'Angle Median': 15.9529, 'Angle 11.25': 25.8145, 'Angle 22.5': 72.3656, 'Angle 30': 85.8485}
+[Iter 50 Task dept] Val Loss: 1.0341
+{'abs_err': 1.0001, 'rel_err': 0.335, 'sigma_1.25': 34.2815, 'sigma_1.25^2': 64.9094, 'sigma_1.25^3': 84.2402}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 60 Task segm] Train Loss: 2.5472
+[Iter 60 Task norm] Train Loss: 0.0742
+[Iter 60 Task dept] Train Loss: 1.0818
+[Iter 60 Total] Train Loss: 3.7032
+======================================================================
+[Iter 60 Total] Train Loss: 3.7032
+validating on 41 samples = 
+[Iter 60 Task segm] Val Loss: 2.4809
+{'mIoU': 0.1201, 'Pixel Acc': 0.3579}
+46449074
+[Iter 60 Task norm] Val Loss: 0.0660
+{'Angle Mean': 18.7574, 'Angle Median': 16.8814, 'Angle 11.25': 23.6444, 'Angle 22.5': 72.3945, 'Angle 30': 87.2997}
+[Iter 60 Task dept] Val Loss: 1.0545
+{'abs_err': 1.019, 'rel_err': 0.3374, 'sigma_1.25': 33.6782, 'sigma_1.25^2': 63.6171, 'sigma_1.25^3': 82.9677}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 70 Task segm] Train Loss: 2.5443
+[Iter 70 Task norm] Train Loss: 0.0680
+[Iter 70 Task dept] Train Loss: 0.9625
+[Iter 70 Total] Train Loss: 3.5748
+======================================================================
+[Iter 70 Total] Train Loss: 3.5748
+validating on 41 samples = 
+[Iter 70 Task segm] Val Loss: 2.4699
+{'mIoU': 0.1178, 'Pixel Acc': 0.3601}
+46449074
+[Iter 70 Task norm] Val Loss: 0.0683
+{'Angle Mean': 18.7434, 'Angle Median': 15.817, 'Angle 11.25': 25.062, 'Angle 22.5': 73.1729, 'Angle 30': 86.3719}
+[Iter 70 Task dept] Val Loss: 1.0644
+{'abs_err': 1.0228, 'rel_err': 0.3287, 'sigma_1.25': 31.7091, 'sigma_1.25^2': 62.1336, 'sigma_1.25^3': 83.3302}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 80 Task segm] Train Loss: 2.4194
+[Iter 80 Task norm] Train Loss: 0.0700
+[Iter 80 Task dept] Train Loss: 1.0442
+[Iter 80 Total] Train Loss: 3.5336
+======================================================================
+[Iter 80 Total] Train Loss: 3.5336
+validating on 41 samples = 
+[Iter 80 Task segm] Val Loss: 2.6405
+{'mIoU': 0.1093, 'Pixel Acc': 0.2629}
+46449074
+[Iter 80 Task norm] Val Loss: 0.0655
+{'Angle Mean': 18.7651, 'Angle Median': 16.5037, 'Angle 11.25': 20.2147, 'Angle 22.5': 74.6225, 'Angle 30': 87.002}
+[Iter 80 Task dept] Val Loss: 1.1053
+{'abs_err': 1.0554, 'rel_err': 0.3482, 'sigma_1.25': 27.6658, 'sigma_1.25^2': 57.2894, 'sigma_1.25^3': 81.5184}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 90 Task segm] Train Loss: 2.4783
+[Iter 90 Task norm] Train Loss: 0.0662
+[Iter 90 Task dept] Train Loss: 0.9803
+[Iter 90 Total] Train Loss: 3.5248
+======================================================================
+[Iter 90 Total] Train Loss: 3.5248
+validating on 41 samples = 
+[Iter 90 Task segm] Val Loss: 2.4227
+{'mIoU': 0.1101, 'Pixel Acc': 0.3579}
+46449074
+[Iter 90 Task norm] Val Loss: 0.0662
+{'Angle Mean': 18.3242, 'Angle Median': 15.853, 'Angle 11.25': 27.4339, 'Angle 22.5': 73.2495, 'Angle 30': 86.6258}
+[Iter 90 Task dept] Val Loss: 1.0437
+{'abs_err': 0.9994, 'rel_err': 0.3285, 'sigma_1.25': 28.6225, 'sigma_1.25^2': 59.5795, 'sigma_1.25^3': 84.0859}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 100 Task segm] Train Loss: 2.3527
+[Iter 100 Task norm] Train Loss: 0.0670
+[Iter 100 Task dept] Train Loss: 0.9981
+[Iter 100 Total] Train Loss: 3.4178
+======================================================================
+[Iter 100 Total] Train Loss: 3.4178
+validating on 41 samples = 
+[Iter 100 Task segm] Val Loss: 2.4701
+{'mIoU': 0.1336, 'Pixel Acc': 0.3494}
+46449074
+[Iter 100 Task norm] Val Loss: 0.0656
+{'Angle Mean': 18.3494, 'Angle Median': 16.5781, 'Angle 11.25': 25.9295, 'Angle 22.5': 72.5666, 'Angle 30': 87.1083}
+[Iter 100 Task dept] Val Loss: 1.4222
+{'abs_err': 1.3658, 'rel_err': 0.4254, 'sigma_1.25': 16.0374, 'sigma_1.25^2': 35.8952, 'sigma_1.25^3': 59.461}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 110 Task segm] Train Loss: 2.4128
+[Iter 110 Task norm] Train Loss: 0.0607
+[Iter 110 Task dept] Train Loss: 0.9153
+[Iter 110 Total] Train Loss: 3.3888
+======================================================================
+[Iter 110 Total] Train Loss: 3.3888
+validating on 41 samples = 
+[Iter 110 Task segm] Val Loss: 2.2220
+{'mIoU': 0.1339, 'Pixel Acc': 0.3951}
+46449074
+[Iter 110 Task norm] Val Loss: 0.0671
+{'Angle Mean': 18.497, 'Angle Median': 15.5515, 'Angle 11.25': 25.1586, 'Angle 22.5': 74.992, 'Angle 30': 86.1083}
+[Iter 110 Task dept] Val Loss: 1.1242
+{'abs_err': 1.075, 'rel_err': 0.3425, 'sigma_1.25': 24.9117, 'sigma_1.25^2': 54.7361, 'sigma_1.25^3': 81.0345}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 120 Task segm] Train Loss: 2.2859
+[Iter 120 Task norm] Train Loss: 0.0703
+[Iter 120 Task dept] Train Loss: 0.9107
+[Iter 120 Total] Train Loss: 3.2669
+======================================================================
+[Iter 120 Total] Train Loss: 3.2669
+validating on 41 samples = 
+[Iter 120 Task segm] Val Loss: 2.3307
+{'mIoU': 0.1345, 'Pixel Acc': 0.3688}
+46449074
+[Iter 120 Task norm] Val Loss: 0.0674
+{'Angle Mean': 19.1461, 'Angle Median': 16.3591, 'Angle 11.25': 16.0135, 'Angle 22.5': 75.8447, 'Angle 30': 86.4937}
+[Iter 120 Task dept] Val Loss: 1.1557
+{'abs_err': 1.1083, 'rel_err': 0.3532, 'sigma_1.25': 23.8834, 'sigma_1.25^2': 51.8042, 'sigma_1.25^3': 77.6902}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 130 Task segm] Train Loss: 2.1624
+[Iter 130 Task norm] Train Loss: 0.0653
+[Iter 130 Task dept] Train Loss: 0.9122
+[Iter 130 Total] Train Loss: 3.1400
+======================================================================
+[Iter 130 Total] Train Loss: 3.1400
+validating on 41 samples = 
+[Iter 130 Task segm] Val Loss: 2.4298
+{'mIoU': 0.1137, 'Pixel Acc': 0.3384}
+46449074
+[Iter 130 Task norm] Val Loss: 0.0658
+{'Angle Mean': 18.6436, 'Angle Median': 16.3047, 'Angle 11.25': 21.2557, 'Angle 22.5': 74.8077, 'Angle 30': 87.0796}
+[Iter 130 Task dept] Val Loss: 1.3316
+{'abs_err': 1.2764, 'rel_err': 0.4095, 'sigma_1.25': 16.2936, 'sigma_1.25^2': 37.4379, 'sigma_1.25^3': 63.2347}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 140 Task segm] Train Loss: 2.2419
+[Iter 140 Task norm] Train Loss: 0.0633
+[Iter 140 Task dept] Train Loss: 1.0027
+[Iter 140 Total] Train Loss: 3.3079
+======================================================================
+[Iter 140 Total] Train Loss: 3.3079
+validating on 41 samples = 
+[Iter 140 Task segm] Val Loss: 2.3448
+{'mIoU': 0.1652, 'Pixel Acc': 0.3831}
+46449074
+[Iter 140 Task norm] Val Loss: 0.0656
+{'Angle Mean': 17.9871, 'Angle Median': 16.221, 'Angle 11.25': 28.5194, 'Angle 22.5': 72.6612, 'Angle 30': 86.3109}
+[Iter 140 Task dept] Val Loss: 1.3397
+{'abs_err': 1.2817, 'rel_err': 0.4326, 'sigma_1.25': 14.1392, 'sigma_1.25^2': 33.1087, 'sigma_1.25^3': 56.4692}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 150 Task segm] Train Loss: 2.2947
+[Iter 150 Task norm] Train Loss: 0.0643
+[Iter 150 Task dept] Train Loss: 0.9534
+[Iter 150 Total] Train Loss: 3.3124
+======================================================================
+[Iter 150 Total] Train Loss: 3.3124
+validating on 41 samples = 
+[Iter 150 Task segm] Val Loss: 2.2528
+{'mIoU': 0.1688, 'Pixel Acc': 0.3876}
+46449074
+[Iter 150 Task norm] Val Loss: 0.0656
+{'Angle Mean': 18.252, 'Angle Median': 15.8629, 'Angle 11.25': 26.4016, 'Angle 22.5': 74.1703, 'Angle 30': 86.3651}
+[Iter 150 Task dept] Val Loss: 1.0636
+{'abs_err': 1.0173, 'rel_err': 0.3359, 'sigma_1.25': 26.5262, 'sigma_1.25^2': 56.2399, 'sigma_1.25^3': 82.1359}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 160 Task segm] Train Loss: 2.2591
+[Iter 160 Task norm] Train Loss: 0.0646
+[Iter 160 Task dept] Train Loss: 0.9632
+[Iter 160 Total] Train Loss: 3.2869
+======================================================================
+[Iter 160 Total] Train Loss: 3.2869
+validating on 41 samples = 
+[Iter 160 Task segm] Val Loss: 2.7564
+{'mIoU': 0.0862, 'Pixel Acc': 0.313}
+46449074
+[Iter 160 Task norm] Val Loss: 0.0684
+{'Angle Mean': 18.3682, 'Angle Median': 16.6895, 'Angle 11.25': 28.9867, 'Angle 22.5': 68.6073, 'Angle 30': 85.2421}
+[Iter 160 Task dept] Val Loss: 1.1962
+{'abs_err': 1.143, 'rel_err': 0.3611, 'sigma_1.25': 24.99, 'sigma_1.25^2': 52.6256, 'sigma_1.25^3': 76.3385}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 170 Task segm] Train Loss: 2.2005
+[Iter 170 Task norm] Train Loss: 0.0684
+[Iter 170 Task dept] Train Loss: 0.8738
+[Iter 170 Total] Train Loss: 3.1427
+======================================================================
+[Iter 170 Total] Train Loss: 3.1427
+validating on 41 samples = 
+[Iter 170 Task segm] Val Loss: 2.3196
+{'mIoU': 0.124, 'Pixel Acc': 0.3465}
+46449074
+[Iter 170 Task norm] Val Loss: 0.0643
+{'Angle Mean': 18.4885, 'Angle Median': 16.8596, 'Angle 11.25': 21.9141, 'Angle 22.5': 75.0305, 'Angle 30': 87.3191}
+[Iter 170 Task dept] Val Loss: 1.3194
+{'abs_err': 1.2615, 'rel_err': 0.404, 'sigma_1.25': 16.055, 'sigma_1.25^2': 38.0043, 'sigma_1.25^3': 65.3505}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 180 Task segm] Train Loss: 2.0620
+[Iter 180 Task norm] Train Loss: 0.0666
+[Iter 180 Task dept] Train Loss: 0.8794
+[Iter 180 Total] Train Loss: 3.0079
+======================================================================
+[Iter 180 Total] Train Loss: 3.0079
+validating on 41 samples = 
+[Iter 180 Task segm] Val Loss: 2.1884
+{'mIoU': 0.1072, 'Pixel Acc': 0.3771}
+46449074
+[Iter 180 Task norm] Val Loss: 0.0684
+{'Angle Mean': 18.4519, 'Angle Median': 16.1563, 'Angle 11.25': 28.8897, 'Angle 22.5': 72.4017, 'Angle 30': 86.1962}
+[Iter 180 Task dept] Val Loss: 1.2137
+{'abs_err': 1.1607, 'rel_err': 0.3624, 'sigma_1.25': 23.127, 'sigma_1.25^2': 50.1776, 'sigma_1.25^3': 75.2633}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 190 Task segm] Train Loss: 2.2369
+[Iter 190 Task norm] Train Loss: 0.0638
+[Iter 190 Task dept] Train Loss: 0.8612
+[Iter 190 Total] Train Loss: 3.1619
+======================================================================
+[Iter 190 Total] Train Loss: 3.1619
+validating on 41 samples = 
+[Iter 190 Task segm] Val Loss: 2.2745
+{'mIoU': 0.149, 'Pixel Acc': 0.3528}
+46449074
+[Iter 190 Task norm] Val Loss: 0.0674
+{'Angle Mean': 18.4931, 'Angle Median': 15.7489, 'Angle 11.25': 26.1059, 'Angle 22.5': 74.6227, 'Angle 30': 85.9903}
+[Iter 190 Task dept] Val Loss: 1.0144
+{'abs_err': 0.9688, 'rel_err': 0.3205, 'sigma_1.25': 28.9056, 'sigma_1.25^2': 61.0473, 'sigma_1.25^3': 85.7986}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 200 Task segm] Train Loss: 2.1688
+[Iter 200 Task norm] Train Loss: 0.0668
+[Iter 200 Task dept] Train Loss: 0.8443
+[Iter 200 Total] Train Loss: 3.0798
+======================================================================
+[Iter 200 Total] Train Loss: 3.0798
+validating on 41 samples = 
+[Iter 200 Task segm] Val Loss: 2.1814
+{'mIoU': 0.1666, 'Pixel Acc': 0.4103}
+46449074
+[Iter 200 Task norm] Val Loss: 0.0665
+{'Angle Mean': 18.2029, 'Angle Median': 15.8333, 'Angle 11.25': 27.6457, 'Angle 22.5': 73.2133, 'Angle 30': 85.7527}
+[Iter 200 Task dept] Val Loss: 1.2951
+{'abs_err': 1.2364, 'rel_err': 0.3911, 'sigma_1.25': 17.7605, 'sigma_1.25^2': 41.5557, 'sigma_1.25^3': 68.8566}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 210 Task segm] Train Loss: 2.1742
+[Iter 210 Task norm] Train Loss: 0.0602
+[Iter 210 Task dept] Train Loss: 0.9947
+[Iter 210 Total] Train Loss: 3.2291
+======================================================================
+[Iter 210 Total] Train Loss: 3.2291
+validating on 41 samples = 
+[Iter 210 Task segm] Val Loss: 2.2469
+{'mIoU': 0.1465, 'Pixel Acc': 0.367}
+46449074
+[Iter 210 Task norm] Val Loss: 0.0666
+{'Angle Mean': 18.2467, 'Angle Median': 15.5539, 'Angle 11.25': 28.4054, 'Angle 22.5': 74.1114, 'Angle 30': 86.1789}
+[Iter 210 Task dept] Val Loss: 0.7472
+{'abs_err': 0.7292, 'rel_err': 0.2858, 'sigma_1.25': 48.4411, 'sigma_1.25^2': 80.5634, 'sigma_1.25^3': 94.1604}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 220 Task segm] Train Loss: 2.1233
+[Iter 220 Task norm] Train Loss: 0.0649
+[Iter 220 Task dept] Train Loss: 0.8402
+[Iter 220 Total] Train Loss: 3.0284
+======================================================================
+[Iter 220 Total] Train Loss: 3.0284
+validating on 41 samples = 
+[Iter 220 Task segm] Val Loss: 2.1989
+{'mIoU': 0.1311, 'Pixel Acc': 0.3882}
+46449074
+[Iter 220 Task norm] Val Loss: 0.0679
+{'Angle Mean': 18.772, 'Angle Median': 16.315, 'Angle 11.25': 22.4514, 'Angle 22.5': 74.8884, 'Angle 30': 86.2731}
+[Iter 220 Task dept] Val Loss: 1.4346
+{'abs_err': 1.3726, 'rel_err': 0.4421, 'sigma_1.25': 12.1665, 'sigma_1.25^2': 29.3329, 'sigma_1.25^3': 54.858}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 230 Task segm] Train Loss: 2.0338
+[Iter 230 Task norm] Train Loss: 0.0610
+[Iter 230 Task dept] Train Loss: 0.9942
+[Iter 230 Total] Train Loss: 3.0890
+======================================================================
+[Iter 230 Total] Train Loss: 3.0890
+validating on 41 samples = 
+[Iter 230 Task segm] Val Loss: 2.0645
+{'mIoU': 0.1264, 'Pixel Acc': 0.4121}
+46449074
+[Iter 230 Task norm] Val Loss: 0.0640
+{'Angle Mean': 17.975, 'Angle Median': 16.3792, 'Angle 11.25': 27.8226, 'Angle 22.5': 73.4526, 'Angle 30': 86.9568}
+[Iter 230 Task dept] Val Loss: 0.8632
+{'abs_err': 0.8366, 'rel_err': 0.2878, 'sigma_1.25': 43.4143, 'sigma_1.25^2': 75.338, 'sigma_1.25^3': 91.0365}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 240 Task segm] Train Loss: 1.9790
+[Iter 240 Task norm] Train Loss: 0.0671
+[Iter 240 Task dept] Train Loss: 0.9561
+[Iter 240 Total] Train Loss: 3.0022
+======================================================================
+[Iter 240 Total] Train Loss: 3.0022
+validating on 41 samples = 
+[Iter 240 Task segm] Val Loss: 2.1351
+{'mIoU': 0.1232, 'Pixel Acc': 0.4016}
+46449074
+[Iter 240 Task norm] Val Loss: 0.0659
+{'Angle Mean': 18.2976, 'Angle Median': 16.3234, 'Angle 11.25': 27.0287, 'Angle 22.5': 73.2162, 'Angle 30': 86.8683}
+[Iter 240 Task dept] Val Loss: 1.4431
+{'abs_err': 1.3819, 'rel_err': 0.4415, 'sigma_1.25': 11.7811, 'sigma_1.25^2': 29.0703, 'sigma_1.25^3': 56.3192}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 250 Task segm] Train Loss: 1.9271
+[Iter 250 Task norm] Train Loss: 0.0650
+[Iter 250 Task dept] Train Loss: 0.8194
+[Iter 250 Total] Train Loss: 2.8115
+======================================================================
+[Iter 250 Total] Train Loss: 2.8115
+validating on 41 samples = 
+[Iter 250 Task segm] Val Loss: 2.0851
+{'mIoU': 0.1289, 'Pixel Acc': 0.401}
+46449074
+[Iter 250 Task norm] Val Loss: 0.0636
+{'Angle Mean': 18.2783, 'Angle Median': 16.3953, 'Angle 11.25': 22.3173, 'Angle 22.5': 75.2764, 'Angle 30': 87.1631}
+[Iter 250 Task dept] Val Loss: 0.8865
+{'abs_err': 0.849, 'rel_err': 0.2827, 'sigma_1.25': 39.3639, 'sigma_1.25^2': 72.4966, 'sigma_1.25^3': 91.6508}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 260 Task segm] Train Loss: 1.9702
+[Iter 260 Task norm] Train Loss: 0.0664
+[Iter 260 Task dept] Train Loss: 0.8974
+[Iter 260 Total] Train Loss: 2.9340
+======================================================================
+[Iter 260 Total] Train Loss: 2.9340
+validating on 41 samples = 
+[Iter 260 Task segm] Val Loss: 2.1362
+{'mIoU': 0.1349, 'Pixel Acc': 0.3844}
+46449074
+[Iter 260 Task norm] Val Loss: 0.0660
+{'Angle Mean': 18.1998, 'Angle Median': 15.6197, 'Angle 11.25': 27.8511, 'Angle 22.5': 74.4846, 'Angle 30': 86.3421}
+[Iter 260 Task dept] Val Loss: 1.1319
+{'abs_err': 1.0786, 'rel_err': 0.3446, 'sigma_1.25': 23.2482, 'sigma_1.25^2': 53.3624, 'sigma_1.25^3': 81.3269}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 270 Task segm] Train Loss: 1.9399
+[Iter 270 Task norm] Train Loss: 0.0664
+[Iter 270 Task dept] Train Loss: 0.7987
+[Iter 270 Total] Train Loss: 2.8050
+======================================================================
+[Iter 270 Total] Train Loss: 2.8050
+validating on 41 samples = 
+[Iter 270 Task segm] Val Loss: 1.9968
+{'mIoU': 0.1576, 'Pixel Acc': 0.4216}
+46449074
+[Iter 270 Task norm] Val Loss: 0.0636
+{'Angle Mean': 18.153, 'Angle Median': 16.2817, 'Angle 11.25': 24.3717, 'Angle 22.5': 75.3604, 'Angle 30': 87.4752}
+[Iter 270 Task dept] Val Loss: 1.0267
+{'abs_err': 0.9744, 'rel_err': 0.3154, 'sigma_1.25': 28.2862, 'sigma_1.25^2': 62.0559, 'sigma_1.25^3': 87.2925}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 280 Task segm] Train Loss: 2.0964
+[Iter 280 Task norm] Train Loss: 0.0687
+[Iter 280 Task dept] Train Loss: 0.7727
+[Iter 280 Total] Train Loss: 2.9378
+======================================================================
+[Iter 280 Total] Train Loss: 2.9378
+validating on 41 samples = 
+[Iter 280 Task segm] Val Loss: 2.0987
+{'mIoU': 0.1201, 'Pixel Acc': 0.4145}
+46449074
+[Iter 280 Task norm] Val Loss: 0.0679
+{'Angle Mean': 18.4167, 'Angle Median': 17.4066, 'Angle 11.25': 29.9159, 'Angle 22.5': 65.9382, 'Angle 30': 86.4373}
+[Iter 280 Task dept] Val Loss: 1.3299
+{'abs_err': 1.2709, 'rel_err': 0.402, 'sigma_1.25': 15.3319, 'sigma_1.25^2': 39.1211, 'sigma_1.25^3': 66.8354}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 290 Task segm] Train Loss: 2.0850
+[Iter 290 Task norm] Train Loss: 0.0640
+[Iter 290 Task dept] Train Loss: 0.9137
+[Iter 290 Total] Train Loss: 3.0626
+======================================================================
+[Iter 290 Total] Train Loss: 3.0626
+validating on 41 samples = 
+[Iter 290 Task segm] Val Loss: 2.1971
+{'mIoU': 0.1372, 'Pixel Acc': 0.3786}
+46449074
+[Iter 290 Task norm] Val Loss: 0.0700
+{'Angle Mean': 19.1482, 'Angle Median': 16.2437, 'Angle 11.25': 20.2314, 'Angle 22.5': 74.4052, 'Angle 30': 85.2895}
+[Iter 290 Task dept] Val Loss: 0.8215
+{'abs_err': 0.7895, 'rel_err': 0.284, 'sigma_1.25': 43.9914, 'sigma_1.25^2': 77.5894, 'sigma_1.25^3': 92.9298}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 300 Task segm] Train Loss: 2.0347
+[Iter 300 Task norm] Train Loss: 0.0653
+[Iter 300 Task dept] Train Loss: 0.8970
+[Iter 300 Total] Train Loss: 2.9970
+======================================================================
+[Iter 300 Total] Train Loss: 2.9970
+validating on 41 samples = 
+[Iter 300 Task segm] Val Loss: 2.2159
+{'mIoU': 0.1343, 'Pixel Acc': 0.375}
+46449074
+[Iter 300 Task norm] Val Loss: 0.0653
+{'Angle Mean': 18.4639, 'Angle Median': 17.4641, 'Angle 11.25': 25.625, 'Angle 22.5': 70.3695, 'Angle 30': 86.8297}
+[Iter 300 Task dept] Val Loss: 0.9903
+{'abs_err': 0.9598, 'rel_err': 0.3321, 'sigma_1.25': 29.1988, 'sigma_1.25^2': 59.4846, 'sigma_1.25^3': 83.4471}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 310 Task segm] Train Loss: 2.0614
+[Iter 310 Task norm] Train Loss: 0.0671
+[Iter 310 Task dept] Train Loss: 0.8134
+[Iter 310 Total] Train Loss: 2.9418
+======================================================================
+[Iter 310 Total] Train Loss: 2.9418
+validating on 41 samples = 
+[Iter 310 Task segm] Val Loss: 2.1413
+{'mIoU': 0.1368, 'Pixel Acc': 0.3885}
+46449074
+[Iter 310 Task norm] Val Loss: 0.0641
+{'Angle Mean': 18.1852, 'Angle Median': 17.108, 'Angle 11.25': 25.8288, 'Angle 22.5': 71.9293, 'Angle 30': 86.9406}
+[Iter 310 Task dept] Val Loss: 0.9758
+{'abs_err': 0.9293, 'rel_err': 0.3018, 'sigma_1.25': 32.7521, 'sigma_1.25^2': 67.0572, 'sigma_1.25^3': 88.8417}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 320 Task segm] Train Loss: 1.9497
+[Iter 320 Task norm] Train Loss: 0.0609
+[Iter 320 Task dept] Train Loss: 0.8752
+[Iter 320 Total] Train Loss: 2.8859
+======================================================================
+[Iter 320 Total] Train Loss: 2.8859
+validating on 41 samples = 
+[Iter 320 Task segm] Val Loss: 2.2348
+{'mIoU': 0.1121, 'Pixel Acc': 0.3766}
+46449074
+[Iter 320 Task norm] Val Loss: 0.0633
+{'Angle Mean': 18.0, 'Angle Median': 16.1932, 'Angle 11.25': 25.6006, 'Angle 22.5': 74.6277, 'Angle 30': 86.717}
+[Iter 320 Task dept] Val Loss: 1.4221
+{'abs_err': 1.3633, 'rel_err': 0.4303, 'sigma_1.25': 14.589, 'sigma_1.25^2': 34.5326, 'sigma_1.25^3': 58.1109}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 330 Task segm] Train Loss: 1.9601
+[Iter 330 Task norm] Train Loss: 0.0644
+[Iter 330 Task dept] Train Loss: 0.9206
+[Iter 330 Total] Train Loss: 2.9451
+======================================================================
+[Iter 330 Total] Train Loss: 2.9451
+validating on 41 samples = 
+[Iter 330 Task segm] Val Loss: 2.1077
+{'mIoU': 0.1424, 'Pixel Acc': 0.4173}
+46449074
+[Iter 330 Task norm] Val Loss: 0.0647
+{'Angle Mean': 18.6692, 'Angle Median': 16.7501, 'Angle 11.25': 19.1953, 'Angle 22.5': 75.5212, 'Angle 30': 87.116}
+[Iter 330 Task dept] Val Loss: 0.9489
+{'abs_err': 0.9133, 'rel_err': 0.3093, 'sigma_1.25': 37.0203, 'sigma_1.25^2': 68.0057, 'sigma_1.25^3': 87.8145}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 340 Task segm] Train Loss: 1.9733
+[Iter 340 Task norm] Train Loss: 0.0658
+[Iter 340 Task dept] Train Loss: 0.8969
+[Iter 340 Total] Train Loss: 2.9360
+======================================================================
+[Iter 340 Total] Train Loss: 2.9360
+validating on 41 samples = 
+[Iter 340 Task segm] Val Loss: 2.1466
+{'mIoU': 0.1341, 'Pixel Acc': 0.4062}
+46449074
+[Iter 340 Task norm] Val Loss: 0.0658
+{'Angle Mean': 18.2948, 'Angle Median': 15.6682, 'Angle 11.25': 24.5755, 'Angle 22.5': 75.3154, 'Angle 30': 86.1675}
+[Iter 340 Task dept] Val Loss: 1.3093
+{'abs_err': 1.2509, 'rel_err': 0.4029, 'sigma_1.25': 15.7956, 'sigma_1.25^2': 36.8412, 'sigma_1.25^3': 65.2945}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 350 Task segm] Train Loss: 1.9986
+[Iter 350 Task norm] Train Loss: 0.0659
+[Iter 350 Task dept] Train Loss: 0.7350
+[Iter 350 Total] Train Loss: 2.7995
+======================================================================
+[Iter 350 Total] Train Loss: 2.7995
+validating on 41 samples = 
+[Iter 350 Task segm] Val Loss: 2.0251
+{'mIoU': 0.1498, 'Pixel Acc': 0.4158}
+46449074
+[Iter 350 Task norm] Val Loss: 0.0664
+{'Angle Mean': 18.7093, 'Angle Median': 16.1167, 'Angle 11.25': 20.3531, 'Angle 22.5': 76.1456, 'Angle 30': 86.6206}
+[Iter 350 Task dept] Val Loss: 0.9704
+{'abs_err': 0.9243, 'rel_err': 0.2983, 'sigma_1.25': 31.9567, 'sigma_1.25^2': 67.0516, 'sigma_1.25^3': 89.5369}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 360 Task segm] Train Loss: 1.9059
+[Iter 360 Task norm] Train Loss: 0.0646
+[Iter 360 Task dept] Train Loss: 0.8007
+[Iter 360 Total] Train Loss: 2.7713
+======================================================================
+[Iter 360 Total] Train Loss: 2.7713
+validating on 41 samples = 
+[Iter 360 Task segm] Val Loss: 2.1486
+{'mIoU': 0.1239, 'Pixel Acc': 0.4175}
+46449074
+[Iter 360 Task norm] Val Loss: 0.0647
+{'Angle Mean': 18.0671, 'Angle Median': 16.5849, 'Angle 11.25': 26.1845, 'Angle 22.5': 73.5227, 'Angle 30': 86.8914}
+[Iter 360 Task dept] Val Loss: 0.9352
+{'abs_err': 0.8974, 'rel_err': 0.293, 'sigma_1.25': 37.3207, 'sigma_1.25^2': 69.7081, 'sigma_1.25^3': 89.17}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 370 Task segm] Train Loss: 1.9619
+[Iter 370 Task norm] Train Loss: 0.0649
+[Iter 370 Task dept] Train Loss: 0.8299
+[Iter 370 Total] Train Loss: 2.8567
+======================================================================
+[Iter 370 Total] Train Loss: 2.8567
+validating on 41 samples = 
+[Iter 370 Task segm] Val Loss: 1.9703
+{'mIoU': 0.1381, 'Pixel Acc': 0.4338}
+46449074
+[Iter 370 Task norm] Val Loss: 0.0651
+{'Angle Mean': 18.2308, 'Angle Median': 16.2546, 'Angle 11.25': 25.1772, 'Angle 22.5': 75.0421, 'Angle 30': 87.0882}
+[Iter 370 Task dept] Val Loss: 1.3836
+{'abs_err': 1.3225, 'rel_err': 0.4256, 'sigma_1.25': 12.0067, 'sigma_1.25^2': 33.0664, 'sigma_1.25^3': 60.9235}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 380 Task segm] Train Loss: 1.9761
+[Iter 380 Task norm] Train Loss: 0.0631
+[Iter 380 Task dept] Train Loss: 0.7524
+[Iter 380 Total] Train Loss: 2.7916
+======================================================================
+[Iter 380 Total] Train Loss: 2.7916
+validating on 41 samples = 
+[Iter 380 Task segm] Val Loss: 1.9516
+{'mIoU': 0.1311, 'Pixel Acc': 0.4355}
+46449074
+[Iter 380 Task norm] Val Loss: 0.0650
+{'Angle Mean': 18.0607, 'Angle Median': 16.0513, 'Angle 11.25': 28.945, 'Angle 22.5': 73.4804, 'Angle 30': 86.9408}
+[Iter 380 Task dept] Val Loss: 1.0762
+{'abs_err': 1.0273, 'rel_err': 0.3241, 'sigma_1.25': 27.0514, 'sigma_1.25^2': 59.4772, 'sigma_1.25^3': 84.3033}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 390 Task segm] Train Loss: 1.9504
+[Iter 390 Task norm] Train Loss: 0.0608
+[Iter 390 Task dept] Train Loss: 0.7604
+[Iter 390 Total] Train Loss: 2.7715
+======================================================================
+[Iter 390 Total] Train Loss: 2.7715
+validating on 41 samples = 
+[Iter 390 Task segm] Val Loss: 2.0503
+{'mIoU': 0.1348, 'Pixel Acc': 0.4144}
+46449074
+[Iter 390 Task norm] Val Loss: 0.0653
+{'Angle Mean': 18.0292, 'Angle Median': 15.6255, 'Angle 11.25': 28.532, 'Angle 22.5': 74.6895, 'Angle 30': 86.2519}
+[Iter 390 Task dept] Val Loss: 1.2824
+{'abs_err': 1.2232, 'rel_err': 0.4008, 'sigma_1.25': 16.0314, 'sigma_1.25^2': 38.2915, 'sigma_1.25^3': 66.1904}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 400 Task segm] Train Loss: 1.9561
+[Iter 400 Task norm] Train Loss: 0.0662
+[Iter 400 Task dept] Train Loss: 0.9057
+[Iter 400 Total] Train Loss: 2.9279
+======================================================================
+[Iter 400 Total] Train Loss: 2.9279
+validating on 41 samples = 
+[Iter 400 Task segm] Val Loss: 1.9887
+{'mIoU': 0.1535, 'Pixel Acc': 0.4329}
+46449074
+[Iter 400 Task norm] Val Loss: 0.0659
+{'Angle Mean': 17.9404, 'Angle Median': 15.79, 'Angle 11.25': 30.7255, 'Angle 22.5': 73.7617, 'Angle 30': 86.6026}
+[Iter 400 Task dept] Val Loss: 1.4014
+{'abs_err': 1.3409, 'rel_err': 0.4408, 'sigma_1.25': 10.6343, 'sigma_1.25^2': 28.3902, 'sigma_1.25^3': 56.8848}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 410 Task segm] Train Loss: 1.8441
+[Iter 410 Task norm] Train Loss: 0.0632
+[Iter 410 Task dept] Train Loss: 0.7576
+[Iter 410 Total] Train Loss: 2.6649
+======================================================================
+[Iter 410 Total] Train Loss: 2.6649
+validating on 41 samples = 
+[Iter 410 Task segm] Val Loss: 2.1165
+{'mIoU': 0.1406, 'Pixel Acc': 0.4167}
+46449074
+[Iter 410 Task norm] Val Loss: 0.0640
+{'Angle Mean': 18.024, 'Angle Median': 15.9664, 'Angle 11.25': 25.6007, 'Angle 22.5': 75.558, 'Angle 30': 87.029}
+[Iter 410 Task dept] Val Loss: 1.1818
+{'abs_err': 1.1275, 'rel_err': 0.3566, 'sigma_1.25': 21.1782, 'sigma_1.25^2': 50.5369, 'sigma_1.25^3': 77.5517}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 420 Task segm] Train Loss: 1.8962
+[Iter 420 Task norm] Train Loss: 0.0610
+[Iter 420 Task dept] Train Loss: 0.7657
+[Iter 420 Total] Train Loss: 2.7229
+======================================================================
+[Iter 420 Total] Train Loss: 2.7229
+validating on 41 samples = 
+[Iter 420 Task segm] Val Loss: 2.2604
+{'mIoU': 0.105, 'Pixel Acc': 0.3735}
+46449074
+[Iter 420 Task norm] Val Loss: 0.0636
+{'Angle Mean': 18.1702, 'Angle Median': 16.7514, 'Angle 11.25': 24.1323, 'Angle 22.5': 74.6206, 'Angle 30': 87.5393}
+[Iter 420 Task dept] Val Loss: 1.3565
+{'abs_err': 1.2977, 'rel_err': 0.4085, 'sigma_1.25': 15.2722, 'sigma_1.25^2': 37.8164, 'sigma_1.25^3': 64.6472}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 430 Task segm] Train Loss: 1.8782
+[Iter 430 Task norm] Train Loss: 0.0577
+[Iter 430 Task dept] Train Loss: 0.8425
+[Iter 430 Total] Train Loss: 2.7784
+======================================================================
+[Iter 430 Total] Train Loss: 2.7784
+validating on 41 samples = 
+[Iter 430 Task segm] Val Loss: 2.1990
+{'mIoU': 0.1299, 'Pixel Acc': 0.3645}
+46449074
+[Iter 430 Task norm] Val Loss: 0.0652
+{'Angle Mean': 18.1098, 'Angle Median': 16.1008, 'Angle 11.25': 27.3749, 'Angle 22.5': 74.6033, 'Angle 30': 86.9462}
+[Iter 430 Task dept] Val Loss: 0.8587
+{'abs_err': 0.8269, 'rel_err': 0.2796, 'sigma_1.25': 38.445, 'sigma_1.25^2': 72.875, 'sigma_1.25^3': 92.1203}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 440 Task segm] Train Loss: 1.9267
+[Iter 440 Task norm] Train Loss: 0.0627
+[Iter 440 Task dept] Train Loss: 0.7961
+[Iter 440 Total] Train Loss: 2.7854
+======================================================================
+[Iter 440 Total] Train Loss: 2.7854
+validating on 41 samples = 
+[Iter 440 Task segm] Val Loss: 1.9709
+{'mIoU': 0.137, 'Pixel Acc': 0.4477}
+46449074
+[Iter 440 Task norm] Val Loss: 0.0654
+{'Angle Mean': 17.9514, 'Angle Median': 15.4172, 'Angle 11.25': 28.7532, 'Angle 22.5': 75.2333, 'Angle 30': 86.2823}
+[Iter 440 Task dept] Val Loss: 1.0117
+{'abs_err': 0.964, 'rel_err': 0.3111, 'sigma_1.25': 28.8136, 'sigma_1.25^2': 63.2925, 'sigma_1.25^3': 88.112}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 450 Task segm] Train Loss: 1.9173
+[Iter 450 Task norm] Train Loss: 0.0653
+[Iter 450 Task dept] Train Loss: 0.9167
+[Iter 450 Total] Train Loss: 2.8994
+======================================================================
+[Iter 450 Total] Train Loss: 2.8994
+validating on 41 samples = 
+[Iter 450 Task segm] Val Loss: 1.9344
+{'mIoU': 0.1216, 'Pixel Acc': 0.4427}
+46449074
+[Iter 450 Task norm] Val Loss: 0.0648
+{'Angle Mean': 18.1829, 'Angle Median': 16.0093, 'Angle 11.25': 25.7584, 'Angle 22.5': 75.4589, 'Angle 30': 86.9331}
+[Iter 450 Task dept] Val Loss: 0.7624
+{'abs_err': 0.739, 'rel_err': 0.261, 'sigma_1.25': 46.1802, 'sigma_1.25^2': 80.9552, 'sigma_1.25^3': 95.0027}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 460 Task segm] Train Loss: 1.8424
+[Iter 460 Task norm] Train Loss: 0.0659
+[Iter 460 Task dept] Train Loss: 0.7897
+[Iter 460 Total] Train Loss: 2.6981
+======================================================================
+[Iter 460 Total] Train Loss: 2.6981
+validating on 41 samples = 
+[Iter 460 Task segm] Val Loss: 2.0360
+{'mIoU': 0.138, 'Pixel Acc': 0.4078}
+46449074
+[Iter 460 Task norm] Val Loss: 0.0631
+{'Angle Mean': 18.2207, 'Angle Median': 16.3747, 'Angle 11.25': 21.7187, 'Angle 22.5': 76.1702, 'Angle 30': 87.4972}
+[Iter 460 Task dept] Val Loss: 1.2151
+{'abs_err': 1.159, 'rel_err': 0.3805, 'sigma_1.25': 16.5059, 'sigma_1.25^2': 42.4518, 'sigma_1.25^3': 72.7873}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 470 Task segm] Train Loss: 1.8650
+[Iter 470 Task norm] Train Loss: 0.0604
+[Iter 470 Task dept] Train Loss: 0.7872
+[Iter 470 Total] Train Loss: 2.7127
+======================================================================
+[Iter 470 Total] Train Loss: 2.7127
+validating on 41 samples = 
+[Iter 470 Task segm] Val Loss: 2.0644
+{'mIoU': 0.1233, 'Pixel Acc': 0.4069}
+46449074
+[Iter 470 Task norm] Val Loss: 0.0648
+{'Angle Mean': 18.0896, 'Angle Median': 15.9997, 'Angle 11.25': 27.0378, 'Angle 22.5': 74.8469, 'Angle 30': 86.6168}
+[Iter 470 Task dept] Val Loss: 0.8188
+{'abs_err': 0.7939, 'rel_err': 0.278, 'sigma_1.25': 42.247, 'sigma_1.25^2': 76.4767, 'sigma_1.25^3': 93.112}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 480 Task segm] Train Loss: 1.8192
+[Iter 480 Task norm] Train Loss: 0.0658
+[Iter 480 Task dept] Train Loss: 0.9542
+[Iter 480 Total] Train Loss: 2.8392
+======================================================================
+[Iter 480 Total] Train Loss: 2.8392
+validating on 41 samples = 
+[Iter 480 Task segm] Val Loss: 2.0552
+{'mIoU': 0.1486, 'Pixel Acc': 0.4192}
+46449074
+[Iter 480 Task norm] Val Loss: 0.0646
+{'Angle Mean': 18.0845, 'Angle Median': 16.7382, 'Angle 11.25': 27.7672, 'Angle 22.5': 72.15, 'Angle 30': 87.0363}
+[Iter 480 Task dept] Val Loss: 1.2980
+{'abs_err': 1.24, 'rel_err': 0.4001, 'sigma_1.25': 15.7347, 'sigma_1.25^2': 37.7051, 'sigma_1.25^3': 67.1091}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 490 Task segm] Train Loss: 1.8705
+[Iter 490 Task norm] Train Loss: 0.0634
+[Iter 490 Task dept] Train Loss: 0.7753
+[Iter 490 Total] Train Loss: 2.7092
+======================================================================
+[Iter 490 Total] Train Loss: 2.7092
+validating on 41 samples = 
+[Iter 490 Task segm] Val Loss: 2.0547
+{'mIoU': 0.1461, 'Pixel Acc': 0.4304}
+46449074
+[Iter 490 Task norm] Val Loss: 0.0646
+{'Angle Mean': 17.9132, 'Angle Median': 15.8885, 'Angle 11.25': 28.5629, 'Angle 22.5': 74.0145, 'Angle 30': 87.1303}
+[Iter 490 Task dept] Val Loss: 0.7863
+{'abs_err': 0.7639, 'rel_err': 0.2684, 'sigma_1.25': 42.7398, 'sigma_1.25^2': 77.7558, 'sigma_1.25^3': 94.2316}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 500 Task segm] Train Loss: 1.8646
+[Iter 500 Task norm] Train Loss: 0.0623
+[Iter 500 Task dept] Train Loss: 0.8407
+[Iter 500 Total] Train Loss: 2.7676
+======================================================================
+[Iter 500 Total] Train Loss: 2.7676
+validating on 41 samples = 
+[Iter 500 Task segm] Val Loss: 1.9844
+{'mIoU': 0.1453, 'Pixel Acc': 0.4216}
+46449074
+[Iter 500 Task norm] Val Loss: 0.0672
+{'Angle Mean': 18.3805, 'Angle Median': 15.7, 'Angle 11.25': 26.8093, 'Angle 22.5': 74.3299, 'Angle 30': 85.8714}
+[Iter 500 Task dept] Val Loss: 1.3061
+{'abs_err': 1.2517, 'rel_err': 0.4102, 'sigma_1.25': 14.5638, 'sigma_1.25^2': 34.9851, 'sigma_1.25^3': 63.7284}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 510 Task segm] Train Loss: 1.7523
+[Iter 510 Task norm] Train Loss: 0.0653
+[Iter 510 Task dept] Train Loss: 0.8173
+[Iter 510 Total] Train Loss: 2.6349
+======================================================================
+[Iter 510 Total] Train Loss: 2.6349
+validating on 41 samples = 
+[Iter 510 Task segm] Val Loss: 1.8380
+{'mIoU': 0.1743, 'Pixel Acc': 0.4489}
+46449074
+[Iter 510 Task norm] Val Loss: 0.0661
+{'Angle Mean': 17.8447, 'Angle Median': 16.0419, 'Angle 11.25': 31.468, 'Angle 22.5': 71.7302, 'Angle 30': 85.8563}
+[Iter 510 Task dept] Val Loss: 1.2092
+{'abs_err': 1.1542, 'rel_err': 0.3714, 'sigma_1.25': 17.9323, 'sigma_1.25^2': 45.2208, 'sigma_1.25^3': 75.6278}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 520 Task segm] Train Loss: 1.8162
+[Iter 520 Task norm] Train Loss: 0.0629
+[Iter 520 Task dept] Train Loss: 0.7944
+[Iter 520 Total] Train Loss: 2.6735
+======================================================================
+[Iter 520 Total] Train Loss: 2.6735
+validating on 41 samples = 
+[Iter 520 Task segm] Val Loss: 1.9507
+{'mIoU': 0.1378, 'Pixel Acc': 0.4369}
+46449074
+[Iter 520 Task norm] Val Loss: 0.0667
+{'Angle Mean': 18.3032, 'Angle Median': 15.754, 'Angle 11.25': 27.9989, 'Angle 22.5': 74.5835, 'Angle 30': 86.297}
+[Iter 520 Task dept] Val Loss: 0.9283
+{'abs_err': 0.8872, 'rel_err': 0.2879, 'sigma_1.25': 34.9553, 'sigma_1.25^2': 70.4639, 'sigma_1.25^3': 90.7669}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 530 Task segm] Train Loss: 1.8039
+[Iter 530 Task norm] Train Loss: 0.0662
+[Iter 530 Task dept] Train Loss: 0.8340
+[Iter 530 Total] Train Loss: 2.7042
+======================================================================
+[Iter 530 Total] Train Loss: 2.7042
+validating on 41 samples = 
+[Iter 530 Task segm] Val Loss: 1.9144
+{'mIoU': 0.1434, 'Pixel Acc': 0.4352}
+46449074
+[Iter 530 Task norm] Val Loss: 0.0636
+{'Angle Mean': 18.049, 'Angle Median': 16.6389, 'Angle 11.25': 24.9055, 'Angle 22.5': 74.9044, 'Angle 30': 87.6054}
+[Iter 530 Task dept] Val Loss: 1.2082
+{'abs_err': 1.1538, 'rel_err': 0.3693, 'sigma_1.25': 18.4364, 'sigma_1.25^2': 46.7929, 'sigma_1.25^3': 75.9759}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 540 Task segm] Train Loss: 1.8927
+[Iter 540 Task norm] Train Loss: 0.0634
+[Iter 540 Task dept] Train Loss: 0.7179
+[Iter 540 Total] Train Loss: 2.6739
+======================================================================
+[Iter 540 Total] Train Loss: 2.6739
+validating on 41 samples = 
+[Iter 540 Task segm] Val Loss: 2.0726
+{'mIoU': 0.1431, 'Pixel Acc': 0.3926}
+46449074
+[Iter 540 Task norm] Val Loss: 0.0650
+{'Angle Mean': 17.7685, 'Angle Median': 16.3432, 'Angle 11.25': 29.8044, 'Angle 22.5': 72.1213, 'Angle 30': 86.1429}
+[Iter 540 Task dept] Val Loss: 0.9451
+{'abs_err': 0.9006, 'rel_err': 0.3075, 'sigma_1.25': 31.2021, 'sigma_1.25^2': 63.5245, 'sigma_1.25^3': 88.4}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 550 Task segm] Train Loss: 1.8221
+[Iter 550 Task norm] Train Loss: 0.0638
+[Iter 550 Task dept] Train Loss: 0.7419
+[Iter 550 Total] Train Loss: 2.6278
+======================================================================
+[Iter 550 Total] Train Loss: 2.6278
+validating on 41 samples = 
+[Iter 550 Task segm] Val Loss: 1.8803
+{'mIoU': 0.1353, 'Pixel Acc': 0.4463}
+46449074
+[Iter 550 Task norm] Val Loss: 0.0676
+{'Angle Mean': 18.2897, 'Angle Median': 15.8383, 'Angle 11.25': 27.4468, 'Angle 22.5': 75.0518, 'Angle 30': 86.0368}
+[Iter 550 Task dept] Val Loss: 1.1448
+{'abs_err': 1.0936, 'rel_err': 0.3461, 'sigma_1.25': 22.5839, 'sigma_1.25^2': 53.0742, 'sigma_1.25^3': 80.672}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 560 Task segm] Train Loss: 1.6952
+[Iter 560 Task norm] Train Loss: 0.0601
+[Iter 560 Task dept] Train Loss: 0.7939
+[Iter 560 Total] Train Loss: 2.5492
+======================================================================
+[Iter 560 Total] Train Loss: 2.5492
+validating on 41 samples = 
+[Iter 560 Task segm] Val Loss: 1.8668
+{'mIoU': 0.1525, 'Pixel Acc': 0.4429}
+46449074
+[Iter 560 Task norm] Val Loss: 0.0649
+{'Angle Mean': 18.1421, 'Angle Median': 15.6363, 'Angle 11.25': 26.3948, 'Angle 22.5': 75.6533, 'Angle 30': 86.2986}
+[Iter 560 Task dept] Val Loss: 0.8651
+{'abs_err': 0.8277, 'rel_err': 0.2736, 'sigma_1.25': 39.1018, 'sigma_1.25^2': 74.2259, 'sigma_1.25^3': 92.6431}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 570 Task segm] Train Loss: 1.7849
+[Iter 570 Task norm] Train Loss: 0.0641
+[Iter 570 Task dept] Train Loss: 0.7198
+[Iter 570 Total] Train Loss: 2.5688
+======================================================================
+[Iter 570 Total] Train Loss: 2.5688
+validating on 41 samples = 
+[Iter 570 Task segm] Val Loss: 2.2283
+{'mIoU': 0.1084, 'Pixel Acc': 0.3724}
+46449074
+[Iter 570 Task norm] Val Loss: 0.0700
+{'Angle Mean': 19.1482, 'Angle Median': 16.4252, 'Angle 11.25': 21.0438, 'Angle 22.5': 74.4169, 'Angle 30': 85.5715}
+[Iter 570 Task dept] Val Loss: 1.4619
+{'abs_err': 1.4029, 'rel_err': 0.4353, 'sigma_1.25': 15.0531, 'sigma_1.25^2': 34.1172, 'sigma_1.25^3': 57.313}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 580 Task segm] Train Loss: 1.7837
+[Iter 580 Task norm] Train Loss: 0.0602
+[Iter 580 Task dept] Train Loss: 0.7940
+[Iter 580 Total] Train Loss: 2.6379
+======================================================================
+[Iter 580 Total] Train Loss: 2.6379
+validating on 41 samples = 
+[Iter 580 Task segm] Val Loss: 2.0152
+{'mIoU': 0.1088, 'Pixel Acc': 0.4091}
+46449074
+[Iter 580 Task norm] Val Loss: 0.0657
+{'Angle Mean': 18.3057, 'Angle Median': 16.1998, 'Angle 11.25': 25.9645, 'Angle 22.5': 74.9536, 'Angle 30': 86.898}
+[Iter 580 Task dept] Val Loss: 1.1724
+{'abs_err': 1.1229, 'rel_err': 0.3562, 'sigma_1.25': 22.1164, 'sigma_1.25^2': 50.8017, 'sigma_1.25^3': 77.8412}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 590 Task segm] Train Loss: 1.8629
+[Iter 590 Task norm] Train Loss: 0.0637
+[Iter 590 Task dept] Train Loss: 0.8322
+[Iter 590 Total] Train Loss: 2.7589
+======================================================================
+[Iter 590 Total] Train Loss: 2.7589
+validating on 41 samples = 
+[Iter 590 Task segm] Val Loss: 1.8790
+{'mIoU': 0.1588, 'Pixel Acc': 0.4461}
+46449074
+[Iter 590 Task norm] Val Loss: 0.0652
+{'Angle Mean': 18.2978, 'Angle Median': 15.788, 'Angle 11.25': 24.207, 'Angle 22.5': 75.4688, 'Angle 30': 86.0973}
+[Iter 590 Task dept] Val Loss: 0.8215
+{'abs_err': 0.8034, 'rel_err': 0.28, 'sigma_1.25': 38.9508, 'sigma_1.25^2': 73.8494, 'sigma_1.25^3': 92.5953}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 600 Task segm] Train Loss: 1.9155
+[Iter 600 Task norm] Train Loss: 0.0631
+[Iter 600 Task dept] Train Loss: 0.8179
+[Iter 600 Total] Train Loss: 2.7965
+======================================================================
+[Iter 600 Total] Train Loss: 2.7965
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 1.8357
+{'mIoU': 0.1579, 'Pixel Acc': 0.4383}
+46449074
+[Iter 600 Task norm] Val Loss: 0.0643
+{'Angle Mean': 17.8076, 'Angle Median': 16.2252, 'Angle 11.25': 28.8936, 'Angle 22.5': 73.5895, 'Angle 30': 86.5611}
+[Iter 600 Task dept] Val Loss: 1.0658
+{'abs_err': 1.0155, 'rel_err': 0.3197, 'sigma_1.25': 28.1635, 'sigma_1.25^2': 61.9163, 'sigma_1.25^3': 85.005}
+======================================================================
+prequantization
+validating on 41 samples = 
+[Iter 2 Task segm] Val Loss: 1.8353
+{'mIoU': 0.1579, 'Pixel Acc': 0.4384}
+46449074
+[Iter 2 Task norm] Val Loss: 0.0643
+{'Angle Mean': 17.8076, 'Angle Median': 16.2252, 'Angle 11.25': 28.8936, 'Angle 22.5': 73.5894, 'Angle 30': 86.5611}
+[Iter 2 Task dept] Val Loss: 1.0643
+{'abs_err': 1.0155, 'rel_err': 0.3197, 'sigma_1.25': 28.1635, 'sigma_1.25^2': 61.9163, 'sigma_1.25^3': 85.005}
+======================================================================
+inference time = 0.8009823810763476
+postquantization
+validating on 41 samples = 
+[Iter 2 Task segm] Val Loss: 1.8707
+{'mIoU': 0.1474, 'Pixel Acc': 0.4269}
+46449074
+[Iter 2 Task norm] Val Loss: 0.0646
+{'Angle Mean': 17.8275, 'Angle Median': 16.2464, 'Angle 11.25': 29.1544, 'Angle 22.5': 73.1492, 'Angle 30': 86.5112}
+[Iter 2 Task dept] Val Loss: 1.0717
+{'abs_err': 1.0219, 'rel_err': 0.3217, 'sigma_1.25': 27.7362, 'sigma_1.25^2': 61.3337, 'sigma_1.25^3': 84.8735}
+======================================================================
+inference time = 0.1113131558022848

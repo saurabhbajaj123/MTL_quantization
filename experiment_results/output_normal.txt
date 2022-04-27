@@ -1,0 +1,1307 @@
+Apr26_19-38-17_node002
+{'normal': NYUCriterions(
+  (cosine_similiarity): CosineSimilarity()
+  (l1_loss): L1Loss()
+  (l1_loss_sum): L1Loss()
+  (cross_entropy): CrossEntropyLoss()
+)} {'normal': <TreeMTL.data.pixel2pixel_metrics.NYUMetrics object at 0x2aab30c4da90>} {'normal': 3}
+41 50
+quantizable model loaded
+MTLModel(
+  (backbone): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (4): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (5): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (6): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu)      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (7): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): FloatFunctional(
+          (activation_post_process): Identity()
+        )
+      )
+    )
+  )
+  (heads): ModuleDict(
+    (normal): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 3, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 3, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 3, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24))
+        (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+        (conv3): Conv2d(1024, 3, kernel_size=(1, 1), stride=(1, 1))
+        (relu): ReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): FloatFunctional(
+        (activation_post_process): Identity()
+      )
+    )
+  )
+  (quant): QuantStub()
+  (dequant): DeQuantStub()
+)
+device = cuda:0
+initializing the Trainer
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 10 Task norm] Train Loss: 0.1569
+[Iter 10 Total] Train Loss: 0.1569
+======================================================================
+[Iter 10 Total] Train Loss: 0.1569
+validating on 41 samples = 
+46449074
+[Iter 10 Task norm] Val Loss: 0.0708
+{'Angle Mean': 19.6151, 'Angle Median': 17.1287, 'Angle 11.25': 12.868, 'Angle 22.5': 74.345, 'Angle 30': 86.7705}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 20 Task norm] Train Loss: 0.0692
+[Iter 20 Total] Train Loss: 0.0692
+======================================================================
+[Iter 20 Total] Train Loss: 0.0692
+validating on 41 samples = 
+46449074
+[Iter 20 Task norm] Val Loss: 0.0668
+{'Angle Mean': 19.1283, 'Angle Median': 16.8476, 'Angle 11.25': 17.2127, 'Angle 22.5': 72.971, 'Angle 30': 87.7349}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 30 Task norm] Train Loss: 0.0706
+[Iter 30 Total] Train Loss: 0.0706
+======================================================================
+[Iter 30 Total] Train Loss: 0.0706
+validating on 41 samples = 
+46449074
+[Iter 30 Task norm] Val Loss: 0.0669
+{'Angle Mean': 18.693, 'Angle Median': 16.6825, 'Angle 11.25': 25.4616, 'Angle 22.5': 70.5814, 'Angle 30': 87.0702}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 40 Task norm] Train Loss: 0.0678
+[Iter 40 Total] Train Loss: 0.0678
+======================================================================
+[Iter 40 Total] Train Loss: 0.0678
+validating on 41 samples = 
+46449074
+[Iter 40 Task norm] Val Loss: 0.0680
+{'Angle Mean': 18.6238, 'Angle Median': 17.1673, 'Angle 11.25': 27.9852, 'Angle 22.5': 68.5553, 'Angle 30': 86.3273}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 50 Task norm] Train Loss: 0.0654
+[Iter 50 Total] Train Loss: 0.0654
+======================================================================
+[Iter 50 Total] Train Loss: 0.0654
+validating on 41 samples = 
+46449074
+[Iter 50 Task norm] Val Loss: 0.0675
+{'Angle Mean': 18.318, 'Angle Median': 15.6346, 'Angle 11.25': 28.4967, 'Angle 22.5': 72.8515, 'Angle 30': 85.4642}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 60 Task norm] Train Loss: 0.0668
+[Iter 60 Total] Train Loss: 0.0668
+======================================================================
+[Iter 60 Total] Train Loss: 0.0668
+validating on 41 samples = 
+46449074
+[Iter 60 Task norm] Val Loss: 0.0691
+{'Angle Mean': 18.7997, 'Angle Median': 16.6659, 'Angle 11.25': 26.5142, 'Angle 22.5': 70.436, 'Angle 30': 85.7127}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 70 Task norm] Train Loss: 0.0666
+[Iter 70 Total] Train Loss: 0.0666
+======================================================================
+[Iter 70 Total] Train Loss: 0.0666
+validating on 41 samples = 
+46449074
+[Iter 70 Task norm] Val Loss: 0.0659
+{'Angle Mean': 18.5233, 'Angle Median': 16.6468, 'Angle 11.25': 25.2704, 'Angle 22.5': 72.6488, 'Angle 30': 87.1189}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 80 Task norm] Train Loss: 0.0699
+[Iter 80 Total] Train Loss: 0.0699
+======================================================================
+[Iter 80 Total] Train Loss: 0.0699
+validating on 41 samples = 
+46449074
+[Iter 80 Task norm] Val Loss: 0.0688
+{'Angle Mean': 18.6656, 'Angle Median': 17.6281, 'Angle 11.25': 26.0032, 'Angle 22.5': 67.7493, 'Angle 30': 85.1006}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 90 Task norm] Train Loss: 0.0617
+[Iter 90 Total] Train Loss: 0.0617
+======================================================================
+[Iter 90 Total] Train Loss: 0.0617
+validating on 41 samples = 
+46449074
+[Iter 90 Task norm] Val Loss: 0.0671
+{'Angle Mean': 18.2475, 'Angle Median': 15.4706, 'Angle 11.25': 30.4751, 'Angle 22.5': 71.9449, 'Angle 30': 86.0508}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 100 Task norm] Train Loss: 0.0699
+[Iter 100 Total] Train Loss: 0.0699
+======================================================================
+[Iter 100 Total] Train Loss: 0.0699
+validating on 41 samples = 
+46449074
+[Iter 100 Task norm] Val Loss: 0.0654
+{'Angle Mean': 18.1351, 'Angle Median': 16.967, 'Angle 11.25': 26.3488, 'Angle 22.5': 71.8969, 'Angle 30': 86.0195}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 110 Task norm] Train Loss: 0.0715
+[Iter 110 Total] Train Loss: 0.0715
+======================================================================
+[Iter 110 Total] Train Loss: 0.0715
+validating on 41 samples = 
+46449074
+[Iter 110 Task norm] Val Loss: 0.0683
+{'Angle Mean': 18.8007, 'Angle Median': 16.2346, 'Angle 11.25': 24.5458, 'Angle 22.5': 72.6207, 'Angle 30': 85.7932}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 120 Task norm] Train Loss: 0.0644
+[Iter 120 Total] Train Loss: 0.0644
+======================================================================
+[Iter 120 Total] Train Loss: 0.0644
+validating on 41 samples = 
+46449074
+[Iter 120 Task norm] Val Loss: 0.0674
+{'Angle Mean': 18.6972, 'Angle Median': 16.7741, 'Angle 11.25': 24.822, 'Angle 22.5': 71.62, 'Angle 30': 86.3452}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 130 Task norm] Train Loss: 0.0648
+[Iter 130 Total] Train Loss: 0.0648
+======================================================================
+[Iter 130 Total] Train Loss: 0.0648
+validating on 41 samples = 
+46449074
+[Iter 130 Task norm] Val Loss: 0.0656
+{'Angle Mean': 18.6172, 'Angle Median': 16.4786, 'Angle 11.25': 22.507, 'Angle 22.5': 73.7768, 'Angle 30': 86.6598}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 140 Task norm] Train Loss: 0.0665
+[Iter 140 Total] Train Loss: 0.0665
+======================================================================
+[Iter 140 Total] Train Loss: 0.0665
+validating on 41 samples = 
+46449074
+[Iter 140 Task norm] Val Loss: 0.0677
+{'Angle Mean': 18.8204, 'Angle Median': 15.8323, 'Angle 11.25': 23.4422, 'Angle 22.5': 74.4562, 'Angle 30': 85.2632}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 150 Task norm] Train Loss: 0.0668
+[Iter 150 Total] Train Loss: 0.0668
+======================================================================
+[Iter 150 Total] Train Loss: 0.0668
+validating on 41 samples = 
+46449074
+[Iter 150 Task norm] Val Loss: 0.0663
+{'Angle Mean': 18.4747, 'Angle Median': 16.5755, 'Angle 11.25': 25.7499, 'Angle 22.5': 72.1974, 'Angle 30': 87.2466}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 160 Task norm] Train Loss: 0.0638
+[Iter 160 Total] Train Loss: 0.0638
+======================================================================
+[Iter 160 Total] Train Loss: 0.0638
+validating on 41 samples = 
+46449074
+[Iter 160 Task norm] Val Loss: 0.0642
+{'Angle Mean': 18.1465, 'Angle Median': 16.1088, 'Angle 11.25': 26.5965, 'Angle 22.5': 74.1517, 'Angle 30': 86.596}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 170 Task norm] Train Loss: 0.0609
+[Iter 170 Total] Train Loss: 0.0609
+======================================================================
+[Iter 170 Total] Train Loss: 0.0609
+validating on 41 samples = 
+46449074
+[Iter 170 Task norm] Val Loss: 0.0766
+{'Angle Mean': 19.9022, 'Angle Median': 17.3301, 'Angle 11.25': 23.163, 'Angle 22.5': 69.6997, 'Angle 30': 84.1389}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 180 Task norm] Train Loss: 0.0678
+[Iter 180 Total] Train Loss: 0.0678
+======================================================================
+[Iter 180 Total] Train Loss: 0.0678
+validating on 41 samples = 
+46449074
+[Iter 180 Task norm] Val Loss: 0.0650
+{'Angle Mean': 18.2699, 'Angle Median': 16.851, 'Angle 11.25': 25.1658, 'Angle 22.5': 72.4861, 'Angle 30': 86.5229}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 190 Task norm] Train Loss: 0.0654
+[Iter 190 Total] Train Loss: 0.0654
+======================================================================
+[Iter 190 Total] Train Loss: 0.0654
+validating on 41 samples = 
+46449074
+[Iter 190 Task norm] Val Loss: 0.0621
+{'Angle Mean': 18.6102, 'Angle Median': 16.601, 'Angle 11.25': 20.8298, 'Angle 22.5': 75.1163, 'Angle 30': 87.2613}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 200 Task norm] Train Loss: 0.0650
+[Iter 200 Total] Train Loss: 0.0650
+======================================================================
+[Iter 200 Total] Train Loss: 0.0650
+validating on 41 samples = 
+46449074
+[Iter 200 Task norm] Val Loss: 0.0643
+{'Angle Mean': 18.2649, 'Angle Median': 16.2965, 'Angle 11.25': 25.6898, 'Angle 22.5': 73.5372, 'Angle 30': 86.2884}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 210 Task norm] Train Loss: 0.0649
+[Iter 210 Total] Train Loss: 0.0649
+======================================================================
+[Iter 210 Total] Train Loss: 0.0649
+validating on 41 samples = 
+46449074
+[Iter 210 Task norm] Val Loss: 0.0627
+{'Angle Mean': 18.2201, 'Angle Median': 16.2995, 'Angle 11.25': 23.8746, 'Angle 22.5': 75.1488, 'Angle 30': 87.4943}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 220 Task norm] Train Loss: 0.0656
+[Iter 220 Total] Train Loss: 0.0656
+======================================================================
+[Iter 220 Total] Train Loss: 0.0656
+validating on 41 samples = 
+46449074
+[Iter 220 Task norm] Val Loss: 0.0641
+{'Angle Mean': 17.8661, 'Angle Median': 16.0779, 'Angle 11.25': 29.9806, 'Angle 22.5': 73.1597, 'Angle 30': 85.9631}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 230 Task norm] Train Loss: 0.0641
+[Iter 230 Total] Train Loss: 0.0641
+======================================================================
+[Iter 230 Total] Train Loss: 0.0641
+validating on 41 samples = 
+46449074
+[Iter 230 Task norm] Val Loss: 0.0674
+{'Angle Mean': 18.8164, 'Angle Median': 16.4161, 'Angle 11.25': 22.1889, 'Angle 22.5': 74.6361, 'Angle 30': 86.4755}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 240 Task norm] Train Loss: 0.0689
+[Iter 240 Total] Train Loss: 0.0689
+======================================================================
+[Iter 240 Total] Train Loss: 0.0689
+validating on 41 samples = 
+46449074
+[Iter 240 Task norm] Val Loss: 0.0642
+{'Angle Mean': 18.5114, 'Angle Median': 16.8338, 'Angle 11.25': 24.3669, 'Angle 22.5': 73.2238, 'Angle 30': 86.2333}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 250 Task norm] Train Loss: 0.0655
+[Iter 250 Total] Train Loss: 0.0655
+======================================================================
+[Iter 250 Total] Train Loss: 0.0655
+validating on 41 samples = 
+46449074
+[Iter 250 Task norm] Val Loss: 0.0705
+{'Angle Mean': 18.5297, 'Angle Median': 16.4412, 'Angle 11.25': 31.9621, 'Angle 22.5': 68.329, 'Angle 30': 84.0899}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 260 Task norm] Train Loss: 0.0665
+[Iter 260 Total] Train Loss: 0.0665
+======================================================================
+[Iter 260 Total] Train Loss: 0.0665
+validating on 41 samples = 
+46449074
+[Iter 260 Task norm] Val Loss: 0.0684
+{'Angle Mean': 18.9739, 'Angle Median': 16.9921, 'Angle 11.25': 22.9837, 'Angle 22.5': 71.1863, 'Angle 30': 86.8287}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 270 Task norm] Train Loss: 0.0660
+[Iter 270 Total] Train Loss: 0.0660
+======================================================================
+[Iter 270 Total] Train Loss: 0.0660
+validating on 41 samples = 
+46449074
+[Iter 270 Task norm] Val Loss: 0.0639
+{'Angle Mean': 18.3286, 'Angle Median': 16.4127, 'Angle 11.25': 23.8104, 'Angle 22.5': 74.359, 'Angle 30': 87.1156}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 280 Task norm] Train Loss: 0.0646
+[Iter 280 Total] Train Loss: 0.0646
+======================================================================
+[Iter 280 Total] Train Loss: 0.0646
+validating on 41 samples = 
+46449074
+[Iter 280 Task norm] Val Loss: 0.0626
+{'Angle Mean': 17.9705, 'Angle Median': 16.2079, 'Angle 11.25': 25.5244, 'Angle 22.5': 74.689, 'Angle 30': 87.2093}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 290 Task norm] Train Loss: 0.0651
+[Iter 290 Total] Train Loss: 0.0651
+======================================================================
+[Iter 290 Total] Train Loss: 0.0651
+validating on 41 samples = 
+46449074
+[Iter 290 Task norm] Val Loss: 0.0678
+{'Angle Mean': 19.0634, 'Angle Median': 16.5037, 'Angle 11.25': 20.0176, 'Angle 22.5': 75.166, 'Angle 30': 86.3081}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 300 Task norm] Train Loss: 0.0690
+[Iter 300 Total] Train Loss: 0.0690
+======================================================================
+[Iter 300 Total] Train Loss: 0.0690
+validating on 41 samples = 
+46449074
+[Iter 300 Task norm] Val Loss: 0.0643
+{'Angle Mean': 18.8148, 'Angle Median': 17.1717, 'Angle 11.25': 19.3111, 'Angle 22.5': 74.4525, 'Angle 30': 87.327}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 310 Task norm] Train Loss: 0.0669
+[Iter 310 Total] Train Loss: 0.0669
+======================================================================
+[Iter 310 Total] Train Loss: 0.0669
+validating on 41 samples = 
+46449074
+[Iter 310 Task norm] Val Loss: 0.0646
+{'Angle Mean': 18.4999, 'Angle Median': 16.6765, 'Angle 11.25': 25.0334, 'Angle 22.5': 72.8881, 'Angle 30': 86.879}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 320 Task norm] Train Loss: 0.0630
+[Iter 320 Total] Train Loss: 0.0630
+======================================================================
+[Iter 320 Total] Train Loss: 0.0630
+validating on 41 samples = 
+46449074
+[Iter 320 Task norm] Val Loss: 0.0649
+{'Angle Mean': 18.2056, 'Angle Median': 15.8104, 'Angle 11.25': 25.7635, 'Angle 22.5': 74.9737, 'Angle 30': 86.7366}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 330 Task norm] Train Loss: 0.0627
+[Iter 330 Total] Train Loss: 0.0627
+======================================================================
+[Iter 330 Total] Train Loss: 0.0627
+validating on 41 samples = 
+46449074
+[Iter 330 Task norm] Val Loss: 0.0659
+{'Angle Mean': 18.9038, 'Angle Median': 16.643, 'Angle 11.25': 18.7368, 'Angle 22.5': 75.2057, 'Angle 30': 86.8369}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 340 Task norm] Train Loss: 0.0676
+[Iter 340 Total] Train Loss: 0.0676
+======================================================================
+[Iter 340 Total] Train Loss: 0.0676
+validating on 41 samples = 
+46449074
+[Iter 340 Task norm] Val Loss: 0.0642
+{'Angle Mean': 18.857, 'Angle Median': 16.9633, 'Angle 11.25': 18.5713, 'Angle 22.5': 75.6754, 'Angle 30': 87.3015}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 350 Task norm] Train Loss: 0.0620
+[Iter 350 Total] Train Loss: 0.0620
+======================================================================
+[Iter 350 Total] Train Loss: 0.0620
+validating on 41 samples = 
+46449074
+[Iter 350 Task norm] Val Loss: 0.0638
+{'Angle Mean': 18.045, 'Angle Median': 16.0797, 'Angle 11.25': 28.7174, 'Angle 22.5': 73.5006, 'Angle 30': 86.2517}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 360 Task norm] Train Loss: 0.0619
+[Iter 360 Total] Train Loss: 0.0619
+======================================================================
+[Iter 360 Total] Train Loss: 0.0619
+validating on 41 samples = 
+46449074
+[Iter 360 Task norm] Val Loss: 0.0628
+{'Angle Mean': 18.3288, 'Angle Median': 16.6465, 'Angle 11.25': 23.8399, 'Angle 22.5': 73.5624, 'Angle 30': 86.67}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 370 Task norm] Train Loss: 0.0629
+[Iter 370 Total] Train Loss: 0.0629
+======================================================================
+[Iter 370 Total] Train Loss: 0.0629
+validating on 41 samples = 
+46449074
+[Iter 370 Task norm] Val Loss: 0.0632
+{'Angle Mean': 17.9918, 'Angle Median': 16.1215, 'Angle 11.25': 27.5641, 'Angle 22.5': 74.1603, 'Angle 30': 86.7275}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 380 Task norm] Train Loss: 0.0696
+[Iter 380 Total] Train Loss: 0.0696
+======================================================================
+[Iter 380 Total] Train Loss: 0.0696
+validating on 41 samples = 
+46449074
+[Iter 380 Task norm] Val Loss: 0.0673
+{'Angle Mean': 18.5888, 'Angle Median': 15.803, 'Angle 11.25': 27.3633, 'Angle 22.5': 74.1592, 'Angle 30': 86.023}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 390 Task norm] Train Loss: 0.0675
+[Iter 390 Total] Train Loss: 0.0675
+======================================================================
+[Iter 390 Total] Train Loss: 0.0675
+validating on 41 samples = 
+46449074
+[Iter 390 Task norm] Val Loss: 0.0638
+{'Angle Mean': 18.4195, 'Angle Median': 17.4725, 'Angle 11.25': 24.1919, 'Angle 22.5': 71.5168, 'Angle 30': 87.8049}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 400 Task norm] Train Loss: 0.0676
+[Iter 400 Total] Train Loss: 0.0676
+======================================================================
+[Iter 400 Total] Train Loss: 0.0676
+validating on 41 samples = 
+46449074
+[Iter 400 Task norm] Val Loss: 0.0673
+{'Angle Mean': 19.0937, 'Angle Median': 16.5341, 'Angle 11.25': 18.2608, 'Angle 22.5': 74.3886, 'Angle 30': 86.2948}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 410 Task norm] Train Loss: 0.0667
+[Iter 410 Total] Train Loss: 0.0667
+======================================================================
+[Iter 410 Total] Train Loss: 0.0667
+validating on 41 samples = 
+46449074
+[Iter 410 Task norm] Val Loss: 0.0649
+{'Angle Mean': 18.8979, 'Angle Median': 16.8672, 'Angle 11.25': 17.8117, 'Angle 22.5': 74.9413, 'Angle 30': 87.7599}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 420 Task norm] Train Loss: 0.0651
+[Iter 420 Total] Train Loss: 0.0651
+======================================================================
+[Iter 420 Total] Train Loss: 0.0651
+validating on 41 samples = 
+46449074
+[Iter 420 Task norm] Val Loss: 0.0646
+{'Angle Mean': 18.8329, 'Angle Median': 17.3328, 'Angle 11.25': 19.9821, 'Angle 22.5': 73.9811, 'Angle 30': 88.1773}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 430 Task norm] Train Loss: 0.0656
+[Iter 430 Total] Train Loss: 0.0656
+======================================================================
+[Iter 430 Total] Train Loss: 0.0656
+validating on 41 samples = 
+46449074
+[Iter 430 Task norm] Val Loss: 0.0644
+{'Angle Mean': 18.3792, 'Angle Median': 16.0631, 'Angle 11.25': 24.2027, 'Angle 22.5': 74.6375, 'Angle 30': 86.6809}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 440 Task norm] Train Loss: 0.0634
+[Iter 440 Total] Train Loss: 0.0634
+======================================================================
+[Iter 440 Total] Train Loss: 0.0634
+validating on 41 samples = 
+46449074
+[Iter 440 Task norm] Val Loss: 0.0688
+{'Angle Mean': 18.8442, 'Angle Median': 16.6928, 'Angle 11.25': 25.5, 'Angle 22.5': 72.0685, 'Angle 30': 85.7041}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 450 Task norm] Train Loss: 0.0666
+[Iter 450 Total] Train Loss: 0.0666
+======================================================================
+[Iter 450 Total] Train Loss: 0.0666
+validating on 41 samples = 
+46449074
+[Iter 450 Task norm] Val Loss: 0.0649
+{'Angle Mean': 18.7096, 'Angle Median': 16.7963, 'Angle 11.25': 21.1539, 'Angle 22.5': 73.472, 'Angle 30': 86.9516}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 460 Task norm] Train Loss: 0.0626
+[Iter 460 Total] Train Loss: 0.0626
+======================================================================
+[Iter 460 Total] Train Loss: 0.0626
+validating on 41 samples = 
+46449074
+[Iter 460 Task norm] Val Loss: 0.0671
+{'Angle Mean': 18.8256, 'Angle Median': 16.5852, 'Angle 11.25': 22.4661, 'Angle 22.5': 72.968, 'Angle 30': 86.9692}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 470 Task norm] Train Loss: 0.0685
+[Iter 470 Total] Train Loss: 0.0685
+======================================================================
+[Iter 470 Total] Train Loss: 0.0685
+validating on 41 samples = 
+46449074
+[Iter 470 Task norm] Val Loss: 0.0651
+{'Angle Mean': 18.9537, 'Angle Median': 16.6586, 'Angle 11.25': 18.1509, 'Angle 22.5': 74.3652, 'Angle 30': 86.8364}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 480 Task norm] Train Loss: 0.0650
+[Iter 480 Total] Train Loss: 0.0650
+======================================================================
+[Iter 480 Total] Train Loss: 0.0650
+validating on 41 samples = 
+46449074
+[Iter 480 Task norm] Val Loss: 0.0670
+{'Angle Mean': 18.7907, 'Angle Median': 16.2489, 'Angle 11.25': 21.7886, 'Angle 22.5': 73.6556, 'Angle 30': 86.9128}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 490 Task norm] Train Loss: 0.0679
+[Iter 490 Total] Train Loss: 0.0679
+======================================================================
+[Iter 490 Total] Train Loss: 0.0679
+validating on 41 samples = 
+46449074
+[Iter 490 Task norm] Val Loss: 0.0670
+{'Angle Mean': 18.9525, 'Angle Median': 16.306, 'Angle 11.25': 18.849, 'Angle 22.5': 75.0422, 'Angle 30': 86.862}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 500 Task norm] Train Loss: 0.0681
+[Iter 500 Total] Train Loss: 0.0681
+======================================================================
+[Iter 500 Total] Train Loss: 0.0681
+validating on 41 samples = 
+46449074
+[Iter 500 Task norm] Val Loss: 0.0648
+{'Angle Mean': 18.432, 'Angle Median': 16.6814, 'Angle 11.25': 23.5363, 'Angle 22.5': 73.3615, 'Angle 30': 87.1584}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 510 Task norm] Train Loss: 0.0671
+[Iter 510 Total] Train Loss: 0.0671
+======================================================================
+[Iter 510 Total] Train Loss: 0.0671
+validating on 41 samples = 
+46449074
+[Iter 510 Task norm] Val Loss: 0.0673
+{'Angle Mean': 18.9485, 'Angle Median': 16.4334, 'Angle 11.25': 19.4496, 'Angle 22.5': 75.0709, 'Angle 30': 86.7497}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 520 Task norm] Train Loss: 0.0615
+[Iter 520 Total] Train Loss: 0.0615
+======================================================================
+[Iter 520 Total] Train Loss: 0.0615
+validating on 41 samples = 
+46449074
+[Iter 520 Task norm] Val Loss: 0.0661
+{'Angle Mean': 18.7663, 'Angle Median': 16.48, 'Angle 11.25': 22.7293, 'Angle 22.5': 73.7374, 'Angle 30': 86.7992}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 530 Task norm] Train Loss: 0.0662
+[Iter 530 Total] Train Loss: 0.0662
+======================================================================
+[Iter 530 Total] Train Loss: 0.0662
+validating on 41 samples = 
+46449074
+[Iter 530 Task norm] Val Loss: 0.0655
+{'Angle Mean': 18.7044, 'Angle Median': 16.6743, 'Angle 11.25': 23.5658, 'Angle 22.5': 72.9758, 'Angle 30': 86.4939}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 540 Task norm] Train Loss: 0.0677
+[Iter 540 Total] Train Loss: 0.0677
+======================================================================
+[Iter 540 Total] Train Loss: 0.0677
+validating on 41 samples = 
+46449074
+[Iter 540 Task norm] Val Loss: 0.0670
+{'Angle Mean': 18.8695, 'Angle Median': 17.2475, 'Angle 11.25': 22.9404, 'Angle 22.5': 70.9731, 'Angle 30': 87.0629}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 550 Task norm] Train Loss: 0.0616
+[Iter 550 Total] Train Loss: 0.0616
+======================================================================
+[Iter 550 Total] Train Loss: 0.0616
+validating on 41 samples = 
+46449074
+[Iter 550 Task norm] Val Loss: 0.0710
+{'Angle Mean': 19.3204, 'Angle Median': 17.5335, 'Angle 11.25': 21.911, 'Angle 22.5': 70.3042, 'Angle 30': 86.0987}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 560 Task norm] Train Loss: 0.0670
+[Iter 560 Total] Train Loss: 0.0670
+======================================================================
+[Iter 560 Total] Train Loss: 0.0670
+validating on 41 samples = 
+46449074
+[Iter 560 Task norm] Val Loss: 0.0705
+{'Angle Mean': 19.7438, 'Angle Median': 18.559, 'Angle 11.25': 17.5883, 'Angle 22.5': 67.7291, 'Angle 30': 85.1813}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 570 Task norm] Train Loss: 0.0699
+[Iter 570 Total] Train Loss: 0.0699
+======================================================================
+[Iter 570 Total] Train Loss: 0.0699
+validating on 41 samples = 
+46449074
+[Iter 570 Task norm] Val Loss: 0.0664
+{'Angle Mean': 18.9562, 'Angle Median': 16.8101, 'Angle 11.25': 19.3419, 'Angle 22.5': 73.8193, 'Angle 30': 87.5077}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 580 Task norm] Train Loss: 0.0654
+[Iter 580 Total] Train Loss: 0.0654
+======================================================================
+[Iter 580 Total] Train Loss: 0.0654
+validating on 41 samples = 
+46449074
+[Iter 580 Task norm] Val Loss: 0.0663
+{'Angle Mean': 18.7076, 'Angle Median': 16.5181, 'Angle 11.25': 22.1609, 'Angle 22.5': 74.8289, 'Angle 30': 86.9479}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 590 Task norm] Train Loss: 0.0640
+[Iter 590 Total] Train Loss: 0.0640
+======================================================================
+[Iter 590 Total] Train Loss: 0.0640
+validating on 41 samples = 
+46449074
+[Iter 590 Task norm] Val Loss: 0.0659
+{'Angle Mean': 18.9697, 'Angle Median': 17.1622, 'Angle 11.25': 19.1208, 'Angle 22.5': 73.3623, 'Angle 30': 86.8161}
+======================================================================
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+starting train step
+[Iter 600 Task norm] Train Loss: 0.0623
+[Iter 600 Total] Train Loss: 0.0623
+======================================================================
+[Iter 600 Total] Train Loss: 0.0623
+validating on 41 samples = 
+46449074
+[Iter 600 Task norm] Val Loss: 0.0668
+{'Angle Mean': 18.8652, 'Angle Median': 15.8087, 'Angle 11.25': 20.3161, 'Angle 22.5': 75.6856, 'Angle 30': 86.0101}
+======================================================================
+prequantization
+validating on 41 samples = 
+46449074
+[Iter 2 Task norm] Val Loss: 0.0668
+{'Angle Mean': 18.8652, 'Angle Median': 15.8087, 'Angle 11.25': 20.3161, 'Angle 22.5': 75.6856, 'Angle 30': 86.0101}
+======================================================================
+postquantization
+validating on 41 samples = 
+46449074
+[Iter 2 Task norm] Val Loss: 0.0671
+{'Angle Mean': 18.9184, 'Angle Median': 15.9086, 'Angle 11.25': 19.9647, 'Angle 22.5': 75.4362, 'Angle 30': 85.9829}
+======================================================================

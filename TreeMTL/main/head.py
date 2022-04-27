@@ -12,9 +12,14 @@ class ASPPHeadNode(nn.Module):
         self.fc2 = Classification_Module(feature_channels, out_channels, rate=12)
         self.fc3 = Classification_Module(feature_channels, out_channels, rate=18)
         self.fc4 = Classification_Module(feature_channels, out_channels, rate=24)
-
+        self.add = nn.quantized.FloatFunctional()
     def forward(self, x):
-        output = self.fc1(x) + self.fc2(x) + self.fc3(x) + self.fc4(x)
+        # x = self.quant(x)
+        x1 = self.add.add(self.fc1(x), self.fc2(x))
+        x2 = self.add.add(self.fc3(x), self.fc4(x))
+        output = self.add.add(x1, x2)
+        # output = self.fc1(x) + self.fc2(x) + self.fc3(x) + self.fc4(x)
+        # output = self.dequant(output)
         return output
     
 class Classification_Module(nn.Module):
@@ -25,11 +30,11 @@ class Classification_Module(nn.Module):
         self.conv3 = nn.Conv2d(1024, num_classes, kernel_size=1)
         self.relu = nn.ReLU(inplace=True)
         self.dropout = nn.Dropout()
-        self.quant = QuantStub()
-        self.dequant = DeQuantStub()
+        # self.quant = QuantStub()
+        # self.dequant = DeQuantStub()
 
     def forward(self, x):
-        x = self.quant(x)
+        # x = self.quant(x)
         x = self.conv1(x)
         x = self.relu(x)
         x = self.dropout(x)
@@ -37,5 +42,5 @@ class Classification_Module(nn.Module):
         x = self.relu(x)
         x = self.dropout(x)
         x = self.conv3(x)
-        x = self.dequant(x)
+        # x = self.dequant(x)
         return x

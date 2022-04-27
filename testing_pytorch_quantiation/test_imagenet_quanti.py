@@ -76,14 +76,14 @@ def model_training(res_model, criterion, optimizer, scheduler, number_epochs=25)
                     _, preds = torch.max(outputs, 1)
                     loss = criterion(outputs, labels)
 
-                    if phase == 'train': # backward and then optimizing only if it is in training phase
+                    if phase == 'train_mini': # backward and then optimizing only if it is in training phase
                         loss.backward()
                         optimizer.step()
 
                 running_loss += loss.item() * inputs.size(0)
                 running_corrects += torch.sum(preds == labels.data)
 
-            if phase == 'train':
+            if phase == 'train_mini':
                 scheduler.step()
 
             epoch_loss = running_loss / sizes_datasets[phase]
@@ -91,7 +91,7 @@ def model_training(res_model, criterion, optimizer, scheduler, number_epochs=25)
 
             print('{} Loss: {:.4f} Acc: {:.4f}'.format(phase, epoch_loss, epoch_acc))
 
-            if phase == 'val' and epoch_acc > best_accuracy: ## deep copy the model
+            if phase == 'val_mini' and epoch_acc > best_accuracy: ## deep copy the model
                 best_accuracy = epoch_acc
                 best_resmodel_wts = copy.deepcopy(res_model.state_dict())
         print()
