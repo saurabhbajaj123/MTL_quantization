@@ -1,0 +1,505 @@
+['segment_semantic']
+=============================
+MTLModel(
+  (backbone): Sequential(
+    (0): Conv2d(
+      3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False
+      (activation_post_process): HistogramObserver()
+    )
+    (1): BatchNorm2d(
+      64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+      (activation_post_process): HistogramObserver()
+    )
+    (2): ReLU(
+      inplace=True
+      (activation_post_process): HistogramObserver()
+    )
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (4): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(
+          64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn1): BatchNorm2d(
+          64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn2): BatchNorm2d(
+          64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): HistogramObserver()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(
+          64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn1): BatchNorm2d(
+          64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn2): BatchNorm2d(
+          64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): HistogramObserver()
+        )
+      )
+    )
+    (5): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(
+          64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn1): BatchNorm2d(
+          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn2): BatchNorm2d(
+          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (downsample): Sequential(
+          (0): Conv2d(
+            64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False
+            (activation_post_process): HistogramObserver()
+          )
+          (1): BatchNorm2d(
+            128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (activation_post_process): HistogramObserver()
+          )
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): HistogramObserver()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(
+          128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn1): BatchNorm2d(
+          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn2): BatchNorm2d(
+          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): HistogramObserver()
+        )
+      )
+    )
+    (6): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(
+          128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn1): BatchNorm2d(
+          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn2): BatchNorm2d(
+          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (downsample): Sequential(
+          (0): Conv2d(
+            128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False
+            (activation_post_process): HistogramObserver()
+          )
+          (1): BatchNorm2d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (activation_post_process): HistogramObserver()
+          )
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): HistogramObserver()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(
+          256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn1): BatchNorm2d(
+          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn2): BatchNorm2d(
+          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): HistogramObserver()
+        )
+      )
+    )
+    (7): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(
+          256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn1): BatchNorm2d(
+          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn2): BatchNorm2d(
+          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (downsample): Sequential(
+          (0): Conv2d(
+            256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False
+            (activation_post_process): HistogramObserver()
+          )
+          (1): BatchNorm2d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (activation_post_process): HistogramObserver()
+          )
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): HistogramObserver()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(
+          512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn1): BatchNorm2d(
+          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+          (activation_post_process): HistogramObserver()
+        )
+        (bn2): BatchNorm2d(
+          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (activation_post_process): HistogramObserver()
+        )
+        (skip_add): FloatFunctional(
+          (activation_post_process): HistogramObserver()
+        )
+      )
+    )
+  )
+  (heads): ModuleDict(
+    (segment_semantic): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): Conv2d(
+          512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6)
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+          (activation_post_process): HistogramObserver()
+        )
+        (conv3): Conv2d(
+          1024, 40, kernel_size=(1, 1), stride=(1, 1)
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): Conv2d(
+          512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12)
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+          (activation_post_process): HistogramObserver()
+        )
+        (conv3): Conv2d(
+          1024, 40, kernel_size=(1, 1), stride=(1, 1)
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): Conv2d(
+          512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18)
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+          (activation_post_process): HistogramObserver()
+        )
+        (conv3): Conv2d(
+          1024, 40, kernel_size=(1, 1), stride=(1, 1)
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): Conv2d(
+          512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24)
+          (activation_post_process): HistogramObserver()
+        )
+        (conv2): Conv2d(
+          1024, 1024, kernel_size=(1, 1), stride=(1, 1)
+          (activation_post_process): HistogramObserver()
+        )
+        (conv3): Conv2d(
+          1024, 40, kernel_size=(1, 1), stride=(1, 1)
+          (activation_post_process): HistogramObserver()
+        )
+        (relu): ReLU(
+          inplace=True
+          (activation_post_process): HistogramObserver()
+        )
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): FloatFunctional(
+        (activation_post_process): HistogramObserver()
+      )
+    )
+  )
+  (quant): QuantStub(
+    (activation_post_process): HistogramObserver()
+  )
+  (dequant): DeQuantStub()
+)
+=============================
+MTLModel(
+  (backbone): Sequential(
+    (0): QuantizedConv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), scale=1.0, zero_point=0, padding=(3, 3), bias=False)
+    (1): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): QuantizedReLU(inplace=True)
+    (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (4): Sequential(
+      (0): BasicBlock(
+        (conv1): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn1): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): QuantizedReLU(inplace=True)
+        (conv2): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn2): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): QFunctional(
+          scale=1.0, zero_point=0
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn1): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): QuantizedReLU(inplace=True)
+        (conv2): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn2): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): QFunctional(
+          scale=1.0, zero_point=0
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (5): Sequential(
+      (0): BasicBlock(
+        (conv1): QuantizedConv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn1): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): QuantizedReLU(inplace=True)
+        (conv2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn2): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): QuantizedConv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), scale=1.0, zero_point=0, bias=False)
+          (1): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): QFunctional(
+          scale=1.0, zero_point=0
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn1): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): QuantizedReLU(inplace=True)
+        (conv2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn2): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): QFunctional(
+          scale=1.0, zero_point=0
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (6): Sequential(
+      (0): BasicBlock(
+        (conv1): QuantizedConv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn1): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): QuantizedReLU(inplace=True)
+        (conv2): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn2): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), scale=1.0, zero_point=0, bias=False)
+          (1): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): QFunctional(
+          scale=1.0, zero_point=0
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn1): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): QuantizedReLU(inplace=True)
+        (conv2): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn2): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): QFunctional(
+          scale=1.0, zero_point=0
+          (activation_post_process): Identity()
+        )
+      )
+    )
+    (7): Sequential(
+      (0): BasicBlock(
+        (conv1): QuantizedConv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn1): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): QuantizedReLU(inplace=True)
+        (conv2): QuantizedConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn2): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): QuantizedConv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), scale=1.0, zero_point=0, bias=False)
+          (1): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (skip_add): QFunctional(
+          scale=1.0, zero_point=0
+          (activation_post_process): Identity()
+        )
+      )
+      (1): BasicBlock(
+        (conv1): QuantizedConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn1): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): QuantizedReLU(inplace=True)
+        (conv2): QuantizedConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+        (bn2): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (skip_add): QFunctional(
+          scale=1.0, zero_point=0
+          (activation_post_process): Identity()
+        )
+      )
+    )
+  )
+  (heads): ModuleDict(
+    (segment_semantic): ASPPHeadNode(
+      (fc1): Classification_Module(
+        (conv1): QuantizedConv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(6, 6), dilation=(6, 6))
+        (conv2): QuantizedConv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (conv3): QuantizedConv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (relu): QuantizedReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc2): Classification_Module(
+        (conv1): QuantizedConv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(12, 12), dilation=(12, 12))
+        (conv2): QuantizedConv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (conv3): QuantizedConv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (relu): QuantizedReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc3): Classification_Module(
+        (conv1): QuantizedConv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(18, 18), dilation=(18, 18))
+        (conv2): QuantizedConv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (conv3): QuantizedConv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (relu): QuantizedReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (fc4): Classification_Module(
+        (conv1): QuantizedConv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(24, 24), dilation=(24, 24))
+        (conv2): QuantizedConv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (conv3): QuantizedConv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (relu): QuantizedReLU(inplace=True)
+        (dropout): Dropout(p=0.5, inplace=False)
+      )
+      (add): QFunctional(
+        scale=1.0, zero_point=0
+        (activation_post_process): Identity()
+      )
+    )
+  )
+  (quant): Quantize(scale=tensor([1.]), zero_point=tensor([0]), dtype=torch.quint8)
+  (dequant): DeQuantize()
+)
+=============================
+<class 'torch.nn.parameter.Parameter'>
+<bound method Module.parameters of QuantizedConv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), scale=1.0, zero_point=0, padding=(3, 3), bias=False)>
+model:  fp32  	 Size (KB): 137759.807
+model:  int8  	 Size (KB): 34817.587
+3.956616 times smaller
