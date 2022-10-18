@@ -1,0 +1,35 @@
+       JobID    JobName  Partition    Account  AllocCPUS      State ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- -------- 
+3370343            bash        gpu pi_huigua+          2    TIMEOUT      0:0 
+3370343.ext+     extern            pi_huigua+          2  COMPLETED      0:0 
+3370343.0          bash            pi_huigua+          2  COMPLETED      0:0 
+3370619            bash        gpu pi_huigua+          2    TIMEOUT      0:0 
+3370619.ext+     extern            pi_huigua+          2  COMPLETED      0:0 
+3370619.0          bash            pi_huigua+          2  CANCELLED      0:9 
+3370620      JupyterLab cpu-preem+ pi_huigua+          2     FAILED    127:0 
+3370620.bat+      batch            pi_huigua+          2     FAILED    127:0 
+3370620.ext+     extern            pi_huigua+          2  COMPLETED      0:0 
+3371023            bash        gpu pi_huigua+          2  COMPLETED      0:0 
+3371023.ext+     extern            pi_huigua+          2  COMPLETED      0:0 
+3371023.0          bash            pi_huigua+          2  COMPLETED      0:0 
+3371108      sbatch_fi+        gpu pi_huigua+          4 OUT_OF_ME+    0:125 
+3371108.bat+      batch            pi_huigua+          4 OUT_OF_ME+    0:125 
+3371108.ext+     extern            pi_huigua+          4  COMPLETED      0:0 
+3371191      sbatch_fi+        gpu pi_huigua+          4 OUT_OF_ME+    0:125 
+3371191.bat+      batch            pi_huigua+          4 OUT_OF_ME+    0:125 
+3371191.ext+     extern            pi_huigua+          4  COMPLETED      0:0 
+3371192      sbatch_fi+        gpu pi_huigua+          4 OUT_OF_ME+    0:125 
+3371192.bat+      batch            pi_huigua+          4 OUT_OF_ME+    0:125 
+3371192.ext+     extern            pi_huigua+          4  COMPLETED      0:0 
+3371195      sbatch_fi+        gpu pi_huigua+          4 OUT_OF_ME+    0:125 
+3371195.bat+      batch            pi_huigua+          4 OUT_OF_ME+    0:125 
+3371195.ext+     extern            pi_huigua+          4  COMPLETED      0:0 
+3371196      sbatch_fi+        gpu pi_huigua+          4 OUT_OF_ME+    0:125 
+3371196.bat+      batch            pi_huigua+          4 OUT_OF_ME+    0:125 
+3371196.ext+     extern            pi_huigua+          4  COMPLETED      0:0 
+3371198      sbatch_fi+        gpu pi_huigua+          4 OUT_OF_ME+    0:125 
+3371198.bat+      batch            pi_huigua+          4 OUT_OF_ME+    0:125 
+3371198.ext+     extern            pi_huigua+          4  COMPLETED      0:0 
+3371199            bash        gpu pi_huigua+          2    RUNNING      0:0 
+3371199.ext+     extern            pi_huigua+          2    RUNNING      0:0 
+3371199.0          bash            pi_huigua+          2    RUNNING      0:0 

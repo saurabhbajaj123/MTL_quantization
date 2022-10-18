@@ -1,0 +1,729 @@
+41 50
+quantizable model loaded
+device = cuda:0
+initializing the Trainer
+[Iter 10 Task dept] Train Loss: 3.0925
+[Iter 10 Task norm] Train Loss: 0.1798
+[Iter 10 Total] Train Loss: 3.2723
+======================================================================
+[Iter 10 Total] Train Loss: 3.2723
+validating on 41 samples = 
+[Iter 10 Task dept] Val Loss: 0.9243
+{'abs_err': 0.9056, 'rel_err': 0.3565, 'sigma_1.25': 40.5246, 'sigma_1.25^2': 70.6525, 'sigma_1.25^3': 87.6523}
+46449074
+[Iter 10 Task norm] Val Loss: 0.0684
+{'Angle Mean': 19.3809, 'Angle Median': 17.7314, 'Angle 11.25': 19.9035, 'Angle 22.5': 67.8003, 'Angle 30': 87.9448}
+saving best model, with val_loss = 0.9927643581134517
+======================================================================
+[Iter 20 Task dept] Train Loss: 1.2540
+[Iter 20 Task norm] Train Loss: 0.0700
+[Iter 20 Total] Train Loss: 1.3239
+======================================================================
+[Iter 20 Total] Train Loss: 1.3239
+validating on 41 samples = 
+[Iter 20 Task dept] Val Loss: 1.0416
+{'abs_err': 1.0265, 'rel_err': 0.406, 'sigma_1.25': 36.9071, 'sigma_1.25^2': 65.1112, 'sigma_1.25^3': 83.1964}
+46449074
+[Iter 20 Task norm] Val Loss: 0.0678
+{'Angle Mean': 19.0519, 'Angle Median': 16.6503, 'Angle 11.25': 19.0991, 'Angle 22.5': 71.1749, 'Angle 30': 87.4478}
+======================================================================
+[Iter 30 Task dept] Train Loss: 1.1918
+[Iter 30 Task norm] Train Loss: 0.0660
+[Iter 30 Total] Train Loss: 1.2578
+======================================================================
+[Iter 30 Total] Train Loss: 1.2578
+validating on 41 samples = 
+[Iter 30 Task dept] Val Loss: 0.9695
+{'abs_err': 0.969, 'rel_err': 0.4529, 'sigma_1.25': 40.1963, 'sigma_1.25^2': 68.06, 'sigma_1.25^3': 84.6265}
+46449074
+[Iter 30 Task norm] Val Loss: 0.0698
+{'Angle Mean': 19.3987, 'Angle Median': 16.3466, 'Angle 11.25': 13.0141, 'Angle 22.5': 74.1539, 'Angle 30': 86.4657}
+======================================================================
+[Iter 40 Task dept] Train Loss: 1.1979
+[Iter 40 Task norm] Train Loss: 0.0737
+[Iter 40 Total] Train Loss: 1.2716
+======================================================================
+[Iter 40 Total] Train Loss: 1.2716
+validating on 41 samples = 
+[Iter 40 Task dept] Val Loss: 0.9359
+{'abs_err': 0.9008, 'rel_err': 0.3355, 'sigma_1.25': 39.226, 'sigma_1.25^2': 70.6207, 'sigma_1.25^3': 88.4444}
+46449074
+[Iter 40 Task norm] Val Loss: 0.0680
+{'Angle Mean': 19.1326, 'Angle Median': 17.7853, 'Angle 11.25': 24.5574, 'Angle 22.5': 67.9626, 'Angle 30': 87.2339}
+======================================================================
+[Iter 50 Task dept] Train Loss: 1.0399
+[Iter 50 Task norm] Train Loss: 0.0666
+[Iter 50 Total] Train Loss: 1.1065
+======================================================================
+[Iter 50 Total] Train Loss: 1.1065
+validating on 41 samples = 
+[Iter 50 Task dept] Val Loss: 1.2736
+{'abs_err': 1.3004, 'rel_err': 0.6169, 'sigma_1.25': 34.3911, 'sigma_1.25^2': 60.1525, 'sigma_1.25^3': 77.804}
+46449074
+[Iter 50 Task norm] Val Loss: 0.0686
+{'Angle Mean': 19.2973, 'Angle Median': 16.5665, 'Angle 11.25': 15.0391, 'Angle 22.5': 74.4528, 'Angle 30': 86.785}
+======================================================================
+[Iter 60 Task dept] Train Loss: 1.0459
+[Iter 60 Task norm] Train Loss: 0.0729
+[Iter 60 Total] Train Loss: 1.1188
+======================================================================
+[Iter 60 Total] Train Loss: 1.1188
+validating on 41 samples = 
+[Iter 60 Task dept] Val Loss: 1.0053
+{'abs_err': 0.9687, 'rel_err': 0.3317, 'sigma_1.25': 35.0503, 'sigma_1.25^2': 67.1466, 'sigma_1.25^3': 86.4221}
+46449074
+[Iter 60 Task norm] Val Loss: 0.0678
+{'Angle Mean': 19.0649, 'Angle Median': 16.9286, 'Angle 11.25': 21.368, 'Angle 22.5': 71.1305, 'Angle 30': 87.4416}
+======================================================================
+[Iter 70 Task dept] Train Loss: 1.1031
+[Iter 70 Task norm] Train Loss: 0.0675
+[Iter 70 Total] Train Loss: 1.1707
+======================================================================
+[Iter 70 Total] Train Loss: 1.1707
+validating on 41 samples = 
+[Iter 70 Task dept] Val Loss: 0.9100
+{'abs_err': 0.9317, 'rel_err': 0.4442, 'sigma_1.25': 42.4356, 'sigma_1.25^2': 69.9165, 'sigma_1.25^3': 86.1905}
+46449074
+[Iter 70 Task norm] Val Loss: 0.0699
+{'Angle Mean': 19.435, 'Angle Median': 16.715, 'Angle 11.25': 14.0149, 'Angle 22.5': 74.4871, 'Angle 30': 86.5616}
+saving best model, with val_loss = 0.9799460129040044
+======================================================================
+[Iter 80 Task dept] Train Loss: 1.1679
+[Iter 80 Task norm] Train Loss: 0.0682
+[Iter 80 Total] Train Loss: 1.2360
+======================================================================
+[Iter 80 Total] Train Loss: 1.2360
+validating on 41 samples = 
+[Iter 80 Task dept] Val Loss: 1.1423
+{'abs_err': 1.0973, 'rel_err': 0.3602, 'sigma_1.25': 26.0297, 'sigma_1.25^2': 52.3653, 'sigma_1.25^3': 76.0699}
+46449074
+[Iter 80 Task norm] Val Loss: 0.0698
+{'Angle Mean': 19.2304, 'Angle Median': 16.0952, 'Angle 11.25': 17.1754, 'Angle 22.5': 73.2328, 'Angle 30': 86.1989}
+======================================================================
+[Iter 90 Task dept] Train Loss: 0.9985
+[Iter 90 Task norm] Train Loss: 0.0683
+[Iter 90 Total] Train Loss: 1.0668
+======================================================================
+[Iter 90 Total] Train Loss: 1.0668
+validating on 41 samples = 
+[Iter 90 Task dept] Val Loss: 0.9514
+{'abs_err': 0.9475, 'rel_err': 0.444, 'sigma_1.25': 41.3931, 'sigma_1.25^2': 70.6444, 'sigma_1.25^3': 86.6967}
+46449074
+[Iter 90 Task norm] Val Loss: 0.0670
+{'Angle Mean': 18.6497, 'Angle Median': 16.4759, 'Angle 11.25': 25.2652, 'Angle 22.5': 71.974, 'Angle 30': 86.9373}
+======================================================================
+[Iter 100 Task dept] Train Loss: 0.9912
+[Iter 100 Task norm] Train Loss: 0.0673
+[Iter 100 Total] Train Loss: 1.0586
+======================================================================
+[Iter 100 Total] Train Loss: 1.0586
+validating on 41 samples = 
+[Iter 100 Task dept] Val Loss: 0.9878
+{'abs_err': 0.9556, 'rel_err': 0.3212, 'sigma_1.25': 34.6883, 'sigma_1.25^2': 66.5825, 'sigma_1.25^3': 86.795}
+46449074
+[Iter 100 Task norm] Val Loss: 0.0677
+{'Angle Mean': 18.9375, 'Angle Median': 16.1078, 'Angle 11.25': 19.5251, 'Angle 22.5': 72.8975, 'Angle 30': 86.8546}
+======================================================================
+[Iter 110 Task dept] Train Loss: 1.0818
+[Iter 110 Task norm] Train Loss: 0.0658
+[Iter 110 Total] Train Loss: 1.1476
+======================================================================
+[Iter 110 Total] Train Loss: 1.1476
+validating on 41 samples = 
+[Iter 110 Task dept] Val Loss: 0.7933
+{'abs_err': 0.7877, 'rel_err': 0.3199, 'sigma_1.25': 45.7641, 'sigma_1.25^2': 77.7155, 'sigma_1.25^3': 92.2521}
+46449074
+[Iter 110 Task norm] Val Loss: 0.0672
+{'Angle Mean': 18.9317, 'Angle Median': 16.4275, 'Angle 11.25': 19.687, 'Angle 22.5': 73.3224, 'Angle 30': 87.0779}
+saving best model, with val_loss = 0.8604894076905599
+======================================================================
+[Iter 120 Task dept] Train Loss: 0.9677
+[Iter 120 Task norm] Train Loss: 0.0675
+[Iter 120 Total] Train Loss: 1.0352
+======================================================================
+[Iter 120 Total] Train Loss: 1.0352
+validating on 41 samples = 
+[Iter 120 Task dept] Val Loss: 1.3511
+{'abs_err': 1.2949, 'rel_err': 0.4063, 'sigma_1.25': 17.1204, 'sigma_1.25^2': 38.7699, 'sigma_1.25^3': 64.8412}
+46449074
+[Iter 120 Task norm] Val Loss: 0.0682
+{'Angle Mean': 19.0993, 'Angle Median': 16.5059, 'Angle 11.25': 17.5638, 'Angle 22.5': 72.743, 'Angle 30': 87.2343}
+======================================================================
+[Iter 130 Task dept] Train Loss: 0.9660
+[Iter 130 Task norm] Train Loss: 0.0681
+[Iter 130 Total] Train Loss: 1.0341
+======================================================================
+[Iter 130 Total] Train Loss: 1.0341
+validating on 41 samples = 
+[Iter 130 Task dept] Val Loss: 1.0415
+{'abs_err': 1.078, 'rel_err': 0.5072, 'sigma_1.25': 39.1805, 'sigma_1.25^2': 66.9409, 'sigma_1.25^3': 84.048}
+46449074
+[Iter 130 Task norm] Val Loss: 0.0696
+{'Angle Mean': 19.2085, 'Angle Median': 16.2366, 'Angle 11.25': 17.8151, 'Angle 22.5': 74.2057, 'Angle 30': 86.1924}
+======================================================================
+[Iter 140 Task dept] Train Loss: 1.0592
+[Iter 140 Task norm] Train Loss: 0.0724
+[Iter 140 Total] Train Loss: 1.1315
+======================================================================
+[Iter 140 Total] Train Loss: 1.1315
+validating on 41 samples = 
+[Iter 140 Task dept] Val Loss: 1.0655
+{'abs_err': 1.029, 'rel_err': 0.3469, 'sigma_1.25': 29.2755, 'sigma_1.25^2': 58.8784, 'sigma_1.25^3': 81.7037}
+46449074
+[Iter 140 Task norm] Val Loss: 0.0688
+{'Angle Mean': 19.2449, 'Angle Median': 16.1736, 'Angle 11.25': 15.6361, 'Angle 22.5': 74.3215, 'Angle 30': 86.1815}
+======================================================================
+[Iter 150 Task dept] Train Loss: 1.0055
+[Iter 150 Task norm] Train Loss: 0.0671
+[Iter 150 Total] Train Loss: 1.0726
+======================================================================
+[Iter 150 Total] Train Loss: 1.0726
+validating on 41 samples = 
+[Iter 150 Task dept] Val Loss: 0.8635
+{'abs_err': 0.8486, 'rel_err': 0.3385, 'sigma_1.25': 42.411, 'sigma_1.25^2': 74.0193, 'sigma_1.25^3': 90.3038}
+46449074
+[Iter 150 Task norm] Val Loss: 0.0681
+{'Angle Mean': 19.0733, 'Angle Median': 16.5639, 'Angle 11.25': 19.4663, 'Angle 22.5': 72.7548, 'Angle 30': 86.885}
+======================================================================
+[Iter 160 Task dept] Train Loss: 1.0432
+[Iter 160 Task norm] Train Loss: 0.0692
+[Iter 160 Total] Train Loss: 1.1124
+======================================================================
+[Iter 160 Total] Train Loss: 1.1124
+validating on 41 samples = 
+[Iter 160 Task dept] Val Loss: 0.8949
+{'abs_err': 0.8661, 'rel_err': 0.3187, 'sigma_1.25': 41.6021, 'sigma_1.25^2': 73.1474, 'sigma_1.25^3': 89.656}
+46449074
+[Iter 160 Task norm] Val Loss: 0.0707
+{'Angle Mean': 19.4708, 'Angle Median': 16.5859, 'Angle 11.25': 14.7113, 'Angle 22.5': 74.4597, 'Angle 30': 86.2751}
+======================================================================
+[Iter 170 Task dept] Train Loss: 1.0379
+[Iter 170 Task norm] Train Loss: 0.0677
+[Iter 170 Total] Train Loss: 1.1056
+======================================================================
+[Iter 170 Total] Train Loss: 1.1056
+validating on 41 samples = 
+[Iter 170 Task dept] Val Loss: 1.6100
+{'abs_err': 1.5482, 'rel_err': 0.4862, 'sigma_1.25': 11.1286, 'sigma_1.25^2': 26.3313, 'sigma_1.25^3': 45.542}
+46449074
+[Iter 170 Task norm] Val Loss: 0.0691
+{'Angle Mean': 19.33, 'Angle Median': 16.8192, 'Angle 11.25': 15.3699, 'Angle 22.5': 72.3985, 'Angle 30': 87.2142}
+======================================================================
+[Iter 180 Task dept] Train Loss: 0.8846
+[Iter 180 Task norm] Train Loss: 0.0642
+[Iter 180 Total] Train Loss: 0.9488
+======================================================================
+[Iter 180 Total] Train Loss: 0.9488
+validating on 41 samples = 
+[Iter 180 Task dept] Val Loss: 0.9686
+{'abs_err': 0.932, 'rel_err': 0.3193, 'sigma_1.25': 36.2304, 'sigma_1.25^2': 69.5813, 'sigma_1.25^3': 88.2114}
+46449074
+[Iter 180 Task norm] Val Loss: 0.0676
+{'Angle Mean': 19.026, 'Angle Median': 16.6429, 'Angle 11.25': 20.2767, 'Angle 22.5': 72.4354, 'Angle 30': 87.2461}
+======================================================================
+[Iter 190 Task dept] Train Loss: 1.0516
+[Iter 190 Task norm] Train Loss: 0.0675
+[Iter 190 Total] Train Loss: 1.1192
+======================================================================
+[Iter 190 Total] Train Loss: 1.1192
+validating on 41 samples = 
+[Iter 190 Task dept] Val Loss: 1.2057
+{'abs_err': 1.1549, 'rel_err': 0.3776, 'sigma_1.25': 21.1891, 'sigma_1.25^2': 45.7164, 'sigma_1.25^3': 72.1898}
+46449074
+[Iter 190 Task norm] Val Loss: 0.0682
+{'Angle Mean': 19.1001, 'Angle Median': 16.3301, 'Angle 11.25': 17.3619, 'Angle 22.5': 73.7251, 'Angle 30': 86.8181}
+======================================================================
+[Iter 200 Task dept] Train Loss: 1.0451
+[Iter 200 Task norm] Train Loss: 0.0732
+[Iter 200 Total] Train Loss: 1.1183
+======================================================================
+[Iter 200 Total] Train Loss: 1.1183
+validating on 41 samples = 
+[Iter 200 Task dept] Val Loss: 0.9906
+{'abs_err': 0.9515, 'rel_err': 0.3205, 'sigma_1.25': 33.445, 'sigma_1.25^2': 65.9294, 'sigma_1.25^3': 87.3005}
+46449074
+[Iter 200 Task norm] Val Loss: 0.0682
+{'Angle Mean': 19.3399, 'Angle Median': 16.4754, 'Angle 11.25': 12.8477, 'Angle 22.5': 75.0647, 'Angle 30': 86.8992}
+======================================================================
+[Iter 210 Task dept] Train Loss: 0.9774
+[Iter 210 Task norm] Train Loss: 0.0680
+[Iter 210 Total] Train Loss: 1.0454
+======================================================================
+[Iter 210 Total] Train Loss: 1.0454
+validating on 41 samples = 
+[Iter 210 Task dept] Val Loss: 1.0414
+{'abs_err': 1.0008, 'rel_err': 0.3278, 'sigma_1.25': 32.663, 'sigma_1.25^2': 64.4674, 'sigma_1.25^3': 85.1981}
+46449074
+[Iter 210 Task norm] Val Loss: 0.0670
+{'Angle Mean': 19.2161, 'Angle Median': 16.5577, 'Angle 11.25': 14.3952, 'Angle 22.5': 74.2382, 'Angle 30': 87.318}
+======================================================================
+[Iter 220 Task dept] Train Loss: 1.0048
+[Iter 220 Task norm] Train Loss: 0.0668
+[Iter 220 Total] Train Loss: 1.0717
+======================================================================
+[Iter 220 Total] Train Loss: 1.0717
+validating on 41 samples = 
+[Iter 220 Task dept] Val Loss: 1.0656
+{'abs_err': 1.025, 'rel_err': 0.3337, 'sigma_1.25': 33.4422, 'sigma_1.25^2': 63.3583, 'sigma_1.25^3': 83.4309}
+46449074
+[Iter 220 Task norm] Val Loss: 0.0686
+{'Angle Mean': 19.1275, 'Angle Median': 16.7921, 'Angle 11.25': 20.5436, 'Angle 22.5': 70.4275, 'Angle 30': 87.2509}
+======================================================================
+[Iter 230 Task dept] Train Loss: 0.9995
+[Iter 230 Task norm] Train Loss: 0.0678
+[Iter 230 Total] Train Loss: 1.0673
+======================================================================
+[Iter 230 Total] Train Loss: 1.0673
+validating on 41 samples = 
+[Iter 230 Task dept] Val Loss: 1.2308
+{'abs_err': 1.1781, 'rel_err': 0.3719, 'sigma_1.25': 22.5713, 'sigma_1.25^2': 48.7912, 'sigma_1.25^3': 74.1822}
+46449074
+[Iter 230 Task norm] Val Loss: 0.0672
+{'Angle Mean': 19.1271, 'Angle Median': 16.2276, 'Angle 11.25': 15.0263, 'Angle 22.5': 74.7343, 'Angle 30': 86.8986}
+======================================================================
+[Iter 240 Task dept] Train Loss: 1.0198
+[Iter 240 Task norm] Train Loss: 0.0727
+[Iter 240 Total] Train Loss: 1.0925
+======================================================================
+[Iter 240 Total] Train Loss: 1.0925
+validating on 41 samples = 
+[Iter 240 Task dept] Val Loss: 0.9929
+{'abs_err': 1.0335, 'rel_err': 0.5042, 'sigma_1.25': 39.293, 'sigma_1.25^2': 67.1499, 'sigma_1.25^3': 83.952}
+46449074
+[Iter 240 Task norm] Val Loss: 0.0656
+{'Angle Mean': 18.8851, 'Angle Median': 16.5126, 'Angle 11.25': 18.9689, 'Angle 22.5': 74.3701, 'Angle 30': 87.4226}
+======================================================================
+[Iter 250 Task dept] Train Loss: 0.9615
+[Iter 250 Task norm] Train Loss: 0.0635
+[Iter 250 Total] Train Loss: 1.0250
+======================================================================
+[Iter 250 Total] Train Loss: 1.0250
+validating on 41 samples = 
+[Iter 250 Task dept] Val Loss: 1.0607
+{'abs_err': 1.0154, 'rel_err': 0.3288, 'sigma_1.25': 30.8809, 'sigma_1.25^2': 62.4703, 'sigma_1.25^3': 84.5983}
+46449074
+[Iter 250 Task norm] Val Loss: 0.0667
+{'Angle Mean': 18.7349, 'Angle Median': 16.4199, 'Angle 11.25': 23.1755, 'Angle 22.5': 72.3022, 'Angle 30': 87.237}
+======================================================================
+[Iter 260 Task dept] Train Loss: 0.9115
+[Iter 260 Task norm] Train Loss: 0.0684
+[Iter 260 Total] Train Loss: 0.9800
+======================================================================
+[Iter 260 Total] Train Loss: 0.9800
+validating on 41 samples = 
+[Iter 260 Task dept] Val Loss: 1.1163
+{'abs_err': 1.0717, 'rel_err': 0.343, 'sigma_1.25': 26.5497, 'sigma_1.25^2': 55.9018, 'sigma_1.25^3': 81.5326}
+46449074
+[Iter 260 Task norm] Val Loss: 0.0671
+{'Angle Mean': 18.9036, 'Angle Median': 17.136, 'Angle 11.25': 24.0994, 'Angle 22.5': 70.4673, 'Angle 30': 87.3802}
+======================================================================
+[Iter 270 Task dept] Train Loss: 1.0165
+[Iter 270 Task norm] Train Loss: 0.0662
+[Iter 270 Total] Train Loss: 1.0827
+======================================================================
+[Iter 270 Total] Train Loss: 1.0827
+validating on 41 samples = 
+[Iter 270 Task dept] Val Loss: 0.8292
+{'abs_err': 0.8153, 'rel_err': 0.3176, 'sigma_1.25': 42.8527, 'sigma_1.25^2': 76.1052, 'sigma_1.25^3': 91.5925}
+46449074
+[Iter 270 Task norm] Val Loss: 0.0693
+{'Angle Mean': 18.9357, 'Angle Median': 15.9725, 'Angle 11.25': 23.6891, 'Angle 22.5': 72.3115, 'Angle 30': 86.2976}
+======================================================================
+[Iter 280 Task dept] Train Loss: 0.9856
+[Iter 280 Task norm] Train Loss: 0.0711
+[Iter 280 Total] Train Loss: 1.0567
+======================================================================
+[Iter 280 Total] Train Loss: 1.0567
+validating on 41 samples = 
+[Iter 280 Task dept] Val Loss: 1.2636
+{'abs_err': 1.2093, 'rel_err': 0.377, 'sigma_1.25': 21.5809, 'sigma_1.25^2': 47.3214, 'sigma_1.25^3': 72.7125}
+46449074
+[Iter 280 Task norm] Val Loss: 0.0666
+{'Angle Mean': 18.9648, 'Angle Median': 17.0104, 'Angle 11.25': 21.4791, 'Angle 22.5': 72.0478, 'Angle 30': 87.6045}
+======================================================================
+[Iter 290 Task dept] Train Loss: 0.9480
+[Iter 290 Task norm] Train Loss: 0.0676
+[Iter 290 Total] Train Loss: 1.0156
+======================================================================
+[Iter 290 Total] Train Loss: 1.0156
+validating on 41 samples = 
+[Iter 290 Task dept] Val Loss: 1.2216
+{'abs_err': 1.1699, 'rel_err': 0.3775, 'sigma_1.25': 20.2525, 'sigma_1.25^2': 45.3208, 'sigma_1.25^3': 72.4449}
+46449074
+[Iter 290 Task norm] Val Loss: 0.0670
+{'Angle Mean': 19.0039, 'Angle Median': 16.733, 'Angle 11.25': 19.4657, 'Angle 22.5': 73.1702, 'Angle 30': 87.1846}
+======================================================================
+[Iter 300 Task dept] Train Loss: 0.9136
+[Iter 300 Task norm] Train Loss: 0.0680
+[Iter 300 Total] Train Loss: 0.9816
+======================================================================
+[Iter 300 Total] Train Loss: 0.9816
+validating on 41 samples = 
+[Iter 300 Task dept] Val Loss: 1.3419
+{'abs_err': 1.2847, 'rel_err': 0.4058, 'sigma_1.25': 17.0879, 'sigma_1.25^2': 38.471, 'sigma_1.25^3': 64.9638}
+46449074
+[Iter 300 Task norm] Val Loss: 0.0668
+{'Angle Mean': 19.0236, 'Angle Median': 16.6486, 'Angle 11.25': 18.4497, 'Angle 22.5': 73.5807, 'Angle 30': 86.9976}
+======================================================================
+[Iter 310 Task dept] Train Loss: 0.8768
+[Iter 310 Task norm] Train Loss: 0.0674
+[Iter 310 Total] Train Loss: 0.9443
+======================================================================
+[Iter 310 Total] Train Loss: 0.9443
+validating on 41 samples = 
+[Iter 310 Task dept] Val Loss: 1.0578
+{'abs_err': 1.0119, 'rel_err': 0.3316, 'sigma_1.25': 28.7336, 'sigma_1.25^2': 59.1388, 'sigma_1.25^3': 84.0119}
+46449074
+[Iter 310 Task norm] Val Loss: 0.0675
+{'Angle Mean': 18.6533, 'Angle Median': 16.7734, 'Angle 11.25': 27.1213, 'Angle 22.5': 70.0601, 'Angle 30': 86.3653}
+======================================================================
+[Iter 320 Task dept] Train Loss: 0.9496
+[Iter 320 Task norm] Train Loss: 0.0695
+[Iter 320 Total] Train Loss: 1.0191
+======================================================================
+[Iter 320 Total] Train Loss: 1.0191
+validating on 41 samples = 
+[Iter 320 Task dept] Val Loss: 1.0333
+{'abs_err': 0.9913, 'rel_err': 0.3241, 'sigma_1.25': 31.6261, 'sigma_1.25^2': 62.0657, 'sigma_1.25^3': 85.4455}
+46449074
+[Iter 320 Task norm] Val Loss: 0.0661
+{'Angle Mean': 18.7138, 'Angle Median': 16.502, 'Angle 11.25': 22.8323, 'Angle 22.5': 72.9126, 'Angle 30': 87.0434}
+======================================================================
+[Iter 330 Task dept] Train Loss: 1.0179
+[Iter 330 Task norm] Train Loss: 0.0698
+[Iter 330 Total] Train Loss: 1.0877
+======================================================================
+[Iter 330 Total] Train Loss: 1.0877
+validating on 41 samples = 
+[Iter 330 Task dept] Val Loss: 1.0029
+{'abs_err': 0.9618, 'rel_err': 0.3314, 'sigma_1.25': 30.9649, 'sigma_1.25^2': 61.6561, 'sigma_1.25^3': 85.6255}
+46449074
+[Iter 330 Task norm] Val Loss: 0.0670
+{'Angle Mean': 18.7757, 'Angle Median': 16.3264, 'Angle 11.25': 22.4326, 'Angle 22.5': 72.5953, 'Angle 30': 87.0587}
+======================================================================
+[Iter 340 Task dept] Train Loss: 0.9230
+[Iter 340 Task norm] Train Loss: 0.0702
+[Iter 340 Total] Train Loss: 0.9932
+======================================================================
+[Iter 340 Total] Train Loss: 0.9932
+validating on 41 samples = 
+[Iter 340 Task dept] Val Loss: 0.9444
+{'abs_err': 0.9172, 'rel_err': 0.3297, 'sigma_1.25': 35.1215, 'sigma_1.25^2': 66.3845, 'sigma_1.25^3': 87.1757}
+46449074
+[Iter 340 Task norm] Val Loss: 0.0672
+{'Angle Mean': 19.0724, 'Angle Median': 16.3987, 'Angle 11.25': 16.8311, 'Angle 22.5': 74.3584, 'Angle 30': 87.0457}
+======================================================================
+[Iter 350 Task dept] Train Loss: 1.0079
+[Iter 350 Task norm] Train Loss: 0.0646
+[Iter 350 Total] Train Loss: 1.0726
+======================================================================
+[Iter 350 Total] Train Loss: 1.0726
+validating on 41 samples = 
+[Iter 350 Task dept] Val Loss: 1.0203
+{'abs_err': 0.9759, 'rel_err': 0.3184, 'sigma_1.25': 31.5787, 'sigma_1.25^2': 63.0759, 'sigma_1.25^3': 85.9158}
+46449074
+[Iter 350 Task norm] Val Loss: 0.0672
+{'Angle Mean': 18.8246, 'Angle Median': 16.0785, 'Angle 11.25': 20.3939, 'Angle 22.5': 74.1889, 'Angle 30': 86.9174}
+======================================================================
+[Iter 360 Task dept] Train Loss: 0.9898
+[Iter 360 Task norm] Train Loss: 0.0703
+[Iter 360 Total] Train Loss: 1.0600
+======================================================================
+[Iter 360 Total] Train Loss: 1.0600
+validating on 41 samples = 
+[Iter 360 Task dept] Val Loss: 0.9457
+{'abs_err': 0.9112, 'rel_err': 0.3069, 'sigma_1.25': 35.6876, 'sigma_1.25^2': 67.499, 'sigma_1.25^3': 87.88}
+46449074
+[Iter 360 Task norm] Val Loss: 0.0672
+{'Angle Mean': 18.8975, 'Angle Median': 16.2078, 'Angle 11.25': 19.7147, 'Angle 22.5': 74.2342, 'Angle 30': 86.7149}
+======================================================================
+[Iter 370 Task dept] Train Loss: 1.0049
+[Iter 370 Task norm] Train Loss: 0.0707
+[Iter 370 Total] Train Loss: 1.0756
+======================================================================
+[Iter 370 Total] Train Loss: 1.0756
+validating on 41 samples = 
+[Iter 370 Task dept] Val Loss: 0.9215
+{'abs_err': 0.8774, 'rel_err': 0.3014, 'sigma_1.25': 35.99, 'sigma_1.25^2': 69.7078, 'sigma_1.25^3': 89.6713}
+46449074
+[Iter 370 Task norm] Val Loss: 0.0693
+{'Angle Mean': 19.3843, 'Angle Median': 16.6326, 'Angle 11.25': 12.9887, 'Angle 22.5': 75.8507, 'Angle 30': 86.5324}
+======================================================================
+[Iter 380 Task dept] Train Loss: 0.8976
+[Iter 380 Task norm] Train Loss: 0.0654
+[Iter 380 Total] Train Loss: 0.9631
+======================================================================
+[Iter 380 Total] Train Loss: 0.9631
+validating on 41 samples = 
+[Iter 380 Task dept] Val Loss: 1.5724
+{'abs_err': 1.5096, 'rel_err': 0.4694, 'sigma_1.25': 12.2995, 'sigma_1.25^2': 29.2035, 'sigma_1.25^3': 49.7903}
+46449074
+[Iter 380 Task norm] Val Loss: 0.0713
+{'Angle Mean': 19.6799, 'Angle Median': 17.2525, 'Angle 11.25': 13.8963, 'Angle 22.5': 74.5267, 'Angle 30': 86.2069}
+======================================================================
+[Iter 390 Task dept] Train Loss: 0.9054
+[Iter 390 Task norm] Train Loss: 0.0651
+[Iter 390 Total] Train Loss: 0.9704
+======================================================================
+[Iter 390 Total] Train Loss: 0.9704
+validating on 41 samples = 
+[Iter 390 Task dept] Val Loss: 1.2087
+{'abs_err': 1.156, 'rel_err': 0.3595, 'sigma_1.25': 24.1003, 'sigma_1.25^2': 51.7299, 'sigma_1.25^3': 76.6665}
+46449074
+[Iter 390 Task norm] Val Loss: 0.0681
+{'Angle Mean': 18.9437, 'Angle Median': 16.1917, 'Angle 11.25': 19.9451, 'Angle 22.5': 72.8762, 'Angle 30': 87.0122}
+======================================================================
+[Iter 400 Task dept] Train Loss: 0.9353
+[Iter 400 Task norm] Train Loss: 0.0703
+[Iter 400 Total] Train Loss: 1.0056
+======================================================================
+[Iter 400 Total] Train Loss: 1.0056
+validating on 41 samples = 
+[Iter 400 Task dept] Val Loss: 1.4868
+{'abs_err': 1.4267, 'rel_err': 0.4471, 'sigma_1.25': 12.7716, 'sigma_1.25^2': 30.3684, 'sigma_1.25^3': 54.464}
+46449074
+[Iter 400 Task norm] Val Loss: 0.0673
+{'Angle Mean': 18.938, 'Angle Median': 17.3049, 'Angle 11.25': 24.7556, 'Angle 22.5': 69.0197, 'Angle 30': 87.4681}
+======================================================================
+[Iter 410 Task dept] Train Loss: 0.8320
+[Iter 410 Task norm] Train Loss: 0.0657
+[Iter 410 Total] Train Loss: 0.8977
+======================================================================
+[Iter 410 Total] Train Loss: 0.8977
+validating on 41 samples = 
+[Iter 410 Task dept] Val Loss: 0.8018
+{'abs_err': 0.7805, 'rel_err': 0.2872, 'sigma_1.25': 42.1461, 'sigma_1.25^2': 75.8201, 'sigma_1.25^3': 93.2715}
+46449074
+[Iter 410 Task norm] Val Loss: 0.0683
+{'Angle Mean': 19.0282, 'Angle Median': 16.2132, 'Angle 11.25': 17.8496, 'Angle 22.5': 74.6541, 'Angle 30': 86.6973}
+======================================================================
+[Iter 420 Task dept] Train Loss: 0.8564
+[Iter 420 Task norm] Train Loss: 0.0658
+[Iter 420 Total] Train Loss: 0.9222
+======================================================================
+[Iter 420 Total] Train Loss: 0.9222
+validating on 41 samples = 
+[Iter 420 Task dept] Val Loss: 0.7890
+{'abs_err': 0.7817, 'rel_err': 0.3147, 'sigma_1.25': 44.5915, 'sigma_1.25^2': 77.2671, 'sigma_1.25^3': 92.2409}
+46449074
+[Iter 420 Task norm] Val Loss: 0.0675
+{'Angle Mean': 18.6922, 'Angle Median': 16.1478, 'Angle 11.25': 24.1838, 'Angle 22.5': 72.789, 'Angle 30': 86.3566}
+saving best model, with val_loss = 0.8564764639226402
+======================================================================
+[Iter 430 Task dept] Train Loss: 0.9059
+[Iter 430 Task norm] Train Loss: 0.0667
+[Iter 430 Total] Train Loss: 0.9727
+======================================================================
+[Iter 430 Total] Train Loss: 0.9727
+validating on 41 samples = 
+[Iter 430 Task dept] Val Loss: 1.1798
+{'abs_err': 1.1251, 'rel_err': 0.3585, 'sigma_1.25': 22.4532, 'sigma_1.25^2': 50.4399, 'sigma_1.25^3': 77.9438}
+46449074
+[Iter 430 Task norm] Val Loss: 0.0670
+{'Angle Mean': 18.8707, 'Angle Median': 16.7018, 'Angle 11.25': 21.9499, 'Angle 22.5': 72.6167, 'Angle 30': 87.0763}
+======================================================================
+[Iter 440 Task dept] Train Loss: 0.9435
+[Iter 440 Task norm] Train Loss: 0.0691
+[Iter 440 Total] Train Loss: 1.0126
+======================================================================
+[Iter 440 Total] Train Loss: 1.0126
+validating on 41 samples = 
+[Iter 440 Task dept] Val Loss: 1.1566
+{'abs_err': 1.107, 'rel_err': 0.3569, 'sigma_1.25': 23.3667, 'sigma_1.25^2': 51.552, 'sigma_1.25^3': 78.288}
+46449074
+[Iter 440 Task norm] Val Loss: 0.0670
+{'Angle Mean': 19.0241, 'Angle Median': 16.9475, 'Angle 11.25': 19.794, 'Angle 22.5': 72.6874, 'Angle 30': 87.5803}
+======================================================================
+[Iter 450 Task dept] Train Loss: 0.9533
+[Iter 450 Task norm] Train Loss: 0.0722
+[Iter 450 Total] Train Loss: 1.0255
+======================================================================
+[Iter 450 Total] Train Loss: 1.0255
+validating on 41 samples = 
+[Iter 450 Task dept] Val Loss: 1.2117
+{'abs_err': 1.1595, 'rel_err': 0.3769, 'sigma_1.25': 21.1745, 'sigma_1.25^2': 46.6533, 'sigma_1.25^3': 73.3969}
+46449074
+[Iter 450 Task norm] Val Loss: 0.0668
+{'Angle Mean': 18.698, 'Angle Median': 16.3117, 'Angle 11.25': 23.3617, 'Angle 22.5': 72.6893, 'Angle 30': 86.5083}
+======================================================================
+[Iter 460 Task dept] Train Loss: 1.0475
+[Iter 460 Task norm] Train Loss: 0.0698
+[Iter 460 Total] Train Loss: 1.1173
+======================================================================
+[Iter 460 Total] Train Loss: 1.1173
+validating on 41 samples = 
+[Iter 460 Task dept] Val Loss: 1.4720
+{'abs_err': 1.414, 'rel_err': 0.4399, 'sigma_1.25': 14.3389, 'sigma_1.25^2': 32.5172, 'sigma_1.25^3': 55.7378}
+46449074
+[Iter 460 Task norm] Val Loss: 0.0686
+{'Angle Mean': 19.0972, 'Angle Median': 16.9679, 'Angle 11.25': 22.5251, 'Angle 22.5': 70.2142, 'Angle 30': 87.1146}
+======================================================================
+[Iter 470 Task dept] Train Loss: 0.8916
+[Iter 470 Task norm] Train Loss: 0.0651
+[Iter 470 Total] Train Loss: 0.9568
+======================================================================
+[Iter 470 Total] Train Loss: 0.9568
+validating on 41 samples = 
+[Iter 470 Task dept] Val Loss: 0.7812
+{'abs_err': 0.77, 'rel_err': 0.3172, 'sigma_1.25': 44.845, 'sigma_1.25^2': 78.007, 'sigma_1.25^3': 93.072}
+46449074
+[Iter 470 Task norm] Val Loss: 0.0672
+{'Angle Mean': 18.7802, 'Angle Median': 16.1701, 'Angle 11.25': 22.3151, 'Angle 22.5': 73.4466, 'Angle 30': 86.2271}
+saving best model, with val_loss = 0.8483443623635827
+======================================================================
+[Iter 480 Task dept] Train Loss: 0.8759
+[Iter 480 Task norm] Train Loss: 0.0675
+[Iter 480 Total] Train Loss: 0.9435
+======================================================================
+[Iter 480 Total] Train Loss: 0.9435
+validating on 41 samples = 
+[Iter 480 Task dept] Val Loss: 1.3520
+{'abs_err': 1.2938, 'rel_err': 0.4089, 'sigma_1.25': 16.3218, 'sigma_1.25^2': 37.5966, 'sigma_1.25^3': 64.3138}
+46449074
+[Iter 480 Task norm] Val Loss: 0.0663
+{'Angle Mean': 18.8495, 'Angle Median': 16.3504, 'Angle 11.25': 20.0212, 'Angle 22.5': 73.7627, 'Angle 30': 87.0378}
+======================================================================
+[Iter 490 Task dept] Train Loss: 0.8847
+[Iter 490 Task norm] Train Loss: 0.0659
+[Iter 490 Total] Train Loss: 0.9505
+======================================================================
+[Iter 490 Total] Train Loss: 0.9505
+validating on 41 samples = 
+[Iter 490 Task dept] Val Loss: 1.2926
+{'abs_err': 1.2388, 'rel_err': 0.389, 'sigma_1.25': 18.5413, 'sigma_1.25^2': 42.8191, 'sigma_1.25^3': 70.1934}
+46449074
+[Iter 490 Task norm] Val Loss: 0.0685
+{'Angle Mean': 19.2898, 'Angle Median': 16.3031, 'Angle 11.25': 13.9508, 'Angle 22.5': 75.2128, 'Angle 30': 86.3471}
+======================================================================
+[Iter 500 Task dept] Train Loss: 0.9600
+[Iter 500 Task norm] Train Loss: 0.0705
+[Iter 500 Total] Train Loss: 1.0305
+======================================================================
+[Iter 500 Total] Train Loss: 1.0305
+validating on 41 samples = 
+[Iter 500 Task dept] Val Loss: 1.2161
+{'abs_err': 1.1648, 'rel_err': 0.3631, 'sigma_1.25': 23.4808, 'sigma_1.25^2': 51.3467, 'sigma_1.25^3': 76.4566}
+46449074
+[Iter 500 Task norm] Val Loss: 0.0684
+{'Angle Mean': 18.9306, 'Angle Median': 16.5886, 'Angle 11.25': 24.0866, 'Angle 22.5': 70.3169, 'Angle 30': 87.0093}
+======================================================================
+[Iter 510 Task dept] Train Loss: 0.8525
+[Iter 510 Task norm] Train Loss: 0.0668
+[Iter 510 Total] Train Loss: 0.9193
+======================================================================
+[Iter 510 Total] Train Loss: 0.9193
+validating on 41 samples = 
+[Iter 510 Task dept] Val Loss: 1.3274
+{'abs_err': 1.2701, 'rel_err': 0.4021, 'sigma_1.25': 16.5282, 'sigma_1.25^2': 38.4759, 'sigma_1.25^3': 66.238}
+46449074
+[Iter 510 Task norm] Val Loss: 0.0668
+{'Angle Mean': 18.8166, 'Angle Median': 16.1898, 'Angle 11.25': 20.3071, 'Angle 22.5': 74.0843, 'Angle 30': 87.0918}
+======================================================================
+[Iter 520 Task dept] Train Loss: 0.9715
+[Iter 520 Task norm] Train Loss: 0.0705
+[Iter 520 Total] Train Loss: 1.0420
+======================================================================
+[Iter 520 Total] Train Loss: 1.0420
+validating on 41 samples = 
+[Iter 520 Task dept] Val Loss: 1.0339
+{'abs_err': 0.9939, 'rel_err': 0.3311, 'sigma_1.25': 29.6064, 'sigma_1.25^2': 61.0389, 'sigma_1.25^3': 84.2989}
+46449074
+[Iter 520 Task norm] Val Loss: 0.0652
+{'Angle Mean': 18.5545, 'Angle Median': 16.5387, 'Angle 11.25': 23.592, 'Angle 22.5': 73.2038, 'Angle 30': 87.1671}
+======================================================================
+[Iter 530 Task dept] Train Loss: 0.9279
+[Iter 530 Task norm] Train Loss: 0.0668
+[Iter 530 Total] Train Loss: 0.9948
+======================================================================
+[Iter 530 Total] Train Loss: 0.9948
+validating on 41 samples = 
+[Iter 530 Task dept] Val Loss: 1.1999
+{'abs_err': 1.1485, 'rel_err': 0.3577, 'sigma_1.25': 23.8996, 'sigma_1.25^2': 52.377, 'sigma_1.25^3': 77.2489}
+46449074
+[Iter 530 Task norm] Val Loss: 0.0663
+{'Angle Mean': 19.0173, 'Angle Median': 16.6574, 'Angle 11.25': 17.0733, 'Angle 22.5': 74.7738, 'Angle 30': 87.5484}
+======================================================================
+[Iter 540 Task dept] Train Loss: 0.9257
+[Iter 540 Task norm] Train Loss: 0.0653
+[Iter 540 Total] Train Loss: 0.9910
+======================================================================
+[Iter 540 Total] Train Loss: 0.9910
+validating on 41 samples = 
+[Iter 540 Task dept] Val Loss: 1.0569
+{'abs_err': 1.0114, 'rel_err': 0.3271, 'sigma_1.25': 28.3873, 'sigma_1.25^2': 60.5168, 'sigma_1.25^3': 84.9407}
+46449074
+[Iter 540 Task norm] Val Loss: 0.0677
+{'Angle Mean': 18.7491, 'Angle Median': 16.1522, 'Angle 11.25': 24.1066, 'Angle 22.5': 72.5181, 'Angle 30': 86.6512}
+======================================================================
+[Iter 550 Task dept] Train Loss: 0.8690
+[Iter 550 Task norm] Train Loss: 0.0689
+[Iter 550 Total] Train Loss: 0.9379
+======================================================================
+[Iter 550 Total] Train Loss: 0.9379
+validating on 41 samples = 
+[Iter 550 Task dept] Val Loss: 1.2458
+{'abs_err': 1.1901, 'rel_err': 0.3728, 'sigma_1.25': 20.682, 'sigma_1.25^2': 46.343, 'sigma_1.25^3': 74.2546}
+46449074
+[Iter 550 Task norm] Val Loss: 0.0677
+{'Angle Mean': 18.998, 'Angle Median': 16.8056, 'Angle 11.25': 20.8728, 'Angle 22.5': 72.8473, 'Angle 30': 87.0748}
+======================================================================
+[Iter 560 Task dept] Train Loss: 0.9291
+[Iter 560 Task norm] Train Loss: 0.0657
+[Iter 560 Total] Train Loss: 0.9948
+======================================================================
+[Iter 560 Total] Train Loss: 0.9948
+validating on 41 samples = 
+[Iter 560 Task dept] Val Loss: 1.1495
+{'abs_err': 1.0964, 'rel_err': 0.3481, 'sigma_1.25': 24.3129, 'sigma_1.25^2': 54.2844, 'sigma_1.25^3': 80.0631}
+46449074
+[Iter 560 Task norm] Val Loss: 0.0663
+{'Angle Mean': 18.8827, 'Angle Median': 17.0517, 'Angle 11.25': 22.0161, 'Angle 22.5': 72.4146, 'Angle 30': 87.5331}
+======================================================================
+[Iter 570 Task dept] Train Loss: 0.9118
+[Iter 570 Task norm] Train Loss: 0.0703
+[Iter 570 Total] Train Loss: 0.9821
+======================================================================
+[Iter 570 Total] Train Loss: 0.9821
+validating on 41 samples = 
+[Iter 570 Task dept] Val Loss: 1.1358
+{'abs_err': 1.0892, 'rel_err': 0.3497, 'sigma_1.25': 26.1595, 'sigma_1.25^2': 54.3822, 'sigma_1.25^3': 79.9915}
+46449074
+[Iter 570 Task norm] Val Loss: 0.0691
+{'Angle Mean': 19.4642, 'Angle Median': 16.8838, 'Angle 11.25': 13.8621, 'Angle 22.5': 74.4999, 'Angle 30': 86.7053}
+======================================================================
+[Iter 580 Task dept] Train Loss: 0.8477
+[Iter 580 Task norm] Train Loss: 0.0653
+[Iter 580 Total] Train Loss: 0.9130
+======================================================================
+[Iter 580 Total] Train Loss: 0.9130
+validating on 41 samples = 
+[Iter 580 Task dept] Val Loss: 1.5645
+{'abs_err': 1.5026, 'rel_err': 0.4726, 'sigma_1.25': 11.3494, 'sigma_1.25^2': 26.3911, 'sigma_1.25^3': 47.4767}
+46449074
+[Iter 580 Task norm] Val Loss: 0.0692
+{'Angle Mean': 19.4293, 'Angle Median': 16.8764, 'Angle 11.25': 13.6169, 'Angle 22.5': 75.1296, 'Angle 30': 86.852}
+======================================================================
+[Iter 590 Task dept] Train Loss: 1.0054
+[Iter 590 Task norm] Train Loss: 0.0663
+[Iter 590 Total] Train Loss: 1.0718
+======================================================================
+[Iter 590 Total] Train Loss: 1.0718
+validating on 41 samples = 
+[Iter 590 Task dept] Val Loss: 1.0357
+{'abs_err': 0.9904, 'rel_err': 0.3202, 'sigma_1.25': 29.632, 'sigma_1.25^2': 62.2519, 'sigma_1.25^3': 86.5985}
+46449074
+[Iter 590 Task norm] Val Loss: 0.0654
+{'Angle Mean': 18.5683, 'Angle Median': 16.1462, 'Angle 11.25': 23.6081, 'Angle 22.5': 73.5069, 'Angle 30': 87.0919}
+======================================================================
+[Iter 600 Task dept] Train Loss: 0.8353
+[Iter 600 Task norm] Train Loss: 0.0668
+[Iter 600 Total] Train Loss: 0.9021
+======================================================================
+[Iter 600 Total] Train Loss: 0.9021
+validating on 41 samples = 
+[Iter 600 Task dept] Val Loss: 1.4507
+{'abs_err': 1.3885, 'rel_err': 0.4393, 'sigma_1.25': 12.7684, 'sigma_1.25^2': 30.7502, 'sigma_1.25^3': 55.2901}
+46449074
+[Iter 600 Task norm] Val Loss: 0.0661
+{'Angle Mean': 18.5524, 'Angle Median': 16.4989, 'Angle 11.25': 25.4711, 'Angle 22.5': 72.4572, 'Angle 30': 87.1252}
+======================================================================

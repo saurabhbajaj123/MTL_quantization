@@ -19,7 +19,7 @@ import torchvision
 
 
 model_urls = {
-    "resnet18": "/home/sbajaj/MyCode/quantization_remote/MTL_quantization/PretrainedModels/resnet18-f37072fd.pth",
+    "resnet18": "/work/sbajaj_umass_edu/MTL_quantization/PretrainedModels/resnet18-f37072fd.pth",
     # "resnet34": "https://download.pytorch.org/models/resnet34-b627a593.pth",
     # "resnet50": "https://download.pytorch.org/models/resnet50-0676ba61.pth",
     # "resnet101": "https://download.pytorch.org/models/resnet101-63fe2227.pth",

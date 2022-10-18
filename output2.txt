@@ -1,505 +1,504 @@
-['segment_semantic']
-=============================
-MTLModel(
-  (backbone): Sequential(
-    (0): Conv2d(
-      3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False
-      (activation_post_process): HistogramObserver()
-    )
-    (1): BatchNorm2d(
-      64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-      (activation_post_process): HistogramObserver()
-    )
-    (2): ReLU(
-      inplace=True
-      (activation_post_process): HistogramObserver()
-    )
-    (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
-    (4): Sequential(
-      (0): BasicBlock(
-        (conv1): Conv2d(
-          64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn1): BatchNorm2d(
-          64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn2): BatchNorm2d(
-          64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (skip_add): FloatFunctional(
-          (activation_post_process): HistogramObserver()
-        )
-      )
-      (1): BasicBlock(
-        (conv1): Conv2d(
-          64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn1): BatchNorm2d(
-          64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn2): BatchNorm2d(
-          64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (skip_add): FloatFunctional(
-          (activation_post_process): HistogramObserver()
-        )
-      )
-    )
-    (5): Sequential(
-      (0): BasicBlock(
-        (conv1): Conv2d(
-          64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn1): BatchNorm2d(
-          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn2): BatchNorm2d(
-          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (downsample): Sequential(
-          (0): Conv2d(
-            64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False
-            (activation_post_process): HistogramObserver()
-          )
-          (1): BatchNorm2d(
-            128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-            (activation_post_process): HistogramObserver()
-          )
-        )
-        (skip_add): FloatFunctional(
-          (activation_post_process): HistogramObserver()
-        )
-      )
-      (1): BasicBlock(
-        (conv1): Conv2d(
-          128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn1): BatchNorm2d(
-          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn2): BatchNorm2d(
-          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (skip_add): FloatFunctional(
-          (activation_post_process): HistogramObserver()
-        )
-      )
-    )
-    (6): Sequential(
-      (0): BasicBlock(
-        (conv1): Conv2d(
-          128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn1): BatchNorm2d(
-          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn2): BatchNorm2d(
-          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (downsample): Sequential(
-          (0): Conv2d(
-            128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False
-            (activation_post_process): HistogramObserver()
-          )
-          (1): BatchNorm2d(
-            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-            (activation_post_process): HistogramObserver()
-          )
-        )
-        (skip_add): FloatFunctional(
-          (activation_post_process): HistogramObserver()
-        )
-      )
-      (1): BasicBlock(
-        (conv1): Conv2d(
-          256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn1): BatchNorm2d(
-          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn2): BatchNorm2d(
-          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (skip_add): FloatFunctional(
-          (activation_post_process): HistogramObserver()
-        )
-      )
-    )
-    (7): Sequential(
-      (0): BasicBlock(
-        (conv1): Conv2d(
-          256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn1): BatchNorm2d(
-          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn2): BatchNorm2d(
-          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (downsample): Sequential(
-          (0): Conv2d(
-            256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False
-            (activation_post_process): HistogramObserver()
-          )
-          (1): BatchNorm2d(
-            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-            (activation_post_process): HistogramObserver()
-          )
-        )
-        (skip_add): FloatFunctional(
-          (activation_post_process): HistogramObserver()
-        )
-      )
-      (1): BasicBlock(
-        (conv1): Conv2d(
-          512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn1): BatchNorm2d(
-          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
-          (activation_post_process): HistogramObserver()
-        )
-        (bn2): BatchNorm2d(
-          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
-          (activation_post_process): HistogramObserver()
-        )
-        (skip_add): FloatFunctional(
-          (activation_post_process): HistogramObserver()
-        )
-      )
-    )
-  )
-  (heads): ModuleDict(
-    (segment_semantic): ASPPHeadNode(
-      (fc1): Classification_Module(
-        (conv1): Conv2d(
-          512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(6, 6), dilation=(6, 6)
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          1024, 1024, kernel_size=(1, 1), stride=(1, 1)
-          (activation_post_process): HistogramObserver()
-        )
-        (conv3): Conv2d(
-          1024, 40, kernel_size=(1, 1), stride=(1, 1)
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (dropout): Dropout(p=0.5, inplace=False)
-      )
-      (fc2): Classification_Module(
-        (conv1): Conv2d(
-          512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(12, 12), dilation=(12, 12)
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          1024, 1024, kernel_size=(1, 1), stride=(1, 1)
-          (activation_post_process): HistogramObserver()
-        )
-        (conv3): Conv2d(
-          1024, 40, kernel_size=(1, 1), stride=(1, 1)
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (dropout): Dropout(p=0.5, inplace=False)
-      )
-      (fc3): Classification_Module(
-        (conv1): Conv2d(
-          512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(18, 18), dilation=(18, 18)
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          1024, 1024, kernel_size=(1, 1), stride=(1, 1)
-          (activation_post_process): HistogramObserver()
-        )
-        (conv3): Conv2d(
-          1024, 40, kernel_size=(1, 1), stride=(1, 1)
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (dropout): Dropout(p=0.5, inplace=False)
-      )
-      (fc4): Classification_Module(
-        (conv1): Conv2d(
-          512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(24, 24), dilation=(24, 24)
-          (activation_post_process): HistogramObserver()
-        )
-        (conv2): Conv2d(
-          1024, 1024, kernel_size=(1, 1), stride=(1, 1)
-          (activation_post_process): HistogramObserver()
-        )
-        (conv3): Conv2d(
-          1024, 40, kernel_size=(1, 1), stride=(1, 1)
-          (activation_post_process): HistogramObserver()
-        )
-        (relu): ReLU(
-          inplace=True
-          (activation_post_process): HistogramObserver()
-        )
-        (dropout): Dropout(p=0.5, inplace=False)
-      )
-      (add): FloatFunctional(
-        (activation_post_process): HistogramObserver()
-      )
-    )
-  )
-  (quant): QuantStub(
-    (activation_post_process): HistogramObserver()
-  )
-  (dequant): DeQuantStub()
-)
-=============================
-MTLModel(
-  (backbone): Sequential(
-    (0): QuantizedConv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), scale=1.0, zero_point=0, padding=(3, 3), bias=False)
-    (1): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (2): QuantizedReLU(inplace=True)
-    (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
-    (4): Sequential(
-      (0): BasicBlock(
-        (conv1): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn1): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (relu): QuantizedReLU(inplace=True)
-        (conv2): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn2): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (skip_add): QFunctional(
-          scale=1.0, zero_point=0
-          (activation_post_process): Identity()
-        )
-      )
-      (1): BasicBlock(
-        (conv1): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn1): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (relu): QuantizedReLU(inplace=True)
-        (conv2): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn2): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (skip_add): QFunctional(
-          scale=1.0, zero_point=0
-          (activation_post_process): Identity()
-        )
-      )
-    )
-    (5): Sequential(
-      (0): BasicBlock(
-        (conv1): QuantizedConv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn1): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (relu): QuantizedReLU(inplace=True)
-        (conv2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn2): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (downsample): Sequential(
-          (0): QuantizedConv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), scale=1.0, zero_point=0, bias=False)
-          (1): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        )
-        (skip_add): QFunctional(
-          scale=1.0, zero_point=0
-          (activation_post_process): Identity()
-        )
-      )
-      (1): BasicBlock(
-        (conv1): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn1): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (relu): QuantizedReLU(inplace=True)
-        (conv2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn2): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (skip_add): QFunctional(
-          scale=1.0, zero_point=0
-          (activation_post_process): Identity()
-        )
-      )
-    )
-    (6): Sequential(
-      (0): BasicBlock(
-        (conv1): QuantizedConv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn1): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (relu): QuantizedReLU(inplace=True)
-        (conv2): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn2): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (downsample): Sequential(
-          (0): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), scale=1.0, zero_point=0, bias=False)
-          (1): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        )
-        (skip_add): QFunctional(
-          scale=1.0, zero_point=0
-          (activation_post_process): Identity()
-        )
-      )
-      (1): BasicBlock(
-        (conv1): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn1): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (relu): QuantizedReLU(inplace=True)
-        (conv2): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn2): QuantizedBatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (skip_add): QFunctional(
-          scale=1.0, zero_point=0
-          (activation_post_process): Identity()
-        )
-      )
-    )
-    (7): Sequential(
-      (0): BasicBlock(
-        (conv1): QuantizedConv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn1): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (relu): QuantizedReLU(inplace=True)
-        (conv2): QuantizedConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn2): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (downsample): Sequential(
-          (0): QuantizedConv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), scale=1.0, zero_point=0, bias=False)
-          (1): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        )
-        (skip_add): QFunctional(
-          scale=1.0, zero_point=0
-          (activation_post_process): Identity()
-        )
-      )
-      (1): BasicBlock(
-        (conv1): QuantizedConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn1): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (relu): QuantizedReLU(inplace=True)
-        (conv2): QuantizedConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
-        (bn2): QuantizedBatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-        (skip_add): QFunctional(
-          scale=1.0, zero_point=0
-          (activation_post_process): Identity()
-        )
-      )
-    )
-  )
-  (heads): ModuleDict(
-    (segment_semantic): ASPPHeadNode(
-      (fc1): Classification_Module(
-        (conv1): QuantizedConv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(6, 6), dilation=(6, 6))
-        (conv2): QuantizedConv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
-        (conv3): QuantizedConv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
-        (relu): QuantizedReLU(inplace=True)
-        (dropout): Dropout(p=0.5, inplace=False)
-      )
-      (fc2): Classification_Module(
-        (conv1): QuantizedConv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(12, 12), dilation=(12, 12))
-        (conv2): QuantizedConv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
-        (conv3): QuantizedConv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
-        (relu): QuantizedReLU(inplace=True)
-        (dropout): Dropout(p=0.5, inplace=False)
-      )
-      (fc3): Classification_Module(
-        (conv1): QuantizedConv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(18, 18), dilation=(18, 18))
-        (conv2): QuantizedConv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
-        (conv3): QuantizedConv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
-        (relu): QuantizedReLU(inplace=True)
-        (dropout): Dropout(p=0.5, inplace=False)
-      )
-      (fc4): Classification_Module(
-        (conv1): QuantizedConv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(24, 24), dilation=(24, 24))
-        (conv2): QuantizedConv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
-        (conv3): QuantizedConv2d(1024, 40, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
-        (relu): QuantizedReLU(inplace=True)
-        (dropout): Dropout(p=0.5, inplace=False)
-      )
-      (add): QFunctional(
-        scale=1.0, zero_point=0
-        (activation_post_process): Identity()
-      )
-    )
-  )
-  (quant): Quantize(scale=tensor([1.]), zero_point=tensor([0]), dtype=torch.quint8)
-  (dequant): DeQuantize()
-)
-=============================
-<class 'torch.nn.parameter.Parameter'>
-<bound method Module.parameters of QuantizedConv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), scale=1.0, zero_point=0, padding=(3, 3), bias=False)>
-model:  fp32  	 Size (KB): 137759.807
-model:  int8  	 Size (KB): 34817.587
-3.956616 times smaller
+41 50
+quantizable model loaded
+device = cuda:0
+initializing the Trainer
+[Iter 10 Task segm] Train Loss: 3.6546
+[Iter 10 Total] Train Loss: 3.6546
+======================================================================
+[Iter 10 Total] Train Loss: 3.6546
+validating on 41 samples = 
+[Iter 10 Task segm] Val Loss: 3.0184
+{'mIoU': 0.1758, 'Pixel Acc': 0.3215}
+saving best model, with val_loss = 3.0183530900536515
+======================================================================
+[Iter 20 Task segm] Train Loss: 2.8454
+[Iter 20 Total] Train Loss: 2.8454
+======================================================================
+[Iter 20 Total] Train Loss: 2.8454
+validating on 41 samples = 
+[Iter 20 Task segm] Val Loss: 2.7547
+{'mIoU': 0.1615, 'Pixel Acc': 0.3207}
+saving best model, with val_loss = 2.754661583318943
+======================================================================
+[Iter 30 Task segm] Train Loss: 2.5697
+[Iter 30 Total] Train Loss: 2.5697
+======================================================================
+[Iter 30 Total] Train Loss: 2.5697
+validating on 41 samples = 
+[Iter 30 Task segm] Val Loss: 2.6306
+{'mIoU': 0.1322, 'Pixel Acc': 0.3249}
+saving best model, with val_loss = 2.6305533385858304
+======================================================================
+[Iter 40 Task segm] Train Loss: 2.5901
+[Iter 40 Total] Train Loss: 2.5901
+======================================================================
+[Iter 40 Total] Train Loss: 2.5901
+validating on 41 samples = 
+[Iter 40 Task segm] Val Loss: 2.5250
+{'mIoU': 0.1415, 'Pixel Acc': 0.3472}
+saving best model, with val_loss = 2.5249803357008025
+======================================================================
+[Iter 50 Task segm] Train Loss: 2.5319
+[Iter 50 Total] Train Loss: 2.5319
+======================================================================
+[Iter 50 Total] Train Loss: 2.5319
+validating on 41 samples = 
+[Iter 50 Task segm] Val Loss: 2.5944
+{'mIoU': 0.1135, 'Pixel Acc': 0.3341}
+======================================================================
+[Iter 60 Task segm] Train Loss: 2.4617
+[Iter 60 Total] Train Loss: 2.4617
+======================================================================
+[Iter 60 Total] Train Loss: 2.4617
+validating on 41 samples = 
+[Iter 60 Task segm] Val Loss: 2.6961
+{'mIoU': 0.1159, 'Pixel Acc': 0.334}
+======================================================================
+[Iter 70 Task segm] Train Loss: 2.4637
+[Iter 70 Total] Train Loss: 2.4637
+======================================================================
+[Iter 70 Total] Train Loss: 2.4637
+validating on 41 samples = 
+[Iter 70 Task segm] Val Loss: 2.5729
+{'mIoU': 0.1396, 'Pixel Acc': 0.3516}
+======================================================================
+[Iter 80 Task segm] Train Loss: 2.4151
+[Iter 80 Total] Train Loss: 2.4151
+======================================================================
+[Iter 80 Total] Train Loss: 2.4151
+validating on 41 samples = 
+[Iter 80 Task segm] Val Loss: 2.8247
+{'mIoU': 0.1471, 'Pixel Acc': 0.2358}
+======================================================================
+[Iter 90 Task segm] Train Loss: 2.4865
+[Iter 90 Total] Train Loss: 2.4865
+======================================================================
+[Iter 90 Total] Train Loss: 2.4865
+validating on 41 samples = 
+[Iter 90 Task segm] Val Loss: 2.5296
+{'mIoU': 0.1286, 'Pixel Acc': 0.3137}
+======================================================================
+[Iter 100 Task segm] Train Loss: 2.3459
+[Iter 100 Total] Train Loss: 2.3459
+======================================================================
+[Iter 100 Total] Train Loss: 2.3459
+validating on 41 samples = 
+[Iter 100 Task segm] Val Loss: 2.5242
+{'mIoU': 0.1225, 'Pixel Acc': 0.3378}
+saving best model, with val_loss = 2.5241640486368317
+======================================================================
+[Iter 110 Task segm] Train Loss: 2.1781
+[Iter 110 Total] Train Loss: 2.1781
+======================================================================
+[Iter 110 Total] Train Loss: 2.1781
+validating on 41 samples = 
+[Iter 110 Task segm] Val Loss: 2.4442
+{'mIoU': 0.1502, 'Pixel Acc': 0.3503}
+saving best model, with val_loss = 2.44415872271468
+======================================================================
+[Iter 120 Task segm] Train Loss: 2.1648
+[Iter 120 Total] Train Loss: 2.1648
+======================================================================
+[Iter 120 Total] Train Loss: 2.1648
+validating on 41 samples = 
+[Iter 120 Task segm] Val Loss: 2.2991
+{'mIoU': 0.1358, 'Pixel Acc': 0.367}
+saving best model, with val_loss = 2.2990943745868964
+======================================================================
+[Iter 130 Task segm] Train Loss: 2.3536
+[Iter 130 Total] Train Loss: 2.3536
+======================================================================
+[Iter 130 Total] Train Loss: 2.3536
+validating on 41 samples = 
+[Iter 130 Task segm] Val Loss: 2.3915
+{'mIoU': 0.1158, 'Pixel Acc': 0.3567}
+======================================================================
+[Iter 140 Task segm] Train Loss: 2.3592
+[Iter 140 Total] Train Loss: 2.3592
+======================================================================
+[Iter 140 Total] Train Loss: 2.3592
+validating on 41 samples = 
+[Iter 140 Task segm] Val Loss: 2.2675
+{'mIoU': 0.178, 'Pixel Acc': 0.3708}
+saving best model, with val_loss = 2.2674989293261274
+======================================================================
+[Iter 150 Task segm] Train Loss: 2.0922
+[Iter 150 Total] Train Loss: 2.0922
+======================================================================
+[Iter 150 Total] Train Loss: 2.0922
+validating on 41 samples = 
+[Iter 150 Task segm] Val Loss: 2.2975
+{'mIoU': 0.1407, 'Pixel Acc': 0.3597}
+======================================================================
+[Iter 160 Task segm] Train Loss: 1.9621
+[Iter 160 Total] Train Loss: 1.9621
+======================================================================
+[Iter 160 Total] Train Loss: 1.9621
+validating on 41 samples = 
+[Iter 160 Task segm] Val Loss: 2.2931
+{'mIoU': 0.129, 'Pixel Acc': 0.3805}
+======================================================================
+[Iter 170 Task segm] Train Loss: 2.1871
+[Iter 170 Total] Train Loss: 2.1871
+======================================================================
+[Iter 170 Total] Train Loss: 2.1871
+validating on 41 samples = 
+[Iter 170 Task segm] Val Loss: 2.2614
+{'mIoU': 0.1344, 'Pixel Acc': 0.3749}
+saving best model, with val_loss = 2.261424428079186
+======================================================================
+[Iter 180 Task segm] Train Loss: 2.1266
+[Iter 180 Total] Train Loss: 2.1266
+======================================================================
+[Iter 180 Total] Train Loss: 2.1266
+validating on 41 samples = 
+[Iter 180 Task segm] Val Loss: 2.1581
+{'mIoU': 0.1651, 'Pixel Acc': 0.3777}
+saving best model, with val_loss = 2.1580664006675163
+======================================================================
+[Iter 190 Task segm] Train Loss: 2.1266
+[Iter 190 Total] Train Loss: 2.1266
+======================================================================
+[Iter 190 Total] Train Loss: 2.1266
+validating on 41 samples = 
+[Iter 190 Task segm] Val Loss: 2.2042
+{'mIoU': 0.1307, 'Pixel Acc': 0.3886}
+======================================================================
+[Iter 200 Task segm] Train Loss: 2.0550
+[Iter 200 Total] Train Loss: 2.0550
+======================================================================
+[Iter 200 Total] Train Loss: 2.0550
+validating on 41 samples = 
+[Iter 200 Task segm] Val Loss: 2.3644
+{'mIoU': 0.1332, 'Pixel Acc': 0.3329}
+======================================================================
+[Iter 210 Task segm] Train Loss: 2.1098
+[Iter 210 Total] Train Loss: 2.1098
+======================================================================
+[Iter 210 Total] Train Loss: 2.1098
+validating on 41 samples = 
+[Iter 210 Task segm] Val Loss: 2.2529
+{'mIoU': 0.1366, 'Pixel Acc': 0.3949}
+======================================================================
+[Iter 220 Task segm] Train Loss: 2.0515
+[Iter 220 Total] Train Loss: 2.0515
+======================================================================
+[Iter 220 Total] Train Loss: 2.0515
+validating on 41 samples = 
+[Iter 220 Task segm] Val Loss: 2.0443
+{'mIoU': 0.1595, 'Pixel Acc': 0.4288}
+saving best model, with val_loss = 2.044346015627791
+======================================================================
+[Iter 230 Task segm] Train Loss: 2.1344
+[Iter 230 Total] Train Loss: 2.1344
+======================================================================
+[Iter 230 Total] Train Loss: 2.1344
+validating on 41 samples = 
+[Iter 230 Task segm] Val Loss: 2.0415
+{'mIoU': 0.1572, 'Pixel Acc': 0.4174}
+saving best model, with val_loss = 2.0414810238814933
+======================================================================
+[Iter 240 Task segm] Train Loss: 1.9818
+[Iter 240 Total] Train Loss: 1.9818
+======================================================================
+[Iter 240 Total] Train Loss: 1.9818
+validating on 41 samples = 
+[Iter 240 Task segm] Val Loss: 2.2234
+{'mIoU': 0.1374, 'Pixel Acc': 0.3796}
+======================================================================
+[Iter 250 Task segm] Train Loss: 2.0978
+[Iter 250 Total] Train Loss: 2.0978
+======================================================================
+[Iter 250 Total] Train Loss: 2.0978
+validating on 41 samples = 
+[Iter 250 Task segm] Val Loss: 2.2187
+{'mIoU': 0.1312, 'Pixel Acc': 0.3891}
+======================================================================
+[Iter 260 Task segm] Train Loss: 1.9908
+[Iter 260 Total] Train Loss: 1.9908
+======================================================================
+[Iter 260 Total] Train Loss: 1.9908
+validating on 41 samples = 
+[Iter 260 Task segm] Val Loss: 2.0630
+{'mIoU': 0.1389, 'Pixel Acc': 0.4226}
+======================================================================
+[Iter 270 Task segm] Train Loss: 1.9631
+[Iter 270 Total] Train Loss: 1.9631
+======================================================================
+[Iter 270 Total] Train Loss: 1.9631
+validating on 41 samples = 
+[Iter 270 Task segm] Val Loss: 2.1872
+{'mIoU': 0.1316, 'Pixel Acc': 0.3606}
+======================================================================
+[Iter 280 Task segm] Train Loss: 1.9680
+[Iter 280 Total] Train Loss: 1.9680
+======================================================================
+[Iter 280 Total] Train Loss: 1.9680
+validating on 41 samples = 
+[Iter 280 Task segm] Val Loss: 2.0326
+{'mIoU': 0.1621, 'Pixel Acc': 0.414}
+saving best model, with val_loss = 2.0326125679946525
+======================================================================
+[Iter 290 Task segm] Train Loss: 2.0062
+[Iter 290 Total] Train Loss: 2.0062
+======================================================================
+[Iter 290 Total] Train Loss: 2.0062
+validating on 41 samples = 
+[Iter 290 Task segm] Val Loss: 2.0525
+{'mIoU': 0.1469, 'Pixel Acc': 0.4221}
+======================================================================
+[Iter 300 Task segm] Train Loss: 2.0211
+[Iter 300 Total] Train Loss: 2.0211
+======================================================================
+[Iter 300 Total] Train Loss: 2.0211
+validating on 41 samples = 
+[Iter 300 Task segm] Val Loss: 1.9901
+{'mIoU': 0.1484, 'Pixel Acc': 0.4204}
+saving best model, with val_loss = 1.9900618820655636
+======================================================================
+[Iter 310 Task segm] Train Loss: 1.9739
+[Iter 310 Total] Train Loss: 1.9739
+======================================================================
+[Iter 310 Total] Train Loss: 1.9739
+validating on 41 samples = 
+[Iter 310 Task segm] Val Loss: 2.0388
+{'mIoU': 0.1337, 'Pixel Acc': 0.4165}
+======================================================================
+[Iter 320 Task segm] Train Loss: 1.9366
+[Iter 320 Total] Train Loss: 1.9366
+======================================================================
+[Iter 320 Total] Train Loss: 1.9366
+validating on 41 samples = 
+[Iter 320 Task segm] Val Loss: 2.1396
+{'mIoU': 0.1263, 'Pixel Acc': 0.3967}
+======================================================================
+[Iter 330 Task segm] Train Loss: 1.9379
+[Iter 330 Total] Train Loss: 1.9379
+======================================================================
+[Iter 330 Total] Train Loss: 1.9379
+validating on 41 samples = 
+[Iter 330 Task segm] Val Loss: 2.0584
+{'mIoU': 0.1546, 'Pixel Acc': 0.4191}
+======================================================================
+[Iter 340 Task segm] Train Loss: 1.9727
+[Iter 340 Total] Train Loss: 1.9727
+======================================================================
+[Iter 340 Total] Train Loss: 1.9727
+validating on 41 samples = 
+[Iter 340 Task segm] Val Loss: 2.0065
+{'mIoU': 0.1311, 'Pixel Acc': 0.4194}
+======================================================================
+[Iter 350 Task segm] Train Loss: 1.9691
+[Iter 350 Total] Train Loss: 1.9691
+======================================================================
+[Iter 350 Total] Train Loss: 1.9691
+validating on 41 samples = 
+[Iter 350 Task segm] Val Loss: 2.0411
+{'mIoU': 0.1297, 'Pixel Acc': 0.4135}
+======================================================================
+[Iter 360 Task segm] Train Loss: 1.9638
+[Iter 360 Total] Train Loss: 1.9638
+======================================================================
+[Iter 360 Total] Train Loss: 1.9638
+validating on 41 samples = 
+[Iter 360 Task segm] Val Loss: 1.9803
+{'mIoU': 0.1457, 'Pixel Acc': 0.415}
+saving best model, with val_loss = 1.9803375529079903
+======================================================================
+[Iter 370 Task segm] Train Loss: 1.9883
+[Iter 370 Total] Train Loss: 1.9883
+======================================================================
+[Iter 370 Total] Train Loss: 1.9883
+validating on 41 samples = 
+[Iter 370 Task segm] Val Loss: 2.2658
+{'mIoU': 0.1332, 'Pixel Acc': 0.3739}
+======================================================================
+[Iter 380 Task segm] Train Loss: 1.9314
+[Iter 380 Total] Train Loss: 1.9314
+======================================================================
+[Iter 380 Total] Train Loss: 1.9314
+validating on 41 samples = 
+[Iter 380 Task segm] Val Loss: 1.9991
+{'mIoU': 0.1309, 'Pixel Acc': 0.424}
+======================================================================
+[Iter 390 Task segm] Train Loss: 1.9730
+[Iter 390 Total] Train Loss: 1.9730
+======================================================================
+[Iter 390 Total] Train Loss: 1.9730
+validating on 41 samples = 
+[Iter 390 Task segm] Val Loss: 1.9248
+{'mIoU': 0.1546, 'Pixel Acc': 0.4401}
+saving best model, with val_loss = 1.9247962410857038
+======================================================================
+[Iter 400 Task segm] Train Loss: 1.8203
+[Iter 400 Total] Train Loss: 1.8203
+======================================================================
+[Iter 400 Total] Train Loss: 1.8203
+validating on 41 samples = 
+[Iter 400 Task segm] Val Loss: 1.9985
+{'mIoU': 0.127, 'Pixel Acc': 0.426}
+======================================================================
+[Iter 410 Task segm] Train Loss: 1.7874
+[Iter 410 Total] Train Loss: 1.7874
+======================================================================
+[Iter 410 Total] Train Loss: 1.7874
+validating on 41 samples = 
+[Iter 410 Task segm] Val Loss: 1.9548
+{'mIoU': 0.1365, 'Pixel Acc': 0.431}
+======================================================================
+[Iter 420 Task segm] Train Loss: 1.9040
+[Iter 420 Total] Train Loss: 1.9040
+======================================================================
+[Iter 420 Total] Train Loss: 1.9040
+validating on 41 samples = 
+[Iter 420 Task segm] Val Loss: 1.9984
+{'mIoU': 0.1304, 'Pixel Acc': 0.4046}
+======================================================================
+[Iter 430 Task segm] Train Loss: 1.8051
+[Iter 430 Total] Train Loss: 1.8051
+======================================================================
+[Iter 430 Total] Train Loss: 1.8051
+validating on 41 samples = 
+[Iter 430 Task segm] Val Loss: 2.1119
+{'mIoU': 0.1307, 'Pixel Acc': 0.391}
+======================================================================
+[Iter 440 Task segm] Train Loss: 1.8454
+[Iter 440 Total] Train Loss: 1.8454
+======================================================================
+[Iter 440 Total] Train Loss: 1.8454
+validating on 41 samples = 
+[Iter 440 Task segm] Val Loss: 2.0459
+{'mIoU': 0.1431, 'Pixel Acc': 0.4232}
+======================================================================
+[Iter 450 Task segm] Train Loss: 1.9040
+[Iter 450 Total] Train Loss: 1.9040
+======================================================================
+[Iter 450 Total] Train Loss: 1.9040
+validating on 41 samples = 
+[Iter 450 Task segm] Val Loss: 2.0694
+{'mIoU': 0.1219, 'Pixel Acc': 0.4036}
+======================================================================
+[Iter 460 Task segm] Train Loss: 1.8101
+[Iter 460 Total] Train Loss: 1.8101
+======================================================================
+[Iter 460 Total] Train Loss: 1.8101
+validating on 41 samples = 
+[Iter 460 Task segm] Val Loss: 2.2320
+{'mIoU': 0.1307, 'Pixel Acc': 0.4011}
+======================================================================
+[Iter 470 Task segm] Train Loss: 1.9630
+[Iter 470 Total] Train Loss: 1.9630
+======================================================================
+[Iter 470 Total] Train Loss: 1.9630
+validating on 41 samples = 
+[Iter 470 Task segm] Val Loss: 2.1006
+{'mIoU': 0.1405, 'Pixel Acc': 0.4187}
+======================================================================
+[Iter 480 Task segm] Train Loss: 1.8698
+[Iter 480 Total] Train Loss: 1.8698
+======================================================================
+[Iter 480 Total] Train Loss: 1.8698
+validating on 41 samples = 
+[Iter 480 Task segm] Val Loss: 1.9145
+{'mIoU': 0.1594, 'Pixel Acc': 0.4533}
+saving best model, with val_loss = 1.914539188873477
+======================================================================
+[Iter 490 Task segm] Train Loss: 1.7806
+[Iter 490 Total] Train Loss: 1.7806
+======================================================================
+[Iter 490 Total] Train Loss: 1.7806
+validating on 41 samples = 
+[Iter 490 Task segm] Val Loss: 2.2760
+{'mIoU': 0.1169, 'Pixel Acc': 0.3863}
+======================================================================
+[Iter 500 Task segm] Train Loss: 1.8129
+[Iter 500 Total] Train Loss: 1.8129
+======================================================================
+[Iter 500 Total] Train Loss: 1.8129
+validating on 41 samples = 
+[Iter 500 Task segm] Val Loss: 2.5311
+{'mIoU': 0.1214, 'Pixel Acc': 0.3524}
+======================================================================
+[Iter 510 Task segm] Train Loss: 1.7554
+[Iter 510 Total] Train Loss: 1.7554
+======================================================================
+[Iter 510 Total] Train Loss: 1.7554
+validating on 41 samples = 
+[Iter 510 Task segm] Val Loss: 2.2719
+{'mIoU': 0.1112, 'Pixel Acc': 0.3504}
+======================================================================
+[Iter 520 Task segm] Train Loss: 1.8616
+[Iter 520 Total] Train Loss: 1.8616
+======================================================================
+[Iter 520 Total] Train Loss: 1.8616
+validating on 41 samples = 
+[Iter 520 Task segm] Val Loss: 1.8983
+{'mIoU': 0.146, 'Pixel Acc': 0.4347}
+saving best model, with val_loss = 1.8983338199010709
+======================================================================
+[Iter 530 Task segm] Train Loss: 1.7193
+[Iter 530 Total] Train Loss: 1.7193
+======================================================================
+[Iter 530 Total] Train Loss: 1.7193
+validating on 41 samples = 
+[Iter 530 Task segm] Val Loss: 2.0162
+{'mIoU': 0.1327, 'Pixel Acc': 0.4031}
+======================================================================
+[Iter 540 Task segm] Train Loss: 1.8642
+[Iter 540 Total] Train Loss: 1.8642
+======================================================================
+[Iter 540 Total] Train Loss: 1.8642
+validating on 41 samples = 
+[Iter 540 Task segm] Val Loss: 1.8772
+{'mIoU': 0.1326, 'Pixel Acc': 0.4333}
+saving best model, with val_loss = 1.8771863390759724
+======================================================================
+[Iter 550 Task segm] Train Loss: 1.8038
+[Iter 550 Total] Train Loss: 1.8038
+======================================================================
+[Iter 550 Total] Train Loss: 1.8038
+validating on 41 samples = 
+[Iter 550 Task segm] Val Loss: 1.8598
+{'mIoU': 0.1673, 'Pixel Acc': 0.4609}
+saving best model, with val_loss = 1.8597618922954653
+======================================================================
+[Iter 560 Task segm] Train Loss: 1.7819
+[Iter 560 Total] Train Loss: 1.7819
+======================================================================
+[Iter 560 Total] Train Loss: 1.7819
+validating on 41 samples = 
+[Iter 560 Task segm] Val Loss: 1.9035
+{'mIoU': 0.1403, 'Pixel Acc': 0.4324}
+======================================================================
+[Iter 570 Task segm] Train Loss: 1.7410
+[Iter 570 Total] Train Loss: 1.7410
+======================================================================
+[Iter 570 Total] Train Loss: 1.7410
+validating on 41 samples = 
+[Iter 570 Task segm] Val Loss: 1.9173
+{'mIoU': 0.142, 'Pixel Acc': 0.4227}
+======================================================================
+[Iter 580 Task segm] Train Loss: 1.7371
+[Iter 580 Total] Train Loss: 1.7371
+======================================================================
+[Iter 580 Total] Train Loss: 1.7371
+validating on 41 samples = 
+[Iter 580 Task segm] Val Loss: 1.9406
+{'mIoU': 0.1427, 'Pixel Acc': 0.4248}
+======================================================================
+[Iter 590 Task segm] Train Loss: 1.8034
+[Iter 590 Total] Train Loss: 1.8034
+======================================================================
+[Iter 590 Total] Train Loss: 1.8034
+validating on 41 samples = 
+[Iter 590 Task segm] Val Loss: 1.9693
+{'mIoU': 0.1449, 'Pixel Acc': 0.4334}
+======================================================================
+[Iter 600 Task segm] Train Loss: 1.8194
+[Iter 600 Total] Train Loss: 1.8194
+======================================================================
+[Iter 600 Total] Train Loss: 1.8194
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 1.9246
+{'mIoU': 0.1529, 'Pixel Acc': 0.4334}
+======================================================================

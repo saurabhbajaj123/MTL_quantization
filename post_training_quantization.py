@@ -38,14 +38,24 @@ task_cls_num = {'segment_semantic': 40, 'normal':3, 'depth_zbuffer': 1}
 # three_task = ['depth_zbuffer']
 # three_task = ['segment_semantic', 'normal']
 # three_task = ['segment_semantic', 'depth_zbuffer']
-# three_task = ['depth_zbuffer', 'normal']
-three_task = ['segment_semantic','normal','depth_zbuffer']
+three_task = ['depth_zbuffer', 'normal']
+# three_task = ['segment_semantic','normal','depth_zbuffer']
+
+# three_task = [
+#     ['segment_semantic'],
+#     ['normal'],
+#     ['depth_zbuffer'],
+#     ['segment_semantic', 'normal'],
+#     ['segment_semantic', 'depth_zbuffer'],
+#     ['depth_zbuffer', 'normal'],
+#     ['segment_semantic','normal','depth_zbuffer'],
+# ]
 
 criterionDict = {}
 metricDict = {}
 clsNum = {}
 
-dataroot = "/home/sbajaj/MyCode/quantization_remote/Datasets/nyu_v2"
+dataroot = "/work/sbajaj_umass_edu/Datasets/nyu_v2"
 dataset = NYU_v2(dataroot, 'train', crop_h=321, crop_w=321)
 trainDataloader = DataLoader(dataset, 16, shuffle=True)
 
@@ -56,7 +66,7 @@ for task in three_task:
     criterionDict[task] = NYUCriterions(task)
     metricDict[task] = NYUMetrics(task)
     clsNum[task] = task_cls_num[task]
-print(criterionDict, metricDict, clsNum)
+# print(criterionDict, metricDict, clsNum)
 
 print(len(valDataloader), len(trainDataloader))
 
@@ -88,10 +98,15 @@ pretrained_features = torch.nn.Sequential(*list(pretrained.children())[:-2])
 # pretrained_features = torch.nn.Sequential(*(list(pretrained.children())[:-4] + list(pretrained.children())[-2:]))
 # print("pretrained_features == {}".format(pretrained_features))
 model = MTLModel(512, clsNum, pretrained_features)
-print(model)
-# savePath = '/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test/trained'
-# state = torch.load(savePath + '_' + '_'.join(three_task) + '.model')
-# model.load_state_dict(state['state_dict'])
+# print(model)
+
+# savePath = '/work/sbajaj_umass_edu/SavedModels/'
+# num_iters = 3
+# # state = torch.load(savePath + 'resnet18' +  '_' + '_'.join(three_task) + '_iters_'+ str(num_iters) + '.pt')
+# state = torch.load(savePath + "".join(three_task))
+# print(state.keys())
+# model.load_state_dict(state)
+
 # startIter = state['iter'] + 1
 
 
@@ -148,11 +163,11 @@ tb = SummaryWriter()
 class Trainer():
     def __init__(self, model, tasks, train_dataloader, val_dataloader, criterion_dict, metric_dict, 
                  lr=0.001, decay_lr_freq=4000, decay_lr_rate=0.5,
-                 print_iters=50, val_iters=200, save_iters=200, optimizer=None, quantization=False):
+                 print_iters=50, val_iters=200, save_iters=200, optimizer=None, quantization=False, startIter=0, bestPath=None):
         print("initializing the Trainer")
         super(Trainer, self).__init__()
         self.model = model
-        self.startIter = 0
+        self.startIter = startIter
         self.quantization = quantization
         if not optimizer:
           self.optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, self.model.parameters()), lr=lr, betas=(0.5, 0.999), weight_decay=0.0001)
@@ -178,6 +193,41 @@ class Trainer():
         self.save_iters = save_iters
         self.tb_data = next(iter(trainDataloader))
 
+        self.best_val_loss = float("inf")
+
+
+        if bestPath:
+            state = torch.load(bestPath)
+            self.model.load_state_dict(state['state_dict'])
+            self.model.eval()
+            loss_list = {}
+            for task in self.tasks:
+                loss_list[task] = []
+
+            for i, data in enumerate(self.val_dataloader):
+                x = data['input'].cuda()
+                # x = data['input']
+
+                output = self.model(x)
+                
+                for task in self.tasks:
+                    y = data[task].cuda()
+                    # y = data[task]
+                    
+                    if task + '_mask' in data:
+                        tloss = self.criterion_dict[task](output[task], y, data[task + '_mask'].cuda())
+                        self.metric_dict[task](output[task], y, data[task + '_mask'].cuda())              
+                    else:
+                        tloss = self.criterion_dict[task](output[task], y)
+                        self.metric_dict[task](output[task], y)
+                    loss_list[task].append(tloss.item())
+            val_loss = 0
+            for task in self.tasks:
+                val_loss += np.mean(loss_list[task])
+            print("model with best val_loss = {}".format(val_loss))
+            self.best_val_loss = val_loss
+            
+
     def train(self, iters, loss_lambda, savePath=None, reload=None):
         self.model.train()
         if reload is not None and reload != 'false' and savePath is not None:
@@ -196,14 +246,15 @@ class Trainer():
 
             if (i+1) % self.print_iters == 0:
                 self.print_train_loss(i)
-                tb.add_scalar('Loss', self.get_loss(i), i)
+                tb.add_scalar('Loss_train', self.get_loss(i), i)
                 self.set_train_loss()
             if (i+1) % self.val_iters == 0:
                 self.validate(i)
             if (i+1) % self.save_iters == 0:
                 if savePath is not None:
-                    # self.save_model(i, savePath)
-                    torch.save(model, "/home/sbajaj/MyCode/quantization_remote/Checkpoints/NYUv2/test2/resnet18_{}_iters_{}.pt".format("_".join(three_task), i))
+                    self.save_model(i, savePath)
+                    # torch.save(model, "/work/sbajaj_umass_edu/SavedModels/resnet18_{}_iters_{}.pt".format("_".join(three_task), i))
+                    # torch.save(model.state_dict(), "/work/sbajaj_umass_edu/SavedModels/{}".format("".join(three_task)))
             # print(self.get_loss(i))
             # tb.add_scalar('Loss', self.get_loss(i), i)
 
@@ -283,7 +334,7 @@ class Trainer():
         return
     
     def train_step(self, loss_lambda):
-        print("starting train step")
+        # print("starting train step")
         self.model.train()
 
 
@@ -294,6 +345,7 @@ class Trainer():
             data = next(self.train_iter)
         
         x = data['input'].cuda()
+        # x = data['input']
         # print("size(x) = ", x.size())
         self.optimizer.zero_grad()
         output = self.model(x)
@@ -302,8 +354,11 @@ class Trainer():
         for task in self.tasks:
             # print("task = {}".format(task))
             y = data[task].cuda()
+            # y = data[task]
+
             if task + '_mask' in data:
                 tloss = self.criterion_dict[task](output[task], y, data[task + '_mask'].cuda())
+                # tloss = self.criterion_dict[task](output[task], y, data[task + '_mask'])
             else:
                 tloss = self.criterion_dict[task](output[task], y)
                 
@@ -327,13 +382,19 @@ class Trainer():
         print("validating on {} samples = ".format(len(self.val_dataloader)))
         for i, data in enumerate(self.val_dataloader):
             x = data['input'].cuda()
+            # x = data['input']
+
             output = self.model(x)
             
             for task in self.tasks:
                 y = data[task].cuda()
+                # y = data[task]
+                
                 if task + '_mask' in data:
                     tloss = self.criterion_dict[task](output[task], y, data[task + '_mask'].cuda())
                     self.metric_dict[task](output[task], y, data[task + '_mask'].cuda())
+                    # tloss = self.criterion_dict[task](output[task], y, data[task + '_mask'])
+                    # self.metric_dict[task](output[task], y, data[task + '_mask'])                
                 else:
                     tloss = self.criterion_dict[task](output[task], y)
                     self.metric_dict[task](output[task], y)
@@ -345,7 +406,7 @@ class Trainer():
         for task in self.tasks:
             val_results = self.metric_dict[task].val_metrics()
             print('[Iter {} Task {}] Val Loss: {:.4f}'.format((it+1), task[:4], np.mean(loss_list[task])), flush=True)
-            tb.add_scalar(str(task[:4]), np.mean(loss_list[task]), it)
+            tb.add_scalar(str(task[:4]) + "_val", np.mean(loss_list[task]), it)
             print(val_results, flush=True)
             # with open("validation_results.txt", 'a+') as f:
             #     f.write('\n')
@@ -353,6 +414,14 @@ class Trainer():
             #     f.write('\n')
             #     f.write(str(val_results))
             #     f.write('\n')
+        val_loss = 0
+        for task in self.tasks:
+            val_loss += np.mean(loss_list[task])
+        
+        if val_loss < self.best_val_loss:
+            self.best_val_loss = val_loss
+            self.save_model(it, "/work/sbajaj_umass_edu/BestModels/")
+            print("saving best model, with val_loss = {}".format(self.best_val_loss))
         print('======================================================================', flush=True)
         return
     
@@ -368,6 +437,7 @@ class Trainer():
         for task in self.tasks:
             if task not in reload:
                 model_name = False
+                print("Breaking...")
                 break
         if model_name:
             state = torch.load(savePath + reload)
@@ -383,13 +453,14 @@ class Trainer():
     def save_model(self, it, savePath):
         state = {'iter': it,
                 'state_dict': self.model.state_dict(),
-                'layout': self.model.layout,
+                # 'layout': self.model.layout,
                 'optimizer': self.optimizer.state_dict(),
                 'scheduler': self.scheduler.state_dict()}
-        if hasattr(self.model, 'branch') and self.model.branch is not None:
-            torch.save(state, savePath + '_'.join(self.tasks) + '_b' + str(self.model.branch) + '.model')
-        elif hasattr(self.model, 'layout') and self.model.layout is not None:
-            torch.save(state, savePath + '_'.join(self.tasks) + '.model')
+        torch.save(state, savePath + '_'.join(self.tasks) + '.model')
+        # if hasattr(self.model, 'branch') and self.model.branch is not None:
+        #     torch.save(state, savePath + '_'.join(self.tasks) + '_b' + str(self.model.branch) + '.model')
+        # elif hasattr(self.model, 'layout') and self.model.layout is not None:
+        #     torch.save(state, savePath + '_'.join(self.tasks) + '.model')
         return
     
     def print_train_loss(self, it):
@@ -419,27 +490,32 @@ print("device = {}".format(device))
 # model = model.cuda()
 model = model.to(device)
 
-trainer = Trainer(model, three_task, trainDataloader, valDataloader, criterionDict, metricDict, print_iters=10, val_iters=10, quantization=False)
-trainer.train(600, loss_lambda, checkpoint)
+best_path = "/work/sbajaj_umass_edu/BestModels/" +  "_".join(three_task) + '.model'
+trainer = Trainer(model, three_task, trainDataloader, valDataloader, criterionDict, metricDict, print_iters=10, val_iters=10, quantization=False, save_iters=200)
 
-device = torch.device('cpu')
-model_fp32 = model.to(device)
-
-model_fp32.eval()
-
-model_fp32.qconfig = torch.quantization.get_default_qconfig('fbgemm')
-
-# print(model_fp32)
-model_fp32_prepared = torch.quantization.prepare(model_fp32, inplace = False)
+savePath = "/work/sbajaj_umass_edu/SavedModels/"
+reload = "_".join(three_task) + '.model'
+trainer.train(600, loss_lambda, savePath, None)
 
 
-with open("validation_results.txt", 'a+') as f:
-    f.write('\n')
-    f.write("Tasks = {}".format("_".join(three_task)))
+# device = torch.device('cpu')
+# model_fp32 = model.to(device)
 
-startIter = 1
-print('prequantization')
-validate(model_fp32_prepared, valDataloader, three_task, criterionDict, metricDict, startIter)
-model_quantized = torch.quantization.convert(model_fp32_prepared) 
-print('postquantization')
-validate(model_quantized, valDataloader, three_task, criterionDict, metricDict, startIter)
+# model_fp32.eval()
+
+# model_fp32.qconfig = torch.quantization.get_default_qconfig('fbgemm')
+
+# # print(model_fp32)
+# model_fp32_prepared = torch.quantization.prepare(model_fp32, inplace = False)
+
+
+# with open("validation_results.txt", 'a+') as f:
+#     f.write('\n')
+#     f.write("Tasks = {}".format("_".join(three_task)))
+
+# startIter = 1
+# print('prequantization')
+# validate(model_fp32_prepared, valDataloader, three_task, criterionDict, metricDict, startIter)
+# model_quantized = torch.quantization.convert(model_fp32_prepared) 
+# print('postquantization')
+# validate(model_quantized, valDataloader, three_task, criterionDict, metricDict, startIter)

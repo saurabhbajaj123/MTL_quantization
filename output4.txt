@@ -1,0 +1,488 @@
+41 50
+quantizable model loaded
+device = cuda:0
+initializing the Trainer
+[Iter 10 Task dept] Train Loss: 2.9464
+[Iter 10 Total] Train Loss: 2.9464
+======================================================================
+[Iter 10 Total] Train Loss: 2.9464
+validating on 41 samples = 
+[Iter 10 Task dept] Val Loss: 1.2897
+{'abs_err': 1.2408, 'rel_err': 0.4119, 'sigma_1.25': 23.8677, 'sigma_1.25^2': 47.1098, 'sigma_1.25^3': 68.6159}
+saving best model, with val_loss = 1.289670820643262
+======================================================================
+[Iter 20 Task dept] Train Loss: 1.1452
+[Iter 20 Total] Train Loss: 1.1452
+======================================================================
+[Iter 20 Total] Train Loss: 1.1452
+validating on 41 samples = 
+[Iter 20 Task dept] Val Loss: 0.9526
+{'abs_err': 0.9317, 'rel_err': 0.3869, 'sigma_1.25': 39.4251, 'sigma_1.25^2': 68.9642, 'sigma_1.25^3': 86.36}
+saving best model, with val_loss = 0.9525779674692851
+======================================================================
+[Iter 30 Task dept] Train Loss: 1.2209
+[Iter 30 Total] Train Loss: 1.2209
+======================================================================
+[Iter 30 Total] Train Loss: 1.2209
+validating on 41 samples = 
+[Iter 30 Task dept] Val Loss: 1.0501
+{'abs_err': 1.0561, 'rel_err': 0.4412, 'sigma_1.25': 36.9838, 'sigma_1.25^2': 66.843, 'sigma_1.25^3': 85.1508}
+======================================================================
+[Iter 40 Task dept] Train Loss: 1.0878
+[Iter 40 Total] Train Loss: 1.0878
+======================================================================
+[Iter 40 Total] Train Loss: 1.0878
+validating on 41 samples = 
+[Iter 40 Task dept] Val Loss: 0.8806
+{'abs_err': 0.869, 'rel_err': 0.3691, 'sigma_1.25': 42.5873, 'sigma_1.25^2': 71.8287, 'sigma_1.25^3': 88.4019}
+saving best model, with val_loss = 0.8805775962224821
+======================================================================
+[Iter 50 Task dept] Train Loss: 1.1957
+[Iter 50 Total] Train Loss: 1.1957
+======================================================================
+[Iter 50 Total] Train Loss: 1.1957
+validating on 41 samples = 
+[Iter 50 Task dept] Val Loss: 1.1983
+{'abs_err': 1.1625, 'rel_err': 0.3913, 'sigma_1.25': 25.4102, 'sigma_1.25^2': 50.9789, 'sigma_1.25^3': 73.3072}
+======================================================================
+[Iter 60 Task dept] Train Loss: 1.2270
+[Iter 60 Total] Train Loss: 1.2270
+======================================================================
+[Iter 60 Total] Train Loss: 1.2270
+validating on 41 samples = 
+[Iter 60 Task dept] Val Loss: 1.5152
+{'abs_err': 1.5468, 'rel_err': 0.7759, 'sigma_1.25': 29.7178, 'sigma_1.25^2': 54.1602, 'sigma_1.25^3': 72.1863}
+======================================================================
+[Iter 70 Task dept] Train Loss: 1.1317
+[Iter 70 Total] Train Loss: 1.1317
+======================================================================
+[Iter 70 Total] Train Loss: 1.1317
+validating on 41 samples = 
+[Iter 70 Task dept] Val Loss: 1.0544
+{'abs_err': 1.0409, 'rel_err': 0.4704, 'sigma_1.25': 38.347, 'sigma_1.25^2': 66.4675, 'sigma_1.25^3': 83.1662}
+======================================================================
+[Iter 80 Task dept] Train Loss: 1.0381
+[Iter 80 Total] Train Loss: 1.0381
+======================================================================
+[Iter 80 Total] Train Loss: 1.0381
+validating on 41 samples = 
+[Iter 80 Task dept] Val Loss: 1.1306
+{'abs_err': 1.1411, 'rel_err': 0.5532, 'sigma_1.25': 36.1485, 'sigma_1.25^2': 63.6553, 'sigma_1.25^3': 81.1743}
+======================================================================
+[Iter 90 Task dept] Train Loss: 1.0593
+[Iter 90 Total] Train Loss: 1.0593
+======================================================================
+[Iter 90 Total] Train Loss: 1.0593
+validating on 41 samples = 
+[Iter 90 Task dept] Val Loss: 1.4207
+{'abs_err': 1.4521, 'rel_err': 0.7114, 'sigma_1.25': 30.026, 'sigma_1.25^2': 55.3834, 'sigma_1.25^3': 73.922}
+======================================================================
+[Iter 100 Task dept] Train Loss: 1.0609
+[Iter 100 Total] Train Loss: 1.0609
+======================================================================
+[Iter 100 Total] Train Loss: 1.0609
+validating on 41 samples = 
+[Iter 100 Task dept] Val Loss: 1.0369
+{'abs_err': 1.0002, 'rel_err': 0.3444, 'sigma_1.25': 35.1593, 'sigma_1.25^2': 65.2228, 'sigma_1.25^3': 83.2849}
+======================================================================
+[Iter 110 Task dept] Train Loss: 1.0828
+[Iter 110 Total] Train Loss: 1.0828
+======================================================================
+[Iter 110 Total] Train Loss: 1.0828
+validating on 41 samples = 
+[Iter 110 Task dept] Val Loss: 0.8990
+{'abs_err': 0.8684, 'rel_err': 0.3464, 'sigma_1.25': 40.4208, 'sigma_1.25^2': 72.7432, 'sigma_1.25^3': 89.9953}
+======================================================================
+[Iter 120 Task dept] Train Loss: 1.1344
+[Iter 120 Total] Train Loss: 1.1344
+======================================================================
+[Iter 120 Total] Train Loss: 1.1344
+validating on 41 samples = 
+[Iter 120 Task dept] Val Loss: 0.8987
+{'abs_err': 0.8694, 'rel_err': 0.3384, 'sigma_1.25': 39.0604, 'sigma_1.25^2': 71.9392, 'sigma_1.25^3': 89.7886}
+======================================================================
+[Iter 130 Task dept] Train Loss: 1.0404
+[Iter 130 Total] Train Loss: 1.0404
+======================================================================
+[Iter 130 Total] Train Loss: 1.0404
+validating on 41 samples = 
+[Iter 130 Task dept] Val Loss: 0.8849
+{'abs_err': 0.8539, 'rel_err': 0.3345, 'sigma_1.25': 40.2575, 'sigma_1.25^2': 72.931, 'sigma_1.25^3': 90.5187}
+======================================================================
+[Iter 140 Task dept] Train Loss: 0.9884
+[Iter 140 Total] Train Loss: 0.9884
+======================================================================
+[Iter 140 Total] Train Loss: 0.9884
+validating on 41 samples = 
+[Iter 140 Task dept] Val Loss: 0.9024
+{'abs_err': 0.8714, 'rel_err': 0.3299, 'sigma_1.25': 38.9131, 'sigma_1.25^2': 71.897, 'sigma_1.25^3': 90.4213}
+======================================================================
+[Iter 150 Task dept] Train Loss: 0.9726
+[Iter 150 Total] Train Loss: 0.9726
+======================================================================
+[Iter 150 Total] Train Loss: 0.9726
+validating on 41 samples = 
+[Iter 150 Task dept] Val Loss: 1.1880
+{'abs_err': 1.1379, 'rel_err': 0.3713, 'sigma_1.25': 24.8217, 'sigma_1.25^2': 51.7343, 'sigma_1.25^3': 75.0634}
+======================================================================
+[Iter 160 Task dept] Train Loss: 1.0679
+[Iter 160 Total] Train Loss: 1.0679
+======================================================================
+[Iter 160 Total] Train Loss: 1.0679
+validating on 41 samples = 
+[Iter 160 Task dept] Val Loss: 0.9885
+{'abs_err': 0.9478, 'rel_err': 0.3194, 'sigma_1.25': 35.028, 'sigma_1.25^2': 67.6236, 'sigma_1.25^3': 87.5744}
+======================================================================
+[Iter 170 Task dept] Train Loss: 0.9772
+[Iter 170 Total] Train Loss: 0.9772
+======================================================================
+[Iter 170 Total] Train Loss: 0.9772
+validating on 41 samples = 
+[Iter 170 Task dept] Val Loss: 1.0707
+{'abs_err': 1.0249, 'rel_err': 0.3441, 'sigma_1.25': 29.2368, 'sigma_1.25^2': 60.2201, 'sigma_1.25^3': 83.3372}
+======================================================================
+[Iter 180 Task dept] Train Loss: 1.0177
+[Iter 180 Total] Train Loss: 1.0177
+======================================================================
+[Iter 180 Total] Train Loss: 1.0177
+validating on 41 samples = 
+[Iter 180 Task dept] Val Loss: 1.0660
+{'abs_err': 1.0201, 'rel_err': 0.3339, 'sigma_1.25': 28.7751, 'sigma_1.25^2': 59.918, 'sigma_1.25^3': 84.5561}
+======================================================================
+[Iter 190 Task dept] Train Loss: 0.9876
+[Iter 190 Total] Train Loss: 0.9876
+======================================================================
+[Iter 190 Total] Train Loss: 0.9876
+validating on 41 samples = 
+[Iter 190 Task dept] Val Loss: 0.8386
+{'abs_err': 0.8146, 'rel_err': 0.3325, 'sigma_1.25': 44.0327, 'sigma_1.25^2': 75.3645, 'sigma_1.25^3': 91.0347}
+saving best model, with val_loss = 0.838616132736206
+======================================================================
+[Iter 200 Task dept] Train Loss: 1.0575
+[Iter 200 Total] Train Loss: 1.0575
+======================================================================
+[Iter 200 Total] Train Loss: 1.0575
+validating on 41 samples = 
+[Iter 200 Task dept] Val Loss: 1.2494
+{'abs_err': 1.1994, 'rel_err': 0.3938, 'sigma_1.25': 23.8486, 'sigma_1.25^2': 49.8638, 'sigma_1.25^3': 73.9372}
+======================================================================
+[Iter 210 Task dept] Train Loss: 1.0620
+[Iter 210 Total] Train Loss: 1.0620
+======================================================================
+[Iter 210 Total] Train Loss: 1.0620
+validating on 41 samples = 
+[Iter 210 Task dept] Val Loss: 1.0008
+{'abs_err': 0.9631, 'rel_err': 0.3714, 'sigma_1.25': 37.0064, 'sigma_1.25^2': 67.755, 'sigma_1.25^3': 86.1113}
+======================================================================
+[Iter 220 Task dept] Train Loss: 1.0704
+[Iter 220 Total] Train Loss: 1.0704
+======================================================================
+[Iter 220 Total] Train Loss: 1.0704
+validating on 41 samples = 
+[Iter 220 Task dept] Val Loss: 0.9609
+{'abs_err': 0.9202, 'rel_err': 0.34, 'sigma_1.25': 36.7237, 'sigma_1.25^2': 69.3515, 'sigma_1.25^3': 89.3815}
+======================================================================
+[Iter 230 Task dept] Train Loss: 0.9627
+[Iter 230 Total] Train Loss: 0.9627
+======================================================================
+[Iter 230 Total] Train Loss: 0.9627
+validating on 41 samples = 
+[Iter 230 Task dept] Val Loss: 1.1368
+{'abs_err': 1.0833, 'rel_err': 0.3483, 'sigma_1.25': 27.2831, 'sigma_1.25^2': 56.3871, 'sigma_1.25^3': 80.4861}
+======================================================================
+[Iter 240 Task dept] Train Loss: 0.9893
+[Iter 240 Total] Train Loss: 0.9893
+======================================================================
+[Iter 240 Total] Train Loss: 0.9893
+validating on 41 samples = 
+[Iter 240 Task dept] Val Loss: 0.8958
+{'abs_err': 0.8674, 'rel_err': 0.3135, 'sigma_1.25': 38.4911, 'sigma_1.25^2': 71.818, 'sigma_1.25^3': 90.3293}
+======================================================================
+[Iter 250 Task dept] Train Loss: 1.0419
+[Iter 250 Total] Train Loss: 1.0419
+======================================================================
+[Iter 250 Total] Train Loss: 1.0419
+validating on 41 samples = 
+[Iter 250 Task dept] Val Loss: 1.2245
+{'abs_err': 1.1685, 'rel_err': 0.3682, 'sigma_1.25': 23.1229, 'sigma_1.25^2': 49.2074, 'sigma_1.25^3': 74.8622}
+======================================================================
+[Iter 260 Task dept] Train Loss: 0.9635
+[Iter 260 Total] Train Loss: 0.9635
+======================================================================
+[Iter 260 Total] Train Loss: 0.9635
+validating on 41 samples = 
+[Iter 260 Task dept] Val Loss: 0.8558
+{'abs_err': 0.8257, 'rel_err': 0.314, 'sigma_1.25': 40.5863, 'sigma_1.25^2': 74.6812, 'sigma_1.25^3': 91.4777}
+======================================================================
+[Iter 270 Task dept] Train Loss: 0.8503
+[Iter 270 Total] Train Loss: 0.8503
+======================================================================
+[Iter 270 Total] Train Loss: 0.8503
+validating on 41 samples = 
+[Iter 270 Task dept] Val Loss: 0.9949
+{'abs_err': 0.9544, 'rel_err': 0.318, 'sigma_1.25': 33.0236, 'sigma_1.25^2': 65.2519, 'sigma_1.25^3': 86.9188}
+======================================================================
+[Iter 280 Task dept] Train Loss: 0.9523
+[Iter 280 Total] Train Loss: 0.9523
+======================================================================
+[Iter 280 Total] Train Loss: 0.9523
+validating on 41 samples = 
+[Iter 280 Task dept] Val Loss: 1.1266
+{'abs_err': 1.0796, 'rel_err': 0.3543, 'sigma_1.25': 29.175, 'sigma_1.25^2': 57.9915, 'sigma_1.25^3': 80.4512}
+======================================================================
+[Iter 290 Task dept] Train Loss: 0.9673
+[Iter 290 Total] Train Loss: 0.9673
+======================================================================
+[Iter 290 Total] Train Loss: 0.9673
+validating on 41 samples = 
+[Iter 290 Task dept] Val Loss: 1.2730
+{'abs_err': 1.2185, 'rel_err': 0.3848, 'sigma_1.25': 22.4955, 'sigma_1.25^2': 47.5808, 'sigma_1.25^3': 71.3944}
+======================================================================
+[Iter 300 Task dept] Train Loss: 1.0374
+[Iter 300 Total] Train Loss: 1.0374
+======================================================================
+[Iter 300 Total] Train Loss: 1.0374
+validating on 41 samples = 
+[Iter 300 Task dept] Val Loss: 1.2390
+{'abs_err': 1.1874, 'rel_err': 0.3807, 'sigma_1.25': 23.9757, 'sigma_1.25^2': 49.4573, 'sigma_1.25^3': 73.042}
+======================================================================
+[Iter 310 Task dept] Train Loss: 1.1336
+[Iter 310 Total] Train Loss: 1.1336
+======================================================================
+[Iter 310 Total] Train Loss: 1.1336
+validating on 41 samples = 
+[Iter 310 Task dept] Val Loss: 1.1681
+{'abs_err': 1.1287, 'rel_err': 0.4186, 'sigma_1.25': 30.193, 'sigma_1.25^2': 58.4115, 'sigma_1.25^3': 79.9041}
+======================================================================
+[Iter 320 Task dept] Train Loss: 1.0097
+[Iter 320 Total] Train Loss: 1.0097
+======================================================================
+[Iter 320 Total] Train Loss: 1.0097
+validating on 41 samples = 
+[Iter 320 Task dept] Val Loss: 1.0100
+{'abs_err': 0.9647, 'rel_err': 0.325, 'sigma_1.25': 33.6497, 'sigma_1.25^2': 66.0277, 'sigma_1.25^3': 86.9752}
+======================================================================
+[Iter 330 Task dept] Train Loss: 1.0149
+[Iter 330 Total] Train Loss: 1.0149
+======================================================================
+[Iter 330 Total] Train Loss: 1.0149
+validating on 41 samples = 
+[Iter 330 Task dept] Val Loss: 1.2841
+{'abs_err': 1.2286, 'rel_err': 0.3815, 'sigma_1.25': 21.6402, 'sigma_1.25^2': 46.427, 'sigma_1.25^3': 71.3081}
+======================================================================
+[Iter 340 Task dept] Train Loss: 0.9390
+[Iter 340 Total] Train Loss: 0.9390
+======================================================================
+[Iter 340 Total] Train Loss: 0.9390
+validating on 41 samples = 
+[Iter 340 Task dept] Val Loss: 0.8803
+{'abs_err': 0.8438, 'rel_err': 0.3109, 'sigma_1.25': 38.501, 'sigma_1.25^2': 73.1107, 'sigma_1.25^3': 91.5105}
+======================================================================
+[Iter 350 Task dept] Train Loss: 1.0497
+[Iter 350 Total] Train Loss: 1.0497
+======================================================================
+[Iter 350 Total] Train Loss: 1.0497
+validating on 41 samples = 
+[Iter 350 Task dept] Val Loss: 0.9322
+{'abs_err': 0.9009, 'rel_err': 0.3219, 'sigma_1.25': 35.2748, 'sigma_1.25^2': 67.6079, 'sigma_1.25^3': 88.7514}
+======================================================================
+[Iter 360 Task dept] Train Loss: 0.9787
+[Iter 360 Total] Train Loss: 0.9787
+======================================================================
+[Iter 360 Total] Train Loss: 0.9787
+validating on 41 samples = 
+[Iter 360 Task dept] Val Loss: 0.9829
+{'abs_err': 0.9448, 'rel_err': 0.3315, 'sigma_1.25': 34.2677, 'sigma_1.25^2': 66.1593, 'sigma_1.25^3': 87.2153}
+======================================================================
+[Iter 370 Task dept] Train Loss: 0.9785
+[Iter 370 Total] Train Loss: 0.9785
+======================================================================
+[Iter 370 Total] Train Loss: 0.9785
+validating on 41 samples = 
+[Iter 370 Task dept] Val Loss: 1.2004
+{'abs_err': 1.1505, 'rel_err': 0.3673, 'sigma_1.25': 25.7235, 'sigma_1.25^2': 52.073, 'sigma_1.25^3': 76.161}
+======================================================================
+[Iter 380 Task dept] Train Loss: 0.9340
+[Iter 380 Total] Train Loss: 0.9340
+======================================================================
+[Iter 380 Total] Train Loss: 0.9340
+validating on 41 samples = 
+[Iter 380 Task dept] Val Loss: 1.1460
+{'abs_err': 1.0979, 'rel_err': 0.3501, 'sigma_1.25': 26.6144, 'sigma_1.25^2': 54.821, 'sigma_1.25^3': 79.7221}
+======================================================================
+[Iter 390 Task dept] Train Loss: 0.8880
+[Iter 390 Total] Train Loss: 0.8880
+======================================================================
+[Iter 390 Total] Train Loss: 0.8880
+validating on 41 samples = 
+[Iter 390 Task dept] Val Loss: 1.0376
+{'abs_err': 0.9956, 'rel_err': 0.3267, 'sigma_1.25': 30.8761, 'sigma_1.25^2': 62.7228, 'sigma_1.25^3': 86.0644}
+======================================================================
+[Iter 400 Task dept] Train Loss: 1.0397
+[Iter 400 Total] Train Loss: 1.0397
+======================================================================
+[Iter 400 Total] Train Loss: 1.0397
+validating on 41 samples = 
+[Iter 400 Task dept] Val Loss: 0.9673
+{'abs_err': 0.9315, 'rel_err': 0.3259, 'sigma_1.25': 33.7608, 'sigma_1.25^2': 65.7011, 'sigma_1.25^3': 87.9879}
+======================================================================
+[Iter 410 Task dept] Train Loss: 0.8804
+[Iter 410 Total] Train Loss: 0.8804
+======================================================================
+[Iter 410 Total] Train Loss: 0.8804
+validating on 41 samples = 
+[Iter 410 Task dept] Val Loss: 0.9015
+{'abs_err': 0.8728, 'rel_err': 0.3427, 'sigma_1.25': 42.3456, 'sigma_1.25^2': 72.969, 'sigma_1.25^3': 88.9737}
+======================================================================
+[Iter 420 Task dept] Train Loss: 0.9200
+[Iter 420 Total] Train Loss: 0.9200
+======================================================================
+[Iter 420 Total] Train Loss: 0.9200
+validating on 41 samples = 
+[Iter 420 Task dept] Val Loss: 1.0437
+{'abs_err': 0.9941, 'rel_err': 0.3308, 'sigma_1.25': 28.9767, 'sigma_1.25^2': 60.797, 'sigma_1.25^3': 85.6555}
+======================================================================
+[Iter 430 Task dept] Train Loss: 0.8759
+[Iter 430 Total] Train Loss: 0.8759
+======================================================================
+[Iter 430 Total] Train Loss: 0.8759
+validating on 41 samples = 
+[Iter 430 Task dept] Val Loss: 1.1371
+{'abs_err': 1.0868, 'rel_err': 0.3494, 'sigma_1.25': 25.7659, 'sigma_1.25^2': 54.1768, 'sigma_1.25^3': 80.5325}
+======================================================================
+[Iter 440 Task dept] Train Loss: 1.0307
+[Iter 440 Total] Train Loss: 1.0307
+======================================================================
+[Iter 440 Total] Train Loss: 1.0307
+validating on 41 samples = 
+[Iter 440 Task dept] Val Loss: 1.1708
+{'abs_err': 1.1217, 'rel_err': 0.3618, 'sigma_1.25': 25.8231, 'sigma_1.25^2': 53.9399, 'sigma_1.25^3': 78.4206}
+======================================================================
+[Iter 450 Task dept] Train Loss: 0.9762
+[Iter 450 Total] Train Loss: 0.9762
+======================================================================
+[Iter 450 Total] Train Loss: 0.9762
+validating on 41 samples = 
+[Iter 450 Task dept] Val Loss: 0.8740
+{'abs_err': 0.8492, 'rel_err': 0.3416, 'sigma_1.25': 43.2473, 'sigma_1.25^2': 75.341, 'sigma_1.25^3': 90.9597}
+======================================================================
+[Iter 460 Task dept] Train Loss: 0.9001
+[Iter 460 Total] Train Loss: 0.9001
+======================================================================
+[Iter 460 Total] Train Loss: 0.9001
+validating on 41 samples = 
+[Iter 460 Task dept] Val Loss: 1.1509
+{'abs_err': 1.0971, 'rel_err': 0.3524, 'sigma_1.25': 24.1618, 'sigma_1.25^2': 52.2046, 'sigma_1.25^3': 79.2001}
+======================================================================
+[Iter 470 Task dept] Train Loss: 0.9464
+[Iter 470 Total] Train Loss: 0.9464
+======================================================================
+[Iter 470 Total] Train Loss: 0.9464
+validating on 41 samples = 
+[Iter 470 Task dept] Val Loss: 1.2770
+{'abs_err': 1.2221, 'rel_err': 0.3871, 'sigma_1.25': 20.3209, 'sigma_1.25^2': 44.1532, 'sigma_1.25^3': 70.0027}
+======================================================================
+[Iter 480 Task dept] Train Loss: 0.9985
+[Iter 480 Total] Train Loss: 0.9985
+======================================================================
+[Iter 480 Total] Train Loss: 0.9985
+validating on 41 samples = 
+[Iter 480 Task dept] Val Loss: 1.2663
+{'abs_err': 1.2127, 'rel_err': 0.3807, 'sigma_1.25': 21.1677, 'sigma_1.25^2': 46.0668, 'sigma_1.25^3': 71.5482}
+======================================================================
+[Iter 490 Task dept] Train Loss: 0.9729
+[Iter 490 Total] Train Loss: 0.9729
+======================================================================
+[Iter 490 Total] Train Loss: 0.9729
+validating on 41 samples = 
+[Iter 490 Task dept] Val Loss: 0.9974
+{'abs_err': 0.9517, 'rel_err': 0.3183, 'sigma_1.25': 30.3178, 'sigma_1.25^2': 62.5305, 'sigma_1.25^3': 87.7178}
+======================================================================
+[Iter 500 Task dept] Train Loss: 0.9283
+[Iter 500 Total] Train Loss: 0.9283
+======================================================================
+[Iter 500 Total] Train Loss: 0.9283
+validating on 41 samples = 
+[Iter 500 Task dept] Val Loss: 1.1998
+{'abs_err': 1.1478, 'rel_err': 0.3634, 'sigma_1.25': 24.1943, 'sigma_1.25^2': 51.9784, 'sigma_1.25^3': 76.7865}
+======================================================================
+[Iter 510 Task dept] Train Loss: 0.9384
+[Iter 510 Total] Train Loss: 0.9384
+======================================================================
+[Iter 510 Total] Train Loss: 0.9384
+validating on 41 samples = 
+[Iter 510 Task dept] Val Loss: 1.3098
+{'abs_err': 1.2545, 'rel_err': 0.3943, 'sigma_1.25': 18.116, 'sigma_1.25^2': 41.3439, 'sigma_1.25^3': 68.4658}
+======================================================================
+[Iter 520 Task dept] Train Loss: 0.9193
+[Iter 520 Total] Train Loss: 0.9193
+======================================================================
+[Iter 520 Total] Train Loss: 0.9193
+validating on 41 samples = 
+[Iter 520 Task dept] Val Loss: 0.9598
+{'abs_err': 0.9215, 'rel_err': 0.3134, 'sigma_1.25': 34.0201, 'sigma_1.25^2': 67.8322, 'sigma_1.25^3': 89.3231}
+======================================================================
+[Iter 530 Task dept] Train Loss: 0.8485
+[Iter 530 Total] Train Loss: 0.8485
+======================================================================
+[Iter 530 Total] Train Loss: 0.8485
+validating on 41 samples = 
+[Iter 530 Task dept] Val Loss: 1.3153
+{'abs_err': 1.2591, 'rel_err': 0.3962, 'sigma_1.25': 18.1109, 'sigma_1.25^2': 40.559, 'sigma_1.25^3': 67.5536}
+======================================================================
+[Iter 540 Task dept] Train Loss: 1.0304
+[Iter 540 Total] Train Loss: 1.0304
+======================================================================
+[Iter 540 Total] Train Loss: 1.0304
+validating on 41 samples = 
+[Iter 540 Task dept] Val Loss: 0.9686
+{'abs_err': 0.9302, 'rel_err': 0.3222, 'sigma_1.25': 32.752, 'sigma_1.25^2': 63.9713, 'sigma_1.25^3': 86.8123}
+======================================================================
+[Iter 550 Task dept] Train Loss: 0.9011
+[Iter 550 Total] Train Loss: 0.9011
+======================================================================
+[Iter 550 Total] Train Loss: 0.9011
+validating on 41 samples = 
+[Iter 550 Task dept] Val Loss: 1.2503
+{'abs_err': 1.1983, 'rel_err': 0.3761, 'sigma_1.25': 21.7331, 'sigma_1.25^2': 47.3955, 'sigma_1.25^3': 72.8405}
+======================================================================
+[Iter 560 Task dept] Train Loss: 0.9342
+[Iter 560 Total] Train Loss: 0.9342
+======================================================================
+[Iter 560 Total] Train Loss: 0.9342
+validating on 41 samples = 
+[Iter 560 Task dept] Val Loss: 0.9593
+{'abs_err': 0.9266, 'rel_err': 0.3118, 'sigma_1.25': 34.9592, 'sigma_1.25^2': 68.2783, 'sigma_1.25^3': 88.5883}
+======================================================================
+[Iter 570 Task dept] Train Loss: 1.0070
+[Iter 570 Total] Train Loss: 1.0070
+======================================================================
+[Iter 570 Total] Train Loss: 1.0070
+validating on 41 samples = 
+[Iter 570 Task dept] Val Loss: 1.0871
+{'abs_err': 1.0402, 'rel_err': 0.3319, 'sigma_1.25': 28.9464, 'sigma_1.25^2': 59.8356, 'sigma_1.25^3': 84.2031}
+======================================================================
+[Iter 580 Task dept] Train Loss: 0.8202
+[Iter 580 Total] Train Loss: 0.8202
+======================================================================
+[Iter 580 Total] Train Loss: 0.8202
+validating on 41 samples = 
+[Iter 580 Task dept] Val Loss: 0.8928
+{'abs_err': 0.8678, 'rel_err': 0.2984, 'sigma_1.25': 38.7507, 'sigma_1.25^2': 72.4894, 'sigma_1.25^3': 90.9505}
+======================================================================
+[Iter 590 Task dept] Train Loss: 0.9436
+[Iter 590 Total] Train Loss: 0.9436
+======================================================================
+[Iter 590 Total] Train Loss: 0.9436
+validating on 41 samples = 
+[Iter 590 Task dept] Val Loss: 1.0072
+{'abs_err': 0.9655, 'rel_err': 0.3205, 'sigma_1.25': 33.8006, 'sigma_1.25^2': 65.5776, 'sigma_1.25^3': 86.9262}
+======================================================================
+[Iter 600 Task dept] Train Loss: 0.8768
+[Iter 600 Total] Train Loss: 0.8768
+======================================================================
+[Iter 600 Total] Train Loss: 0.8768
+validating on 41 samples = 
+[Iter 600 Task dept] Val Loss: 1.3593
+{'abs_err': 1.3047, 'rel_err': 0.4073, 'sigma_1.25': 18.2544, 'sigma_1.25^2': 40.4269, 'sigma_1.25^3': 64.593}
+======================================================================

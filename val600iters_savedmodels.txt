@@ -1,0 +1,140 @@
+model:  fp32  	 Size (MB): 137.756001
+model:  int8  	 Size (MB): 34.822825
+3.955911 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 1.9263
+{'mIoU': 0.1529, 'Pixel Acc': 0.4332}
+======================================================================
+inference time = 0.7835823012561333
+postquantization
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 3.5701
+{'mIoU': 0.2288, 'Pixel Acc': 0.2806}
+======================================================================
+inference time = 0.21953000440830137
+Speed Up = 3.5693631190329564
+model:  fp32  	 Size (MB): 137.148769
+model:  int8  	 Size (MB): 34.667433
+3.956127 times smaller
+prequantization
+validating on 41 samples = 
+46449074
+[Iter 600 Task norm] Val Loss: 0.0694
+{'Angle Mean': 18.7834, 'Angle Median': 17.2623, 'Angle 11.25': 26.0864, 'Angle 22.5': 68.9949, 'Angle 30': 84.9496}
+======================================================================
+inference time = 1.3924567164444341
+postquantization
+validating on 41 samples = 
+46449074
+[Iter 600 Task norm] Val Loss: 0.0675
+{'Angle Mean': 19.4803, 'Angle Median': 18.0568, 'Angle 11.25': 19.7386, 'Angle 22.5': 70.6171, 'Angle 30': 87.64}
+======================================================================
+inference time = 0.21827789283380275
+Speed Up = 6.379284215945101
+model:  fp32  	 Size (MB): 137.116385
+model:  int8  	 Size (MB): 34.659753
+3.956069 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 600 Task dept] Val Loss: 1.3599
+{'abs_err': 1.3047, 'rel_err': 0.4073, 'sigma_1.25': 18.2545, 'sigma_1.25^2': 40.4269, 'sigma_1.25^3': 64.593}
+======================================================================
+inference time = 0.7015393105948844
+postquantization
+validating on 41 samples = 
+[Iter 600 Task dept] Val Loss: 2.6340
+{'abs_err': 2.5669, 'rel_err': 0.936, 'sigma_1.25': 0.5144, 'sigma_1.25^2': 1.4173, 'sigma_1.25^3': 2.7767}
+======================================================================
+inference time = 0.21855313021962236
+Speed Up = 3.2099257049757783
+model:  fp32  	 Size (MB): 230.121329
+model:  int8  	 Size (MB): 58.090645
+3.961418 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 1.8335
+{'mIoU': 0.1544, 'Pixel Acc': 0.4563}
+46449074
+[Iter 600 Task norm] Val Loss: 0.0638
+{'Angle Mean': 18.0532, 'Angle Median': 16.3498, 'Angle 11.25': 25.1342, 'Angle 22.5': 75.0487, 'Angle 30': 87.0872}
+======================================================================
+inference time = 0.9766869777586402
+postquantization
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 3.6410
+{'mIoU': 0.0677, 'Pixel Acc': 0.2512}
+46449074
+[Iter 600 Task norm] Val Loss: 0.0706
+{'Angle Mean': 19.8081, 'Angle Median': 17.349, 'Angle 11.25': 10.4237, 'Angle 22.5': 75.3513, 'Angle 30': 86.9709}
+======================================================================
+inference time = 0.2905912352771294
+Speed Up = 3.3610338482067394
+model:  fp32  	 Size (MB): 230.088881
+model:  int8  	 Size (MB): 58.082965
+3.961383 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 2.0505
+{'mIoU': 0.1294, 'Pixel Acc': 0.4097}
+[Iter 600 Task dept] Val Loss: 0.7090
+{'abs_err': 0.692, 'rel_err': 0.2462, 'sigma_1.25': 51.1723, 'sigma_1.25^2': 83.1232, 'sigma_1.25^3': 95.3102}
+======================================================================
+inference time = 0.9870511834214374
+postquantization
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 3.5948
+{'mIoU': 0.0545, 'Pixel Acc': 0.2523}
+[Iter 600 Task dept] Val Loss: 1.0476
+{'abs_err': 1.0675, 'rel_err': 0.5207, 'sigma_1.25': 35.1449, 'sigma_1.25^2': 62.5306, 'sigma_1.25^3': 81.0968}
+======================================================================
+inference time = 0.28769191997807203
+Speed Up = 3.4309311971523937
+model:  fp32  	 Size (MB): 229.481649
+model:  int8  	 Size (MB): 57.927573
+3.961527 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 600 Task dept] Val Loss: 1.4509
+{'abs_err': 1.3885, 'rel_err': 0.4393, 'sigma_1.25': 12.7684, 'sigma_1.25^2': 30.7502, 'sigma_1.25^3': 55.2901}
+46449074
+[Iter 600 Task norm] Val Loss: 0.0661
+{'Angle Mean': 18.5524, 'Angle Median': 16.4989, 'Angle 11.25': 25.4711, 'Angle 22.5': 72.4572, 'Angle 30': 87.1252}
+======================================================================
+inference time = 1.1080071018963324
+postquantization
+validating on 41 samples = 
+[Iter 600 Task dept] Val Loss: 2.8028
+{'abs_err': 2.7381, 'rel_err': 0.9986, 'sigma_1.25': 0.0036, 'sigma_1.25^2': 0.0226, 'sigma_1.25^3': 0.0449}
+46449074
+[Iter 600 Task norm] Val Loss: 0.0677
+{'Angle Mean': 19.0817, 'Angle Median': 17.7245, 'Angle 11.25': 24.4782, 'Angle 22.5': 67.7292, 'Angle 30': 87.5229}
+======================================================================
+inference time = 0.2889979769543904
+Speed Up = 3.8339614469730283
+model:  fp32  	 Size (MB): 322.454209
+model:  int8  	 Size (MB): 81.350721
+3.963754 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 2.0159
+{'mIoU': 0.1328, 'Pixel Acc': 0.418}
+46449074
+[Iter 600 Task norm] Val Loss: 0.0657
+{'Angle Mean': 18.1298, 'Angle Median': 16.8939, 'Angle 11.25': 29.7641, 'Angle 22.5': 69.1569, 'Angle 30': 87.1648}
+[Iter 600 Task dept] Val Loss: 1.3150
+{'abs_err': 1.2576, 'rel_err': 0.397, 'sigma_1.25': 16.2313, 'sigma_1.25^2': 40.9228, 'sigma_1.25^3': 67.8207}
+======================================================================
+inference time = 1.2641783970158273
+postquantization
+validating on 41 samples = 
+[Iter 600 Task segm] Val Loss: 3.6020
+{'mIoU': 0.0959, 'Pixel Acc': 0.2378}
+46449074
+[Iter 600 Task norm] Val Loss: 0.0700
+{'Angle Mean': 19.4693, 'Angle Median': 17.3645, 'Angle 11.25': 18.8572, 'Angle 22.5': 67.0179, 'Angle 30': 87.3917}
+[Iter 600 Task dept] Val Loss: 1.1104
+{'abs_err': 1.1242, 'rel_err': 0.5325, 'sigma_1.25': 34.754, 'sigma_1.25^2': 61.3336, 'sigma_1.25^3': 79.4654}
+======================================================================
+inference time = 0.3608803481590457
+Speed Up = 3.5030402831984744

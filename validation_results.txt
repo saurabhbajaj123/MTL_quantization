@@ -1,461 +1,382 @@
-
-[Iter 199 Task segm] Val Loss: 2.8626
-{'mIoU': 0.2866, 'Pixel Acc': 0.3125}
-
-[Iter 199 Task norm] Val Loss: 0.0666
-{'Angle Mean': 19.0802, 'Angle Median': 17.8738, 'Angle 11.25': 23.6365, 'Angle 22.5': 69.7574, 'Angle 30': 87.7975}
-
-[Iter 199 Task dept] Val Loss: 1.2000
-{'abs_err': 1.1537, 'rel_err': 0.3681, 'sigma_1.25': 28.1066, 'sigma_1.25^2': 54.9182, 'sigma_1.25^3': 76.5159}
-
-[Iter 199 Task segm] Val Loss: 2.8122
-{'mIoU': 0.2105, 'Pixel Acc': 0.317}
-
-[Iter 199 Task norm] Val Loss: 0.0685
-{'Angle Mean': 19.0349, 'Angle Median': 16.4011, 'Angle 11.25': 20.3613, 'Angle 22.5': 73.4226, 'Angle 30': 86.817}
-
-[Iter 199 Task dept] Val Loss: 1.3141
-{'abs_err': 1.26, 'rel_err': 0.3896, 'sigma_1.25': 21.5778, 'sigma_1.25^2': 45.4834, 'sigma_1.25^3': 69.5139}
-
-[Iter 199 Task segm] Val Loss: 2.8040
-{'mIoU': 0.1977, 'Pixel Acc': 0.3195}
-
-[Iter 199 Task norm] Val Loss: 0.0682
-{'Angle Mean': 19.1738, 'Angle Median': 16.9473, 'Angle 11.25': 18.7363, 'Angle 22.5': 71.0406, 'Angle 30': 87.5896}
-
-[Iter 199 Task dept] Val Loss: 1.4679
-{'abs_err': 1.511, 'rel_err': 0.8035, 'sigma_1.25': 23.9735, 'sigma_1.25^2': 48.4117, 'sigma_1.25^3': 68.9333}
-
-[Iter 199 Task segm] Val Loss: 2.9365
-{'mIoU': 0.2556, 'Pixel Acc': 0.2538}
-
-[Iter 199 Task norm] Val Loss: 0.0691
-{'Angle Mean': 19.6446, 'Angle Median': 18.8233, 'Angle 11.25': 22.4309, 'Angle 22.5': 63.5051, 'Angle 30': 87.8598}
-
-[Iter 199 Task dept] Val Loss: 1.0634
-{'abs_err': 1.022, 'rel_err': 0.35, 'sigma_1.25': 34.4549, 'sigma_1.25^2': 63.5807, 'sigma_1.25^3': 83.002}
-
-[Iter 199 Task segm] Val Loss: 2.8792
-{'mIoU': 0.1007, 'Pixel Acc': 0.3048}
-
-[Iter 199 Task norm] Val Loss: 0.0667
-{'Angle Mean': 19.1243, 'Angle Median': 16.6585, 'Angle 11.25': 15.5917, 'Angle 22.5': 73.9892, 'Angle 30': 87.5492}
-
-[Iter 199 Task dept] Val Loss: 1.2786
-{'abs_err': 1.2271, 'rel_err': 0.393, 'sigma_1.25': 21.8277, 'sigma_1.25^2': 46.2617, 'sigma_1.25^3': 69.6654}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e-5_test2.pt
-[Iter 199 Task segm] Val Loss: 3.0238
-{'mIoU': 0.2556, 'Pixel Acc': 0.2542}
-
-[Iter 199 Task norm] Val Loss: 0.0672
-{'Angle Mean': 19.3295, 'Angle Median': 17.0924, 'Angle 11.25': 14.671, 'Angle 22.5': 73.2919, 'Angle 30': 87.8362}
-
-[Iter 199 Task dept] Val Loss: 1.1926
-{'abs_err': 1.2121, 'rel_err': 0.6161, 'sigma_1.25': 30.771, 'sigma_1.25^2': 58.5447, 'sigma_1.25^3': 77.622}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--7_test2.pt(BS 2)
-[Iter 199 Task segm] Val Loss: 3.0303
-{'mIoU': 0.2556, 'Pixel Acc': 0.2537}
-
-[Iter 199 Task norm] Val Loss: 0.0728
-{'Angle Mean': 20.0408, 'Angle Median': 18.0977, 'Angle 11.25': 11.9585, 'Angle 22.5': 73.8609, 'Angle 30': 86.885}
-
-[Iter 199 Task dept] Val Loss: 1.0320
-{'abs_err': 1.049, 'rel_err': 0.5044, 'sigma_1.25': 35.7096, 'sigma_1.25^2': 63.375, 'sigma_1.25^3': 81.6764}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--7_test2.pt(BS 2)
-[Iter 199 Task segm] Val Loss: 3.0670
-{'mIoU': 0.2556, 'Pixel Acc': 0.2536}
-
-[Iter 199 Task norm] Val Loss: 0.0724
-{'Angle Mean': 20.0286, 'Angle Median': 18.0736, 'Angle 11.25': 12.1566, 'Angle 22.5': 73.3497, 'Angle 30': 86.9779}
-
-[Iter 199 Task dept] Val Loss: 1.0004
-{'abs_err': 0.9843, 'rel_err': 0.3865, 'sigma_1.25': 37.3012, 'sigma_1.25^2': 66.6207, 'sigma_1.25^3': 84.0839}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--7_test2.pt(BS 2)
-[Iter 199 Task segm] Val Loss: 3.0175
-{'mIoU': 0.2556, 'Pixel Acc': 0.2545}
-
-[Iter 199 Task norm] Val Loss: 0.0693
-{'Angle Mean': 19.8147, 'Angle Median': 18.079, 'Angle 11.25': 12.6642, 'Angle 22.5': 67.5522, 'Angle 30': 88.2026}
-
-[Iter 199 Task dept] Val Loss: 0.9960
-{'abs_err': 0.9793, 'rel_err': 0.381, 'sigma_1.25': 37.6562, 'sigma_1.25^2': 66.9679, 'sigma_1.25^3': 84.2807}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--6_test2.pt (BS 2)
-[Iter 199 Task segm] Val Loss: 3.0227
-{'mIoU': 0.2556, 'Pixel Acc': 0.2537}
-
-[Iter 199 Task norm] Val Loss: 0.0701
-{'Angle Mean': 20.1684, 'Angle Median': 18.0073, 'Angle 11.25': 7.8649, 'Angle 22.5': 76.1739, 'Angle 30': 87.6008}
-
-[Iter 199 Task dept] Val Loss: 1.0288
-{'abs_err': 1.0437, 'rel_err': 0.4987, 'sigma_1.25': 35.9433, 'sigma_1.25^2': 63.698, 'sigma_1.25^3': 81.923}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--6_test2.pt (BS - 16)
-[Iter 199 Task segm] Val Loss: 2.9910
-{'mIoU': 0.2556, 'Pixel Acc': 0.2554}
-
-[Iter 199 Task norm] Val Loss: 0.0685
-{'Angle Mean': 19.5031, 'Angle Median': 17.105, 'Angle 11.25': 11.9841, 'Angle 22.5': 74.3087, 'Angle 30': 87.5473}
-
-[Iter 199 Task dept] Val Loss: 1.1464
-{'abs_err': 1.1615, 'rel_err': 0.5557, 'sigma_1.25': 34.9537, 'sigma_1.25^2': 61.3841, 'sigma_1.25^3': 79.1464}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--6_test2.pt
-[Iter 199 Task segm] Val Loss: 2.8581
-{'mIoU': 0.2377, 'Pixel Acc': 0.2873}
-
-[Iter 199 Task norm] Val Loss: 0.0689
-{'Angle Mean': 19.7343, 'Angle Median': 17.7902, 'Angle 11.25': 11.5105, 'Angle 22.5': 70.8084, 'Angle 30': 88.1354}
-
-[Iter 199 Task dept] Val Loss: 0.9738
-{'abs_err': 0.9738, 'rel_err': 0.4351, 'sigma_1.25': 38.8665, 'sigma_1.25^2': 66.9794, 'sigma_1.25^3': 84.1732}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--5_test2.pt
-[Iter 199 Task segm] Val Loss: 2.9875
-{'mIoU': 0.2556, 'Pixel Acc': 0.2554}
-
-[Iter 199 Task norm] Val Loss: 0.0693
-{'Angle Mean': 19.8657, 'Angle Median': 18.1245, 'Angle 11.25': 11.5274, 'Angle 22.5': 68.4511, 'Angle 30': 88.2481}
-
-[Iter 199 Task dept] Val Loss: 1.2323
-{'abs_err': 1.2601, 'rel_err': 0.6562, 'sigma_1.25': 30.4439, 'sigma_1.25^2': 57.5545, 'sigma_1.25^3': 76.4385}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--5_test2.pt
-[Iter 199 Task segm] Val Loss: 2.9702
-{'mIoU': 0.2556, 'Pixel Acc': 0.2556}
-
-[Iter 199 Task norm] Val Loss: 0.0694
-{'Angle Mean': 18.8916, 'Angle Median': 15.8391, 'Angle 11.25': 24.2144, 'Angle 22.5': 71.6624, 'Angle 30': 86.4618}
-
-[Iter 199 Task dept] Val Loss: 0.9697
-{'abs_err': 0.9702, 'rel_err': 0.4635, 'sigma_1.25': 39.803, 'sigma_1.25^2': 67.7156, 'sigma_1.25^3': 84.5075}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--5_test2.pt
-[Iter 199 Task segm] Val Loss: 2.9840
-{'mIoU': 0.2556, 'Pixel Acc': 0.2554}
-
-[Iter 199 Task norm] Val Loss: 0.0697
-{'Angle Mean': 19.9664, 'Angle Median': 17.9357, 'Angle 11.25': 9.586, 'Angle 22.5': 73.4982, 'Angle 30': 87.9753}
-
-[Iter 199 Task dept] Val Loss: 0.9246
-{'abs_err': 0.9082, 'rel_err': 0.3778, 'sigma_1.25': 41.743, 'sigma_1.25^2': 70.4016, 'sigma_1.25^3': 86.821}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--4_test2.pt
-[Iter 199 Task segm] Val Loss: 3.0133
-{'mIoU': 0.2556, 'Pixel Acc': 0.2555}
-
-[Iter 199 Task norm] Val Loss: 0.0692
-{'Angle Mean': 19.7082, 'Angle Median': 17.5832, 'Angle 11.25': 11.477, 'Angle 22.5': 72.2218, 'Angle 30': 87.922}
-
-[Iter 199 Task dept] Val Loss: 0.9444
-{'abs_err': 0.9186, 'rel_err': 0.3462, 'sigma_1.25': 40.033, 'sigma_1.25^2': 70.1998, 'sigma_1.25^3': 87.1634}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--3_test2.pt
-[Iter 199 Task segm] Val Loss: 2.9951
-{'mIoU': 0.2556, 'Pixel Acc': 0.2553}
-
-[Iter 199 Task norm] Val Loss: 0.0696
-{'Angle Mean': 19.8315, 'Angle Median': 17.8343, 'Angle 11.25': 11.4787, 'Angle 22.5': 70.1483, 'Angle 30': 88.0175}
-
-[Iter 199 Task dept] Val Loss: 1.4648
-{'abs_err': 1.4096, 'rel_err': 0.4343, 'sigma_1.25': 17.5987, 'sigma_1.25^2': 37.6984, 'sigma_1.25^3': 58.1114}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task segm] Val Loss: 2.9787
-{'mIoU': 0.2556, 'Pixel Acc': 0.2557}
-
-[Iter 199 Task norm] Val Loss: 0.0687
-{'Angle Mean': 19.3138, 'Angle Median': 16.7261, 'Angle 11.25': 13.7475, 'Angle 22.5': 73.2668, 'Angle 30': 87.3397}
-
-[Iter 199 Task dept] Val Loss: 1.0016
-{'abs_err': 1.0092, 'rel_err': 0.4786, 'sigma_1.25': 37.4696, 'sigma_1.25^2': 65.6629, 'sigma_1.25^3': 83.0768}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task segm] Val Loss: 2.9883
-{'mIoU': 0.2556, 'Pixel Acc': 0.2555}
-
-[Iter 199 Task norm] Val Loss: 0.0682
-{'Angle Mean': 19.1048, 'Angle Median': 16.7312, 'Angle 11.25': 18.9894, 'Angle 22.5': 72.492, 'Angle 30': 87.2436}
-
-[Iter 199 Task dept] Val Loss: 0.9192
-{'abs_err': 0.9059, 'rel_err': 0.3895, 'sigma_1.25': 41.6855, 'sigma_1.25^2': 70.5054, 'sigma_1.25^3': 87.1963}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task segm] Val Loss: 2.9922
-{'mIoU': 0.17, 'Pixel Acc': 0.2612}
-
-[Iter 199 Task norm] Val Loss: 0.0668
-{'Angle Mean': 19.1174, 'Angle Median': 17.3489, 'Angle 11.25': 20.2605, 'Angle 22.5': 71.5767, 'Angle 30': 87.9485}
-
-[Iter 199 Task dept] Val Loss: 0.9512
-{'abs_err': 0.9649, 'rel_err': 0.4752, 'sigma_1.25': 41.0939, 'sigma_1.25^2': 68.3496, 'sigma_1.25^3': 84.7751}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task segm] Val Loss: 2.2312
-{'mIoU': 0.1377, 'Pixel Acc': 0.3923}
-
-[Iter 199 Task norm] Val Loss: 0.0643
-{'Angle Mean': 18.2049, 'Angle Median': 16.9306, 'Angle 11.25': 25.2964, 'Angle 22.5': 73.0992, 'Angle 30': 86.972}
-
-[Iter 199 Task dept] Val Loss: 0.7306
-{'abs_err': 0.7289, 'rel_err': 0.3052, 'sigma_1.25': 50.1519, 'sigma_1.25^2': 81.1049, 'sigma_1.25^3': 93.6699}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 398 Task segm] Val Loss: 2.0170
-{'mIoU': 0.1476, 'Pixel Acc': 0.4229}
-
-[Iter 398 Task norm] Val Loss: 0.0696
-{'Angle Mean': 18.0874, 'Angle Median': 15.2087, 'Angle 11.25': 33.6264, 'Angle 22.5': 73.1243, 'Angle 30': 84.9448}
-
-[Iter 398 Task dept] Val Loss: 1.1056
-{'abs_err': 1.0544, 'rel_err': 0.3405, 'sigma_1.25': 25.4685, 'sigma_1.25^2': 55.6876, 'sigma_1.25^3': 80.9821}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task segm] Val Loss: 2.0368
-{'mIoU': 0.1202, 'Pixel Acc': 0.4049}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 398 Task segm] Val Loss: 2.1792
-{'mIoU': 0.1299, 'Pixel Acc': 0.4035}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task norm] Val Loss: 0.0632
-{'Angle Mean': 18.4386, 'Angle Median': 17.4117, 'Angle 11.25': 24.6452, 'Angle 22.5': 71.6081, 'Angle 30': 88.0462}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 398 Task norm] Val Loss: 0.0745
-{'Angle Mean': 19.6844, 'Angle Median': 17.9845, 'Angle 11.25': 24.6357, 'Angle 22.5': 63.6425, 'Angle 30': 83.0236}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task dept] Val Loss: 0.9672
-{'abs_err': 0.9333, 'rel_err': 0.3346, 'sigma_1.25': 38.557, 'sigma_1.25^2': 69.1651, 'sigma_1.25^3': 87.0273}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task dept] Val Loss: 1.1186
-{'abs_err': 1.0631, 'rel_err': 0.3461, 'sigma_1.25': 26.4982, 'sigma_1.25^2': 54.7382, 'sigma_1.25^3': 79.8745}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 398 Task dept] Val Loss: 1.3875
-{'abs_err': 1.3264, 'rel_err': 0.4211, 'sigma_1.25': 14.7268, 'sigma_1.25^2': 34.5187, 'sigma_1.25^3': 60.5147}
-
-[Iter 401 Task segm] Val Loss: 2.2006
-{'mIoU': 0.1286, 'Pixel Acc': 0.3911}
-
-[Iter 401 Task norm] Val Loss: 0.0674
-{'Angle Mean': 18.2723, 'Angle Median': 15.3135, 'Angle 11.25': 27.5605, 'Angle 22.5': 74.2668, 'Angle 30': 85.3995}
-
-[Iter 401 Task dept] Val Loss: 1.0367
-{'abs_err': 0.9924, 'rel_err': 0.3326, 'sigma_1.25': 27.4191, 'sigma_1.25^2': 56.899, 'sigma_1.25^3': 81.9568}
-
-[Iter 399 Task segm] Val Loss: 2.1805
-{'mIoU': 0.1299, 'Pixel Acc': 0.4032}
-
-[Iter 399 Task norm] Val Loss: 0.0745
-{'Angle Mean': 19.6844, 'Angle Median': 17.9845, 'Angle 11.25': 24.6357, 'Angle 22.5': 63.6425, 'Angle 30': 83.0236}
-
-[Iter 399 Task dept] Val Loss: 1.3867
-{'abs_err': 1.3264, 'rel_err': 0.4211, 'sigma_1.25': 14.7268, 'sigma_1.25^2': 34.5187, 'sigma_1.25^3': 60.5147}
-
-[Iter 399 Task dept] Val Loss: 1.3870
-{'abs_err': 1.3264, 'rel_err': 0.4211, 'sigma_1.25': 14.7268, 'sigma_1.25^2': 34.5187, 'sigma_1.25^3': 60.5147}
-______________________________________________________________________
-
-[Iter 399 Task dept] Val Loss: 1.3869
-{'abs_err': 1.3264, 'rel_err': 0.4211, 'sigma_1.25': 14.7268, 'sigma_1.25^2': 34.5187, 'sigma_1.25^3': 60.5147}
-inference time = 2.3767336275519395
-[Iter 2 Task dept] Val Loss: 4.1396
-{'abs_err': 4.0694, 'rel_err': 1.5703, 'sigma_1.25': 90.4985, 'sigma_1.25^2': 90.6937, 'sigma_1.25^3': 91.0049}
-inference time = 0.06745344138726955
-[Iter 2 Task dept] Val Loss: 6.4129
-{'abs_err': 6.3424, 'rel_err': 2.6063, 'sigma_1.25': 99.995, 'sigma_1.25^2': 99.995, 'sigma_1.25^3': 99.995}
-inference time = 0.0656691609359369
-[Iter 2 Task dept] Val Loss: 3.2308
-{'abs_err': 3.1664, 'rel_err': 1.1873, 'sigma_1.25': 66.1716, 'sigma_1.25^2': 68.0847, 'sigma_1.25^3': 70.4608}
-inference time = 0.054466255699715964
-[Iter 2 Task dept] Val Loss: 2.8633
-{'abs_err': 2.8038, 'rel_err': 0.9915, 'sigma_1.25': 54.6815, 'sigma_1.25^2': 59.2116, 'sigma_1.25^3': 63.7521}
-inference time = 0.05491891488796327
-[Iter 2 Task dept] Val Loss: 3.0152
-{'abs_err': 2.9583, 'rel_err': 1.0774, 'sigma_1.25': 58.0676, 'sigma_1.25^2': 61.5602, 'sigma_1.25^3': 65.5036}
-inference time = 0.45638180360561464
-[Iter 2 Task dept] Val Loss: 2.1962
-{'abs_err': 2.1422, 'rel_err': 0.7754, 'sigma_1.25': 34.0158, 'sigma_1.25^2': 42.7676, 'sigma_1.25^3': 51.5176}
-inference time = 0.4838235971404285
-[Iter 2 Task dept] Val Loss: 3.9264
-{'abs_err': 3.8625, 'rel_err': 1.528, 'sigma_1.25': 87.0612, 'sigma_1.25^2': 87.4187, 'sigma_1.25^3': 87.8651}
-inference time = 0.8337814412465909
-[Iter 2 Task dept] Val Loss: 3.3724
-{'abs_err': 3.308, 'rel_err': 1.2795, 'sigma_1.25': 70.6741, 'sigma_1.25^2': 72.4353, 'sigma_1.25^3': 74.5386}
-inference time = 0.35674664450854787inference time = 0.08991331356327709inference time = 0.4693850261409108inference time = 0.10091633447786656
-______________________________________________________________________
-
-[Iter 2 Task dept] Val Loss: 2.2475
-{'abs_err': 2.1953, 'rel_err': 0.7722, 'sigma_1.25': 34.6345, 'sigma_1.25^2': 44.2602, 'sigma_1.25^3': 53.4159}
-inference time = 0.5301749182910453
-[Iter 2 Task dept] Val Loss: 2.2770
-{'abs_err': 2.2238, 'rel_err': 0.7841, 'sigma_1.25': 34.7234, 'sigma_1.25^2': 44.2595, 'sigma_1.25^3': 53.1951}
-inference time = 0.10588539053754109
-
-
-Tasks = depth_zbuffer_normal
-[Iter 2 Task dept] Val Loss: 2.8986
-{'abs_err': 2.8361, 'rel_err': 1.061, 'sigma_1.25': 53.6175, 'sigma_1.25^2': 56.7164, 'sigma_1.25^3': 60.4339}
-
-[Iter 2 Task norm] Val Loss: 1.3402
-{'Angle Mean': 112.9534, 'Angle Median': 114.3049, 'Angle 11.25': 0.0325, 'Angle 22.5': 0.1361, 'Angle 30': 0.2905}
-inference time = 0.6469406872260861
-
-
-[Iter 2 Task dept] Val Loss: 2.8275
-{'abs_err': 2.7637, 'rel_err': 1.029, 'sigma_1.25': 49.6634, 'sigma_1.25^2': 53.2616, 'sigma_1.25^3': 57.4534}
-
-[Iter 2 Task norm] Val Loss: 1.3443
-{'Angle Mean': 113.4634, 'Angle Median': 115.0156, 'Angle 11.25': 0.0347, 'Angle 22.5': 0.1877, 'Angle 30': 0.3861}
-inference time = 0.148660874948269
-
-Tasks = depth_zbuffer_normal_segment_semantic
-[Iter 2 Task dept] Val Loss: 2.4293
-{'abs_err': 2.3776, 'rel_err': 0.8322, 'sigma_1.25': 42.1369, 'sigma_1.25^2': 50.7401, 'sigma_1.25^3': 58.6379}
-
-[Iter 2 Task norm] Val Loss: 0.2426
-{'Angle Mean': 36.3796, 'Angle Median': 33.8813, 'Angle 11.25': 6.2797, 'Angle 22.5': 24.3866, 'Angle 30': 41.0801}
-
-[Iter 2 Task segm] Val Loss: 5.1264
-{'mIoU': 0.0093, 'Pixel Acc': 0.0267}
-inference time = 0.7210454568630311
-[Iter 2 Task dept] Val Loss: 2.4495
-{'abs_err': 2.3982, 'rel_err': 0.8416, 'sigma_1.25': 42.2892, 'sigma_1.25^2': 51.0226, 'sigma_1.25^3': 58.8317}
-
-[Iter 2 Task norm] Val Loss: 0.2567
-{'Angle Mean': 37.3577, 'Angle Median': 34.7334, 'Angle 11.25': 5.9413, 'Angle 22.5': 23.2174, 'Angle 30': 39.331}
-
-[Iter 2 Task segm] Val Loss: 5.1599
-{'mIoU': 0.0091, 'Pixel Acc': 0.0272}
-inference time = 0.15497270328242604Tasks = depth_zbuffer_normal_segment_semantic
-[Iter 2 Task dept] Val Loss: 3.1680
-{'abs_err': 3.2212, 'rel_err': 1.5958, 'sigma_1.25': 8.8893, 'sigma_1.25^2': 20.9334, 'sigma_1.25^3': 37.6659}
-
-[Iter 2 Task norm] Val Loss: 0.0712
-{'Angle Mean': 20.6105, 'Angle Median': 18.5413, 'Angle 11.25': 6.2842, 'Angle 22.5': 74.7849, 'Angle 30': 87.8769}
-
-[Iter 2 Task segm] Val Loss: 5.5215
-{'mIoU': 0.1228, 'Pixel Acc': 0.1132}
-inference time = 2.639767671212917
-[Iter 2 Task dept] Val Loss: 3.1531
-{'abs_err': 3.204, 'rel_err': 1.5762, 'sigma_1.25': 9.3637, 'sigma_1.25^2': 22.0736, 'sigma_1.25^3': 38.9161}
-
-[Iter 2 Task norm] Val Loss: 0.0714
-{'Angle Mean': 20.6294, 'Angle Median': 18.5735, 'Angle 11.25': 6.2422, 'Angle 22.5': 74.7044, 'Angle 30': 87.8676}
-
-[Iter 2 Task segm] Val Loss: 5.5357
-{'mIoU': 0.1232, 'Pixel Acc': 0.1138}
-inference time = 0.5102506358449052______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 199 Task dept] Val Loss: 1.2711
-{'abs_err': 1.2143, 'rel_err': 0.3943, 'sigma_1.25': 17.8448, 'sigma_1.25^2': 41.3464, 'sigma_1.25^3': 67.66}
-
-[Iter 199 Task norm] Val Loss: 0.0670
-{'Angle Mean': 17.9957, 'Angle Median': 16.0141, 'Angle 11.25': 30.5339, 'Angle 22.5': 71.886, 'Angle 30': 85.4485}
-
-[Iter 199 Task segm] Val Loss: 2.2579
-{'mIoU': 0.142, 'Pixel Acc': 0.4047}
-______________________________________________________________________resnet18_DGMS_MTL_full_K3_1e--2_test2.pt
-[Iter 398 Task dept] Val Loss: 0.8604
-{'abs_err': 0.8211, 'rel_err': 0.28, 'sigma_1.25': 37.7204, 'sigma_1.25^2': 73.6203, 'sigma_1.25^3': 92.6691}
-
-[Iter 398 Task norm] Val Loss: 0.0657
-{'Angle Mean': 17.9857, 'Angle Median': 15.9493, 'Angle 11.25': 29.7715, 'Angle 22.5': 73.0697, 'Angle 30': 86.5707}
-
-[Iter 398 Task segm] Val Loss: 2.0572
-{'mIoU': 0.1313, 'Pixel Acc': 0.4102}
-
-Tasks = depth_zbuffer_normal_segment_semantic
-[Iter 2 Task dept] Val Loss: 1.0256
-{'abs_err': 0.9785, 'rel_err': 0.3181, 'sigma_1.25': 27.2986, 'sigma_1.25^2': 61.5263, 'sigma_1.25^3': 86.8775}
-
-[Iter 2 Task norm] Val Loss: 0.0666
-{'Angle Mean': 18.2685, 'Angle Median': 16.0142, 'Angle 11.25': 27.6299, 'Angle 22.5': 74.1064, 'Angle 30': 86.5149}
-
-[Iter 2 Task segm] Val Loss: 2.1592
-{'mIoU': 0.1134, 'Pixel Acc': 0.3853}
-inference time = 1.3009892731178097
-
-
-[Iter 2 Task dept] Val Loss: 1.0562
-{'abs_err': 1.007, 'rel_err': 0.3259, 'sigma_1.25': 25.8932, 'sigma_1.25^2': 59.1032, 'sigma_1.25^3': 85.5411}
-
-[Iter 2 Task norm] Val Loss: 0.0667
-{'Angle Mean': 18.3047, 'Angle Median': 16.0628, 'Angle 11.25': 27.3221, 'Angle 22.5': 73.993, 'Angle 30': 86.499}
-
-[Iter 2 Task segm] Val Loss: 2.1633
-{'mIoU': 0.1053, 'Pixel Acc': 0.3802}
-inference time = 0.22497776194316585
-______________________________________________________________________ 4/26/2022 - 5:57
-
-
-
-________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________Tasks = segment_semantic
-[Iter 2 Task segm] Val Loss: 2.3928
-{'mIoU': 0.1773, 'Pixel Acc': 0.3522}
-inference time = 0.9138816356658935
-
-[Iter 2 Task segm] Val Loss: 2.4412
-{'mIoU': 0.1618, 'Pixel Acc': 0.3352}
-inference time = 0.130119446345738
-
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-
-Tasks = segment_semantic
-[Iter 2 Task segm] Val Loss: 1.9329
-{'mIoU': 0.1329, 'Pixel Acc': 0.4306}
-inference time = 0.4762895421284001
-[Iter 2 Task segm] Val Loss: 1.9877
-{'mIoU': 0.1211, 'Pixel Acc': 0.4107}
-inference time = 0.06730917372354647
-
-Tasks = normal
-[Iter 2 Task norm] Val Loss: 0.0668
-{'Angle Mean': 18.8652, 'Angle Median': 15.8087, 'Angle 11.25': 20.3161, 'Angle 22.5': 75.6856, 'Angle 30': 86.0101}
-inference time = 0.7573076980869945
-[Iter 2 Task norm] Val Loss: 0.0671
-{'Angle Mean': 18.9184, 'Angle Median': 15.9086, 'Angle 11.25': 19.9647, 'Angle 22.5': 75.4362, 'Angle 30': 85.9829}
-inference time = 0.10784621355010242
-
-Tasks = depth_zbuffer
-[Iter 2 Task dept] Val Loss: 0.8525
-{'abs_err': 0.8364, 'rel_err': 0.3188, 'sigma_1.25': 39.0549, 'sigma_1.25^2': 72.063, 'sigma_1.25^3': 90.6743}
-inference time = 0.5329402714240842
-[Iter 2 Task dept] Val Loss: 0.8517
-{'abs_err': 0.8345, 'rel_err': 0.3171, 'sigma_1.25': 39.3368, 'sigma_1.25^2': 72.4077, 'sigma_1.25^3': 90.9353}
-inference time = 0.10720837988504549
-
-Tasks = segment_semantic_normal
-[Iter 2 Task segm] Val Loss: 1.9098
-{'mIoU': 0.139, 'Pixel Acc': 0.4393}
-[Iter 2 Task norm] Val Loss: 0.0653
-{'Angle Mean': 18.1008, 'Angle Median': 16.0922, 'Angle 11.25': 28.5343, 'Angle 22.5': 73.8426, 'Angle 30': 86.7293}
-inference time = 0.6486329590401998
-[Iter 2 Task segm] Val Loss: 1.9102
-{'mIoU': 0.1344, 'Pixel Acc': 0.4355}
-[Iter 2 Task norm] Val Loss: 0.0656
-{'Angle Mean': 18.111, 'Angle Median': 16.1219, 'Angle 11.25': 28.9237, 'Angle 22.5': 73.341, 'Angle 30': 86.6392}
-inference time = 0.08822958643843488
-
-Tasks = depth_zbuffer_normal
-[Iter 2 Task dept] Val Loss: 1.0764
-{'abs_err': 1.0303, 'rel_err': 0.3366, 'sigma_1.25': 29.8779, 'sigma_1.25^2': 60.9004, 'sigma_1.25^3': 84.0713}
-[Iter 2 Task norm] Val Loss: 0.0702
-{'Angle Mean': 19.1415, 'Angle Median': 17.5271, 'Angle 11.25': 25.5489, 'Angle 22.5': 66.7129, 'Angle 30': 86.1171}
-inference time = 0.6719009329633014
-[Iter 2 Task dept] Val Loss: 1.0257
-{'abs_err': 0.9827, 'rel_err': 0.3258, 'sigma_1.25': 33.346, 'sigma_1.25^2': 65.2976, 'sigma_1.25^3': 86.2573}
-[Iter 2 Task norm] Val Loss: 0.0705
-{'Angle Mean': 19.2959, 'Angle Median': 17.5671, 'Angle 11.25': 23.9657, 'Angle 22.5': 66.5915, 'Angle 30': 86.2972}
-inference time = 0.14295241890884028
-
-Tasks = segment_semantic_depth_zbuffer
-[Iter 2 Task segm] Val Loss: 1.8470
-{'mIoU': 0.1451, 'Pixel Acc': 0.4607}
-[Iter 2 Task dept] Val Loss: 0.9901
-{'abs_err': 0.9452, 'rel_err': 0.3036, 'sigma_1.25': 31.028, 'sigma_1.25^2': 65.5036, 'sigma_1.25^3': 87.8878}
-inference time = 0.6977570103435982
-[Iter 2 Task segm] Val Loss: 1.8803
-{'mIoU': 0.1438, 'Pixel Acc': 0.4506}
-[Iter 2 Task dept] Val Loss: 0.9917
-{'abs_err': 0.9463, 'rel_err': 0.3037, 'sigma_1.25': 31.2493, 'sigma_1.25^2': 65.7489, 'sigma_1.25^3': 87.8296}
-inference time = 0.14541948016096906
-
-Tasks = segment_semantic_normal_depth_zbuffer
-[Iter 2 Task segm] Val Loss: 1.8353
-{'mIoU': 0.1579, 'Pixel Acc': 0.4384}
-[Iter 2 Task norm] Val Loss: 0.0643
-{'Angle Mean': 17.8076, 'Angle Median': 16.2252, 'Angle 11.25': 28.8936, 'Angle 22.5': 73.5894, 'Angle 30': 86.5611}
-[Iter 2 Task dept] Val Loss: 1.0643
-{'abs_err': 1.0155, 'rel_err': 0.3197, 'sigma_1.25': 28.1635, 'sigma_1.25^2': 61.9163, 'sigma_1.25^3': 85.005}
-inference time = 0.8009823810763476
-[Iter 2 Task segm] Val Loss: 1.8707
-{'mIoU': 0.1474, 'Pixel Acc': 0.4269}
-[Iter 2 Task norm] Val Loss: 0.0646
-{'Angle Mean': 17.8275, 'Angle Median': 16.2464, 'Angle 11.25': 29.1544, 'Angle 22.5': 73.1492, 'Angle 30': 86.5112}
-[Iter 2 Task dept] Val Loss: 1.0717
-{'abs_err': 1.0219, 'rel_err': 0.3217, 'sigma_1.25': 27.7362, 'sigma_1.25^2': 61.3337, 'sigma_1.25^3': 84.8735}
-inference time = 0.1113131558022848
+model:  fp32  	 Size (MB): 137.756001
+model:  int8  	 Size (MB): 34.822825
+3.955911 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 320 Task segm] Val Loss: 1.9399
+{'mIoU': 0.1427, 'Pixel Acc': 0.4372}
+======================================================================
+inference time = 0.7874979635564292
+postquantization
+validating on 41 samples = 
+[Iter 320 Task segm] Val Loss: 3.6778
+{'mIoU': 0.0701, 'Pixel Acc': 0.2483}
+======================================================================
+inference time = 0.2431046113735292
+Speed Up = 3.239337827065904
+model:  fp32  	 Size (MB): 137.148769
+model:  int8  	 Size (MB): 34.667433
+3.956127 times smaller
+prequantization
+validating on 41 samples = 
+46449074
+[Iter 19790 Task norm] Val Loss: 0.0610
+{'Angle Mean': 17.9938, 'Angle Median': 16.1767, 'Angle 11.25': 27.7248, 'Angle 22.5': 72.6615, 'Angle 30': 86.7052}
+======================================================================
+inference time = 4.213759376944565
+postquantization
+validating on 41 samples = 
+46449074
+[Iter 19790 Task norm] Val Loss: 1.0000
+{'Angle Mean': 90.0, 'Angle Median': 90.0, 'Angle 11.25': 0.0, 'Angle 22.5': 0.0, 'Angle 30': 0.0}
+======================================================================
+inference time = 0.3325899473050746
+Speed Up = 12.669533192713766
+model:  fp32  	 Size (MB): 137.116385
+model:  int8  	 Size (MB): 34.659753
+3.956069 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 11950 Task dept] Val Loss: 0.5808
+{'abs_err': 0.602, 'rel_err': 0.2509, 'sigma_1.25': 60.7149, 'sigma_1.25^2': 86.8854, 'sigma_1.25^3': 95.9452}
+======================================================================
+inference time = 4.005571618894251
+postquantization
+validating on 41 samples = 
+[Iter 11950 Task dept] Val Loss: 2.4325
+{'abs_err': 2.3779, 'rel_err': 0.8442, 'sigma_1.25': 6.4403, 'sigma_1.25^2': 11.9029, 'sigma_1.25^3': 17.5156}
+======================================================================
+inference time = 0.25926261180784643
+Speed Up = 15.449862172425377
+model:  fp32  	 Size (MB): 230.121329
+model:  int8  	 Size (MB): 58.090645
+3.961418 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 4180 Task segm] Val Loss: 1.3771
+{'mIoU': 0.227, 'Pixel Acc': 0.5185}
+46449074
+[Iter 4180 Task norm] Val Loss: 0.0623
+{'Angle Mean': 17.6141, 'Angle Median': 15.8581, 'Angle 11.25': 30.1871, 'Angle 22.5': 74.7543, 'Angle 30': 86.5971}
+======================================================================
+inference time = 3.4704512026251817
+postquantization
+validating on 41 samples = 
+[Iter 4180 Task segm] Val Loss: 4.1116
+{'mIoU': 0.0215, 'Pixel Acc': 0.1108}
+46449074
+[Iter 4180 Task norm] Val Loss: 0.9185
+{'Angle Mean': 84.7258, 'Angle Median': 90.0, 'Angle 11.25': 0.3997, 'Angle 22.5': 1.289, 'Angle 30': 3.1804}
+======================================================================
+inference time = 0.32663378017704664
+Speed Up = 10.624899851889412
+model:  fp32  	 Size (MB): 230.088881
+model:  int8  	 Size (MB): 58.082965
+3.961383 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 6070 Task segm] Val Loss: 1.3796
+{'mIoU': 0.2301, 'Pixel Acc': 0.5241}
+[Iter 6070 Task dept] Val Loss: 0.6134
+{'abs_err': 0.6067, 'rel_err': 0.2178, 'sigma_1.25': 59.809, 'sigma_1.25^2': 88.4101, 'sigma_1.25^3': 97.2986}
+======================================================================
+inference time = 3.7561000509959896
+postquantization
+validating on 41 samples = 
+[Iter 6070 Task segm] Val Loss: 5.5613
+{'mIoU': 0.0204, 'Pixel Acc': 0.1093}
+[Iter 6070 Task dept] Val Loss: 2.6480
+{'abs_err': 2.5814, 'rel_err': 0.9431, 'sigma_1.25': 0.5863, 'sigma_1.25^2': 1.4933, 'sigma_1.25^3': 2.868}
+======================================================================
+inference time = 0.33406868213560525
+Speed Up = 11.243496477982669
+model:  fp32  	 Size (MB): 229.481649
+model:  int8  	 Size (MB): 57.927573
+3.961527 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 11990 Task dept] Val Loss: 0.5996
+{'abs_err': 0.6092, 'rel_err': 0.2461, 'sigma_1.25': 59.8899, 'sigma_1.25^2': 86.471, 'sigma_1.25^3': 95.9032}
+46449074
+[Iter 11990 Task norm] Val Loss: 0.0626
+{'Angle Mean': 18.0237, 'Angle Median': 16.5101, 'Angle 11.25': 25.7547, 'Angle 22.5': 75.1319, 'Angle 30': 87.3804}
+======================================================================
+inference time = 5.983208063172131
+postquantization
+validating on 41 samples = 
+[Iter 11990 Task dept] Val Loss: 2.7416
+{'abs_err': 2.6769, 'rel_err': 0.9657, 'sigma_1.25': 0.7248, 'sigma_1.25^2': 1.6102, 'sigma_1.25^3': 3.0167}
+46449074
+[Iter 11990 Task norm] Val Loss: 1.0000
+{'Angle Mean': 89.9992, 'Angle Median': 90.0, 'Angle 11.25': 0.0, 'Angle 22.5': 0.0, 'Angle 30': 0.0}
+======================================================================
+inference time = 0.3626872667452184
+Speed Up = 16.49687930008095
+model:  fp32  	 Size (MB): 322.454209
+model:  int8  	 Size (MB): 81.350721
+3.963754 times smaller
+prequantization
+validating on 41 samples = 
+[Iter 10220 Task segm] Val Loss: 1.4671
+{'mIoU': 0.2312, 'Pixel Acc': 0.5217}
+46449074
+[Iter 10220 Task norm] Val Loss: 0.0626
+{'Angle Mean': 18.1499, 'Angle Median': 17.1288, 'Angle 11.25': 28.6213, 'Angle 22.5': 69.2801, 'Angle 30': 85.7749}
+[Iter 10220 Task dept] Val Loss: 0.5708
+{'abs_err': 0.5878, 'rel_err': 0.2314, 'sigma_1.25': 61.5767, 'sigma_1.25^2': 88.4008, 'sigma_1.25^3': 96.8109}
+======================================================================
+inference time = 5.792974048707543
+postquantization
+validating on 41 samples = 
+[Iter 10220 Task segm] Val Loss: 9.5437
+{'mIoU': 0.0207, 'Pixel Acc': 0.1147}
+46449074
+[Iter 10220 Task norm] Val Loss: 1.0000
+{'Angle Mean': 90.0, 'Angle Median': 90.0, 'Angle 11.25': 0.0, 'Angle 22.5': 0.0, 'Angle 30': 0.0}
+[Iter 10220 Task dept] Val Loss: 2.7135
+{'abs_err': 2.6496, 'rel_err': 0.9475, 'sigma_1.25': 1.8849, 'sigma_1.25^2': 3.5013, 'sigma_1.25^3': 5.4048}
+======================================================================
+inference time = 0.4483168857853587
+Speed Up = 12.92160574893236
+5^3': 5.4048}
+inference time = 0.4483168857853587
+[Iter 4320 Task segm] Val Loss: 1.3560
+{'mIoU': 0.2359, 'Pixel Acc': 0.5234}
+inference time = 2.2445954101841625
+[Iter 4320 Task segm] Val Loss: 6.5513
+{'mIoU': 0.0241, 'Pixel Acc': 0.0874}
+inference time = 0.24749324263595954
+[Iter 4640 Task segm] Val Loss: 1.3926
+{'mIoU': 0.2276, 'Pixel Acc': 0.5134}
+
+[Iter 4640 Task norm] Val Loss: 0.0608
+{'Angle Mean': 17.7852, 'Angle Median': 16.3663, 'Angle 11.25': 27.8573, 'Angle 22.5': 74.1307, 'Angle 30': 86.7871}
+
+[Iter 4640 Task dept] Val Loss: 0.6089
+{'abs_err': 0.604, 'rel_err': 0.2214, 'sigma_1.25': 59.8532, 'sigma_1.25^2': 88.2194, 'sigma_1.25^3': 97.1188}
+inference time = 4.05539138375259
+[Iter 4640 Task segm] Val Loss: 3.4820
+{'mIoU': 0.0495, 'Pixel Acc': 0.2544}
+
+[Iter 4640 Task norm] Val Loss: 0.9973
+{'Angle Mean': 89.8353, 'Angle Median': 90.0, 'Angle 11.25': 0.0061, 'Angle 22.5': 0.0262, 'Angle 30': 0.0774}
+
+[Iter 4640 Task dept] Val Loss: 1.8244
+{'abs_err': 1.7659, 'rel_err': 0.6187, 'sigma_1.25': 12.0338, 'sigma_1.25^2': 24.3327, 'sigma_1.25^3': 36.5492}
+inference time = 0.40908434449172604
+[Iter 550 Task segm] Val Loss: 1.8604
+{'mIoU': 0.1673, 'Pixel Acc': 0.4608}
+inference time = 0.8800300400431563
+[Iter 550 Task segm] Val Loss: 3.6708
+{'mIoU': 0.0907, 'Pixel Acc': 0.2489}
+inference time = 0.2517581648942901
+[Iter 150 Task norm] Val Loss: 0.0634
+{'Angle Mean': 18.1897, 'Angle Median': 16.9083, 'Angle 11.25': 24.1602, 'Angle 22.5': 73.4726, 'Angle 30': 87.0605}
+inference time = 0.773567857974913
+[Iter 150 Task norm] Val Loss: 0.0687
+{'Angle Mean': 20.0954, 'Angle Median': 18.3001, 'Angle 11.25': 9.6, 'Angle 22.5': 73.7314, 'Angle 30': 87.7881}
+inference time = 0.25128953166124296
+[Iter 190 Task dept] Val Loss: 0.8392
+{'abs_err': 0.8146, 'rel_err': 0.3325, 'sigma_1.25': 44.0328, 'sigma_1.25^2': 75.3645, 'sigma_1.25^3': 91.0347}
+inference time = 0.774466465740669
+[Iter 190 Task dept] Val Loss: 2.1388
+{'abs_err': 2.0747, 'rel_err': 0.7366, 'sigma_1.25': 4.7193, 'sigma_1.25^2': 10.7824, 'sigma_1.25^3': 18.2949}
+inference time = 0.2515147604593417
+[Iter 530 Task segm] Val Loss: 1.8217
+{'mIoU': 0.1534, 'Pixel Acc': 0.4652}
+
+[Iter 530 Task norm] Val Loss: 0.0636
+{'Angle Mean': 18.0467, 'Angle Median': 16.316, 'Angle 11.25': 24.1957, 'Angle 22.5': 75.7313, 'Angle 30': 87.0775}
+inference time = 1.1146861413630043
+[Iter 530 Task segm] Val Loss: 3.5044
+{'mIoU': 0.0544, 'Pixel Acc': 0.2564}
+
+[Iter 530 Task norm] Val Loss: 0.0701
+{'Angle Mean': 19.9816, 'Angle Median': 17.6532, 'Angle 11.25': 8.8429, 'Angle 22.5': 76.2248, 'Angle 30': 87.2657}
+inference time = 0.3339419795245659
+[Iter 490 Task segm] Val Loss: 1.9403
+{'mIoU': 0.1372, 'Pixel Acc': 0.4281}
+
+[Iter 490 Task dept] Val Loss: 0.7866
+{'abs_err': 0.7628, 'rel_err': 0.2657, 'sigma_1.25': 42.9255, 'sigma_1.25^2': 77.6102, 'sigma_1.25^3': 94.2146}
+inference time = 1.137759727384986
+[Iter 490 Task segm] Val Loss: 3.5212
+{'mIoU': 0.1198, 'Pixel Acc': 0.2607}
+
+[Iter 490 Task dept] Val Loss: 1.2791
+{'abs_err': 1.2251, 'rel_err': 0.4103, 'sigma_1.25': 22.1491, 'sigma_1.25^2': 44.3825, 'sigma_1.25^3': 65.2491}
+inference time = 0.33471986491505695
+[Iter 470 Task dept] Val Loss: 0.7814
+{'abs_err': 0.77, 'rel_err': 0.3172, 'sigma_1.25': 44.845, 'sigma_1.25^2': 78.007, 'sigma_1.25^3': 93.072}
+
+[Iter 470 Task norm] Val Loss: 0.0672
+{'Angle Mean': 18.7802, 'Angle Median': 16.1701, 'Angle 11.25': 22.315, 'Angle 22.5': 73.4465, 'Angle 30': 86.2271}
+inference time = 1.225317150209008
+[Iter 470 Task dept] Val Loss: 2.3536
+{'abs_err': 2.2891, 'rel_err': 0.8338, 'sigma_1.25': 1.3477, 'sigma_1.25^2': 3.5727, 'sigma_1.25^3': 7.3411}
+
+[Iter 470 Task norm] Val Loss: 0.0701
+{'Angle Mean': 19.4509, 'Angle Median': 16.7605, 'Angle 11.25': 15.4373, 'Angle 22.5': 73.2671, 'Angle 30': 86.6695}
+inference time = 0.3339531386770853
+[Iter 430 Task segm] Val Loss: 1.8953
+{'mIoU': 0.1453, 'Pixel Acc': 0.441}
+
+[Iter 430 Task norm] Val Loss: 0.0640
+{'Angle Mean': 17.7407, 'Angle Median': 15.8912, 'Angle 11.25': 29.4572, 'Angle 22.5': 74.1687, 'Angle 30': 86.4184}
+
+[Iter 430 Task dept] Val Loss: 0.8155
+{'abs_err': 0.7856, 'rel_err': 0.27, 'sigma_1.25': 41.6832, 'sigma_1.25^2': 77.181, 'sigma_1.25^3': 93.6078}
+inference time = 1.4559489715390088
+[Iter 430 Task segm] Val Loss: 3.4487
+{'mIoU': 0.0536, 'Pixel Acc': 0.2237}
+
+[Iter 430 Task norm] Val Loss: 0.0679
+{'Angle Mean': 19.3363, 'Angle Median': 16.9873, 'Angle 11.25': 13.5196, 'Angle 22.5': 75.646, 'Angle 30': 87.3077}
+
+[Iter 430 Task dept] Val Loss: 1.1683
+{'abs_err': 1.1729, 'rel_err': 0.5434, 'sigma_1.25': 33.0879, 'sigma_1.25^2': 60.2355, 'sigma_1.25^3': 78.6143}
+inference time = 0.41705383789248585
+[Iter 4320 Task segm] Val Loss: 1.3532
+{'mIoU': 0.2359, 'Pixel Acc': 0.5238}
+inference time = 1.8777307428964753
+[Iter 4320 Task segm] Val Loss: 6.5511
+{'mIoU': 0.0241, 'Pixel Acc': 0.0875}
+inference time = 0.2264551092938679
+[Iter 19790 Task norm] Val Loss: 0.0610
+{'Angle Mean': 17.9938, 'Angle Median': 16.1767, 'Angle 11.25': 27.7248, 'Angle 22.5': 72.6615, 'Angle 30': 86.7052}
+inference time = 3.9430126259966594
+[Iter 19790 Task norm] Val Loss: 1.0000
+{'Angle Mean': 90.0, 'Angle Median': 90.0, 'Angle 11.25': 0.0, 'Angle 22.5': 0.0, 'Angle 30': 0.0}
+inference time = 0.3098324880367372
+[Iter 11950 Task dept] Val Loss: 0.5801
+{'abs_err': 0.602, 'rel_err': 0.2509, 'sigma_1.25': 60.7149, 'sigma_1.25^2': 86.8854, 'sigma_1.25^3': 95.9452}
+inference time = 3.6612099507959877
+[Iter 11950 Task dept] Val Loss: 2.4336
+{'abs_err': 2.3779, 'rel_err': 0.8442, 'sigma_1.25': 6.4403, 'sigma_1.25^2': 11.9029, 'sigma_1.25^3': 17.5156}
+inference time = 0.2326238876435815
+[Iter 4180 Task segm] Val Loss: 1.3762
+{'mIoU': 0.227, 'Pixel Acc': 0.5186}
+
+[Iter 4180 Task norm] Val Loss: 0.0623
+{'Angle Mean': 17.6141, 'Angle Median': 15.8581, 'Angle 11.25': 30.1871, 'Angle 22.5': 74.7543, 'Angle 30': 86.5971}
+inference time = 3.1425861079518387
+[Iter 4180 Task segm] Val Loss: 4.1102
+{'mIoU': 0.0215, 'Pixel Acc': 0.1109}
+
+[Iter 4180 Task norm] Val Loss: 0.9188
+{'Angle Mean': 84.7258, 'Angle Median': 90.0, 'Angle 11.25': 0.3997, 'Angle 22.5': 1.289, 'Angle 30': 3.1804}
+inference time = 0.29048556932588904
+[Iter 6070 Task segm] Val Loss: 1.3823
+{'mIoU': 0.2301, 'Pixel Acc': 0.5238}
+
+[Iter 6070 Task dept] Val Loss: 0.6146
+{'abs_err': 0.6067, 'rel_err': 0.2178, 'sigma_1.25': 59.809, 'sigma_1.25^2': 88.4101, 'sigma_1.25^3': 97.2986}
+inference time = 3.3962860479587462
+[Iter 6070 Task segm] Val Loss: 5.5593
+{'mIoU': 0.0204, 'Pixel Acc': 0.1095}
+
+[Iter 6070 Task dept] Val Loss: 2.6494
+{'abs_err': 2.5814, 'rel_err': 0.9431, 'sigma_1.25': 0.5863, 'sigma_1.25^2': 1.4933, 'sigma_1.25^3': 2.868}
+inference time = 0.29669400540793817
+[Iter 11990 Task dept] Val Loss: 0.5984
+{'abs_err': 0.6092, 'rel_err': 0.2461, 'sigma_1.25': 59.8899, 'sigma_1.25^2': 86.471, 'sigma_1.25^3': 95.9032}
+
+[Iter 11990 Task norm] Val Loss: 0.0624
+{'Angle Mean': 18.0237, 'Angle Median': 16.5101, 'Angle 11.25': 25.7547, 'Angle 22.5': 75.1319, 'Angle 30': 87.3804}
+inference time = 5.366207736875952
+[Iter 11990 Task dept] Val Loss: 2.7413
+{'abs_err': 2.6769, 'rel_err': 0.9657, 'sigma_1.25': 0.7248, 'sigma_1.25^2': 1.6102, 'sigma_1.25^3': 3.0167}
+
+[Iter 11990 Task norm] Val Loss: 1.0000
+{'Angle Mean': 89.9992, 'Angle Median': 90.0, 'Angle 11.25': 0.0, 'Angle 22.5': 0.0, 'Angle 30': 0.0}
+inference time = 0.32376598962923375
+[Iter 4640 Task segm] Val Loss: 1.3924
+{'mIoU': 0.2276, 'Pixel Acc': 0.5136}
+
+[Iter 4640 Task norm] Val Loss: 0.0609
+{'Angle Mean': 17.7852, 'Angle Median': 16.3663, 'Angle 11.25': 27.8573, 'Angle 22.5': 74.1307, 'Angle 30': 86.7871}
+
+[Iter 4640 Task dept] Val Loss: 0.6081
+{'abs_err': 0.604, 'rel_err': 0.2214, 'sigma_1.25': 59.8532, 'sigma_1.25^2': 88.2194, 'sigma_1.25^3': 97.1188}
+inference time = 3.394650301119176
+[Iter 4640 Task segm] Val Loss: 3.4833
+{'mIoU': 0.0495, 'Pixel Acc': 0.2541}
+
+[Iter 4640 Task norm] Val Loss: 0.9973
+{'Angle Mean': 89.8354, 'Angle Median': 90.0, 'Angle 11.25': 0.0061, 'Angle 22.5': 0.0262, 'Angle 30': 0.0774}
+
+[Iter 4640 Task dept] Val Loss: 1.8251
+{'abs_err': 1.7659, 'rel_err': 0.6187, 'sigma_1.25': 12.0338, 'sigma_1.25^2': 24.3327, 'sigma_1.25^3': 36.5492}
+inference time = 0.36291912474283355
+[Iter 600 Task segm] Val Loss: 1.9263
+{'mIoU': 0.1529, 'Pixel Acc': 0.4332}
+inference time = 0.7835823012561333
+[Iter 600 Task segm] Val Loss: 3.5701
+{'mIoU': 0.2288, 'Pixel Acc': 0.2806}
+inference time = 0.21953000440830137
+[Iter 600 Task norm] Val Loss: 0.0694
+{'Angle Mean': 18.7834, 'Angle Median': 17.2623, 'Angle 11.25': 26.0864, 'Angle 22.5': 68.9949, 'Angle 30': 84.9496}
+inference time = 1.3924567164444341
+[Iter 600 Task norm] Val Loss: 0.0675
+{'Angle Mean': 19.4803, 'Angle Median': 18.0568, 'Angle 11.25': 19.7386, 'Angle 22.5': 70.6171, 'Angle 30': 87.64}
+inference time = 0.21827789283380275
+[Iter 600 Task dept] Val Loss: 1.3599
+{'abs_err': 1.3047, 'rel_err': 0.4073, 'sigma_1.25': 18.2545, 'sigma_1.25^2': 40.4269, 'sigma_1.25^3': 64.593}
+inference time = 0.7015393105948844
+[Iter 600 Task dept] Val Loss: 2.6340
+{'abs_err': 2.5669, 'rel_err': 0.936, 'sigma_1.25': 0.5144, 'sigma_1.25^2': 1.4173, 'sigma_1.25^3': 2.7767}
+inference time = 0.21855313021962236
+[Iter 600 Task segm] Val Loss: 1.8335
+{'mIoU': 0.1544, 'Pixel Acc': 0.4563}
+
+[Iter 600 Task norm] Val Loss: 0.0638
+{'Angle Mean': 18.0532, 'Angle Median': 16.3498, 'Angle 11.25': 25.1342, 'Angle 22.5': 75.0487, 'Angle 30': 87.0872}
+inference time = 0.9766869777586402
+[Iter 600 Task segm] Val Loss: 3.6410
+{'mIoU': 0.0677, 'Pixel Acc': 0.2512}
+
+[Iter 600 Task norm] Val Loss: 0.0706
+{'Angle Mean': 19.8081, 'Angle Median': 17.349, 'Angle 11.25': 10.4237, 'Angle 22.5': 75.3513, 'Angle 30': 86.9709}
+inference time = 0.2905912352771294
+[Iter 600 Task segm] Val Loss: 2.0505
+{'mIoU': 0.1294, 'Pixel Acc': 0.4097}
+
+[Iter 600 Task dept] Val Loss: 0.7090
+{'abs_err': 0.692, 'rel_err': 0.2462, 'sigma_1.25': 51.1723, 'sigma_1.25^2': 83.1232, 'sigma_1.25^3': 95.3102}
+inference time = 0.9870511834214374
+[Iter 600 Task segm] Val Loss: 3.5948
+{'mIoU': 0.0545, 'Pixel Acc': 0.2523}
+
+[Iter 600 Task dept] Val Loss: 1.0476
+{'abs_err': 1.0675, 'rel_err': 0.5207, 'sigma_1.25': 35.1449, 'sigma_1.25^2': 62.5306, 'sigma_1.25^3': 81.0968}
+inference time = 0.28769191997807203
+[Iter 600 Task dept] Val Loss: 1.4509
+{'abs_err': 1.3885, 'rel_err': 0.4393, 'sigma_1.25': 12.7684, 'sigma_1.25^2': 30.7502, 'sigma_1.25^3': 55.2901}
+
+[Iter 600 Task norm] Val Loss: 0.0661
+{'Angle Mean': 18.5524, 'Angle Median': 16.4989, 'Angle 11.25': 25.4711, 'Angle 22.5': 72.4572, 'Angle 30': 87.1252}
+inference time = 1.1080071018963324
+[Iter 600 Task dept] Val Loss: 2.8028
+{'abs_err': 2.7381, 'rel_err': 0.9986, 'sigma_1.25': 0.0036, 'sigma_1.25^2': 0.0226, 'sigma_1.25^3': 0.0449}
+
+[Iter 600 Task norm] Val Loss: 0.0677
+{'Angle Mean': 19.0817, 'Angle Median': 17.7245, 'Angle 11.25': 24.4782, 'Angle 22.5': 67.7292, 'Angle 30': 87.5229}
+inference time = 0.2889979769543904
+[Iter 600 Task segm] Val Loss: 2.0159
+{'mIoU': 0.1328, 'Pixel Acc': 0.418}
+
+[Iter 600 Task norm] Val Loss: 0.0657
+{'Angle Mean': 18.1298, 'Angle Median': 16.8939, 'Angle 11.25': 29.7641, 'Angle 22.5': 69.1569, 'Angle 30': 87.1648}
+
+[Iter 600 Task dept] Val Loss: 1.3150
+{'abs_err': 1.2576, 'rel_err': 0.397, 'sigma_1.25': 16.2313, 'sigma_1.25^2': 40.9228, 'sigma_1.25^3': 67.8207}
+inference time = 1.2641783970158273
+[Iter 600 Task segm] Val Loss: 3.6020
+{'mIoU': 0.0959, 'Pixel Acc': 0.2378}
+
+[Iter 600 Task norm] Val Loss: 0.0700
+{'Angle Mean': 19.4693, 'Angle Median': 17.3645, 'Angle 11.25': 18.8572, 'Angle 22.5': 67.0179, 'Angle 30': 87.3917}
+
+[Iter 600 Task dept] Val Loss: 1.1104
+{'abs_err': 1.1242, 'rel_err': 0.5325, 'sigma_1.25': 34.754, 'sigma_1.25^2': 61.3336, 'sigma_1.25^3': 79.4654}
+inference time = 0.3608803481590457
