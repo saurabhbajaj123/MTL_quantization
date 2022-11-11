@@ -144,7 +144,7 @@ for tasks in task_list:
         metricDict[task] = NYUMetrics(task)
         clsNum[task] = task_cls_num[task]
 
-    savePath = "/work/sbajaj_umass_edu/SavedModels/"
+    savePath = "/work/sbajaj_umass_edu/BestModels/"
     reload = "_".join(tasks) + '.model'
 
     model, it = load_model(savePath, reload, clsNum)

@@ -34,22 +34,22 @@ perform_quantization = False
 tasks = ('segment_semantic','normal','depth_zbuffer')
 task_cls_num = {'segment_semantic': 40, 'normal':3, 'depth_zbuffer': 1}
 # three_task = ['segment_semantic']
-# three_task = ['normal']
+three_task = ['normal']
 # three_task = ['depth_zbuffer']
 # three_task = ['segment_semantic', 'normal']
 # three_task = ['segment_semantic', 'depth_zbuffer']
-three_task = ['depth_zbuffer', 'normal']
+# three_task = ['depth_zbuffer', 'normal']
 # three_task = ['segment_semantic','normal','depth_zbuffer']
 
-# three_task = [
-#     ['segment_semantic'],
-#     ['normal'],
-#     ['depth_zbuffer'],
-#     ['segment_semantic', 'normal'],
-#     ['segment_semantic', 'depth_zbuffer'],
-#     ['depth_zbuffer', 'normal'],
-#     ['segment_semantic','normal','depth_zbuffer'],
-# ]
+early_stop = {
+    "_".join(['segment_semantic']):8000,
+    "_".join(['normal']):30000,
+    "_".join(['depth_zbuffer']):30000,
+    "_".join(['segment_semantic', 'normal']):11000,
+    "_".join(['segment_semantic', 'depth_zbuffer']):10000,
+    "_".join(['depth_zbuffer', 'normal']):25000,
+    "_".join(['segment_semantic','normal','depth_zbuffer']):15000,
+}
 
 criterionDict = {}
 metricDict = {}
@@ -495,7 +495,10 @@ trainer = Trainer(model, three_task, trainDataloader, valDataloader, criterionDi
 
 savePath = "/work/sbajaj_umass_edu/SavedModels/"
 reload = "_".join(three_task) + '.model'
-trainer.train(600, loss_lambda, savePath, None)
+
+
+print("Training for {} iterations...".format(early_stop["_".join(three_task)]))
+trainer.train(early_stop["_".join(three_task)], loss_lambda, savePath, reload=reload)
 
 
 # device = torch.device('cpu')
